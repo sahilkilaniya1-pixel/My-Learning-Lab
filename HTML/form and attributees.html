@@ -1,0 +1,76 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+</head>
+<body>
+    <form action ="xyz.php" method="POST" autocomplete="on" enctype="multipart/form-data">
+        <form action ="xyz.php" methodd="GET">
+
+        <label>Email:</label>
+        <input type="email" name="email"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+
+        <input type="submit" name="" value="Login">
+    </form>-->
+    
+
+
+    <!--
+    1.input and label
+    2.textarea
+    3.Select
+    4.Datalist
+    5.Field and legend
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Student Information</legend>
+
+            <label for="bio">Bio:</label><br>
+            <textarea id="bio" name="bio" rows="10" cols="30"></textarea><br><br>
+
+            <label for="year">Year:</label><br>
+            <select id="year" name="year">
+                <optgroup label="Junior Division">
+                    <option value="1">First year</option>
+                    <option value="2">Second year</option>
+                </optgroup>
+                <optgroup label="Senior Division">
+                    <option value="3">Third Year</option>
+                    <option value="4">Fourth Year</option>
+                </optgroup>
+            </select><br><br>
+
+            <label for="smartphone">Smartphone:</label>
+            <input list="phone-list" id="smartphone" name="smartphone">
+            
+            <datalist id="phone-list">
+                <option value="Redmi Note 9"></option>
+                <option value="OnePlus 8"></option>
+                <option value="iPhone 11"></option>
+            </datalist>
+        <fieldset>
+            <legend>Educaiton Info</legend>
+
+            <label>12th Marks</label><br>
+            <input type="12th Marks"name=""><br>
+            <label>10th Marks</label><br>
+            <input type="10th Marks" name=""><br>
+        </fieldset>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+x =10 #integer (pura number)
+y = 10.5 #float (decimal number)
+z = 1 + 2j #complex number (real + imaginary)
+x = "Python" #string (sequence of characters)
+is_easy = True #boolean (True or False)
