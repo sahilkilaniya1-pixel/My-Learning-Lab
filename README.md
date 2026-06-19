@@ -1,5 +1,4 @@
-<img width="152" height="418" alt="image" src="https://github.com/user-attachments/assets/f7d42713-1d74-49a8-84c2-5d543c4bcc30" /># 🚀 My Learning Lab
-
+# 🚀 My Learning Lab
 Welcome to my central learning hub! This repository serves as a personal playground documenting my journey in secure web development, programming syntax practice, and building custom scripts for security automation and vulnerability research (VAPT). 🛡️💻
 
 Here, I systematically organize my code, experiment with different tech stacks, and bridge the gap between robust software engineering and cyber security.
