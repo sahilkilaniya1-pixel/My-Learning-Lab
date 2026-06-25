@@ -73,3 +73,52 @@ console.log(totalSum);  //output:: 10
 
 
 // Run fn on each item (no return value)
+e.forEach(x => console.log(x));
+// Output
+// 1
+// 2
+// 3
+// 4
+// 5
+
+
+//  True if any item passes fn
+let f = [1, 2, 4, 2];
+let result = f.some(x => x > 3);
+console.log(result)   //output : true
+
+
+//  True if all items pass fn
+let g = [1, 2, -4, 2];
+let reslt = g.every(x => x > 0);
+
+console.log(reslt);   //Output : false
+
+
+// Sort in place — always pass comparator
+let h = [1, 2, -4, 2];
+h.sort()
+console.log(h);  //output :: [ -4, 1, 2, 2 ]
+
+
+// Reverse array in place
+let i = [1, 2, -4, 2];
+i.reverse();
+console.log(i);  //Output: [ 2, -4, 2, 1 ]
+
+
+//  Flatten one level of nesting
+let j = [1, 2, [3, 4], -4, 2];
+let res = j.flat();
+console.log(res);  //Output:[ 1, 2, 3, 4, -4, 2 ]
+
+
+// Make array from string / Set / Map
+let str = 'abc';
+let arr = Array.from(str);
+console.log(arr);  //Output: [ 'a', 'b', 'c' ]
+
+
+// True if x is an array
+console.log(Array.isArray([]));         //Output: true
+console.log(Array.isArray([1, 2, 3]));  //Output: true
