@@ -25,3 +25,14 @@ a = [1, 4, 5, 7, 8, 9]
 print("Random value:", random.choice(a))
 # Cryptographically secure choice
 print("Secure random value:", secrets.choice(a))
+
+
+
+
+# Checking if Two Lists are Completely Identical
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+# Using all() with zip()
+flag = all(x == y for x, y in zip(a, b))
+print("Are lists identical?:", flag)  # Output: True
