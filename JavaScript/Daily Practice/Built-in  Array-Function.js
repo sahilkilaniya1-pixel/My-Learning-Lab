@@ -122,3 +122,5 @@ console.log(arr);  //Output: [ 'a', 'b', 'c' ]
 // True if x is an array
 console.log(Array.isArray([]));         //Output: true
 console.log(Array.isArray([1, 2, 3]));  //Output: true
+
+
