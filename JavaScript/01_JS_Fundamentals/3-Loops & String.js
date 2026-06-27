@@ -212,6 +212,11 @@ console.log(str.replace("h","y")); // Output: Yello
 console.log(str.replaceAll("l","y")); // Replace all matching value
 
 // str.charAt(idx)
+let myName = "sahil";
+console.log(myName.charAt(0));
 
 
-
+// Questions:
+let fullname = prompt("enter  your fullname without spaces");
+let username = "@"+ fullname + fullname.length
+console.log(username);
