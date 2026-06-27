@@ -1,117 +1,97 @@
-// ===================================================
-// 1. FOR LOOPS
-// ===================================================
+// // print 1 to 10 loop
+// Note: Changed from 5 to 10 based on the loop condition below
 
-// Example 1: Print "Sahil" 10 times
 for (let count = 1; count <= 10; count++) {
     console.log("Sahil");  // Executes 10 times
 }
-console.log("Loop has ended\n");
+console.log("Loop has ended");
 
-// Example 2: Calculate sum of 1 to 100
+// // =================================================
+// // calculate sum of 1 to 100
 let sum = 0;
 let n = 100;
 for (let i = 1; i <= n; i++) {
     sum = sum + i;
 }
-console.log("Sum 1 to 100 =", sum);
-console.log("Loop has ended\n");
+console.log("sum", sum);
+console.log("loop has ended");
 
-// Example 3: Simple 1 to 5 print
+
 for (let i = 1; i <= 5; i++) {
     console.log("i =", i);
 }
-console.log("\n");
 
-// Example 4: Print numbers from 0 to 5
-for (let num = 0; num <= 5; num++) {
-    console.log("num =", num);
-}
-console.log("\n");
+// // ===========================================
+//  infinite loop - a loop that never ends
+// print numbers starting from 1 continuously
 
-// Example 5: Loop to print even numbers from 0 to 10
-for (let num = 0; num <= 10; num++) {
-    if (num % 2 === 0) {
-        console.log("even num =", num);
-    }
-}
-console.log("\n");
-
-/* // WARNING: INFINITE LOOP (Uncomment only if you want to test, it may crash browser)
+// WARNING: This will crash your browser or console because i keeps increasing and remains >= 0
+/*
 for (let i = 1; i >= 0; i++) {
     console.log("i=", i);
 }
 */
 
 
-// ===================================================
-// 2. WHILE LOOPS
-// ===================================================
+// // ==================================================
+// // while loop
+let whileCount = 1; // Created variable (renamed to avoid conflict)
 
-// Example 1: Basic while loop
-let whileCount = 1;
-while (whileCount <= 5) {
+while (whileCount <= 5) { // Applied the correct condition
     console.log("Work is in progress, count =", whileCount);
-    whileCount++; // Increment is necessary to stop the loop
+    whileCount++; // Incrementing the count is necessary, otherwise the loop will never stop
 }
-console.log("\n");
 
-// Example 2: Printing name 5 times
-let whileI = 1;
+let whileI = 1; // Renamed to avoid identifier conflict
 while (whileI <= 5) {
+    // console.log("i", whileI);
     console.log("Sahil");
     whileI++;
 }
-console.log("\n");
 
-// Example 3: Guessing Game (Runs until user guesses 25)
-// Note: prompt() works in Browser environment. If running via Node.js, uncomment carefully.
-/*
-let gameNum = 25;
-let userNum = prompt("Guess the game number: ");
-while (userNum != gameNum) {
-    userNum = prompt("You entered the wrong number. Guess again:");
-}
-console.log("Congratulations, you entered the right number!\n");
-*/
+// // ===============================================
+//  do-while loop
+// Syntax:
+// do {
+//     // do some work
+// } while(condition);
 
+let j = 1; // Kept 1 so the loop can execute properly
 
-// ===================================================
-// 3. DO-WHILE LOOPS
-// ===================================================
-
-// Example 1: Executes 10 times
-let j = 1;
 do {
     console.log("Apna college");
-    j++;
-} while (j <= 10);
-console.log("\n");
+    j++; // Used 'j' instead of 'i'
+} while (j <= 10); // Used 'j' instead of 'i'
 
-// Example 2: Prints numbers from 1 to 5
-let doWhileI = 1;
+let doWhileI = 1; // Started from 1 to loop from 1 to 5
+
 do {
-    console.log("doWhileI =", doWhileI);
+    console.log("i =", doWhileI); // Fixed variable name from 's' to 'doWhileI'
     doWhileI++;
 } while (doWhileI <= 5);
-console.log("\n");
 
 
-// ===================================================
-// 4. FOR-OF & FOR-IN LOOPS
-// ===================================================
+// // ==================================================
+// // For-of loop (Used for Strings and Arrays)
 
-// For-of loop (Used for Strings and Arrays)
-let nameStr = "sahil";
+// // Syntax:
+// // for(let val of strVar){
+// //     // do some work
+// // }
+
+let nameStr = "sahil";   // iterator -> characters
 let size = 0;
 for (let char of nameStr) {
     console.log("value =", char);
     size++;
 }
-console.log("string size = ", size); // 5
-console.log("\n");
 
-// For-in loop (Used for Objects to loop through keys)
+console.log("string size = ", size); // 5
+
+
+
+// // for-in loop (Used for Objects to loop through keys)
+
 let student = {
     name: "sahil",
     age: 23,
@@ -121,47 +101,117 @@ let student = {
 for (let key in student) {
     console.log("key =", key, ", value =", student[key]);
 }
-console.log("\n");
+
+for (let num = 0; num <= 5; num++) {
+    console.log("num=", num);
+}
+
+// Loop to print even numbers
+for (let num = 0; num <= 10; num++) {
+    if (num % 2 == 0) {
+        // even number
+        console.log("even num=", num);
+    }
+}
 
 
-// ===================================================
-// 5. STRINGS & TEMPLATE LITERALS
-// ===================================================
+let gameNum = 25;
+let userNum = prompt("Guess the game number: ");
+// Loop runs as long as the user's guess is wrong
+while (userNum != gameNum) {
+    userNum = prompt("You entered the wrong number. Guess again:");
+}
+console.log("Congratulations, you entered the right number!");
 
-// Creating and updating string
-let sampleStr = "sahil";
-console.log("Character at index 2:", sampleStr[2]); // Outputs 'h'
 
-sampleStr = "new name";  // Reassignment without 'let'
-console.log("Updated character at index 2:", sampleStr[2]); // Outputs 'w'
-console.log("\n");
+// // ======================================================
+// // Strings in JS
+// Strings are inmuteable but 
 
-// Template Literal and String Interpolation
+
+// // create string --->
+
+let sampleStr = "sahil"; // First time declaration (Correct)
+sampleStr = "new name";  // Do not use 'let' again when reassigning a value 
+console.log(sampleStr[2]); // Accessing character at index 2 ('w')
+
+// string length --->
+// sampleStr.length
+
+
+// string indices --->
+// sampleStr[0], sampleStr[1], sampleStr[2]
+
+
+
+// ==============================================
+// Template Literal
+// A way to have embedded expressions in strings
+//   `this is a Template literal`
+
+// String interpolation
+// To create strings by substituting placeholders with values
+// `string text ${expression} string text`
 let obj = {
-    item: "pen",
+    item: "pen", // Fixed key name from 'items' to match the template below
     price: "10"
-};
-let output = `the cost of ${obj.item} is ${obj.price} rupees`;
-console.log("Using Template Literal:", output);
-console.log("Using Console Commas:", "the cost of", obj.item, "is", obj.price, "rupees");
-console.log("\n");
+}
+let output = `the cost of ${obj.item} is ${obj.price} rupees`; // Fixed keys inside the template
+console.log(output);
+console.log("the cost of", obj.item, "is", obj.price, "rupees");
+
+// =================================================
+let escapeStr = "sahil\nkilaniya"; // \n adds a new line but counts as 1 character
+let escapeStr = "sahil\tilaniya"; // \t make a sapce btw to name
+console.log(escapeStr.length); // Outputs 14
+
+// ==================================================
+// These are built-in functions to manipulate a string 
+// Note: Strings are immutable in JS, these methods return a new string.
+// str.toUpperCase()
+// str.toLowerCase()
+// str.trim() // removes leading and trailing whitespaces
 
 
-// ===================================================
-// 6. ESCAPE CHARACTERS & STRING METHODS
-// ===================================================
+let upperCaseStr = "sahil kilaniya";
+// 'sahil kilaniya'
+// upperCaseStr.toUpperCase() -> returns 'SAHIL KILANIYA'
+upperCaseStr = upperCaseStr.toUpperCase(); // Reassigned to store changes
 
-let escapeStr1 = "sahil\nkilaniya"; // \n adds a new line
-console.log("With Newline:\n" + escapeStr1);
-
-let escapeStr2 = "sahil\tkilaniya"; // \t adds a tab space
-console.log("With Tab:", escapeStr2);
-console.log("Length of 'sahil\\tkilaniya':", escapeStr2.length);
-console.log("\n");
-
-// String Immutability Example
+// =================================
 let originalStr = "sahil kilaniya";
-let newStr = originalStr.toUpperCase(); // Returns a brand new string
+// 'sahil kilaniya'
+// originalStr.toUpperCase() -> returns 'SAHIL KILANIYA'
+let newStr = originalStr.toUpperCase(); // Storing result in a new variable
+console.log(originalStr); // Prints original: "sahil kilaniya"
+console.log(newStr);      // Prints modified: "SAHIL KILANIYA"
 
-console.log("Original String (Unchanged):", originalStr);
-console.log("New String (Modified):", newStr);
+
+// ================================
+let str = "   sahil             "
+console.log(str.trim());   //Output:: "sahil"
+
+
+
+
+// ====================================================
+// str.slice(start, end?) //return part of string
+let str = "Hello";
+console.log(str.slice(2));
+
+// str1.concat(str2) // join str2 with str1
+let str1 = "sahil";
+let str2 = "xyz";
+
+let res = str1.concat(str2);
+console.log(res); // Output sahil xyz
+
+// str.replace(searchVal,newVal)
+let str = "hello";
+console.log(str.replace("h","y")); // Output: Yello
+console.log(str.replaceAll("l","y")); // Replace all matching value
+
+// str.charAt(idx)
+
+
+

@@ -1,0 +1,44 @@
+/* ==========================================================================
+   GLOBAL BODY STYLES
+   ========================================================================== */
+body {
+  background-color: blanchedalmond;
+  font-family: Arial, sans-serif; /* Added for clean, readable text layout */
+  margin: 20px;
+}
+
+/* ==========================================================================
+   DOM ELEMENTS & CLASS STYLES
+   ========================================================================== */
+
+/* Target headings with class 'myClass' */
+.myClass {
+  color: cadetblue;
+  text-decoration: overline;
+}
+
+/* Target plain H2 headings */
+h2 {
+  color: cadetblue;
+}
+
+/* Target all interactive buttons */
+button {
+  background-color: black;
+  color: azure;
+  padding: 10px 20px; /* Added for a clean, professional look */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   PRACTICE BOX STYLES (For Question 2 Divs)
+   ========================================================================== */
+.box {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
