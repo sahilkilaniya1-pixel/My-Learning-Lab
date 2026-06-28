@@ -1,0 +1,45 @@
+<!-- In Advanced HTML we focus on data collection, native media handling, and browser optimization.
+
+Advanced Forms & Validation
+Forms not only host input fields, they also host native browser validation and accessibility features. -->
+
+
+<form action="/submit-data" method="POST">
+    <fieldset>
+        <legend>Personal Information</legend>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required minlength="3" placeholder="e.g. sahil_golu">
+        
+        <label for="user-email">Email:</label>
+        <input type="email" id="user-email" name="user-email" required>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <button type="submit">Register</button>
+    </fieldset>
+</form>
+
+
+<!-- Code Explanation: -->
+fieldset & legend: These group complex forms visually and logically (improved for accessibility).
+
+label[for] and input[id]: The value of the for attribute must match the id of the input. This means that whenever the user clicks on the label, the input will automatically be focused.
+
+required, minlength: These provide Native HTML Validation without JavaScript. The browser will not allow forms to be submitted unless these rules are followed.
+
+
+
+<!-- HTML5 Audio & Video -->
+<!-- Playing native media without any third-party plugin: -->
+<video width="640" height="360" controls poster="thumbnail.jpg" preload="metadata">
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.webm" type="video/webm">
+    Your browser does not support the video tag.
+</video>
+
+
+Controls: Play, pause, and volume buttons are provided.
+Poster: The image that will be seen before the video is loaded.
+Multiple <source> tags: If the browser does not support one format (mp4), it will try another (webm).
