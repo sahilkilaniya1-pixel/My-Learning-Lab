@@ -28,7 +28,7 @@ function findLargestNum(arr) {
     }
     return max;
 }
-console.log("Q2. Largest Number:", findLargestNum([1, 2, 3, 4, 5])); // Output: 5
+console.log(findLargestNum([1, 2, 3, 4, 5])); // Output: 5
 
 
 // -------------------------------------------------------------------------
@@ -37,11 +37,9 @@ console.log("Q2. Largest Number:", findLargestNum([1, 2, 3, 4, 5])); // Output: 
 function isPalindrome(test) {
     // Standardizing the string: removing spaces and forcing uppercase
     let cleanedText = test.toUpperCase().replace(/\s+/g, '');
-    
     // Two-pointer approach (Pure logic without built-in array conversion)
     let left = 0;
     let right = cleanedText.length - 1;
-    
     while (left < right) {
         if (cleanedText[left] !== cleanedText[right]) {
             return false;
