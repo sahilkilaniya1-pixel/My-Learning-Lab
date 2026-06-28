@@ -1,0 +1,44 @@
+<!-- At the intermediate level, we learn how elements interact with each other and how layouts are constructed. -->
+
+<!-- Semantic HTML (SEO & Accessibility) -->
+Previously, people used only `<div>` tags for the entire layout (a practice known as "Div-Soup"). HTML5 introduced Semantic Elements, which inform browsers and search engines about the actual meaning of the content.
+
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Latest Articles</h2>
+        <article>
+            <h3>Understanding Semantic HTML</h3>
+            <p>Semantic tags improve SEO drastically...</p>
+        </article>
+    </section>
+    
+    <aside>
+        <p>Sponsored Sidebar Ads</p>
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; 2026 Developer Notes</p>
+</footer>
+
+<!-- 🧠 Code Explanation: -->
+<header> and <footer>: Define the introductory and concluding parts of a page or section.
+
+<nav>: Represents a block of navigation links.
+
+<main>: Contains the unique and primary content of the entire document. There should be only one <main> element per page.
+
+<section>: Represents a group of related content.
+
+<article>: An independent piece of content (such as a blog post or news article) that retains its full meaning even if separated from the rest of the page.
+
+<aside>: Content that is tangentially related to the main content (such as sidebars, pull quotes, or ads).
