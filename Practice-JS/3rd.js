@@ -12,7 +12,7 @@ function reverseString(str) {
     }
     return reversed;
 }
-console.log("Q1. Reversed String:", reverseString("sahil")); // Output: lihas
+console.log(reverseString("sahil")); // Output: lihas
 
 
 // -------------------------------------------------------------------------
@@ -52,6 +52,16 @@ function isPalindrome(test) {
 console.log("Q3. Is 'sah il' a Palindrome?:", isPalindrome("sah il")); // Output: false
 console.log("Q3. Is 'racecar' a Palindrome?:", isPalindrome("racecar")); // Output: true
 
+// =======================================================================
+// 2nd option
+function isPalindrome(text) {
+    let cleanedtext = text.toUpperCase().replace(/\s+/, '');
+    let reversetext = cleanedtext.split('').reverse().join();
+    return cleanedtext === reversetext;
+} console.log(isPalindrome("sahi il"));
+// =====================================================================
+
+
 
 // -------------------------------------------------------------------------
 // Q4. Remove Duplicate Elements from Array (Without Set or indexOf())
@@ -74,16 +84,16 @@ function removeDuplicatesManual(arr) {
     }
     return uniqueArr;
 }
-console.log("Q4. Unique Array:", removeDuplicatesManual([1, 2, 2, 3, 4, 4, 5, 5, 6, 3, 4, 1, 4])); 
+console.log("Q4. Unique Array:", removeDuplicatesManual([1, 2, 2, 3, 4, 4, 5, 5, 6, 3, 4, 1, 4]));
 // Output: [1, 2, 3, 4, 5, 6]
 
 
 // ==========================================================================
 // 2nd choice
 // ==========================================================================
-function removeDuplicate(arr){
-    return(...new set[arr]);
-}console.log(removeDuplicate([1,1,2,2,3,4,3,5,4]));
+function removeDuplicate(arr) {
+    return (...new set[arr]);
+} console.log(removeDuplicate([1, 1, 2, 2, 3, 4, 3, 5, 4]));
 
 
 
@@ -118,7 +128,7 @@ function countCharacterFrequencyShort(str) {
     }
     return frequency;
 }
-console.log("Q6. Character Frequency:", countCharacterFrequencyShort("sahil")); 
+console.log("Q6. Character Frequency:", countCharacterFrequencyShort("sahil"));
 // Output: { s: 1, a: 1, h: 1, i: 1, l: 1 }
 
 
@@ -129,14 +139,14 @@ const rotateArrayLeft = (arr, k) => {
     let n = arr.length;
     k = k % n; // Handles cases where k > array length
     let rotated = [];
-    
+
     for (let i = 0; i < n; i++) {
         let newIndex = (i + k) % n; // Math formula to calculate rotated position
         rotated[i] = arr[newIndex];
     }
     return rotated;
 };
-console.log("Q7. Left Rotated Array:", rotateArrayLeft([1, 2, 3, 4, 5], 2)); 
+console.log(rotateArrayLeft([1, 2, 3, 4, 5], 2));
 // Output: [3, 4, 5, 1, 2]
 
 
