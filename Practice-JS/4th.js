@@ -19,11 +19,11 @@ console.log(wordcount("hey i am sahil"))
 
 
 // =========== 2nd ===================
-const countword =(word) =>{
-    let count =1;
-    for(let i = 0; i<=word.length-1; i++){
-        if(word[i]==" "){
-            count ++
+const countword = (word) => {
+    let count = 1;
+    for (let i = 0; i <= word.length - 1; i++) {
+        if (word[i] == " ") {
+            count++
         }
     }
     return count;
@@ -36,28 +36,34 @@ console.log(countword("We are indians"))
 
 
 // ================ 3rd =========================
-function reverseKeepSpaces(str){
-    let reversedChars ="";
-    for(let i = str.length-1; i>=0; i--){
-        if(str[i]!==" "){
-            reversedChars += str[i];
+function reverseWordsKeepSpaces(str) {
+    let result = "";
+    let currentWord = "";
+
+    // Hum string ke har ek character par loop chalayenge
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== " ") {
+            // Agar space nahi hai, toh letter ko currentWord ke SHURUAT mein jodo
+            // Isse word apne aap ulta (reverse) hota chala jayega
+            currentWord = str[i] + currentWord;
+        } else {
+            // Agar space mil gaya, toh jo word abhi tak ulta hua hai use result mein dalo
+            result += currentWord + " ";
+            currentWord = ""; // Agle word ke liye khali kar do
         }
     }
 
+    // Aakhri word ke baad koi space nahi hota, isliye loop khatam hone ke baad 
+    // bacha hua aakhri reversed word bhi result mein jodna zaroori hai
+    result += currentWord;
 
-    let result ="";
-    let charIndex = 0;
-    for(let i=0; i<str.length; i++){
-        if(str[i]=== " "){
-            result +=" ";
-        } else{
-            result += reversedChars[charIndex];
-        }
-    }
     return result;
 }
-const originalStr = "i am human";
-const output =reverseKeepSpaces(originalStr);
 
-console.log("original: "+ originalStr);
-console.log("output: "+output);
+// Testing
+const originalStr = "I am human";
+const output = reverseWordsKeepSpaces(originalStr);
+
+console.log("Original: " + originalStr);
+console.log("Output:   " + output);
+// Output: "I ma namuh"
