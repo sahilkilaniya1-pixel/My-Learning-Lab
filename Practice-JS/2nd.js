@@ -17,7 +17,7 @@ console.log("loop has ended!\n");
 // -------------------------------------------------------------------------
 // Answer: Initialize a sum variable to 0, then add the loop iterator 'i' to it in each step.
 // Note: Changed initial sum from 1 to 0 to get the correct mathematical sum (15).
-let sum = 0; 
+let sum = 0;
 for (let i = 1; i <= 5; i++) {
     sum = sum + i;
 }
