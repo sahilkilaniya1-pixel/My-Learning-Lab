@@ -43,9 +43,10 @@ function reverseKeepSpaces(str){
             reversedChars += str[i];
         }
     }
+
+
     let result ="";
     let charIndex = 0;
-
     for(let i=0; i<str.length; i++){
         if(str[i]=== " "){
             result +=" ";
