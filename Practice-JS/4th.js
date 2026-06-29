@@ -29,3 +29,34 @@ const countword =(word) =>{
     return count;
 };
 console.log(countword("We are indians"))
+
+
+
+
+
+
+// ================ 3rd =========================
+function reverseKeepSpaces(str){
+    let reversedChars ="";
+    for(let i = str.length-1; i>=0; i--){
+        if(str[i]!==" "){
+            reversedChars += str[i];
+        }
+    }
+    let result ="";
+    let charIndex = 0;
+
+    for(let i=0; i<str.length; i++){
+        if(str[i]=== " "){
+            result +=" ";
+        } else{
+            result += reversedChars[charIndex];
+        }
+    }
+    return result;
+}
+const originalStr = "i am human";
+const output =reverseKeepSpaces(originalStr);
+
+console.log("original: "+ originalStr);
+console.log("output: "+output);
