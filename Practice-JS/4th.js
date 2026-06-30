@@ -7,28 +7,27 @@
 // -------------------------------------------------------------------------
 // Description: Counts words by tracking state ('in_word').
 // This prevents false counts when multiple spaces are placed consecutively.
-const wordCountAdvanced = (str) => {
-    let count = 0;
-    let inWord = false;
+const wordcount = (word) => {
+    // 1. Properly declare variables using 'let'
+    let count = 0; 
+    let inWord = false; 
 
-    for (let i = 0; i < str.length; i++) {
-        // Fixed: Changed empty string "" to a proper space check " "
-        if (str[i] === " ") {
-            inWord = false; // We hit a space, so we are no longer inside a word
-        } else {
-            // If we are transitioning from a space to a fresh word
-            if (inWord === false) {
+    // 2. Simplified loop condition
+    for (let i = 0; i < word.length; i++) { 
+        if (word[i] === " ") { 
+            inWord = false;
+        } else { 
+            // 3. Using strict equality (===) and shorthand check
+            if (!inWord) { 
                 count++;
-                inWord = true; // Mark state as inside a word
+                inWord = true;
             }
         }
     }
     return count;
 };
 
-// Testing Q1:
-console.log(wordCountAdvanced("hey i am sahil"));
-// Output: 4
+console.log(wordcount("We are  Indians")); // Outputs: 3
 
 
 // -------------------------------------------------------------------------
