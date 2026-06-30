@@ -48,7 +48,7 @@ function reverseWordsKeepSpaces(str) {
         } else {
             // If a space is found, add the word that has been reversed so far to the result.
             result += currentWord + " ";
-            currentWord = ""; // Agle word ke liye khali kar do
+            currentWord = "";   // Clear it for the next word
         }
     }
     // There is no space after the last word, so after the loop finishes,
