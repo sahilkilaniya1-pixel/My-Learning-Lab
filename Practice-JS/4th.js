@@ -39,27 +39,24 @@ console.log(countword("We are indians"))
 function reverseWordsKeepSpaces(str) {
     let result = "";
     let currentWord = "";
-
-    // Hum string ke har ek character par loop chalayenge
+    // We will loop through every character of the string.
     for (let i = 0; i < str.length; i++) {
         if (str[i] !== " ") {
-            // Agar space nahi hai, toh letter ko currentWord ke SHURUAT mein jodo
-            // Isse word apne aap ulta (reverse) hota chala jayega
+            // If there is no space, add the letter to the beginning of currentWord
+            // This will automatically reverse the word
             currentWord = str[i] + currentWord;
         } else {
-            // Agar space mil gaya, toh jo word abhi tak ulta hua hai use result mein dalo
+            // If a space is found, add the word that has been reversed so far to the result.
             result += currentWord + " ";
             currentWord = ""; // Agle word ke liye khali kar do
         }
     }
-
-    // Aakhri word ke baad koi space nahi hota, isliye loop khatam hone ke baad 
-    // bacha hua aakhri reversed word bhi result mein jodna zaroori hai
+    // There is no space after the last word, so after the loop finishes,
+    // it is necessary to add the remaining reversed word to the result as well.
     result += currentWord;
 
     return result;
 }
-
 // Testing
 const originalStr = "I am human";
 const output = reverseWordsKeepSpaces(originalStr);
