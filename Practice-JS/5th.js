@@ -3,8 +3,8 @@
 // =========================================================================
 
 function reverseWordsNested(str) {
-    let word = "";
-    let result = "";
+    let word = "";      //Temporary Container
+    let result = "";    //Final Result Container
 
     // Loop runs from 0 up to str.length (inclusive) to catch the last word
     for (let i = 0; i <= str.length; i++) {
