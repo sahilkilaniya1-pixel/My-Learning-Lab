@@ -40,8 +40,9 @@ const pricing_chart = { "Standard": 150, "Luxury": 250, "VIP": 400 };
 // Variables to store final selections
 let selectedCity = "", selectedCinema = "", selectedMovie = "", selectedSeat = "";
 
-
-console.log("        MOVIE BOOKING SYSTEM         ");
+console.log("=========================================");
+console.log("         MOVIE BOOKING SYSTEM            ");
+console.log("=========================================\n");
 
 // ==========================================
 // GROUP 2: INTERACTIVE PROCESS (BUILT-IN FUNCTIONS)
@@ -49,52 +50,52 @@ console.log("        MOVIE BOOKING SYSTEM         ");
 
 // STEP 1: City Selection
 const citiesList = Object.keys(booking_dataset);
-// .map() ka use karke humne har city ke naam ko uppercase/fancy banaya
+// Using .map() to format and display each city cleanly
 console.log(`Available Cities: ${citiesList.map(city => `📍 ${city}`).join(" | ")}`);
 
-rl.question("Enter City Name: ", (cityInput) => {
+rl.question("👉 Enter City Name: ", (cityInput) => {
     
-    // .find() builtin function se sahi city dhoondhi (Case-Insensitive)
+    // Using .find() built-in function for case-insensitive city matching
     const matchedCity = citiesList.find(c => c.toLowerCase() === cityInput.trim().toLowerCase());
 
     if (matchedCity) {
         selectedCity = matchedCity;
-        console.log(`City Confirmed: ${selectedCity}\n`);
+        console.log(`✅ City Confirmed: ${selectedCity}\n`);
 
         // STEP 2: Cinema Selection
         const cinemaList = Object.keys(booking_dataset[selectedCity]);
         console.log(`Available Cinemas: ${cinemaList.map(cinema => `🏢 ${cinema}`).join(" | ")}`);
         
-        rl.question("Enter Cinema Name: ", (cinemaInput) => {
+        rl.question("👉 Enter Cinema Name: ", (cinemaInput) => {
             
-            // .find() function used for cinema matching
+            // Using .find() for case-insensitive cinema matching
             const matchedCinema = cinemaList.find(c => c.toLowerCase() === cinemaInput.trim().toLowerCase());
 
             if (matchedCinema) {
                 selectedCinema = matchedCinema;
-                console.log(`Cinema Confirmed: ${selectedCinema}\n`);
+                console.log(`✅ Cinema Confirmed: ${selectedCinema}\n`);
 
                 // STEP 3: Movie Selection
                 const movieList = booking_dataset[selectedCity][selectedCinema];
                 console.log(`Now Showing: ${movieList.map(movie => `🎬 ${movie}`).join(" | ")}`);
                 
-                rl.question("Enter Movie Name: ", (movieInput) => {
+                rl.question("👉 Enter Movie Name: ", (movieInput) => {
                     
-                    // .find() function used for movie matching
+                    // Using .find() for case-insensitive movie matching
                     const matchedMovie = movieList.find(m => m.toLowerCase() === movieInput.trim().toLowerCase());
 
                     if (matchedMovie) {
                         selectedMovie = matchedMovie;
-                        console.log(`Movie Confirmed: ${selectedMovie}\n`);
+                        console.log(`✅ Movie Confirmed: ${selectedMovie}\n`);
 
                         // STEP 4: Seat Selection
                         const seatList = Object.keys(pricing_chart);
-                        // .map() se seat aur uski price ko ek sath sundar format mein dikhaya
+                        // Using .map() to format seat types alongside their pricing dynamically
                         console.log(`Seat Options: ${seatList.map(seat => `${seat} (₹${pricing_chart[seat]})`).join(" | ")}`);
                         
-                        rl.question("Enter Seat Type: ", (seatInput) => {
+                        rl.question("👉 Enter Seat Type: ", (seatInput) => {
                             
-                            // .find() function used for seat matching
+                            // Using .find() for case-insensitive seat matching
                             const matchedSeat = seatList.find(s => s.toLowerCase() === seatInput.trim().toLowerCase());
 
                             if (matchedSeat) {
@@ -103,25 +104,25 @@ rl.question("Enter City Name: ", (cityInput) => {
                                 // GROUP 3: FINAL OUTPUT
                                 printTicket(pricing_chart[selectedSeat]);
                             } else {
-                                console.log("Error: Invalid seat type! Booking failed.");
+                                console.log("❌ Error: Invalid seat type! Booking failed.");
                                 rl.close();
                             }
                         });
 
                     } else {
-                        console.log("Error: Movie not found in this cinema! Booking failed.");
+                        console.log("❌ Error: Movie not found in this cinema! Booking failed.");
                         rl.close();
                     }
                 });
 
             } else {
-                console.log("Error: Cinema not found! Booking failed.");
+                console.log("❌ Error: Cinema not found! Booking failed.");
                 rl.close();
             }
         });
 
     } else {
-        console.log("Error: Service not available in this city! Booking failed.");
+        console.log("❌ Error: Service not available in this city! Booking failed.");
         rl.close();
     }
 });
@@ -131,12 +132,12 @@ rl.question("Enter City Name: ", (cityInput) => {
 // ==========================================
 function printTicket(finalPrice) {
     console.log("\n-------------------------------------------");
-    console.log("TICKET BOOKING SUCCESSFUL! ");
-    console.log(`City:       ${selectedCity}`);
-    console.log(`Cinema:     ${selectedCinema}`);
-    console.log(`Movie:      ${selectedMovie}`);
-    console.log(`Seat Type:  ${selectedSeat}`);
-    console.log(`Total Paid: ₹${finalPrice}`);
+    console.log("🎉 TICKET BOOKING SUCCESSFUL! 🎉");
+    console.log(`📍 City:       ${selectedCity}`);
+    console.log(`🏢 Cinema:     ${selectedCinema}`);
+    console.log(`🎬 Movie:      ${selectedMovie}`);
+    console.log(`💺 Seat Type:  ${selectedSeat}`);
+    console.log(`💰 Total Paid: ₹${finalPrice}`);
     console.log("-------------------------------------------");
     rl.close();
 }
