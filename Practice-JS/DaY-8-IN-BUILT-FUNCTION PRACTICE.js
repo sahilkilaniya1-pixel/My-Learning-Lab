@@ -40,9 +40,7 @@ const pricing_chart = { "Standard": 150, "Luxury": 250, "VIP": 400 };
 // Variables to store final selections
 let selectedCity = "", selectedCinema = "", selectedMovie = "", selectedSeat = "";
 
-console.log("=========================================");
 console.log("         MOVIE BOOKING SYSTEM            ");
-console.log("=========================================\n");
 
 // ==========================================
 // GROUP 2: INTERACTIVE PROCESS (BUILT-IN FUNCTIONS)
@@ -60,40 +58,40 @@ rl.question("👉 Enter City Name: ", (cityInput) => {
 
     if (matchedCity) {
         selectedCity = matchedCity;
-        console.log(`✅ City Confirmed: ${selectedCity}\n`);
+        console.log(`City Confirmed: ${selectedCity}\n`);
 
         // STEP 2: Cinema Selection
         const cinemaList = Object.keys(booking_dataset[selectedCity]);
         console.log(`Available Cinemas: ${cinemaList.map(cinema => `🏢 ${cinema}`).join(" | ")}`);
         
-        rl.question("👉 Enter Cinema Name: ", (cinemaInput) => {
+        rl.question("Enter Cinema Name: ", (cinemaInput) => {
             
             // Using .find() for case-insensitive cinema matching
             const matchedCinema = cinemaList.find(c => c.toLowerCase() === cinemaInput.trim().toLowerCase());
 
             if (matchedCinema) {
                 selectedCinema = matchedCinema;
-                console.log(`✅ Cinema Confirmed: ${selectedCinema}\n`);
+                console.log(`Cinema Confirmed: ${selectedCinema}\n`);
 
                 // STEP 3: Movie Selection
                 const movieList = booking_dataset[selectedCity][selectedCinema];
                 console.log(`Now Showing: ${movieList.map(movie => `🎬 ${movie}`).join(" | ")}`);
                 
-                rl.question("👉 Enter Movie Name: ", (movieInput) => {
+                rl.question("Enter Movie Name: ", (movieInput) => {
                     
                     // Using .find() for case-insensitive movie matching
                     const matchedMovie = movieList.find(m => m.toLowerCase() === movieInput.trim().toLowerCase());
 
                     if (matchedMovie) {
                         selectedMovie = matchedMovie;
-                        console.log(`✅ Movie Confirmed: ${selectedMovie}\n`);
+                        console.log(`Movie Confirmed: ${selectedMovie}\n`);
 
                         // STEP 4: Seat Selection
                         const seatList = Object.keys(pricing_chart);
                         // Using .map() to format seat types alongside their pricing dynamically
                         console.log(`Seat Options: ${seatList.map(seat => `${seat} (₹${pricing_chart[seat]})`).join(" | ")}`);
                         
-                        rl.question("👉 Enter Seat Type: ", (seatInput) => {
+                        rl.question("Enter Seat Type: ", (seatInput) => {
                             
                             // Using .find() for case-insensitive seat matching
                             const matchedSeat = seatList.find(s => s.toLowerCase() === seatInput.trim().toLowerCase());
@@ -104,19 +102,19 @@ rl.question("👉 Enter City Name: ", (cityInput) => {
                                 // GROUP 3: FINAL OUTPUT
                                 printTicket(pricing_chart[selectedSeat]);
                             } else {
-                                console.log("❌ Error: Invalid seat type! Booking failed.");
+                                console.log("Error: Invalid seat type! Booking failed.");
                                 rl.close();
                             }
                         });
 
                     } else {
-                        console.log("❌ Error: Movie not found in this cinema! Booking failed.");
+                        console.log("Error: Movie not found in this cinema! Booking failed.");
                         rl.close();
                     }
                 });
 
             } else {
-                console.log("❌ Error: Cinema not found! Booking failed.");
+                console.log("Error: Cinema not found! Booking failed.");
                 rl.close();
             }
         });
@@ -132,12 +130,12 @@ rl.question("👉 Enter City Name: ", (cityInput) => {
 // ==========================================
 function printTicket(finalPrice) {
     console.log("\n-------------------------------------------");
-    console.log("🎉 TICKET BOOKING SUCCESSFUL! 🎉");
-    console.log(`📍 City:       ${selectedCity}`);
-    console.log(`🏢 Cinema:     ${selectedCinema}`);
-    console.log(`🎬 Movie:      ${selectedMovie}`);
-    console.log(`💺 Seat Type:  ${selectedSeat}`);
-    console.log(`💰 Total Paid: ₹${finalPrice}`);
+    console.log("TICKET BOOKING SUCCESSFUL! 🎉");
+    console.log(`City:       ${selectedCity}`);
+    console.log(`Cinema:     ${selectedCinema}`);
+    console.log(`Movie:      ${selectedMovie}`);
+    console.log(`Seat Type:  ${selectedSeat}`);
+    console.log(`Total Paid: ₹${finalPrice}`);
     console.log("-------------------------------------------");
     rl.close();
 }
