@@ -49,10 +49,10 @@ console.log("         MOVIE BOOKING SYSTEM            ");
 // STEP 1: City Selection
 const citiesList = Object.keys(booking_dataset);
 // Using .map() to format and display each city cleanly
-console.log(`Available Cities: ${citiesList.map(city => `📍 ${city}`).join(" | ")}`);
+console.log(`Available Cities: ${citiesList.map(city => ` ${city}`).join(" | ")}`);
 
-rl.question("👉 Enter City Name: ", (cityInput) => {
-    
+rl.question(" Enter City Name: ", (cityInput) => {
+
     // Using .find() built-in function for case-insensitive city matching
     const matchedCity = citiesList.find(c => c.toLowerCase() === cityInput.trim().toLowerCase());
 
@@ -63,9 +63,9 @@ rl.question("👉 Enter City Name: ", (cityInput) => {
         // STEP 2: Cinema Selection
         const cinemaList = Object.keys(booking_dataset[selectedCity]);
         console.log(`Available Cinemas: ${cinemaList.map(cinema => `🏢 ${cinema}`).join(" | ")}`);
-        
+
         rl.question("Enter Cinema Name: ", (cinemaInput) => {
-            
+
             // Using .find() for case-insensitive cinema matching
             const matchedCinema = cinemaList.find(c => c.toLowerCase() === cinemaInput.trim().toLowerCase());
 
@@ -76,9 +76,9 @@ rl.question("👉 Enter City Name: ", (cityInput) => {
                 // STEP 3: Movie Selection
                 const movieList = booking_dataset[selectedCity][selectedCinema];
                 console.log(`Now Showing: ${movieList.map(movie => `🎬 ${movie}`).join(" | ")}`);
-                
+
                 rl.question("Enter Movie Name: ", (movieInput) => {
-                    
+
                     // Using .find() for case-insensitive movie matching
                     const matchedMovie = movieList.find(m => m.toLowerCase() === movieInput.trim().toLowerCase());
 
@@ -90,15 +90,15 @@ rl.question("👉 Enter City Name: ", (cityInput) => {
                         const seatList = Object.keys(pricing_chart);
                         // Using .map() to format seat types alongside their pricing dynamically
                         console.log(`Seat Options: ${seatList.map(seat => `${seat} (₹${pricing_chart[seat]})`).join(" | ")}`);
-                        
+
                         rl.question("Enter Seat Type: ", (seatInput) => {
-                            
+
                             // Using .find() for case-insensitive seat matching
                             const matchedSeat = seatList.find(s => s.toLowerCase() === seatInput.trim().toLowerCase());
 
                             if (matchedSeat) {
                                 selectedSeat = matchedSeat;
-                                
+
                                 // GROUP 3: FINAL OUTPUT
                                 printTicket(pricing_chart[selectedSeat]);
                             } else {
@@ -120,7 +120,7 @@ rl.question("👉 Enter City Name: ", (cityInput) => {
         });
 
     } else {
-        console.log("❌ Error: Service not available in this city! Booking failed.");
+        console.log(" Error: Service not available in this city! Booking failed.");
         rl.close();
     }
 });
