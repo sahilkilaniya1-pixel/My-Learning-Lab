@@ -40,7 +40,7 @@ const pricing_chart = { "Standard": 150, "Luxury": 250, "VIP": 400 };
 // Variables to store final selections
 let selectedCity = "", selectedCinema = "", selectedMovie = "", selectedSeat = "";
 
-console.log("         MOVIE BOOKING SYSTEM            ");
+console.log(" WELCOME TO THE MOVIE BOOKING SYSTEM ");
 
 // ==========================================
 // GROUP 2: INTERACTIVE PROCESS (BUILT-IN FUNCTIONS)
