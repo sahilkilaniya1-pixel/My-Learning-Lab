@@ -62,7 +62,7 @@ rl.question(" Enter City Name: ", (cityInput) => {
 
         // STEP 2: Cinema Selection
         const cinemaList = Object.keys(booking_dataset[selectedCity]);
-        console.log(`Available Cinemas: ${cinemaList.map(cinema => `🏢 ${cinema}`).join(" | ")}`);
+        console.log(`Available Cinemas: ${cinemaList.map(cinema => `${cinema}`).join(" | ")}`);
 
         rl.question("Enter Cinema Name: ", (cinemaInput) => {
 
@@ -75,7 +75,7 @@ rl.question(" Enter City Name: ", (cityInput) => {
 
                 // STEP 3: Movie Selection
                 const movieList = booking_dataset[selectedCity][selectedCinema];
-                console.log(`Now Showing: ${movieList.map(movie => `🎬 ${movie}`).join(" | ")}`);
+                console.log(`Now Showing: ${movieList.map(movie => `${movie}`).join(" | ")}`);
 
                 rl.question("Enter Movie Name: ", (movieInput) => {
 
