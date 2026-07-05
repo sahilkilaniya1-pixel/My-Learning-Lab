@@ -198,3 +198,5 @@ console.log("Original Array:           [1, 2, 3, 4, 5]");
 console.log("Rotated Array (Loop):    ", rotateArray([1, 2, 3, 4, 5]));       // Output: [5, 1, 2, 3, 4]
 console.log("Rotated Array (Modern):  ", rotateArrayModern([1, 2, 3, 4, 5])); // Output: [5, 1, 2, 3, 4]
 >>>>>>> 6e49059 (DaY-10-Update)
+
+
