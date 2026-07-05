@@ -1,5 +1,5 @@
 // =========================================================================
-// JAVASCRIPT FOUNDATION: PRACTICE SHEET (LEVEL 1 & LEVEL 2)
+// JAVASCRIPT FOUNDATION: PRACTICE SHEET (LEVEL 1, LEVEL 2 & LEVEL 3)
 // =========================================================================
 
 // =========================================================================
@@ -24,7 +24,7 @@ function findCountOccurrences(arr, target) {
         }
     }
     
-    return count; // FIXED: Moved outside the loop to ensure the entire array is scanned
+    return count; // Verified: Outside the loop to ensure the entire array is scanned
 }
 
 console.log("--- Level 1: Count Occurrences Demo ---");
@@ -64,9 +64,59 @@ console.log("Output using Loop:", removeVowelsLoop("hello world")); // Output: "
 
 
 // --- Method 2: Modern Regex Approach (1-Line Shortcut) ---
-// Useful for showing students how senior developers handle string replacement efficiently
 let originalStr = "hello world";
 let cleanedStr = originalStr.replace(/[aeiouAEIOU]/g, ""); 
 
 console.log("--- Level 2: Remove Vowels (Method 2) ---");
 console.log("Output using Regex:", cleanedStr); // Output: "hll wrld"
+console.log("\n");
+
+
+// =========================================================================
+// LEVEL 3: ADVANCED-INTERMEDIATE (Array Deduplication)
+// =========================================================================
+
+/**
+ * 🎯 QUESTION 3: Find Unique Numbers (Remove Duplicates)
+ * * Task: Create a function that takes an array containing duplicate numbers 
+ * and returns a new array with all the duplicate values removed.
+ * * Input:  [1, 2, 3, 2, 4, 1, 5]
+ * Output: [1, 2, 3, 4, 5]
+ */
+
+// --- Method 1: Nested Loops Approach (No Built-in Methods Shortcut) ---
+function findUniqueNumbers(arr) {
+    let uniqueNumbers = [];
+    
+    for (let i = 0; i < arr.length; i++) {
+        let isUnique = true;
+        
+        // Check if the current element already exists in our uniqueNumbers array
+        for (let j = 0; j < uniqueNumbers.length; j++) {
+            if (arr[i] === uniqueNumbers[j]) {
+                isUnique = false; // Duplicate found!
+                break; // Stop checking further for this element
+            }
+        }
+        
+        // If no duplicate was found, safely push it to our unique collection
+        if (isUnique) {
+            uniqueNumbers.push(arr[i]);
+        }
+    }
+    return uniqueNumbers;
+}
+
+console.log("--- Level 3: Find Unique Numbers (Method 1) ---");
+console.log("Unique Numbers (Loops):", findUniqueNumbers([1, 2, 3, 2, 4, 1, 5])); // Output: [1, 2, 3, 4, 5]
+
+
+// --- Method 2: Modern ES6 Set Approach (1-Line Shortcut) ---
+// Great for teaching students how to instantly wipe out duplicates using JS data structures
+function findUniqueNumbersModern(arr) {
+    // A 'Set' only stores unique values automatically. We use spread operator [...] to convert it back to an array.
+    return [...new Set(arr)];
+}
+
+console.log("--- Level 3: Find Unique Numbers (Method 2) ---");
+console.log("Unique Numbers (Set):  ", findUniqueNumbersModern([1, 2, 3, 2, 4, 1, 5])); // Output: [1, 2, 3, 4, 5]
