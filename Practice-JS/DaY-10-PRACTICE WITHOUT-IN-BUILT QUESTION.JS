@@ -35,7 +35,6 @@ console.log("Index of 50:", indexResult1); // Expected Output: 4
 
 let indexResult2 = findIndex([10, 20, 30, 40, 50], 99);
 console.log("Index of 99:", indexResult2); // Expected Output: -1 (Not found)
-console.log("\n-------------------------------------------");
 
 
 // =========================================================================
@@ -70,9 +69,8 @@ const mergeArrays = (arr1, arr2) => {
 const mergeArraysModern = (arr1, arr2) => [...arr1, ...arr2];
 
 console.log("--- Level 2: Merge Arrays Demo ---");
-console.log(mergeArrays([1, 2], [3, 4, 5]));      // Output: [1, 2, 3, 4, 5]
-console.log(mergeArraysModern([1, 2], [3, 4, 5]));// Output: [1, 2, 3, 4, 5]
-console.log("\n-------------------------------------------");
+console.log("Merged (Method 1 - Loop):  ", mergeArrays([1, 2], [3, 4, 5]));      // Output: [1, 2, 3, 4, 5]
+console.log("Merged (Method 2 - Spread):", mergeArraysModern([1, 2], [3, 4, 5]));// Output: [1, 2, 3, 4, 5]
 
 
 // =========================================================================
@@ -105,9 +103,8 @@ const isPalindrome = (str) => {
 };
 
 console.log("--- Level 3: Is Palindrome Demo ---");
-console.log(isPalindrome("racecar")); // Expected Output: true
-console.log(isPalindrome("Hello"));   // Expected Output: false
-console.log("\n-------------------------------------------");
+console.log("Is 'racecar' a Palindrome?:", isPalindrome("racecar")); // Expected Output: true
+console.log("Is 'Hello' a Palindrome?:  ", isPalindrome("Hello"));   // Expected Output: false
 
 
 // =========================================================================
@@ -122,7 +119,6 @@ console.log("\n-------------------------------------------");
  * Output: [2, 3] (Because 2 and 3 are repeated)
  */
 
-// --- Method 1: Nested Loops Approach (No Built-in Helpers) ---
 function findDuplicates(arr) {
     let duplicates = []; // Container to store duplicate items
     
@@ -152,14 +148,53 @@ function findDuplicates(arr) {
     return duplicates;
 }
 
-// --- Method 2: Modern Filter & IndexOf Shortcut Approach ---
-function findDuplicatesModern(arr) {
-    // Keeps items where the first index of occurrence doesn't match the current index, 
-    // and filters down to keep unique collection of repeats.
-    return arr.filter((item, index) => arr.indexOf(item) !== index && arr.lastIndexOf(item) === index);
+console.log("--- Level 4: Find Duplicates Demo ---");
+console.log("Duplicate Elements: ", findDuplicates([1, 2, 3, 2, 4, 3, 5])); // Output: [2, 3]
+
+
+// =========================================================================
+// LEVEL 5: EXPERT (Array Rotation Challenges)
+// =========================================================================
+
+/**
+ * 🎯 QUESTION 5: Rotate Array Right by One Position
+ * * Task: Create a function that shifts all elements of an array to the right 
+ * by one position. The last element of the array must move to the very front.
+ * Do not use built-in heavy array mutating helper configurations.
+ * * * Input:  [1, 2, 3, 4, 5]
+ * Output: [5, 1, 2, 3, 4]
+ */
+
+// --- Method 1: Manual Index Shifting Loop Approach ---
+function rotateArray(arr) {
+    // Safety Check: If the array is empty or has only one element, no rotation is needed
+    if (arr.length <= 1) return arr;
+
+    let rotated = [];
+    
+    // Step 1: Assign the last element of the original array to the first index of the new array
+    rotated[0] = arr[arr.length - 1];
+    
+    // Step 2: Traverse through the rest of the elements and shift them one spot right
+    for (let i = 0; i < arr.length - 1; i++) {
+        rotated[i + 1] = arr[i];
+    }
+    return rotated;
 }
 
+<<<<<<< HEAD
 console.log("--- Level 4: Find Duplicates Demo ---");
 console.log(findDuplicates([1, 2, 3, 2, 4, 3, 5]));       // Output: [2, 3]
 console.log(findDuplicatesModern([1, 2, 3, 2, 4, 3, 5])); // Output: [2, 3]
 console.log("\n-------------------------------------------");
+=======
+// --- Method 2: Modern ES6 Destructuring Approach ---
+const rotateArrayModern = (arr) => {
+    if (arr.length <= 1) return arr;
+    let copy = [...arr];
+    return [copy.pop(), ...copy];
+};
+console.log("Original Array:           [1, 2, 3, 4, 5]");
+console.log("Rotated Array (Loop):    ", rotateArray([1, 2, 3, 4, 5]));       // Output: [5, 1, 2, 3, 4]
+console.log("Rotated Array (Modern):  ", rotateArrayModern([1, 2, 3, 4, 5])); // Output: [5, 1, 2, 3, 4]
+>>>>>>> 6e49059 (DaY-10-Update)
