@@ -182,12 +182,12 @@ function rotateArray(arr) {
     return rotated;
 }
 
-<<<<<<< HEAD
+
 console.log("--- Level 4: Find Duplicates Demo ---");
 console.log(findDuplicates([1, 2, 3, 2, 4, 3, 5]));       // Output: [2, 3]
 console.log(findDuplicatesModern([1, 2, 3, 2, 4, 3, 5])); // Output: [2, 3]
 console.log("\n-------------------------------------------");
-=======
+
 // --- Method 2: Modern ES6 Destructuring Approach ---
 const rotateArrayModern = (arr) => {
     if (arr.length <= 1) return arr;
@@ -197,6 +197,5 @@ const rotateArrayModern = (arr) => {
 console.log("Original Array:           [1, 2, 3, 4, 5]");
 console.log("Rotated Array (Loop):    ", rotateArray([1, 2, 3, 4, 5]));       // Output: [5, 1, 2, 3, 4]
 console.log("Rotated Array (Modern):  ", rotateArrayModern([1, 2, 3, 4, 5])); // Output: [5, 1, 2, 3, 4]
->>>>>>> 6e49059 (DaY-10-Update)
 
 
