@@ -17,5 +17,5 @@ A powerful command-line interface (CLI) dashboard built with Python that tracks 
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/finpy-portfolio-tracker.git](https://github.com/YOUR_USERNAME/finpy-portfolio-tracker.git)
+   git clone https://github.com/sahilkilaniya1-pixel/finpy-portfolio-tracker.git
    cd finpy-portfolio-tracker
