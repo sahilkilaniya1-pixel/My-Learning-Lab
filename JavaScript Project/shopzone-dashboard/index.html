@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopZone | Advanced Product Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🛒 ShopZone</h1>
+        <div>Cart Items: <span id="cart-count">0</span></div>
+    </header>
+
+    <main class="main-container">
+        <section class="controls">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="fitness">Fitness</option>
+            </select>
+        </section>
+
+        <section class="product-section">
+            <div class="product-grid" id="product-grid"></div>
+        </section>
+
+        <aside class="cart-section">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <button style="background-color: var(--success-color); margin-top: 1rem;" onclick="checkout()">
+                Proceed to Checkout
+            </button>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

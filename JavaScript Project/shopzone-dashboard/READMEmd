@@ -1,0 +1,14 @@
+# ShopZone - Dynamic E-Commerce Product Dashboard
+
+An interactive, responsive single-page Product Catalog and Shopping Cart dashboard built using pure frontend technologies.
+
+## 🚀 Features
+- **Dynamic Content Injection:** Content is fully driven by a mock data array through JS.
+- **Advanced State Management:** State persistence using `localStorage` to retain cart items across page updates.
+- **Modern Layout Engines:** Utilizes CSS Grid and Flexbox for complete responsive device mapping.
+- **Calculations Engine:** Leverages optimized functional array methods like `.filter()` and `.reduce()`.
+
+## 📂 Directory Structure
+- `index.html` - Structured application framework.
+- `style.css` - Component styling rules and responsive layout breakouts.
+- `script.js` - Search filter algorithmic processes and state tracking logic.
