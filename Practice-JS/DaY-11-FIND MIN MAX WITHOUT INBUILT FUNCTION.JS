@@ -161,3 +161,142 @@ console.log("--- Pattern 4: Palindrome Check Demo ---");
 console.log("Is 'radar' a Palindrome?:", isPalindrome("radar")); // Expected Output: true
 console.log("Is 'hello' a Palindrome?:", isPalindrome("hello")); // Expected Output: false
 console.log("\n-------------------------------------------");
+
+
+// =========================================================================
+// PATTERN 5: MULTI-POINTER MERGING (Merge Sorted Arrays)
+// =========================================================================
+
+/**
+ * 🎯 QUESTION 5: Merge Two Sorted Arrays
+ * * Task: Given two arrays that are already sorted in ascending order, merge them 
+ * into a single unified array that remains completely sorted.
+ * Do not use built-in helpers like .concat() or .sort().
+ * * * Core Logic: Using a sorted array merging strategy (similar to Merge Sort), initialize 
+ * two pointers ('i' for arr1, 'j' for arr2) at index 0. Compare elements at both pointers, 
+ * insert the smaller value into the 'merged' destination container, and advance that respective pointer.
+ * Once one array exhausts, flush all remaining items from the alternate array into the final structure.
+ * * * Input:  [1, 3, 5], [2, 4, 6]
+ * * Output: [1, 2, 3, 4, 5, 6]
+ */
+
+function mergeSortedArrays(arr1, arr2) {
+    let merged = [];
+    let i = 0; // Iteration track pointer for arr1
+    let j = 0; // Iteration track pointer for arr2
+
+    // Process both arrays simultaneously until one structural bound is exhausted
+    while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] < arr2[j]) {
+            merged[merged.length] = arr1[i]; // Insert value at structural endpoint
+            i++; // Move pointer forward
+        } else {
+            merged[merged.length] = arr2[j];
+            j++; // Move pointer forward
+        }
+    }
+
+    // Append remaining elements of arr1 if arr2 finishes early
+    while (i < arr1.length) {
+        merged[merged.length] = arr1[i];
+        i++;
+    }
+
+    // Append remaining elements of arr2 if arr1 finishes early
+    while (j < arr2.length) {
+        merged[merged.length] = arr2[j];
+        j++;
+    }
+
+    return merged;
+}
+
+console.log("--- Pattern 5: Merge Sorted Arrays Demo ---");
+console.log("Merged Result:", mergeSortedArrays([1, 3, 5], [2, 4, 6]));
+// Expected Output: [1, 2, 3, 4, 5, 6]
+console.log("\n-------------------------------------------");
+
+
+// =========================================================================
+// PATTERN 6: STRING COMPRESSION / LOOK-AHEAD SEGMENTATION
+// =========================================================================
+
+/**
+ * 🎯 QUESTION 6: String Compression using Run-Length Encoding
+ * * Task: Design a basic string compression algorithm using the counts of repeated characters.
+ * For example, "aabcccccaaa" transforms to "a2b1c5a3". If the compressed string length is 
+ * equal to or greater than the original string length, return the original string. Do not use built-in string methods.
+ * * * Core Logic: Run a loop through the string while evaluating consecutive sequences. Employ a look-ahead condition 
+ * checking if str[i] matches str[i + 1]. If it evaluates to true, increment our character tracking counter. 
+ * If it evaluates to false, append the character and its frequency to our result, then reset the frequency tracking state back to 1.
+ * * * Input:  "aabcccccaaa" -> Output: "a2b1c5a3"
+ * * Input:  "abc"         -> Output: "abc" (Since "a1b1c1" is longer than original text tracking bounds)
+ */
+
+function compressString(str) {
+    if (str.length === 0) return str;
+
+    let compressed = "";
+    let count = 1;
+
+    for (let i = 0; i < str.length; i++) {
+        // Look-ahead check: compare current character with the next element boundary
+        if (str[i] === str[i + 1]) {
+            count++;
+        } else {
+            // Sequence boundary broken: flush current state chunk data
+            compressed += str[i] + count;
+            count = 1; // Reset matching counter tracking state
+        }
+    }
+
+    // Optimization Check: If compression does not improve length bounds, return original data
+    if (compressed.length >= str.length) {
+        return str;
+    }
+
+    return compressed;
+}
+
+console.log("--- Pattern 6: String Compression Demo ---");
+console.log("Compressed 'aabcccccaaa':", compressString("aabcccccaaa")); // Expected Output: "a2b1c5a3"
+console.log("Compressed 'abc':        ", compressString("abc"));         // Expected Output: "abc"
+console.log("\n-------------------------------------------");
+
+
+// =========================================================================
+// PATTERN 7: MATHEMATICAL INFERENCE (Arithmetic Progression Sum Optimization)
+// =========================================================================
+
+/**
+ * 🎯 QUESTION 7: Find the Missing Number
+ * * Task: You are given an array containing an unsorted sequence of distinct numbers 
+ * ranging from 1 to 'n'. However, one exact number is missing from this range sequence.
+ * Deduce the missing number without sorting or utilizing array search helpers.
+ * * * Core Logic: Instead of heavy loops or hash table mapping strategies, utilize an Arithmetic Progression formula. 
+ * Calculate the true mathematical sum total that should exist from 1 to 'n' using: 
+ * $$TotalSum = \frac{n \times (n + 1)}{2}$$
+ * Then, calculate the actual accumulated sum of all values inside the array manually. 
+ * The mathematical difference between TotalSum and ArraySum instantly isolates the missing element.
+ * * * Input:  [1, 2, 4, 5], n = 5
+ * * Output: 3
+ */
+
+function findMissingNumber(arr, n) {
+    // 1. Calculate target theoretical summation baseline
+    let totalSum = (n * (n + 1)) / 2;
+
+    // 2. Accumulate the absolute physical numerical values present
+    let arraySum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        arraySum += arr[i];
+    }
+
+    // 3. Absolute delta reveals the unmapped isolated slot
+    return totalSum - arraySum;
+}
+
+console.log("--- Pattern 7: Find Missing Number Demo ---");
+console.log("Missing Element:", findMissingNumber([1, 2, 4, 5], 5)); 
+// Expected Output: 3
+console.log("\n-------------------------------------------");
