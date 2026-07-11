@@ -118,3 +118,166 @@ console.log("16b. Intact Original Scores:", rawScores);         // EXPECTED OUTP
   Line-by-Line Explanation:
   - .toSorted(): Implicitly clones the collection under the hood, uses the callback comparator function logic to balance elements, and passes back a secure independent sorted copy.
 */
+
+// =========================================================================
+// 17. Adding/Removing from the End (.push() & .pop())
+// =========================================================================
+// What it does: These two methods interact exclusively with the very end 
+// of an array. Both methods directly mutate the original array structure.
+
+let structuralFruits = ["Apple", "Banana"];
+
+// Adding to the end
+structuralFruits.push("Mango"); 
+console.log("17a. Array after .push():", structuralFruits);
+// EXPECTED OUTPUT: ["Apple", "Banana", "Mango"]
+
+// Removing from the end
+let poppedFruit = structuralFruits.pop(); 
+console.log("17b. Array after .pop():", structuralFruits);
+console.log("17c. Extracted Element (.pop value):", poppedFruit);
+// EXPECTED OUTPUTS:
+// Array after .pop(): ["Apple", "Banana"]
+// Extracted Element: "Mango"
+
+/*
+  Line-by-Line Explanation:
+  - .push("Mango"): Appends the specified string element directly onto the end of the collection.
+  - .pop(): Truncates the absolute final element from the collection, modifies the length property, and returns that isolated element.
+*/
+
+
+// =========================================================================
+// 18. Adding/Removing from the Start (.unshift() & .shift())
+// =========================================================================
+// What it does: These methods interact exclusively with the beginning of 
+// an array. Both methods directly mutate the original array and trigger index re-indexing.
+
+let processingTeam = ["Bob", "Charlie"];
+
+// Adding to the start
+processingTeam.unshift("Alice"); 
+console.log("18a. Array after .unshift():", processingTeam);
+// EXPECTED OUTPUT: ["Alice", "Bob", "Charlie"]
+
+// Removing from the start
+let shiftedPerson = processingTeam.shift(); 
+console.log("18b. Array after .shift():", processingTeam);
+console.log("18c. Extracted Element (.shift value):", shiftedPerson);
+// EXPECTED OUTPUTS:
+// Array after .shift(): ["Bob", "Charlie"]
+// Extracted Element: "Alice"
+
+/*
+  Line-by-Line Explanation:
+  - .unshift("Alice"): Prepends the string element to the beginning of the array, shifting all existing elements to a higher index.
+  - .shift(): Decouples the very first element at index 0, shifts all remaining elements down by one index position, and returns the removed element.
+*/
+
+
+// =========================================================================
+// 19. Cutting an Array Subset (.slice())
+// =========================================================================
+// What it does: It extracts a shallow copy of a portion of an array into 
+// a brand-new array object. It leaves the original source array completely untouched.
+
+const targetAnimals = ["Ant", "Bison", "Camel", "Duck", "Elephant"];
+
+// Slice from index 1 up to index 4 (end index is exclusive)
+let subArrayResult = targetAnimals.slice(1, 4);
+console.log("19a. Extracted Slice Array:", subArrayResult);
+console.log("19b. Base Source Array Check:", targetAnimals);
+// EXPECTED OUTPUTS:
+// Extracted Slice Array: ["Bison", "Camel", "Duck"]
+// Base Source Array Check: ["Ant", "Bison", "Camel", "Duck", "Elephant"]
+
+/*
+  Line-by-Line Explanation:
+  - .slice(1, 4): The first argument (1) determines the index to begin extractions ("Bison"). The second argument (4) specifies the end index marker; extraction halts right before this index location ("Elephant").
+*/
+
+
+// =========================================================================
+// 20. The Multi-Purpose Content Modifier (.splice())
+// =========================================================================
+// What it does: Known as the Swiss Army knife of arrays because it changes the 
+// contents of an array by removing existing elements, replacing elements, and/or 
+// adding new elements in place. This operation mutates the original reference data.
+
+const calendarMonths = ["Jan", "March", "April", "June"];
+
+// Action 1: Insert "Feb" at index position 1, deleting 0 elements
+calendarMonths.splice(1, 0, "Feb");
+console.log("20a. Splice Insertion Result:", calendarMonths);
+// EXPECTED OUTPUT: ["Jan", "Feb", "March", "April", "June"]
+
+// Action 2: Delete 1 element located precisely at index position 3 ("April")
+calendarMonths.splice(3, 1);
+console.log("20b. Splice Deletion Result:", calendarMonths);
+// EXPECTED OUTPUT: ["Jan", "Feb", "March", "June"]
+
+/*
+  Line-by-Line Explanation:
+  - .splice(index, deleteCount, item1, item2...): The first parameter dictates the insertion/deletion coordinates. The second parameter determines the deletion volume. Subsequent parameters represent new items being injected.
+*/
+
+
+// =========================================================================
+// 21. Merging Independent Arrays (.concat())
+// =========================================================================
+// What it does: It merges two or more arrays together. This method does 
+// not alter or mutate the existing arrays, but instead returns a brand-new combined array.
+
+const alphabetGroup1 = ["a", "b"];
+const alphabetGroup2 = ["c", "d"];
+
+const concatenationResult = alphabetGroup1.concat(alphabetGroup2);
+console.log("21. Merged Array Output:", concatenationResult);
+// EXPECTED OUTPUT: ["a", "b", "c", "d"]
+
+/*
+  Line-by-Line Explanation:
+  - .concat(): Generates a clean, brand-new instance array matching the length of both merged structures combined.
+  - Production Note: While modern developers often use the ES6 spread operator syntax `[...arr1, ...arr2]`, `.concat()` remains a standard approach.
+*/
+
+
+// =========================================================================
+// 22. Standard String Conversion (.toString())
+// =========================================================================
+// What it does: Returns a string representing the specified array and its elements. 
+// It works similarly to `.join(",")` by converting elements and gluing them with comma separators.
+
+const genericElements = [1, 2, "a", "b"];
+const stringifiedResult = genericElements.toString();
+
+console.log("22. Native toString Output:", stringifiedResult);
+// EXPECTED OUTPUT: "1,2,a,b"
+
+/*
+  Line-by-Line Explanation:
+  - .toString(): Automatically converts all elements inside the collection into a simple, flat string format separated exclusively by commas.
+*/
+
+
+// =========================================================================
+// 🏁 FINAL ARCHITECTURAL CLASSIFICATION
+// =========================================================================
+// Review this categorization mapping to understand the fundamental usage groups
+// of the 22 core array methods:
+/*
+  1. Searching Methods:
+     -> .find(), .findIndex(), .includes(), .some(), .every()
+
+  2. Transformation Methods:
+     -> .map(), .filter(), .reduce(), .flat(), .flatMap()
+
+  3. Sorting & Ordering:
+     -> .sort(), .toSorted(), .reverse(), .toReversed()
+
+  4. Mutating Operations (Add/Remove/Modify):
+     -> .push(), .pop(), .shift(), .unshift(), .splice(), .fill(), .copyWithin()
+
+  5. Utility & Conversion:
+     -> .join(), .split(), .slice(), .concat(), .toString()
+*/
