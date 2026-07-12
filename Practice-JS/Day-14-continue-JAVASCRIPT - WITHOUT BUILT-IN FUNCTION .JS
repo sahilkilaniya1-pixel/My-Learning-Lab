@@ -45,8 +45,8 @@ for (let i = 0; i < ascendingResult.length; i++) {
     }
   }
 }
-console.log("1. Ascending Sort Output:", ascendingResult);
-// EXPECTED OUTPUT: [0, 2, 2, 4, 6, 32, 56, 65, 65, 78, 78, 95]
+console.log(ascendingResult);
+// EXPECTED OUTPUT: [0, 2, 2, 4, 6, 32, 56, 65, 65, 78, 78, 95] 
 
 // Descending Order Implementation from scratch
 const descendingResult = cloneArray(numbersArray);
