@@ -185,8 +185,8 @@ const targetAnimals = ["Ant", "Bison", "Camel", "Duck", "Elephant"];
 
 // Slice from index 1 up to index 4 (end index is exclusive)
 let subArrayResult = targetAnimals.slice(1, 4);
-console.log("19a. Extracted Slice Array:", subArrayResult);
-console.log("19b. Base Source Array Check:", targetAnimals);
+console.log(subArrayResult);
+console.log(targetAnimals);
 // EXPECTED OUTPUTS:
 // Extracted Slice Array: ["Bison", "Camel", "Duck"]
 // Base Source Array Check: ["Ant", "Bison", "Camel", "Duck", "Elephant"]
