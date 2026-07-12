@@ -32,7 +32,7 @@ function questionOne() {
     // 3. Find the product of the smallest and biggest number
     let sortedInc = [...a].sort((x, y) => x - y);
     let multiplySmallestBiggest = sortedInc[0] * sortedInc[sortedInc.length - 1]; // First index * last index
-    console.log("Product of smallest and biggest:", multiplySmallestBiggest);
+    console.log(multiplySmallestBiggest);
     console.log("\n");
 }
 questionOne();
