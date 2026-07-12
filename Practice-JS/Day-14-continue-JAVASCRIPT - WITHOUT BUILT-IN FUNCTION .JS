@@ -187,7 +187,7 @@ for (let i = 0; i < usersDataset.length; i++) {
     break; // Satisfied upon detecting a single match
   }
 }
-console.log("10. Minor Presence Verification Check:", existenceEvaluation);
+console.log(existenceEvaluation);
 // EXPECTED OUTPUT: true
 
 /*
