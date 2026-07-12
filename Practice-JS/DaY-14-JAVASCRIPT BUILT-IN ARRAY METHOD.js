@@ -150,7 +150,7 @@ console.log(filteredSubset);
 
 const expenseList = [100, 250, 500, 80];
 const runningGrandTotal = expenseList.reduce((accumulator, current) => accumulator + current, 0);
-console.log("12. Cumulative Financial Aggregation Total:", runningGrandTotal);
+console.log(runningGrandTotal);
 // EXPECTED OUTPUT: 930
 
 /*
