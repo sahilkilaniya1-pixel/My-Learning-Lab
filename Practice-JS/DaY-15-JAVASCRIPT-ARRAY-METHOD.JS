@@ -157,13 +157,13 @@ let processingTeam = ["Bob", "Charlie"];
 
 // Adding to the start
 processingTeam.unshift("Alice"); 
-console.log("18a. Array after .unshift():", processingTeam);
+console.log(processingTeam);
 // EXPECTED OUTPUT: ["Alice", "Bob", "Charlie"]
 
 // Removing from the start
 let shiftedPerson = processingTeam.shift(); 
-console.log("18b. Array after .shift():", processingTeam);
-console.log("18c. Extracted Element (.shift value):", shiftedPerson);
+console.log(processingTeam);
+console.log(shiftedPerson);
 // EXPECTED OUTPUTS:
 // Array after .shift(): ["Bob", "Charlie"]
 // Extracted Element: "Alice"
