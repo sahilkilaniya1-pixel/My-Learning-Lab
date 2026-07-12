@@ -271,7 +271,7 @@ for (let i = 0; i < genericScores.length; i++) {
     break;
   }
 }
-console.log("14. First Matching Index Position:", targetIndexResult);
+console.log(targetIndexResult);
 // EXPECTED OUTPUT: 2
 
 /*
