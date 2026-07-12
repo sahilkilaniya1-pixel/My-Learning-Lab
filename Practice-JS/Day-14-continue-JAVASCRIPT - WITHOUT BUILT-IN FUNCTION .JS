@@ -206,7 +206,7 @@ for (let i = 0; i < usersDataset.length; i++) {
     filteredSubset[filteredSubset.length] = usersDataset[i];
   }
 }
-console.log("11. Filtered Active Users Array:", filteredSubset);
+console.log(filteredSubset);
 /* 
   EXPECTED OUTPUT:
   [
