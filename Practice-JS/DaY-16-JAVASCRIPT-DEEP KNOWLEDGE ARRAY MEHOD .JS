@@ -110,7 +110,7 @@ function questionFive() {
     // 3. Check if at least one user is under the age of 18
     // .some() returns true if AT LEAST ONE element passes the condition
     let hasMinor = users.some(user => user.age < 18);
-    console.log("Is there any user under 18?:", hasMinor);
+    console.log(hasMinor);
     console.log("\n");
 }
 questionFive();
