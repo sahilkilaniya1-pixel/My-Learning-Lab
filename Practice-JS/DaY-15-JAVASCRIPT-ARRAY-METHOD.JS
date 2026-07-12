@@ -251,7 +251,7 @@ console.log(concatenationResult);
 const genericElements = [1, 2, "a", "b"];
 const stringifiedResult = genericElements.toString();
 
-console.log("22. Native toString Output:", stringifiedResult);
+console.log(stringifiedResult);
 // EXPECTED OUTPUT: "1,2,a,b"
 
 /*
