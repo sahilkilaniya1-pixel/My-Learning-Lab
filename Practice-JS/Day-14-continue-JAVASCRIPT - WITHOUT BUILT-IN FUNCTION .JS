@@ -230,7 +230,7 @@ let runningGrandTotal = 0; // Explicit default starter state seed
 for (let i = 0; i < expenseList.length; i++) {
   runningGrandTotal += expenseList[i];
 }
-console.log("12. Cumulative Financial Aggregation Total:", runningGrandTotal);
+console.log(runningGrandTotal);
 // EXPECTED OUTPUT: 930
 
 /*
