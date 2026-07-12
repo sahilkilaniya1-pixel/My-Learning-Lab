@@ -208,7 +208,7 @@ const calendarMonths = ["Jan", "March", "April", "June"];
 
 // Action 1: Insert "Feb" at index position 1, deleting 0 elements
 calendarMonths.splice(1, 0, "Feb");
-console.log("20a. Splice Insertion Result:", calendarMonths);
+console.log(calendarMonths);
 // EXPECTED OUTPUT: ["Jan", "Feb", "March", "April", "June"]
 
 // Action 2: Delete 1 element located precisely at index position 3 ("April")
