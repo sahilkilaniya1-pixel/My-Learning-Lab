@@ -182,7 +182,7 @@ function handleArrayLike() {
     
     // Converting it into an authentic array using Array.from()
     let trueArray = Array.from(arguments);
-    console.log("Is it a true array after Array.from()?:", Array.isArray(trueArray));
+    console.log(Array.isArray(trueArray));
     
     // Now you can safely call array transformations
     let calculated = trueArray.map(v => v * 2);
