@@ -132,7 +132,7 @@ console.log(originalArray);
 let numericArray = [1, 2, 3];
 let newArrayCopy = numericArray.map(num => num * 10);
 console.log(numericArray);
-console.log("New Computed Array:", newArrayCopy);
+console.log(newArrayCopy);
 console.log("\n");
 
 
