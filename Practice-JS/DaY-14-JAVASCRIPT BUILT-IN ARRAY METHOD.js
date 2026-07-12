@@ -73,7 +73,7 @@ console.log(serializedString);
 // EXPECTED OUTPUT: "2,4,5,3,5,3,2,5,a,b"
 
 // String to Array Deserialization
-const stringSample = "Aayush";
+const stringSample = "sahil";
 const deserializedArray = stringSample.split("");
 console.log(deserializedArray);
 // EXPECTED OUTPUT: ['A', 'a', 'y', 'u', 's', 'h']
