@@ -131,7 +131,7 @@ console.log(originalArray);
 // Immutable methods do not affect the source; they generate fresh copies.
 let numericArray = [1, 2, 3];
 let newArrayCopy = numericArray.map(num => num * 10);
-console.log("Source Array (Safe):", numericArray);
+console.log(numericArray);
 console.log("New Computed Array:", newArrayCopy);
 console.log("\n");
 
