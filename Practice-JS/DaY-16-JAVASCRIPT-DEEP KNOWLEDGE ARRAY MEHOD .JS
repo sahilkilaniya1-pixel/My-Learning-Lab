@@ -81,7 +81,7 @@ function questionFour() {
 
     // To sort objects, we target their inner properties (x.marks and y.marks) inside the comparator function
     students.sort((x, y) => x.marks - y.marks); // Sorts students from lowest to highest marks
-    console.log("Students sorted by marks:", students);
+    console.log(students);
     console.log("\n");
 }
 questionFour();
