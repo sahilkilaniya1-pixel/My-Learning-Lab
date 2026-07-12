@@ -59,7 +59,7 @@ for (let i = 0; i < descendingResult.length; i++) {
     }
   }
 }
-console.log("2. Descending Sort Output:", descendingResult);
+console.log(descendingResult);
 // EXPECTED OUTPUT: [95, 78, 78, 65, 65, 56, 32, 6, 4, 2, 2, 0]
 
 /*
