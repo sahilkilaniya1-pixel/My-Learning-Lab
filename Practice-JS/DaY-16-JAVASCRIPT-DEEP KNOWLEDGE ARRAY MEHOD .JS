@@ -105,7 +105,7 @@ function questionFive() {
     // 2. Check if every user in the list is active
     // .every() returns true ONLY if the condition passes for all elements
     let isAllActive = users.every(user => user.isActive === true);
-    console.log("Is every user active?:", isAllActive);
+    console.log(isAllActive);
 
     // 3. Check if at least one user is under the age of 18
     // .some() returns true if AT LEAST ONE element passes the condition
