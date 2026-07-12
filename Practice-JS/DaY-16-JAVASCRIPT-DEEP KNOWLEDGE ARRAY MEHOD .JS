@@ -100,7 +100,7 @@ function questionFive() {
     // 1. Find the first user who is active and over the age of 18
     // .find() returns the VERY FIRST matching element and stops scanning
     let activeAdult = users.find(user => user.isActive === true && user.age > 18);
-    console.log("First active adult:", activeAdult);
+    console.log(activeAdult);
 
     // 2. Check if every user in the list is active
     // .every() returns true ONLY if the condition passes for all elements
