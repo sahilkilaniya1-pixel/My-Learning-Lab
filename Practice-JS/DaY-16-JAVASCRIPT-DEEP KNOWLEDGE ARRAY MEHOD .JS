@@ -186,7 +186,7 @@ function handleArrayLike() {
     
     // Now you can safely call array transformations
     let calculated = trueArray.map(v => v * 2);
-    console.log("Calculated values from transformed array-like object:", calculated);
+    console.log(calculated);
 }
 handleArrayLike(10, 20, 30);
 
