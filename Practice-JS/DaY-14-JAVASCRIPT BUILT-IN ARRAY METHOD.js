@@ -199,8 +199,8 @@ console.log(targetIndexResult);
 // =========================================================================
 
 const logisticsCart = ["Laptop", "Mouse", "Keyboard"];
-console.log("15. Includes 'Trimmer' Check:", logisticsCart.includes("Trimmer")); // EXPECTED OUTPUT: false
-console.log("16. Includes 'Mouse' Check:", logisticsCart.includes("Mouse"));     // EXPECTED OUTPUT: true
+console.log(logisticsCart.includes("Trimmer")); // EXPECTED OUTPUT: false
+console.log(logisticsCart.includes("Mouse"));     // EXPECTED OUTPUT: true
 
 /*
   Line-by-Line Explanation:
