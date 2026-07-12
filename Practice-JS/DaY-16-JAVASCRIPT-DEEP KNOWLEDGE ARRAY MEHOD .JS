@@ -22,7 +22,7 @@ function questionOne() {
     let increasing = [...a].sort((x, y) => x - y); // (x - y) sorts numbers from low to high
     let decreasing = [...a].sort((x, y) => y - x); // (y - x) sorts numbers from high to low
     console.log(increasing);
-    console.log("Decreasing:", decreasing);
+    console.log(decreasing);
 
     // 2. Find the product (multiply) of the two biggest numbers
     let sortedDesc = [...a].sort((x, y) => y - x);
