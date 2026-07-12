@@ -176,7 +176,7 @@ for (let i = 0; i < usersDataset.length; i++) {
     break; // Short circuit completely if an exception is encountered
   }
 }
-console.log("9. Absolute Global Active Status Check:", functionalSanityCheck);
+console.log(functionalSanityCheck);
 // EXPECTED OUTPUT: false
 
 // Replicating .some() functionality
