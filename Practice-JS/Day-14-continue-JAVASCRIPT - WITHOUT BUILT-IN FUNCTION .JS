@@ -97,7 +97,7 @@ for (let i = 1; i < numbersArray.length; i++) {
   if (numbersArray[i] > absoluteMax) absoluteMax = numbersArray[i];
 }
 const productOfExtremes = absoluteMin * absoluteMax;
-console.log("4. Product of Smallest & Largest Numbers:", productOfExtremes);
+console.log(productOfExtremes);
 // EXPECTED OUTPUT: 0 (Calculated via 0 * 95)
 
 /*
