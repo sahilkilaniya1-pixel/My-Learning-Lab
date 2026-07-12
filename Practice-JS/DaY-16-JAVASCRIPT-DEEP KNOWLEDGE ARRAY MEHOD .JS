@@ -62,7 +62,7 @@ function questionThree() {
     
     // .map() creates a brand new array by transforming every single element in the loop
     let lengths = names.map(name => name.length); 
-    console.log("Lengths of names:", lengths);
+    console.log(lengths);
     console.log("\n");
 }
 questionThree();
