@@ -186,7 +186,7 @@ fruits.forEach((fruit, index) => {
 
 const genericScores = [45, 72, 98, 60];
 const targetIndexResult = genericScores.findIndex(score => score >= 75);
-console.log("14. First Matching Index Position:", targetIndexResult);
+console.log(targetIndexResult);
 // EXPECTED OUTPUT: 2 (Points directly to the index location of 98)
 
 /*
