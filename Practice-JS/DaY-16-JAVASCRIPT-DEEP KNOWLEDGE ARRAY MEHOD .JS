@@ -178,7 +178,7 @@ console.log("\n");
 // Objects with indexed elements and a length property, but lacking array methods.
 function handleArrayLike() {
     // The 'arguments' object inside standard functions is an array-like object
-    console.log("Is 'arguments' a true array?:", Array.isArray(arguments));
+    console.log(Array.isArray(arguments));
     
     // Converting it into an authentic array using Array.from()
     let trueArray = Array.from(arguments);
