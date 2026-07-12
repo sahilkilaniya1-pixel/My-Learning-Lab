@@ -144,7 +144,7 @@ const transformationResult = [];
 for (let i = 0; i < namesList.length; i++) {
   transformationResult[transformationResult.length] = namesList[i].length;
 }
-console.log("7. Projection Map Output:", transformationResult);
+console.log(transformationResult);
 // EXPECTED OUTPUT: [6, 5, 6]
 
 /*
