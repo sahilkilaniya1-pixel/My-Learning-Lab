@@ -232,7 +232,7 @@ const alphabetGroup1 = ["a", "b"];
 const alphabetGroup2 = ["c", "d"];
 
 const concatenationResult = alphabetGroup1.concat(alphabetGroup2);
-console.log("21. Merged Array Output:", concatenationResult);
+console.log(concatenationResult);
 // EXPECTED OUTPUT: ["a", "b", "c", "d"]
 
 /*
