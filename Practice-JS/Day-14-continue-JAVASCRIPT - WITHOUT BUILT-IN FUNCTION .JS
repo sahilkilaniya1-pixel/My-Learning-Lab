@@ -127,7 +127,7 @@ const deserializedArray = [];
 for (let i = 0; i < stringSample.length; i++) {
   deserializedArray[deserializedArray.length] = stringSample[i];
 }
-console.log("6. String to Array Output:", deserializedArray);
+console.log(deserializedArray);
 // EXPECTED OUTPUT: ['A', 'a', 'y', 'u', 's', 'h']
 
 /*
