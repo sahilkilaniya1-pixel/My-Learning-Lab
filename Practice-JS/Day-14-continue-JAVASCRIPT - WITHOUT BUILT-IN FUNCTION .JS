@@ -86,7 +86,7 @@ for (let i = 0; i < numbersArray.length; i++) {
   }
 }
 const productOfTwoLargest = max1 * max2;
-console.log("3. Product of Two Largest Numbers:", productOfTwoLargest);
+console.log(productOfTwoLargest);
 // EXPECTED OUTPUT: 7410 (Calculated via 95 * 78)
 
 // Finding the absolute minimum and maximum element manually
