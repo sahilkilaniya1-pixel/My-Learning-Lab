@@ -126,7 +126,7 @@ console.log("=== RUNNING ADVANCED CORE CONCEPTS ===\n");
 // Mutable methods mutate (change) the original data structure.
 let originalArray = ["Apple", "Banana"];
 originalArray.push("Mango"); // Direct alteration
-console.log("Mutated Array:", originalArray);
+console.log(originalArray);
 
 // Immutable methods do not affect the source; they generate fresh copies.
 let numericArray = [1, 2, 3];
