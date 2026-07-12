@@ -149,7 +149,7 @@ let finalScoreSum = dashboardData
     .map(item => item.score)                 // Extracts scores -> [80, 70]
     .reduce((accum, curr) => accum + curr, 0); // Adds scores together -> 150
 
-console.log("Chaining Result (Total Active Scores):", finalScoreSum);
+console.log(finalScoreSum);
 console.log("\n");
 
 
@@ -164,7 +164,7 @@ console.log("\n");
 // --- 4. SPARSE ARRAYS (THE INTERVIEW TRAP) ---
 // Arrays containing empty slot boundaries.
 let sparseArr = [1, , , 4]; // Length is 4, but indices 1 and 2 are blank
-console.log("Sparse Array Length:", sparseArr.length);
+console.log(sparseArr.length);
 
 console.log("Iterating through Sparse Array:");
 sparseArr.forEach((element, index) => {
