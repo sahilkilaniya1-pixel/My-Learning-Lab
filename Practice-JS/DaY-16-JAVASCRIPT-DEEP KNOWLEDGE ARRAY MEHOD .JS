@@ -49,7 +49,7 @@ function questionTwo() {
     // 2. Convert string into an array
     let str = "Aayush";
     let stringToArray = str.split(""); // Splits the string at every character boundary
-    console.log("String to Array:", stringToArray);
+    console.log(stringToArray);
     console.log("\n");
 }
 questionTwo();
