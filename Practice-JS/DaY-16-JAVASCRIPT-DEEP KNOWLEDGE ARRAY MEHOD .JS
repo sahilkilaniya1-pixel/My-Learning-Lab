@@ -27,7 +27,7 @@ function questionOne() {
     // 2. Find the product (multiply) of the two biggest numbers
     let sortedDesc = [...a].sort((x, y) => y - x);
     let multiplyTwoBiggest = sortedDesc[0] * sortedDesc[1]; // Indices 0 and 1 hold the largest numbers
-    console.log("Product of two biggest numbers:", multiplyTwoBiggest);
+    console.log(multiplyTwoBiggest);
 
     // 3. Find the product of the smallest and biggest number
     let sortedInc = [...a].sort((x, y) => x - y);
