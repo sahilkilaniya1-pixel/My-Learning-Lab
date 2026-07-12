@@ -118,7 +118,7 @@ for (let i = 0; i < mixedArray.length; i++) {
     serializedString += ",";
   }
 }
-console.log("5. Array to String Output:", serializedString);
+console.log(serializedString);
 // EXPECTED OUTPUT: "2,4,5,3,5,3,2,5,a,b"
 
 // Custom String to Array Deserialization (Replicating .split(""))
