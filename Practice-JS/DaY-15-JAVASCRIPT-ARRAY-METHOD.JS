@@ -213,7 +213,7 @@ console.log(calendarMonths);
 
 // Action 2: Delete 1 element located precisely at index position 3 ("April")
 calendarMonths.splice(3, 1);
-console.log("20b. Splice Deletion Result:", calendarMonths);
+console.log(calendarMonths);
 // EXPECTED OUTPUT: ["Jan", "Feb", "March", "June"]
 
 /*
