@@ -44,7 +44,7 @@ function questionTwo() {
     // 1. Convert array into a string
     let arr = [2, 4, 5, 3, 5, 3, 2, 5, "a", "b"];
     let arrayToString = arr.join(","); // Joins all elements separated by a comma
-    console.log("Array to String:", arrayToString);
+    console.log(arrayToString);
 
     // 2. Convert string into an array
     let str = "Aayush";
