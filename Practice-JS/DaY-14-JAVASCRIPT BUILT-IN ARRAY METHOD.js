@@ -26,12 +26,12 @@ const usersDataset = [
 
 // Ascending Order Implementation
 const ascendingResult = [...numbersArray].sort((x, y) => x - y);
-console.log("1. Ascending Sort Output:", ascendingResult);
+console.log(ascendingResult);
 // EXPECTED OUTPUT: [0, 2, 2, 4, 6, 32, 56, 65, 65, 78, 78, 95]
 
 // Descending Order Implementation
 const descendingResult = [...numbersArray].sort((x, y) => y - x);
-console.log("2. Descending Sort Output:", descendingResult);
+console.log(descendingResult);
 // EXPECTED OUTPUT: [95, 78, 78, 65, 65, 56, 32, 6, 4, 2, 2, 0]
 
 /*
@@ -48,13 +48,13 @@ console.log("2. Descending Sort Output:", descendingResult);
 // Product of the two largest numbers
 const sortedDesc = [...numbersArray].sort((x, y) => y - x);
 const productOfTwoLargest = sortedDesc[0] * sortedDesc[1];
-console.log("3. Product of Two Largest Numbers:", productOfTwoLargest);
+console.log(productOfTwoLargest);
 // EXPECTED OUTPUT: 7410 (Calculated via 95 * 78)
 
 // Product of the smallest and largest numbers
 const sortedAsc = [...numbersArray].sort((x, y) => x - y);
 const productOfExtremes = sortedAsc[0] * sortedAsc[sortedAsc.length - 1];
-console.log("4. Product of Smallest & Largest Numbers:", productOfExtremes);
+console.log(ProdproductOfExtremes);
 // EXPECTED OUTPUT: 0 (Calculated via 0 * 95)
 
 /*
@@ -69,13 +69,13 @@ console.log("4. Product of Smallest & Largest Numbers:", productOfExtremes);
 
 // Array to String Serialization
 const serializedString = mixedArray.join(",");
-console.log("5. Array to String Output:", serializedString);
+console.log(serializedString);
 // EXPECTED OUTPUT: "2,4,5,3,5,3,2,5,a,b"
 
 // String to Array Deserialization
 const stringSample = "Aayush";
 const deserializedArray = stringSample.split("");
-console.log("6. String to Array Output:", deserializedArray);
+console.log(deserializedArray);
 // EXPECTED OUTPUT: ['A', 'a', 'y', 'u', 's', 'h']
 
 /*
@@ -89,7 +89,7 @@ console.log("6. String to Array Output:", deserializedArray);
 // =========================================================================
 
 const transformationResult = namesList.map(name => name.length);
-console.log("7. Projection Map Output:", transformationResult);
+console.log(transformationResult);
 // EXPECTED OUTPUT: [6, 5, 6]
 
 /*
@@ -104,17 +104,17 @@ console.log("7. Projection Map Output:", transformationResult);
 
 // Finding a specific model structure
 const matchedUser = usersDataset.find(user => user.isActive === true && user.age > 18);
-console.log("8. First Active Adult Found:", matchedUser);
+console.log(matchedUser);
 // EXPECTED OUTPUT: { name: "Bob", age: 19, isActive: true }
 
 // Absolute universal condition evaluation
 const functionalSanityCheck = usersDataset.every(user => user.isActive === true);
-console.log("9. Absolute Global Active Status Check:", functionalSanityCheck);
+console.log(functionalSanityCheck);
 // EXPECTED OUTPUT: false (Fails due to Jane being inactive)
 
 // Existential verification checks
 const existenceEvaluation = usersDataset.some(user => user.age < 18);
-console.log("10. Minor Presence Verification Check:", existenceEvaluation);
+console.log(existenceEvaluation);
 // EXPECTED OUTPUT: true (Passes due to John being 17)
 
 /*
@@ -129,7 +129,7 @@ console.log("10. Minor Presence Verification Check:", existenceEvaluation);
 // =========================================================================
 
 const filteredSubset = usersDataset.filter(user => user.isActive === true);
-console.log("11. Filtered Active Users Array:", filteredSubset);
+console.log(filteredSubset);
 /* 
   EXPECTED OUTPUT:
   [
