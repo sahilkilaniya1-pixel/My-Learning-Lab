@@ -21,7 +21,7 @@ function questionOne() {
     // We use the spread operator [...a] to avoid modifying (mutating) the original array.
     let increasing = [...a].sort((x, y) => x - y); // (x - y) sorts numbers from low to high
     let decreasing = [...a].sort((x, y) => y - x); // (y - x) sorts numbers from high to low
-    console.log("Increasing:", increasing);
+    console.log(increasing);
     console.log("Decreasing:", decreasing);
 
     // 2. Find the product (multiply) of the two biggest numbers
