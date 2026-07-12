@@ -295,8 +295,8 @@ function evaluateInclusion(targetArray, lookupItem) {
   return false;
 }
 
-console.log("15. Includes 'Trimmer' Check:", evaluateInclusion(logisticsCart, "Trimmer")); // EXPECTED OUTPUT: false
-console.log("16. Includes 'Mouse' Check:", evaluateInclusion(logisticsCart, "Mouse"));     // EXPECTED OUTPUT: true
+console.log(evaluateInclusion(logisticsCart, "Trimmer")); // EXPECTED OUTPUT: false
+console.log(evaluateInclusion(logisticsCart, "Mouse"));     // EXPECTED OUTPUT: true
 
 /*
   Line-by-Line Explanation:
