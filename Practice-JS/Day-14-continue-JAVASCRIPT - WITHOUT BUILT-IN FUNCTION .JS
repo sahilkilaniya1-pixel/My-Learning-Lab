@@ -165,7 +165,7 @@ for (let i = 0; i < usersDataset.length; i++) {
     break; // Break execution immediately upon first successful hit
   }
 }
-console.log("8. First Active Adult Found:", matchedUser);
+console.log(matchedUser);
 // EXPECTED OUTPUT: { name: "Bob", age: 19, isActive: true }
 
 // Replicating .every() functionality
