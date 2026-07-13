@@ -142,3 +142,41 @@ for(let i =0; i< expenseList.length; i++){
     runningGrandTotal += expenseList[i];
 }
 console.log(runningGrandTotal);
+
+
+
+const fruits = ["apple","Banana","Mango"];
+for(let i =0; i<fruits.length; i++){
+    console.log(fruits);
+}
+
+
+
+
+const genericScores = [45, 72, 98, 60];
+let targetIndexResult = -1; // Default error indicator if no element satisfies the loop parameters
+for (let i = 0; i < genericScores.length; i++) {
+  if (genericScores[i] >= 75) {
+    targetIndexResult = i;
+    break;
+  }
+}
+console.log(targetIndexResult);
+
+
+
+
+const logisticsCart = ["Laptop", "Mouse", "Keyboard"];
+
+// Helper function to check structural inclusion
+function evaluateInclusion(targetArray, lookupItem) {
+  for (let i = 0; i < targetArray.length; i++) {
+    if (targetArray[i] === lookupItem) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(evaluateInclusion(logisticsCart, "Trimmer")); // EXPECTED OUTPUT: false
+console.log(evaluateInclusion(logisticsCart, "Mouse"));     // EXPECTED OUTPUT: true
