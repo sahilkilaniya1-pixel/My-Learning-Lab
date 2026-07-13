@@ -77,3 +77,10 @@ function findEvenNum(...arr){
 }console.log(findEvenNum(2,3,4,5,56,88,7,8,8,9,10,99));
 
 
+function sayHi(){
+    return
+    {
+        name: "Rahul"
+    };
+};
+console.log(sayHi());
