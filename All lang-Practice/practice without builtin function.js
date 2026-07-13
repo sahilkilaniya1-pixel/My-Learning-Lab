@@ -126,3 +126,10 @@ console.log(existenceEvaluation);
 
 
 
+const filteredSubset = [];
+for(let i =0; i< usersDataset.length; i++){
+    if(usersDataset[i].isActive === true){
+        filteredSubset[filteredSubset.length]= usersDataset[i];
+    }
+}
+console.log(filteredSubset);
