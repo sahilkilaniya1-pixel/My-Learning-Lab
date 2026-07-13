@@ -43,3 +43,18 @@ for(let i =0; i< descendingResult.length; i++){
     }
 }
 console.log(descendingResult);
+
+
+
+let max1= Infinity;
+let max2 =  Infinity;
+for(let i =0; i< numbersArray.length; i++){
+    if(numbersArray[i] > max1){
+        max2 = max1;
+        max1 = numbersArray[i];
+    } else if (numbersArray[i]> max2){
+        max2 = numbersArray[i];
+    }
+}
+const productOfTwoLargest = max1 * max2;
+console.log(productOfTwoLargest);
