@@ -58,3 +58,14 @@ for(let i =0; i< numbersArray.length; i++){
 }
 const productOfTwoLargest = max1 * max2;
 console.log(productOfTwoLargest);
+
+
+
+let absoluteMin = numbersArray[0];
+let absoluteMax = numbersArray[0];
+for(let i =0; i<numbersArray.length; i++){
+    if(numbersArray[i] < absoluteMin) absoluteMin = numbersArray[i];
+    if(numbersArray[i] > absoluteMin) absoluteMax = numbersArray[i];
+}
+const productOfTwoExtremes = absoluteMin * absoluteMax;
+console.log(productOfTwoExtremes);
