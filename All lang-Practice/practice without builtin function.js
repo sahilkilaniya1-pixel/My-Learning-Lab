@@ -72,3 +72,11 @@ console.log(productOfTwoExtremes);
 
 
 
+let serializedString = "";
+for(let i =0; i< mixedArray.length; i++){
+    serializedString += mixedArray[i];
+    if(i < mixedArray.length -1){
+        serializedString +=",";
+    }
+}
+console.log(serializedString);
