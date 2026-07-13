@@ -23,6 +23,10 @@ function greet(){
 greet()
 greet()
 
+function greet(){
+    console.log("Hello kaise ho aap?")
+}
+greet()
 
 function add(x, y){
     let result = x+y;
@@ -30,3 +34,16 @@ function add(x, y){
 }
 let total = add(5,10);
 console.log(total);
+
+
+function add(x, y){
+    let result = x+y;
+    return result;
+}
+let total1 = add(5,10);
+console.log(total1);
+
+const multiply = function(a, b){
+    return a* b
+};
+console.log(multiply(5,9));
