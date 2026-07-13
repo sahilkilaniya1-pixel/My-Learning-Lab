@@ -52,3 +52,28 @@ const multiply1 = function(x, y){
     return x* y
 };
 console.log(multiply1(10,100));
+
+const square = (n) => n*n;
+console.log(square(8));
+
+const sq = (n) =>n*n;
+console.log(sq(7));
+
+
+function findEvenNumber (...arr){
+    return arr.filter(num => num %2===0);
+}
+console.log(findEvenNumber(2,3,4,5,5,6,67,11,8,9,1011));
+
+
+function findEvenNum(...arr){
+    let evenList = [];
+    for(let i =0; i< arr.length; i++){
+        if(arr[i]% 2 === 0){
+            evenList.push(arr[i]);
+        }
+    }
+    return evenList;
+}console.log(findEvenNum(2,3,4,5,56,88,7,8,8,9,10,99));
+
+
