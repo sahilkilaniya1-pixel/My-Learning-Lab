@@ -12,3 +12,21 @@ let b = "5";
 console.log(a == b);  // double equal only check data not data type
 console.log(a === b);   // triple equal always check data and data type
 // output  1st true and second false
+
+
+console.log(typeof null);
+
+
+function greet(){
+    console.log("hello, kaise ho aap")
+}
+greet()
+greet()
+
+
+function add(x, y){
+    let result = x+y;
+    return result;
+}
+let total = add(5,10);
+console.log(total);
