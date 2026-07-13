@@ -1,3 +1,5 @@
+const { use } = require("react");
+
 const numbersArray = [2, 4, 6, 2, 0, 56, 32, 65, 78, 65, 78, 95];
 const mixedArray = [2, 4, 5, 3, 5, 3, 2, 5, "a", "b"];
 const namesList = ["Aayush", "Sahil", "Akshya"];
@@ -80,3 +82,47 @@ for(let i =0; i< mixedArray.length; i++){
     }
 }
 console.log(serializedString);
+
+
+
+const stringSample = "sahil";
+const deserializedArray = [];
+for(let i = 0; i <stringSample.length; i++) {
+    descendingResult[descendingResult.length] = stringSample[i];
+}
+console.log(descendingResult);
+
+
+let matchedUser = undefined;
+for(let i = 0; i< usersDataset.length; i++){
+    if(usersDataset[i].isActive === true && usersDataset[i].age> 18){
+        matchedUser = usersDataset[i];
+        break;
+    }
+}
+console.log(matchedUser);
+
+
+
+let functionSanityCheck = true;
+for(let i =0; i< usersDataset.length; i++){
+    if(usersDataset[i].isActive !== true){
+        functionSanityCheck = false;
+        break;
+    }
+}
+console.log(functionSanityCheck);
+
+
+
+let existenceEvaluation = false;
+for(let i =0; i< usersDataset.length; i++){
+    if(usersDataset[i].age < 18){
+        existenceEvaluation = true;
+        break;
+    }
+}
+console.log(existenceEvaluation);
+
+
+
