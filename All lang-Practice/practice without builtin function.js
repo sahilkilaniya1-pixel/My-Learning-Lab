@@ -69,3 +69,6 @@ for(let i =0; i<numbersArray.length; i++){
 }
 const productOfTwoExtremes = absoluteMin * absoluteMax;
 console.log(productOfTwoExtremes);
+
+
+
