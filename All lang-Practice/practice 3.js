@@ -47,3 +47,8 @@ const multiply = function(a, b){
     return a* b
 };
 console.log(multiply(5,9));
+
+const multiply1 = function(x, y){
+    return x* y
+};
+console.log(multiply1(10,100));
