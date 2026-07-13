@@ -133,3 +133,12 @@ for(let i =0; i< usersDataset.length; i++){
     }
 }
 console.log(filteredSubset);
+
+
+
+const expenseList = [100,205,250,500];
+let runningGrandTotal = 0;
+for(let i =0; i< expenseList.length; i++){
+    runningGrandTotal += expenseList[i];
+}
+console.log(runningGrandTotal);
