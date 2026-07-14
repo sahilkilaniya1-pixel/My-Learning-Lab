@@ -7,24 +7,24 @@
 // =========================================================================
 
 /**
- * 🎯 QUESTION 1: Count Occurrences
- * * Task: Create a function that accepts an array and a target number.
- * Without using any built-in array methods, count and return how many times 
- * the target number appears in the array.
+ * 🎯 QUESTION 1: Count Occurrences (Ek number array mein kitni baar aaya?)
+ * * Task: Ek aisa function banao jo array aur ek target number le.
+ * Bina kisi built-in array methods (jaise filter, indexOf) ke gino ki wo target number array mein kitni baar aaya hai.
  * * Input:  [2, 4, 2, 5, 2, 8], Target: 2
- * Output: 3 (Because 2 appears three times)
+ * Output: 3 (Kyunki 2 poore array mein teen baar aaya hai)
  */
 
 function findCountOccurrences(arr, target) {
-    let count = 0;
+    let count = 0; // Ginti shuru karne ke liye counter ko 0 set kiya
     
+    // Poore array par ek-ek karke ghumenge (loop chalayenge)
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === target) {
-            count++; // Increment count when target matches element
+            count++; // Agar target match ho gaya, toh counter ko +1 badha do
         }
     }
     
-    return count; // Verified: Outside the loop to ensure the entire array is scanned
+    return count; // Loop khatam hone ke baad final ginti (count) return kar do
 }
 
 console.log("--- Level 1: Count Occurrences Demo ---");
@@ -38,20 +38,19 @@ console.log("\n");
 // =========================================================================
 
 /**
- * 🎯 QUESTION 2: Remove Vowels
- * * Task: Write a function that takes a string and returns a brand-new string 
- * with all the vowels (a, e, i, o, u, A, E, I, O, U) completely removed.
+ * 🎯 QUESTION 2: Remove Vowels (A, E, I, O, U ko string se nikalna)
+ * * Task: Ek string se saare vowels (chahe chhote ho ya bade) ko poori tarah se uda do aur bachi hui string return karo.
  * * Input:  "hello world"
  * Output: "hll wrld"
  */
 
-// --- Method 1: Clean Loop & Lookup String Approach (No Array Methods) ---
+// --- Method 1: Simple Loop aur Match String Tarika (Bina kisi high-level array methods ke) ---
 function removeVowelsLoop(str) {
-    let result = '';
-    const vowels = 'aeiouAEIOU'; // Master reference string for vowels
+    let result = '';             // Nayi khali string jisme bina vowels wale letters jodeinge
+    const vowels = 'aeiouAEIOU'; // Master list saare chhote-bade vowels ki
     
     for (let i = 0; i < str.length; i++) {
-        // If the current character is NOT found inside the vowels string, keep it
+        // Agar chalte loop ka letter humari vowels list ke andar NAHI hai, toh use result mein jodd do
         if (!vowels.includes(str[i])) {
             result += str[i];
         }
@@ -63,8 +62,9 @@ console.log("--- Level 2: Remove Vowels (Method 1) ---");
 console.log("Output using Loop:", removeVowelsLoop("hello world")); // Output: "hll wrld"
 
 
-// --- Method 2: Modern Regex Approach (1-Line Shortcut) ---
+// --- Method 2: Modern Regex Approach (1-Line ka short trick) ---
 let originalStr = "hello world";
+// replace() aur Regex (/[aeiouAEIOU]/g) ka use karke saare vowels ko ek sath "" (khaali space) se badal diya
 let cleanedStr = originalStr.replace(/[aeiouAEIOU]/g, ""); 
 
 console.log("--- Level 2: Remove Vowels (Method 2) ---");
@@ -73,33 +73,32 @@ console.log("\n");
 
 
 // =========================================================================
-// LEVEL 3: ADVANCED-INTERMEDIATE (Array Deduplication)
+// LEVEL 3: ADVANCED-INTERMEDIATE (Array Se Duplicates Hatana)
 // =========================================================================
 
 /**
- * 🎯 QUESTION 3: Find Unique Numbers (Remove Duplicates)
- * * Task: Create a function that takes an array containing duplicate numbers 
- * and returns a new array with all the duplicate values removed.
+ * 🎯 QUESTION 3: Find Unique Numbers (Duplicates ko kachre ke dibbe mein daalo)
+ * * Task: Ek array mein bohot saare duplicate numbers hain. Humein ek naya array chahiye jisme har number sirf ek hi baar ho.
  * * Input:  [1, 2, 3, 2, 4, 1, 5]
  * Output: [1, 2, 3, 4, 5]
  */
 
-// --- Method 1: Nested Loops Approach (No Built-in Methods Shortcut) ---
+// --- Method 1: Nested Loops Approach (Ekdum basic logic bina short-cut ke) ---
 function findUniqueNumbers(arr) {
-    let uniqueNumbers = [];
+    let uniqueNumbers = []; // Yeh humara naya box hai jisme sirf unique numbers rahenge
     
     for (let i = 0; i < arr.length; i++) {
-        let isUnique = true;
+        let isUnique = true; // Maan ke chalte hain ki number unique hai
         
-        // Check if the current element already exists in our uniqueNumbers array
+        // Ab check karo ki humare naye wale box 'uniqueNumbers' mein yeh element pehle se toh nahi baitha hai?
         for (let j = 0; j < uniqueNumbers.length; j++) {
             if (arr[i] === uniqueNumbers[j]) {
-                isUnique = false; // Duplicate found!
-                break; // Stop checking further for this element
+                isUnique = false; // Are yaar! Yeh toh duplicate mil gaya
+                break;            // Jab duplicate mil hi gaya toh aage loop chalane ka kya fayda, break karo!
             }
         }
         
-        // If no duplicate was found, safely push it to our unique collection
+        // Agar isUnique abhi bhi true hai, matlab yeh ekdum naya aur unique number hai! Box mein push kar do.
         if (isUnique) {
             uniqueNumbers.push(arr[i]);
         }
@@ -111,10 +110,10 @@ console.log("--- Level 3: Find Unique Numbers (Method 1) ---");
 console.log("Unique Numbers (Loops):", findUniqueNumbers([1, 2, 3, 2, 4, 1, 5])); // Output: [1, 2, 3, 4, 5]
 
 
-// --- Method 2: Modern ES6 Set Approach (1-Line Shortcut) ---
-// Great for teaching students how to instantly wipe out duplicates using JS data structures
+// --- Method 2: Modern ES6 Set Approach (1-Line ka jhatpat shortcut) ---
+// Note: 'Set' JS ka ek aisa special object hai jo apne andar kabhi bhi duplicates nahi rakhta.
+// [...new Set(arr)] likhne se array Set banta hai (duplicates gayab) aur wapas array mein convert ho jata hai.
 function findUniqueNumbersModern(arr) {
-    // A 'Set' only stores unique values automatically. We use spread operator [...] to convert it back to an array.
     return [...new Set(arr)];
 }
 
