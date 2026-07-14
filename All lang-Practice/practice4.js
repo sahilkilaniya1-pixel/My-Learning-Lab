@@ -45,3 +45,6 @@ console.log(dynamic);
 
 let fruits = ["apple","mango","orange"];
 console.log(fruits);
+
+let mixedData = ["sahil",25, true];
+console.log(mixedData);
