@@ -93,3 +93,34 @@ user.city = "Haryana";
 user.isPremium = true;
 console.log(user);
 
+// console.log(a);
+let a = 5; // Output = TDZ
+
+
+// $console.log([] == []); //Output = reference Error (False)
+
+let obj1 = { a: 1, b: { c: 2 } };
+let obj2 = { ...obj1 };
+obj2.b.c = 5;
+console.log(obj1.b.c); // Output = 5
+
+let nums = [1,2,3,4];
+nums.length =2;
+console.log(nums);
+
+// letkey= ′name ′;
+// letp=[key]:′Amit ′;
+// console.log(p.key);
+
+// var x = 10;
+// var y = 20;
+// console.log(y);
+
+typeof null==='object';
+
+
+
+let a = [1,2];
+let b = a;
+b.push(3);
+console.log(a.length);  // Output = 3
