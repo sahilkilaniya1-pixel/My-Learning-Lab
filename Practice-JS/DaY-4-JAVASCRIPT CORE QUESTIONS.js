@@ -1,43 +1,46 @@
 // =========================================================================
-// JAVASCRIPT CORE - INTERVIEW PRACTICE
+// JAVASCRIPT CORE - INTERVIEW PRACTICE (SUPER EASY HINGLISH GUIDE)
 // =========================================================================
 
 // -------------------------------------------------------------------------
-// Q1. Advanced Word Count Algorithm (Handles Multiple Spaces Accurately)
+// Q1. Advanced Word Count Algorithm (Faltu ke extra spaces ko handle karne wala)
 // -------------------------------------------------------------------------
-// Description: Counts words by tracking state ('in_word').
-// This prevents false counts when multiple spaces are placed consecutively.
+// Concept: Yeh algorithm sirf spaces nahi ginta, balki yeh check karta hai ki
+// hum abhi kisi word ke 'andar' hain ya 'baahar'. Isse agar beech mein 2-3 spaces
+// ek sath aa jayein, toh bhi count galat nahi hota.
 const wordcount = (word) => {
-    // 1. Properly declare variables using 'let'
-    let count = 0; 
-    let inWord = false; 
+    let count = 0;      // Total kitne words mile, uska counter
+    let inWord = false; // Yeh track karega ki hum kisi word ke andar hain ya nahi
 
-    // 2. Simplified loop condition
     for (let i = 0; i < word.length; i++) { 
         if (word[i] === " ") { 
+            // Agar space mil gaya, matlab hum word ke baahar aa gaye hain
             inWord = false;
         } else { 
-            // 3. Using strict equality (===) and shorthand check
+            // Agar space nahi mila (koi letter mila), toh check karo:
+            // Kya hum naye word par aaye hain? (agar inWord pehle se false tha)
             if (!inWord) { 
-                count++;
-                inWord = true;
+                count++;       // Naya word mila toh counter ko +1 badha do
+                inWord = true; // State change kar do ki ab hum word ke andar hain
             }
         }
     }
     return count;
 };
 
-console.log(wordcount("We are  Indians")); // Outputs: 3
+console.log("Q1. Advanced Count:", wordcount("We are   Indians")); // Outputs: 3 (Double space ko sahi handle kiya!)
 
 
 // -------------------------------------------------------------------------
-// Q2. Simple Word Count (Counts spaces between standard sentences)
+// Q2. Simple Word Count (Sirf spaces ko ginne wala aasan tarika)
 // -------------------------------------------------------------------------
-// Description: Assumes standard single spaces between words and starts count at 1.
+// Note: Yeh tarika tabhi kaam karega jab words ke beech mein sirf ek hi space ho,
+// aur starting count 1 se shuru hoga kyunki aakhiri word ke baad space nahi hota.
 const wordCountSimple = (str) => {
-    let count = 1;
+    let count = 1; // Maan ke chalte hain ki minimum 1 word toh hoga hi
 
     for (let i = 0; i < str.length; i++) {
+        // Agar loop chalte chalte beech mein space mile, toh count badha do
         if (str[i] === " ") {
             count++;
         }
@@ -46,34 +49,33 @@ const wordCountSimple = (str) => {
 };
 
 // Testing Q2:
-console.log(wordCountSimple("We are indians"));
-// Output: 3
+console.log("Q2. Simple Count:", wordCountSimple("We are indians")); // Output: 3
 
 
 // -------------------------------------------------------------------------
-// Q3. Reverse Individual Words in a Sentence While Keeping Spaces Intact
+// Q3. Sentence ke har word ko ulta karna par spaces ko wahi rakhna
 // -------------------------------------------------------------------------
-// Description: Iterates through characters, building words backwards, 
-// and stitches them back together whenever a space delimiter is identified.
+// Example: "I am human" ban jayega "I ma namuh"
 function reverseWordsKeepSpaces(str) {
-    let result = "";
-    let currentWord = "";
+    let result = "";      // Poora aakhiri sentence isme store hoga
+    let currentWord = ""; // Ek-ek karke jo word banega, wo isme rahega
 
-    // Loop through every character of the string
+    // Loop se hum string ke ek-ek character ke upar jayenge
     for (let i = 0; i < str.length; i++) {
         if (str[i] !== " ") {
-            // If it's not a space, prepend the character to currentWord
-            // This operation automatically mirrors/reverses the word
+            // Agar space nahi hai, toh character ko naye word ke aage lagao (prepend karo)
+            // Jaise: agar currentWord "a" hai aur naya letter "m" aaya, toh "m" + "a" = "ma" (ulta ho gaya!)
             currentWord = str[i] + currentWord;
         } else {
-            // Once a space is met, append the reversed word and space to result
+            // Jaise hi koi space mile, matlab ek word khatam ho gaya!
+            // Pehle se ulta kiya hua word aur ek space 'result' mein jodd do
             result += currentWord + " ";
-            currentWord = ""; // Flush/Reset container for the next word
+            currentWord = ""; // Naye word ke liye container ko wapas khali (reset) kar do
         }
     }
 
-    // Cleanup Step: Since the final word does not end with a trailing space, 
-    // we manually append the last stored 'currentWord' after the loop finishes.
+    // Loop khatam hone ke baad, aakhiri word ke baad space nahi hota, 
+    // isliye aakhiri bacha hua word (currentWord) hum manually end mein jodd denge.
     result += currentWord;
 
     return result;
