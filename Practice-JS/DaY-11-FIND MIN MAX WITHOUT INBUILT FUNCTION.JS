@@ -8,30 +8,31 @@
 
 /**
  * 🎯 QUESTION 1: Find Maximum and Minimum Elements
- * * Task: Write a function to find both the maximum and minimum numbers in an array.
- * Do not use built-in helpers like Math.max(), Math.min(), or array .sort().
- * * * Core Logic: Assume the first element (index 0) is both the maximum and minimum.
- * Iterate through the rest of the array starting from index 1. If any element is greater 
- * than current 'max', update 'max'. If any element is smaller than current 'min', update 'min'.
- * * * Input:  [7, 2, 15, 1, 9]
- * * Output: { maximum: 15, minimum: 1 }
+ * * Task: Array mein se sabse bada (Max) aur sabse chota (Min) number dhoondna hai.
+ * Built-in helpers jaise Math.max() ya array.sort() use nahi karna hai.
+ * 
+ * * Logic: Pehle element (index 0) ko hi temporarily Max aur Min dono maan lo.
+ * Fir index 1 se loop chalakar baaki saare elements se compare karo.
+ * Agar koi naya number milta hai jo current 'max' se bada hai, toh use naya 'max' bana do.
+ * Agar koi number current 'min' se chota hai, toh use naya 'min' bana do.
  */
 
 function findMaxMin(arr) {
-    // Edge Case: Handle empty arrays gracefully
+    // Edge Case: Agar array khali hai, toh pehle hi rok do
     if (arr.length === 0) return "Array is empty";
 
-    let max = arr[0]; // Initialize max with the first element
-    let min = arr[0]; // Initialize min with the first element
+    let max = arr[0]; // Shuruat mein isi ko sabse bada maan liya
+    let min = arr[0]; // Aur isi ko sabse chota bhi maan liya
 
+    // Loop index 1 se shuru hoga kyunki index 0 ko hum already assume kar chuke hain
     for (let i = 1; i < arr.length; i++) {
-        // Check and update maximum element
+        // Agar current number humare 'max' se bada nikal gaya...
         if (arr[i] > max) {
-            max = arr[i]; 
+            max = arr[i]; // ...toh 'max' ko update kar do
         }
-        // Check and update minimum element
+        // Agar current number humare 'min' se bhi chota nikal gaya...
         if (arr[i] < min) {
-            min = arr[i]; 
+            min = arr[i]; // ...toh 'min' ko update kar do
         }
     }
 
@@ -50,27 +51,29 @@ console.log("\n-------------------------------------------");
 
 /**
  * 🎯 QUESTION 2: Rotate Array Right by 'K' Positions
- * * Task: Rotate an array to the right by 'k' steps without using built-in mutating 
- * methods like .pop(), .push(), .shift(), or .unshift().
- * * * Core Logic: To rotate elements efficiently without a temporary shift loop, we use 
- * a mathematical modulo formula. The target position for any element at index 'i' 
- * after shifting 'k' places will always be: newIndex = (i + k) % array_length.
- * * * Input:  [10, 20, 30, 40], k = 1
- * * Output: [40, 10, 20, 30]
+ * * Task: Array ko right side mein 'k' steps aage khiskana hai, 
+ * par push(), pop(), ya shift() jaise methods ke bina.
+ * 
+ * * Logic: Ek mathematical modulo `%` formula ka use karenge.
+ * Kisi bhi element ka naya index hamesha yeh hoga: (current_index + k) % array_length
+ * Modulo (%) humari madad karta hai taaki jab index array ke baahar (boundary par) jaye, 
+ * toh wo wapas ghantaghar ki tarah ghum kar shuruat (index 0) par aa jaye.
  */
 
 function rotateArray(arr, k) {
     let n = arr.length;
-    if (n <= 1) return arr; // Edge Case: No rotation needed for small arrays
+    if (n <= 1) return arr; // Agar array mein 0 ya 1 element hai, toh rotate karne ki koi tension hi nahi hai
     
     let rotated = []; 
     
-    // Handle cases where k is larger than the array length (e.g., length 3, k = 4 behaves like k = 1)
+    // Agar k array ki length se bada hai (jaise length 4 hai aur k = 5), 
+    // toh rotation ko safe limit mein rakhne ke liye length se modulo kar do. 
+    // (5 % 4 = 1 step rotation)
     k = k % n; 
 
     for (let i = 0; i < n; i++) {
-        let newIndex = (i + k) % n; // Compute cyclic target index
-        rotated[newIndex] = arr[i]; // Manually map value to the calculated index
+        let newIndex = (i + k) % n; // Cyclic shifting formula
+        rotated[newIndex] = arr[i]; // Naye array mein element ko uske sahi naye pate (index) par bhej diya
     }
 
     return rotated;
@@ -89,30 +92,31 @@ console.log("\n-------------------------------------------");
 
 /**
  * 🎯 QUESTION 3: Count Words in a Sentence
- * * Task: Given a string sentence, count the total number of words present inside it.
- * You cannot use the built-in .split(" ") method or regular expressions.
- * * * Core Logic: We track state using a boolean flag variable 'inWord'. We loop through 
- * every single character. If we hit a non-space character while 'inWord' is false, it marks 
- * the beginning of a fresh word, so we increment the count. If we hit a space character (" "), 
- * we toggle 'inWord' back to false. This automatically skips leading, trailing, and multiple consecutive internal spaces.
- * * * Input:  "   Hello   bhai kaise   ho   "
- * * Output: 4
+ * * Task: Ek poore sentence mein kitne words hain, unhe count karna hai.
+ * Lekin dhyan rahe—na toh .split(" ") use karna hai aur na hi koi regular expression!
+ * 
+ * * Logic: Hum ek boolean flag `inWord` ka use karke state ko track karenge.
+ * Jab hume koi non-space character dikhega aur hum pehle se word ke andar nahi the (`inWord === false`),
+ * iska matlab ek naya word shuru ho gaya hai! Hum count ko +1 badha denge aur `inWord` ko true kar denge.
+ * Jaise hi koi space (" ") aayegi, hum `inWord` ko wapas false kar denge.
+ * Is se beech ke f फालतू spaces (extra spaces) ignore ho jayenge.
  */
 
 function countWords(str) {
     let wordCount = 0;
-    let inWord = false; // Flag status to track whether we are currently inside a word boundary
+    let inWord = false; // Yeh track rakhega ki hum abhi kisi word ke boundary ke andar hain ya nahi
 
     for (let i = 0; i < str.length; i++) {
+        // Agar current character space nahi hai
         if (str[i] !== " ") { 
-            // If character is not a space and we weren't already inside a word sequence
+            // Aur agar hum abhi tak word ke andar nahi chal rahe the...
             if (inWord === false) {
-                wordCount++; // Detected a new word start segment
-                inWord = true; // Set state indicator to true
+                wordCount++; // ...toh naya word mil gaya! Count badhao!
+                inWord = true; // State badal do ki "haan, hum abhi word read kar rahe hain"
             }
         } else {
-            // When a space character is encountered, it terminates the active word tracking sequence
-            inWord = false;
+            // Jaise hi koi space (" ") milegi, hum word se baahar nikal gaye hain
+            inWord = false; // State reset taaki agla character aate hi naya word detect ho sake
         }
     }
 
@@ -121,7 +125,7 @@ function countWords(str) {
 
 console.log("--- Pattern 3: Word Count Demo ---");
 console.log("Word Count:", countWords("   Hello   bhai kaise   ho   ")); 
-// Expected Output: 4
+// Expected Output: 4 (Extra spaces skip ho gaye!)
 console.log("\n-------------------------------------------");
 
 
@@ -131,30 +135,30 @@ console.log("\n-------------------------------------------");
 
 /**
  * 🎯 QUESTION 4: String Palindrome Verification
- * * Task: Determine whether a given string is a valid palindrome (reads the same 
- * forward and backward) without using string reversal built-in tricks like .reverse().
- * * * Core Logic: Instead of recreating or cloning an optimized mirrored string sequence, 
- * use the Two-Pointer technique. Place a 'left' pointer at index 0 and a 'right' pointer 
- * at string.length - 1. Loop and match characters while moving pointers toward the center. 
- * Terminate early and return false if any mismatch occurs.
- * * * Input:  "radar" -> Output: true
- * * Input:  "hello" -> Output: false
+ * * Task: Check karo ki string palindrome (ulta-seedha ek barabar) hai ya nahi,
+ * bina string ko reverse kiye.
+ * 
+ * * Logic: Hum use karenge Two-Pointer Technique!
+ * Ek pointer `left` ko bilkul shuruat (0) par set karenge, aur dusre `right` pointer ko aakhir (length - 1) par.
+ * Dono pointers ko ek-ek step beech ki taraf badhayenge aur har step par characters ko compare karenge.
+ * Agar kahin par bhi mismatch hua, toh turant false bol kar nikal jayenge!
  */
 
 function isPalindrome(str) {
     let left = 0;
     let right = str.length - 1;
 
+    // Jab tak left pointer right wale se peeche hai...
     while (left < right) {
-        // Immediate exit configuration if structural mirroring fails
+        // Agar dono pointers par alag-alag characters mile...
         if (str[left] !== str[right]) {
-            return false; // Not a palindrome
+            return false; // ...toh yeh pakka palindrome nahi hai!
         }
-        left++;  // Move the left index pointer one step inward
-        right--; // Move the right index pointer one step inward
+        left++;  // Left pointer ko ek step aage badhao
+        right--; // Right pointer ko ek step peeche khiskao
     }
 
-    return true; // Successfully traversed across matching structural bounds
+    return true; // Agar bina kisi rukaawat ke pointers aapas mein cross ho gaye, toh string solid palindrome hai!
 }
 
 console.log("--- Pattern 4: Palindrome Check Demo ---");
@@ -169,42 +173,40 @@ console.log("\n-------------------------------------------");
 
 /**
  * 🎯 QUESTION 5: Merge Two Sorted Arrays
- * * Task: Given two arrays that are already sorted in ascending order, merge them 
- * into a single unified array that remains completely sorted.
- * Do not use built-in helpers like .concat() or .sort().
- * * * Core Logic: Using a sorted array merging strategy (similar to Merge Sort), initialize 
- * two pointers ('i' for arr1, 'j' for arr2) at index 0. Compare elements at both pointers, 
- * insert the smaller value into the 'merged' destination container, and advance that respective pointer.
- * Once one array exhausts, flush all remaining items from the alternate array into the final structure.
- * * * Input:  [1, 3, 5], [2, 4, 6]
- * * Output: [1, 2, 3, 4, 5, 6]
+ * * Task: Do sorted arrays ko merge karke ek single sorted array banana hai,
+ * bina .concat() ya .sort() use kiye.
+ * 
+ * * Logic: Ek dam dhasu method! Dono arrays ke liye ek-ek pointer (`i` aur `j`) set karo 0 index par.
+ * Dono arrays ke current elements ko compare karo. Jo element chota hoga, use hum naye `merged` array mein daal denge,
+ * aur sirf usi array ke pointer ko ek step aage badhayenge.
+ * Jab dono mein se koi ek array khatam ho jayega, toh dusre array mein bache huye saare elements ko as-it-is naye array ke peeche add kar denge.
  */
 
 function mergeSortedArrays(arr1, arr2) {
     let merged = [];
-    let i = 0; // Iteration track pointer for arr1
-    let j = 0; // Iteration track pointer for arr2
+    let i = 0; // arr1 ka track rakhne ke liye pointer
+    let j = 0; // arr2 ka track rakhne ke liye pointer
 
-    // Process both arrays simultaneously until one structural bound is exhausted
+    // Loop tab tak chalega jab tak dono arrays mein elements bache hain
     while (i < arr1.length && j < arr2.length) {
         if (arr1[i] < arr2[j]) {
-            merged[merged.length] = arr1[i]; // Insert value at structural endpoint
-            i++; // Move pointer forward
+            merged[merged.length] = arr1[i]; // arr1 ka element chota tha, toh use pehle naye array mein dala
+            i++; // arr1 ke pointer ko aage badha diya
         } else {
-            merged[merged.length] = arr2[j];
-            j++; // Move pointer forward
+            merged[merged.length] = arr2[j]; // arr2 ka element chota ya barabar tha, toh use dala
+            j++; // arr2 ke pointer ko aage badha diya
         }
     }
 
-    // Append remaining elements of arr1 if arr2 finishes early
+    // Agar arr2 khatam ho gaya par arr1 mein abhi bhi elements bache hain...
     while (i < arr1.length) {
-        merged[merged.length] = arr1[i];
+        merged[merged.length] = arr1[i]; // ...toh baaki bache elements ko end mein append kar do
         i++;
     }
 
-    // Append remaining elements of arr2 if arr1 finishes early
+    // Agar arr1 khatam ho gaya par arr2 mein abhi bhi elements bache hain...
     while (j < arr2.length) {
-        merged[merged.length] = arr2[j];
+        merged[merged.length] = arr2[j]; // ...toh baaki bache elements ko end mein append kar do
         j++;
     }
 
@@ -222,15 +224,15 @@ console.log("\n-------------------------------------------");
 // =========================================================================
 
 /**
- * 🎯 QUESTION 6: String Compression using Run-Length Encoding
- * * Task: Design a basic string compression algorithm using the counts of repeated characters.
- * For example, "aabcccccaaa" transforms to "a2b1c5a3". If the compressed string length is 
- * equal to or greater than the original string length, return the original string. Do not use built-in string methods.
- * * * Core Logic: Run a loop through the string while evaluating consecutive sequences. Employ a look-ahead condition 
- * checking if str[i] matches str[i + 1]. If it evaluates to true, increment our character tracking counter. 
- * If it evaluates to false, append the character and its frequency to our result, then reset the frequency tracking state back to 1.
- * * * Input:  "aabcccccaaa" -> Output: "a2b1c5a3"
- * * Input:  "abc"         -> Output: "abc" (Since "a1b1c1" is longer than original text tracking bounds)
+ * 🎯 QUESTION 6: String Compression (Run-Length Encoding)
+ * * Task: Characters ki repetition ke hisab se string ko compress karo.
+ * Jaise "aabcccccaaa" ko badal kar "a2b1c5a3" banana hai.
+ * Agar compressed string ki length original string se badi ya barabar aati hai, toh original string hi return karni hai.
+ * 
+ * * Logic: "Look-ahead" approach. Loop chalate waqt check karo ki kya current character `str[i]` 
+ * agle character `str[i+1]` se milta hai. Agar haan, toh count ko +1 badhate jao.
+ * Jaise hi naya character dikhega, hum use aur uske total count ko final string mein jodh (append) denge,
+ * aur count ko wapas 1 par reset kar denge.
  */
 
 function compressString(str) {
@@ -240,19 +242,20 @@ function compressString(str) {
     let count = 1;
 
     for (let i = 0; i < str.length; i++) {
-        // Look-ahead check: compare current character with the next element boundary
+        // Look-ahead check: compare current character with the next character
         if (str[i] === str[i + 1]) {
-            count++;
+            count++; // Same character milte hi count badhaya
         } else {
-            // Sequence boundary broken: flush current state chunk data
+            // Sequence break ho gaya! Ab character aur uski frequency ko output mein daal do
             compressed += str[i] + count;
-            count = 1; // Reset matching counter tracking state
+            count = 1; // Count ko wapas reset kiya agle characters ke liye
         }
     }
 
-    // Optimization Check: If compression does not improve length bounds, return original data
+    // Optimization check: Agar compress karne ke baad string choti nahi hui, toh bina baat compress karne ka kya fayda?
+    // "abc" ka compressed "a1b1c1" (6 characters) hoga, jo original "abc" (3 characters) se bada hai!
     if (compressed.length >= str.length) {
-        return str;
+        return str; // Toh original hi return kar do
     }
 
     return compressed;
@@ -270,29 +273,26 @@ console.log("\n-------------------------------------------");
 
 /**
  * 🎯 QUESTION 7: Find the Missing Number
- * * Task: You are given an array containing an unsorted sequence of distinct numbers 
- * ranging from 1 to 'n'. However, one exact number is missing from this range sequence.
- * Deduce the missing number without sorting or utilizing array search helpers.
- * * * Core Logic: Instead of heavy loops or hash table mapping strategies, utilize an Arithmetic Progression formula. 
- * Calculate the true mathematical sum total that should exist from 1 to 'n' using: 
- * $$TotalSum = \frac{n \times (n + 1)}{2}$$
- * Then, calculate the actual accumulated sum of all values inside the array manually. 
- * The mathematical difference between TotalSum and ArraySum instantly isolates the missing element.
- * * * Input:  [1, 2, 4, 5], n = 5
- * * Output: 3
+ * * Task: Array mein 1 se lekar 'n' tak ke distinct numbers hain, par unme se ek exact number gayab hai.
+ * Bina sort kiye aur bina array methods use kiye us gayab number ko dhoondna hai.
+ * 
+ * * Logic: Yeh maths ka kamaal hai! 1 se lekar 'n' tak ka mathematical sum total ka formula hota hai:
+ * TotalSum = (n * (n + 1)) / 2
+ * Hum mathematically full sum calculate karenge, fir array ke saare numbers ko manually sum up karenge.
+ * Jab hum dono sums ke beech ka difference (minus) nikalenge, toh bacha hua number wahi hoga jo missing tha!
  */
 
 function findMissingNumber(arr, n) {
-    // 1. Calculate target theoretical summation baseline
+    // 1. Target theoretical sum nikaal lo jo bina kisi missing number ke hona chahiye tha
     let totalSum = (n * (n + 1)) / 2;
 
-    // 2. Accumulate the absolute physical numerical values present
+    // 2. Jo numbers array mein sach mein hain, un sab ka real total nikaalo
     let arraySum = 0;
     for (let i = 0; i < arr.length; i++) {
         arraySum += arr[i];
     }
 
-    // 3. Absolute delta reveals the unmapped isolated slot
+    // 3. Dono ke difference se missing number turant bahar aa jayega!
     return totalSum - arraySum;
 }
 
