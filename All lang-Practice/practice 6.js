@@ -102,3 +102,10 @@ function makejuice(){
     console.log("Juice taiyar hain");
 }
 makejuice();
+
+
+function makeCustomJuice(fruits, quantity){
+    console.log(quantity+ "glass " +fruits + "juice taiyar hain");
+}
+makeCustomJuice("mango",2);
+makeCustomJuice("banana",2);
