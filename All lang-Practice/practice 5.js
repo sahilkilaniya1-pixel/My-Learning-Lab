@@ -67,3 +67,11 @@ let StudentsData ={
 // console.log(StudentsData);
 console.log(StudentsData.firstName); //output: sahil
 console.log(StudentsData.age);      //age : 24
+
+let products = [
+    {id: 1, name: "Laptop", price:50000},
+    {id: 2, name: "Mobile", price:10000},
+    {id: 3, name: "Headphones", price:2000}
+];
+// console.log(products);
+console.log(products[0].name);
