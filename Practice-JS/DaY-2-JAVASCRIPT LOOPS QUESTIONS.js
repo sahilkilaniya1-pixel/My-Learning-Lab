@@ -1,35 +1,36 @@
 // =========================================================================
-// JAVASCRIPT LOOPS -
+// JAVASCRIPT LOOPS (SUPER EASY HINGLISH GUIDE)
 // =========================================================================
 
 // -------------------------------------------------------------------------
-// Q1. How do you print a message multiple times using a basic 'for' loop?
+// Q1. Ek hi message ko baar-baar print karne ke liye basic 'for' loop kaise chalayein?
 // -------------------------------------------------------------------------
-// Answer: Initialize a counter, set the limit condition, and increment it.
+// Tarika: Pehle ek counter banao (let count = 1), fir limit set karo (count <= 5),
+// aur har round ke baad counter ko 1 se badhao (count++).
 for (let count = 1; count <= 5; count++) {
-    console.log("sahil");
+    console.log("sahil"); // Yeh message 5 baar print hoga
 }
 console.log("loop has ended!\n");
 
 
 // -------------------------------------------------------------------------
-// Q2. How do you calculate the sum of numbers from 1 to 5 using a loop?
+// Q2. Loop ka use karke 1 se 5 tak ke saare numbers ko aapas mein kaise jodein (sum)?
 // -------------------------------------------------------------------------
-// Answer: Initialize a sum variable to 0, then add the loop iterator 'i' to it in each step.
-// Note: Changed initial sum from 1 to 0 to get the correct mathematical sum (15).
+// Tarika: Pehle ek sum variable ko 0 set karo, fir loop ke andar 'i' ki ek-ek value usme add karte jao.
 let sum = 0;
 for (let i = 1; i <= 5; i++) {
-    sum = sum + i;
+    sum = sum + i; // Har baar naya number sum mein judta jayega
 }
-console.log("sum =", sum); // Output: 15
+console.log("sum =", sum); // Output: 15 (1+2+3+4+5)
 console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q3. What is an Infinite Loop? Give an example.
+// Q3. Infinite Loop kya hota hai? Ek example dijiye.
 // -------------------------------------------------------------------------
-// Answer: An infinite loop occurs when the stopping condition is never met. 
-// WARNING: This will crash your console/browser because 'i' will always be >= 0.
+// Answer: Jab loop ke rukne ki condition (stopping condition) kabhi sach hi nahi hoti,
+// toh loop bina ruke chalta hi chala jata hai. Isko infinite loop bolte hain.
+// WARNING: Ise run mat karna, warna computer/browser crash ho jayega kyunki 'i' hamesha 0 se bada hi rahega!
 /*
 for (let i = 1; i >= 0; i++) {
     console.log("i =", i);
@@ -38,21 +39,24 @@ for (let i = 1; i >= 0; i++) {
 
 
 // -------------------------------------------------------------------------
-// Q4. How does a 'while' loop work? Print a message 10 times with it.
+// Q4. 'while' loop kaise kaam karta hai? Isse 10 baar message kaise print karein?
 // -------------------------------------------------------------------------
-// Answer: It checks the condition first. If true, it runs the block and updates the iterator inside.
+// Answer: Yeh loop chalne se PEHLE condition check karta hai. Agar condition sahi hai,
+// toh andar ka code chalta hai aur hume andar hi counter ko badhana (iWhile++) padta hai.
 let iWhile = 1;
 while (iWhile <= 10) {
     console.log("javascript");
-    iWhile++;
+    iWhile++; // Agar yeh line bhool gaye toh infinite loop ban jayega!
 }
 console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q5. How does a 'do-while' loop differ from a 'while' loop? Print a message 20 times.
+// Q5. 'do-while' aur 'while' loop mein kya farq hai? Isse 20 baar print kaise karein?
 // -------------------------------------------------------------------------
-// Answer: A 'do-while' loop runs the code block at least once before checking the condition.
+// Answer: 'while' loop pehle check karta hai fir chalta hai, lekin 'do-while' loop
+// PEHLE ek baar code chala deta hai aur uske BAAD check karta hai. 
+// Matlab condition galat bhi ho, tab bhi yeh kam se kam ek baar zaroor chalega!
 let iDo = 1;
 do {
     console.log("sahil javascript");
@@ -62,23 +66,25 @@ console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q6. How do you iterate over a String and calculate its length using a 'for-of' loop?
+// Q6. String ke ek-ek akshar (character) par ghoomne aur length nikalne ke liye 'for-of' loop
 // -------------------------------------------------------------------------
-// Answer: 'for-of' extracts each character directly. We can increment a counter to find the size.
+// Answer: 'for-of' loop ka use karke hum string ke ek-ek letter ko seedhe nikal sakte hain.
+// Hum saath mein ek 'size' counter rkhkar length bhi khud nikal sakte hain.
 let str = "sahil";
 let size = 0;
 for (let char of str) {
-    console.log("character =", char);
-    size++;
+    console.log("character =", char); // Har round mein ek-ek letter print hoga
+    size++; // Har letter milne par size ko 1 badha diya
 }
 console.log("string size =", size); // Output: 5
 console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q7. How do you loop through the properties (keys and values) of an Object?
+// Q7. Object ke andar ki saari properties (keys aur values) par kaise ghoomein?
 // -------------------------------------------------------------------------
-// Answer: Use a 'for-in' loop to extract the keys, and use bracket notation object[key] to get values.
+// Answer: Object ke andar ghoomne ke liye 'for-in' loop use hota hai.
+// Yahan 'key' variable se property ka naam milega, aur student[key] se uski andar ki value.
 let student = {
     name: "sahil",
     age: 20,
@@ -93,11 +99,11 @@ console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q8. Write a program to print all Even Numbers from 0 to 100.
+// Q8. 0 se 100 tak ke saare Even Numbers (jo 2 se divide ho jayein) print karein.
 // -------------------------------------------------------------------------
-// Answer: Use a 'for' loop and filter numbers using the modulus operator (num % 2 === 0).
+// Answer: 0 se 100 tak ka loop chalaya aur modulus (%) operator se check kiya ki divide karne par 0 bach raha hai ya nahi.
 for (let num = 0; num <= 100; num++) {
     if (num % 2 === 0) {
-        console.log("even num =", num);
+        console.log("even num =", num); // Agar remainder 0 bacha, toh number even hai
     }
 }
