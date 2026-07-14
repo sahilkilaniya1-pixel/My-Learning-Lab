@@ -96,3 +96,9 @@ function findSquare(num){
 }
 let output = findSquare(5);
 console.log(output);
+
+
+function makejuice(){
+    console.log("Juice taiyar hain");
+}
+makejuice();
