@@ -48,3 +48,8 @@ console.log(fruits);
 
 let mixedData = ["sahil",25, true];
 console.log(mixedData);
+
+let cars = ["verna","brezza","amaze","vitara"];
+console.log(cars[0]);  // verna
+console.log(cars[1]);  //brezaa
+console.log(cars[2]); // amaze
