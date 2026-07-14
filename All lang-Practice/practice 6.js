@@ -58,3 +58,13 @@ for(const num of number){
         console.log(num+ "ek Odd number hain");
     }
 }
+
+
+const cartPrices = [200, 1500, 50, 4000, 800];
+for( const price of cartPrices){
+    if( price > 1000){
+        console.log("Expensive Product: rs. " + price + " ");
+    }else {
+        console.log("Normal Product: Rs. "+ price + " ");
+    }
+}
