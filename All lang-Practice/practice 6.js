@@ -44,3 +44,17 @@ const friends = ["Rahul","amit","Sahil","Sneha"];
 for(let i =0; i<friends.length; i++){
     console.log("Hello " + friends[i]);
 }
+
+const friend = ["Rahul","amit","Sahil","Sneha"];
+for(const friend of friends){
+    console.log("Hello "+ friend);
+}
+
+const number = [12,14,13,15,16,18,8,19,20];
+for(const num of number){
+    if(num % 2 ===0){
+        console.log(num +"ek Even number hain .");
+    } else {
+        console.log(num+ "ek Odd number hain");
+    }
+}
