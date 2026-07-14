@@ -47,6 +47,39 @@ console.log(countCharManual("sahil","a"));
 
 
 
+function findmanual(...arr){
+    let max =0;
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]> max){
+            max =arr[i];
+        }
+    }
+    return max;
+}
+console.log(findmanual(10,20,30,40,50,60));
+
+
+
+function findMaxbuiltin(...arr){
+    return Math.max(...arr);
+}
+console.log(findMaxbuiltin(10,20,30,40,50,60));
+
+
+
+function hasKeyManual(obj,searchKey){
+    for(let key in obj){
+        if(key ===searchKey){
+            return true;
+        }
+    }
+    return false;
+}
+console.log(hasKeyManual({name:"sahil",age: 20},"age"));
+
+
+
+
 
 
 
