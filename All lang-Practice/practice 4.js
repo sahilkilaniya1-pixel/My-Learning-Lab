@@ -103,4 +103,63 @@ function doubleNummanualBuilt(...arr){
 console.log(doubleNummanualBuilt(1,2,3,4,5)); 
 
 
+let oldvariable = "old way";
+let editable = "cant change";
+editable = "new value";
+const fixedvalue = "yeh lock hain";
 
+const userRef = {name: "sahil"};
+userRef.name ="golu";
+
+
+let structuralnum= 45; // primitive type = number
+let structuraltext = "hello" // primitive type = string
+let structuralbool = true; // primitive type = boolean
+let emptycell;           //primitive type  = undefined
+let intetionalEmpty = null;  // primitive type null;
+
+
+console.log( typeof emptycell); // output = "undefined"
+console.log( typeof intetionalEmpty); // output = "object"
+
+
+let operandA = 5;
+let operandB = "5";
+console.log(operandA== operandB); // output true
+console.log(operandA===operandB); // output false
+
+//  because double equal only check variable but triple equal are both check
+
+function excecuteAddition (x, y){
+    return x+ y;
+}
+const calculateSquare = (n) => n* n;
+
+function compileEvenNumbers(...arr){
+    let result = [];
+    for(let i = 0; i<arr.length; i++){
+        if(str[i] %2===0){
+            result[result.length]== arr[i];
+        }
+    }
+    return result;
+}
+console.log(compileEvenNumbers(1,2,3,4,5,6));
+
+
+function simulateAsiTrap(){
+    return
+    {
+        status: "success"
+    };
+}
+console.log(simulateAsiTrap());
+
+function resoleveAsitrap(){
+    return(
+        {
+            status: "success"
+        }
+    );
+}
+console.log(resoleveAsitrap());
