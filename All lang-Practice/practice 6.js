@@ -68,3 +68,15 @@ for( const price of cartPrices){
         console.log("Normal Product: Rs. "+ price + " ");
     }
 }
+
+
+function sayHello(){
+    console.log("Hello Friends ");
+}
+sayHello();
+
+function greetUser(name){
+    console.log("Welcome back, "+ name + "! ");
+}
+greetUser("Sahil");
+
