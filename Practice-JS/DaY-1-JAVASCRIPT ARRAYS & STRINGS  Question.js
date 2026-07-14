@@ -1,43 +1,46 @@
 // =========================================================================
-// JAVASCRIPT ARRAYS & STRINGS 
+// JAVASCRIPT ARRAYS & STRINGS (EASY REFERENCE GUIDE)
 // =========================================================================
 
 // -------------------------------------------------------------------------
-// Q1. How do you calculate the Sum of all elements in an Array?
+// Q1. Array ke saare elements ka Sum (Total) kaise nikalte hain?
 // -------------------------------------------------------------------------
 let marksForSum = [85, 97, 44, 37, 76, 60];
 let totalSum = 0;
 
+// 'of' loop lagaya taaki array ki ek-ek value direct 'val' variable mein milti rahe
 for (let val of marksForSum) {
-    totalSum += val;
+    totalSum += val; // Saari values ko totalSum mein jodte (add) gaye
 }
 console.log("Q1. Total Sum of Marks =", totalSum); // Output: 399
 console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q2. How do you find the Average Marks of a class from an Array?
+// Q2. Array se average marks kaise nikalte hain?
 // -------------------------------------------------------------------------
 let marksForAvg = [85, 97, 44, 37, 76, 60];
 let classSum = 0;
 
+// Pehle saare marks ka total sum nikalenge
 for (let val of marksForAvg) {
     classSum += val;
 }
+// Fir total sum ko array ki length (total items) se divide kar denge
 let avg = classSum / marksForAvg.length;
 console.log(`Q2. Avg marks of the class = ${avg}`); // Output: 66.5
 console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q3. Apply a 10% discount/offer on every item price in an Array.
+// Q3. Array ke har item par 10% discount kaise apply karein?
 // -------------------------------------------------------------------------
 let prices = [250, 645, 300, 900, 50];
 
-// Fixed: Changed 'i < prices.length - 1' to 'i < prices.length' so the last item is not skipped.
+// Loop ko pure end tak chalayenge (i < prices.length) taaki aakhiri item miss na ho
 for (let i = 0; i < prices.length; i++) {
-    let offer = prices[i] / 10;
-    prices[i] -= offer;
+    let offer = prices[i] / 10; // Har price ka 10% nikala
+    prices[i] -= offer;         // Us 10% ko original price se minus (ghata) diya
 }
 console.log("Q3. Prices after 10% Offer:", prices);
 // Output: [225, 580.5, 270, 810, 45]
@@ -45,31 +48,32 @@ console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q4. Demonstrate Array basic methods: push(), pop(), and toString().
+// Q4. Array ke basic methods: push(), pop(), aur toString() kaise chalte hain?
 // -------------------------------------------------------------------------
 let fooditems = ["potato", "apple", "lichi", "tomato"];
 
-// push(): Adds elements to the end
+// push(): Array ke aakhiri (end) mein naye elements ghusane ke liye
 fooditems.push("chips", "mango");
 console.log("Q4. After Push:", fooditems);
 
-// pop(): Removes the last element
+// pop(): Sabse aakhiri wala element bahar nikalne (delete karne) ke liye
 fooditems.pop();
 console.log("Q4. After Pop:", fooditems);
 
-// toString(): Converts array to a comma-separated string
-// Note: toString() returns a new string, it does not change the original array.
+// toString(): Pure array ko commas wale single string mein badal deta hai
+// Yaad rakhein: isse original array par koi asar nahi padta, ek naya string banta hai
 let foodString = fooditems.toString();
 console.log("Q4. After toString():", foodString);
 console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q5. How do you merge or concatenate two different Arrays?
+// Q5. Do alag-alag Arrays ko aapas mein kaise jodein (merge karein)?
 // -------------------------------------------------------------------------
 let heroes = ["thor", "spiderman", "ironman"];
 let dc_heroes = ["superman", "batman"];
 
+// .concat() dono arrays ka saaman jodkar ek naya fresh array bana deta hai
 let newheroes = heroes.concat(dc_heroes);
 console.log("Q5. Concatenated Heroes:", newheroes);
 // Output: ["thor", "spiderman", "ironman", "superman", "batman"]
@@ -77,28 +81,29 @@ console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q6. How do you modify or replace elements at a specific index?
+// Q6. Kisi specific index par element ko badalna (replace karna) ho toh?
 // -------------------------------------------------------------------------
 let companies = ["bloomberg", "microsoft", "uber", "google", "ibm", "netflix"];
 
-// Fixed: 'slice' does not modify original array. To replace/insert, we use 'splice(index, deleteCount, element)'.
-// This replaces 1 element at index 2 ("uber") with "google".
+// Note: slice use nahi karenge kyunki woh original array change nahi karta.
+// Kuch replace karne ke liye splice(index, kitne_items_hatane_hain, naya_saaman) use hota hai.
+// Yahan index 2 se "uber" ko hataya aur uski jagah "google" fit kar diya.
 companies.splice(2, 1, "google");
 console.log("Q6. Companies after Splice:", companies);
 console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q7. Write a function to find the Index of a Target element (Linear Search).
+// Q7. Array mein se target element dhoondkar uska Index batane wala function
 // -------------------------------------------------------------------------
-// Fixed: Changed 'i < arr.length - 1' to 'i < arr.length' to check the last element as well.
 const findElementIndx = (arr, target) => {
+    // Loop ko bilkul aakhiri element tak chalaya (i < arr.length)
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === target) {
-            return i; // Returns the index if found
+            return i; // Target milte hi uski seat number (index) return kar do aur loop se bahar
         }
     }
-    return -1; // Returns -1 if not found
+    return -1; // Agar poora array dhoondh liya aur target nahi mila, toh -1 return kar do
 };
 
 const myNumbers = [10, 20, 30, 40, 50];
@@ -108,14 +113,16 @@ console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q8. How do you filter and extract Even Numbers from an Array into a new Array?
+// Q8. Array se sirf Even Numbers (2 se divide hone wale) filter karke alag kaise karein?
 // -------------------------------------------------------------------------
 let numbersList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let evenNumbers = [];
 
+// Har number par check lagayenge
 for (let i = 0; i < numbersList.length; i++) {
+    // Agar number 2 se divide karne par 0 bacha (yaani even hai)
     if (numbersList[i] % 2 === 0) {
-        evenNumbers.push(numbersList[i]);
+        evenNumbers.push(numbersList[i]); // Toh use apne naye 'evenNumbers' wale bag (array) mein daal lo
     }
 }
 console.log("Q8. Even numbers (using loop):", evenNumbers);
@@ -124,12 +131,14 @@ console.log("\n");
 
 
 // -------------------------------------------------------------------------
-// Q9. How do you reverse a String using a decrementing 'for' loop?
+// Q9. Ulte loop (decrementing loop) se String ko reverse kaise karein?
 // -------------------------------------------------------------------------
 const reverseWord = (word) => {
     let newWord = "";
+    // Loop ko string ke aakhiri akshar (word.length - 1) se shuru kiya
+    // aur peeche ki taraf le gaye (i >= 0; i--)
     for (let i = word.length - 1; i >= 0; i--) {
-        newWord += word[i];
+        newWord += word[i]; // Ek-ek ulta akshar jodte gaye
     }
     return newWord;
 };
