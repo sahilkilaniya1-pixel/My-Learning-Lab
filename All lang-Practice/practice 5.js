@@ -17,11 +17,11 @@ console.log(score,price); // both result show
 
 
 let name = "sahil";
-console.log(name);
+console.log(name); // output = sahil
 
 
 letisLoggedIn = true;
-console.log(letisLoggedIn);
+console.log(letisLoggedIn); // output true
 
 
 let x;
@@ -53,3 +53,17 @@ let cars = ["verna","brezza","amaze","vitara"];
 console.log(cars[0]);  // verna
 console.log(cars[1]);  //brezaa
 console.log(cars[2]); // amaze
+
+
+
+let StudentsData ={
+    firstName : "Sahil",
+    lastName : "kilaniya",
+    age : 24,
+    State : "Haryana",
+    City : "rohtak",
+    pincode : 124001
+};
+// console.log(StudentsData);
+console.log(StudentsData.firstName); //output: sahil
+console.log(StudentsData.age);      //age : 24
