@@ -1,57 +1,57 @@
 // =========================================================================
 // JavaScript Core Algorithms & Built-in Methods Practice Script
 // =========================================================================
-// Description: A comprehensive technical reference guide demonstrating 
-// manual algorithm implementations side-by-side with modern ES6+ built-in methods.
+// Description: Manual algorithm implementations (purane tarike) aur modern
+// ES6+ built-in methods ka side-by-side comparison master guide.
 
 /*
   =========================================================================
-  ARCHITECTURAL TOPIC MAPPING TABLE
+  ARCHITECTURAL TOPIC MAPPING TABLE (Khel Kis Cheez Ka Hai?)
   =========================================================================
-  The challenges implemented below provide comprehensive coverage of the 
-  following native ECMAScript programmatic features:
+  Is poore script ke andar humne niche diye gaye core ECMAScript program 
+  features ko depth mein cover kiya hai:
 
   1. STRINGS & INDEXING (Questions 1 & 2)
-     - Character Access via Bracket Notation Syntax: `str[i]`
-     - String Boundary Evaluation using the immutable `.length` scalar property.
+     - Bracket Notation Syntax se Character Access karna: `str[i]`
+     - String Boundary check karne ke liye `.length` property ka use.
 
   2. ARRAYS & PARAMETER WRAPPING (Questions 3 & 5)
-     - Argument Packing using the Rest Parameter token: `...arr`
-     - Dynamic Stack Insertion using the `Array.prototype.push()` method.
+     - Loose arguments ko array mein pack karne ke liye Rest Parameter token: `...arr`
+     - Dynamic tareeke se stack mein data dalne ke liye `Array.prototype.push()`.
 
-  3. CONTROL FLOW ITERATION LOOPS (All Questions)
+  3. CONTROL FLOW ITERATION LOOPS (Saare Questions)
      - Linear Index Traversal: Standard `for` loop (Questions 1, 2, 3, 5)
      - Enumerable Property Traversal: Reflective `for...in` loop (Question 4)
 
-  4. CONDITIONAL BRANCHING STRUCTURES (All Questions)
-     - Evaluative state branching logic using standard `if-else` blocks.
+  4. CONDITIONAL BRANCHING STRUCTURES (Saare Questions)
+     - Standard `if-else` blocks ka use karke condition ke basis par rasta badalna.
 
   5. MODERN NATIVE OPERATORS & EXPRESSIONS (Questions 4 & 5)
-     - Structural Property Verification: The relational `in` operator.
-     - Concise Inline Evaluation: The conditional Ternary Operator (`? :`).
+     - Object mein key check karne ke liye relational `in` operator.
+     - Chota inline if-else validation: Ternary Operator (`? :`).
 
   6. HIGH-ORDER COMPILATION METHODS (Advanced Engine Mechanics)
-     - Sequence Conversions: `.split()`, `.reverse()`, and `.join()`.
-     - Variadic Math Processing: Static `Math.max()` with Spread Parameters.
-     - Immutable Sequence Projections: Immutable transformation via `.map()`.
+     - Sequence Conversions: `.split()`, `.reverse()`, aur `.join()`.
+     - Multi-value processing: `Math.max()` ke sath Spread Parameters `...`.
+     - Immutable Sequence Projections: `.map()` ke sath bina purana array chhede transformation.
   =========================================================================
 */
 
 // -------------------------------------------------------------------------
-// QUESTION 1: String Reversal (Inverting sequence structures)
+// QUESTION 1: String Reversal (String ko ulta ghumana)
 // -------------------------------------------------------------------------
 
-// Approach 1: Manual Iteration (Reverse Pointer Traversal Loop)
+// Approach 1: Manual Iteration (Aakhri index se shuru hone wala reverse loop)
 function reverseStringManual(str) {
     let reversed = ""; 
-    // Start at the final structural index and parse backwards to 0
+    // String ke sabse aakhri index se shuru karo aur piche ki taraf 0 tak aao
     for (let i = str.length - 1; i >= 0; i--) {
         reversed = reversed + str[i]; 
     }
     return reversed;
 }
 
-// Approach 2: Native Utility Chaining (.split -> .reverse -> .join)
+// Approach 2: Native Utility Chaining (.split -> .reverse -> .join ka combo)
 function reverseStringBuiltIn(str) {
     return str.split("").reverse().join("");
 }
@@ -60,14 +60,17 @@ console.log("Q1 Manual Output:", reverseStringManual("rahul"));     // EXPECTED 
 console.log("Q1 Built-In Output:", reverseStringBuiltIn("rahul"));   // EXPECTED OUTPUT: "luhar"
 
 /*
-  Line-by-Line Explanation:
-  - reverseStringManual: Uses character bracket access `str[i]` to look up individual letters. It appends characters starting from the rightmost index (`str.length - 1`) down to zero.
-  - reverseStringBuiltIn: Explodes the string into a temporary array of characters via `.split("")`, uses the native in-place array inversion engine `.reverse()`, and serializes the elements back into a string using `.join("")`.
+  💡 Line-by-Line Explanation (Asaan Bhasha Mein):
+  - reverseStringManual: Bracket notation `str[i]` ka use karke ek-ek akshya uthata hai. 
+    Yeh loop ko ulti taraf se chalata hai (yaani length - 1 se lekar 0 tak) aur string jodta jata hai.
+  - reverseStringBuiltIn: Pehle `.split("")` se string ke tukde karke array banata hai, 
+    fir array ke built-in `.reverse()` engine se use ulta karta hai, aur aakhri mein `.join("")` 
+    se wapas jodkar ek single string bana deta hai.
 */
 
 
 // -------------------------------------------------------------------------
-// QUESTION 2: Character Frequency Count (Locating specific targets)
+// QUESTION 2: Character Frequency Count (Khaas akshya ko dhoondhna)
 // -------------------------------------------------------------------------
 
 // Approach 1: Manual Accumulation (Linear Search Match Counter)
@@ -83,7 +86,7 @@ function countCharManual(str, char) {
 
 // Approach 2: Functional Parsing Strategy (Delimiter Splitting Hack)
 function countCharBuiltIn(str, char) {
-    // Splitting a string by a target character isolates matches inside the resulting array boundaries
+    // Target character ko hi delimiter (katauti ka point) banakar array tod do
     return str.split(char).length - 1;
 }
 
@@ -91,31 +94,33 @@ console.log("Q2 Manual Output:", countCharManual("javascript", "a"));     // EXP
 console.log("Q2 Built-In Output:", countCharBuiltIn("javascript", "a"));   // EXPECTED OUTPUT: 2
 
 /*
-  Line-by-Line Explanation:
-  - countCharManual: Evaluates each character via a standard `for` loop up to `str.length`. If a strict match (`===`) is found against the search character, it increments the tracking pointer variable.
-  - countCharBuiltIn: Subverts typical loop requirements by using the character as a split token delimiter. The matching instances act as slice points, meaning the resulting array length minus one gives the exact count of matches.
+  💡 Line-by-Line Explanation (Asaan Bhasha Mein):
+  - countCharManual: Ek normal `for` loop se poori string ko shuru se aakhri tak chanta hai. 
+    Jahan bhi use strict equality `===` ke sath wo character milta hai, counter ko 1 badha deta hai.
+  - countCharBuiltIn: Yeh ek dhasu hack hai! Agar hum string ko us character se todte hain, 
+    toh jitne tukde honge usse ek kam baar wo character string mein aaya hoga. Isliye `length - 1` return kiya.
 */
 
 
 // -------------------------------------------------------------------------
-// QUESTION 3: Maximum Element Discovery (Locating global upper bounds)
+// QUESTION 3: Maximum Element Discovery (Sabse bada number nikalna)
 // -------------------------------------------------------------------------
 
-// Approach 1: Manual Scanning (Sequential Pointer Comparison Logic)
+// Approach 1: Manual Scanning (Ek-ek karke compare karne wala pointer logic)
 function findMaxManual(...arr) {
-    // Initialize our placeholder value directly with the first array element
+    // Maan lete hain ki pehla element (index 0) hi sabse bada hai
     let max = arr[0]; 
     for (let i = 1; i < arr.length; i++) {
         if (arr[i] > max) {
-            max = arr[i]; 
+            max = arr[i]; // Agar koi naya bada number mila, toh max ko update kar do
         }
     }
     return max;
 }
 
-// Approach 2: Declarative Evaluation (Math.max Utility Engine)
+// Approach 2: Declarative Evaluation (Built-in Math.max Engine)
 function findMaxBuiltIn(...arr) {
-    // The spread operator here unrolls the packed array back into separate, loose numeric parameters
+    // Spread operator `...` array ke pack huye dabbe ko khol kar khule numbers bana deta hai
     return Math.max(...arr); 
 }
 
@@ -123,29 +128,31 @@ console.log("Q3 Manual Output:", findMaxManual(10, 5, 99, 43, 8));     // EXPECT
 console.log("Q3 Built-In Output:", findMaxBuiltIn(10, 5, 99, 43, 8));   // EXPECTED OUTPUT: 99
 
 /*
-  Line-by-Line Explanation:
-  - ...arr (Rest Parameter): Gathers arguments into a structured array instance named `arr`.
-  - findMaxManual: Assumes index 0 contains the highest value. It then compares this assumption against index references 1 through N. If an entry is larger, it overwrites the tracking value.
-  - findMaxBuiltIn: Passes the collection into the highly-optimized built-in `Math.max()` engine by unpackaging the values cleanly using the Spread syntax operator.
+  💡 Line-by-Line Explanation (Asaan Bhasha Mein):
+  - ...arr (Rest Parameter): Function mein bheje gaye loose numbers ko lapet kar ek tameez ka array bana deta hai.
+  - findMaxManual: Index 0 ko champion maan kar index 1 se lekar end tak race karwata hai. 
+    Jo bhi numbers isse bade nikalte hain, wo `max` ki gaddi par baithte jate hain.
+  - findMaxBuiltIn: JavaScript ke highly-optimized browser engine waale `Math.max()` ke andar 
+    Spread operator se array khol kar direct answer nikal leta hai.
 */
 
 
 // -------------------------------------------------------------------------
-// QUESTION 4: Object Property Verification (Key membership testing)
+// QUESTION 4: Object Property Verification (Key dhoondhna)
 // -------------------------------------------------------------------------
 
 // Approach 1: Manual Reflection (Iterative Key Traversal Loop)
 function hasKeyManual(obj, searchKey) {
-    // for...in loops explicitly parse enumerable string properties of target objects
+    // for...in loop object ke andar ki saari keys (properties) par baari-baari ghumta hai
     for (let key in obj) {
         if (key === searchKey) {
-            return true; 
+            return true; // Key milte hi turant true return karke exit maro
         }
     }
     return false; 
 }
 
-// Approach 2: Evaluative Expressions (The Binary 'in' Operator Syntax)
+// Approach 2: Evaluative Expressions (Sasta aur Tikau Binary 'in' Operator)
 function hasKeyBuiltIn(obj, searchKey) {
     return searchKey in obj; 
 }
@@ -154,32 +161,34 @@ console.log("Q4 Manual Output:", hasKeyManual({name: "Amit", age: 20}, "age")); 
 console.log("Q4 Built-In Output:", hasKeyBuiltIn({name: "Amit", age: 20}, "age"));   // EXPECTED OUTPUT: true
 
 /*
-  Line-by-Line Explanation:
-  - for...in Loop: Reflects on an object's structural keys. It tests each property label until it finds a match, returning `true` early and dropping out of the function block.
-  - in Operator: A clean, built-in feature that searches the object and its prototype chain to see if a key exists, returning a Boolean value directly without manual looping.
+  💡 Line-by-Line Explanation (Asaan Bhasha Mein):
+  - for...in Loop: Object ki ek-ek property label ko tab tak check karta hai jab tak exact 
+    match na miley. Agar match mil jata hai toh function beech mein se hi true lekar bhag jata hai.
+  - in Operator: Ek clean built-in feature jo bina koi loop chalaye direct object ya uski prototype 
+    chain mein check kar leta hai ki wo key exist karti hai ya nahi aur seedhe Boolean (true/false) deta hai.
 */
 
 
 // -------------------------------------------------------------------------
-// QUESTION 5: Conditional Sequence Mutation (Targeted transformation)
+// QUESTION 5: Conditional Sequence Mutation (Modulus ke sath Array badalna)
 // -------------------------------------------------------------------------
 
-// Approach 1: Manual Array Construction (Standard Stack Allocation)
+// Approach 1: Manual Array Construction (Naya array banakar push karna)
 function doubleNumbersManual(...arr) {
     let result = []; 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 === 0) {
-            result.push(arr[i] * 2); 
+            result.push(arr[i] * 2); // Even number mila toh dugna karke dalo
         } else {
-            result.push(arr[i]); 
+            result.push(arr[i]);     // Odd mila toh jaisa hai waisa hi daal do
         }
     }
     return result;
 }
 
-// Approach 2: Native Projections (.map Transformation Engine)
+// Approach 2: Native Projections (.map loop aur Ternary operator ka combo)
 function doubleNumbersBuiltIn(...arr) {
-    // Combines an immutable map projection loop with a concise conditional ternary operator
+    // Immutable map loop ke andar hi single line mein ternary operator (? :) lagaya hai
     return arr.map(num => num % 2 === 0 ? num * 2 : num);
 }
 
@@ -187,7 +196,10 @@ console.log("Q5 Manual Output:", doubleNumbersManual(1, 2, 3, 4));     // EXPECT
 console.log("Q5 Built-In Output:", doubleNumbersBuiltIn(1, 2, 3, 4));   // EXPECTED OUTPUT: [1, 4, 3, 8]
 
 /*
-  Line-by-Line Explanation:
-  - doubleNumbersManual: Checks for even numbers using the remainder modulus operator (`num % 2 === 0`). It builds the final array item-by-item using `.push()`.
-  - doubleNumbersBuiltIn: Uses `Array.prototype.map()`, which automatically runs a callback function across every array position to build a brand new, transformed array. The ternary operator handles the underlying if-else choice smoothly on a single line.
+  💡 Line-by-Line Explanation (Asaan Bhasha Mein):
+  - doubleNumbersManual: Remainder modulus operator `% 2 === 0` se check karta hai ki sankhya sam (even) hai ya nahi. 
+    Naye blank array mein item-by-item `.push()` karke data insert karta hai.
+  - doubleNumbersBuiltIn: `Array.prototype.map()` ka use karta hai jo background mein khud naya array 
+    allocate karta hai aur bina original array ko mutate kiye single line ternary logic se elements ko badal deta hai.
 */
+console.log("\n-------------------------------------------");
