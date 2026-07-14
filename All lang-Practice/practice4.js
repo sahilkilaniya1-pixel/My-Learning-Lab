@@ -41,3 +41,7 @@ let result = 10 + "20";  //1020  concatenate
 console.log(result);
 let dynamic = "5" -2;   // output 3
 console.log(dynamic);
+
+
+let fruits = ["apple","mango","orange"];
+console.log(fruits);
