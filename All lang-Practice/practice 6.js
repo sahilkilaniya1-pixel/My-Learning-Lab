@@ -80,3 +80,19 @@ function greetUser(name){
 }
 greetUser("Sahil");
 
+
+
+function addNumber (a, b){
+    let sum = a+b;
+    return sum;
+}
+let result = addNumber(10,20);
+console.log(result);
+
+
+function findSquare(num){
+    let squareValue = num* num;
+    return squareValue;
+}
+let output = findSquare(5);
+console.log(output);
