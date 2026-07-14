@@ -75,3 +75,20 @@ let products = [
 ];
 // console.log(products);
 console.log(products[0].name);
+
+
+let colors = ["Red", "Green","Blue"];
+// colors.push("yellow"); .//add color last
+// colors.pop(); // remove last item
+// colors.shift(); // remove first item
+colors.unshift("yellow"); // add item in first
+console.log(colors);
+
+
+let user = {
+    name: "Rahul",
+    age : 25
+};
+user.city = "Haryana";
+user.isPremium = true;
+console.log(user);
