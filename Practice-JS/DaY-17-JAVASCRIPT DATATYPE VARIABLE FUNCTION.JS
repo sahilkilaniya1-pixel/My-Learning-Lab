@@ -9,13 +9,13 @@
 // -------------------------------------------------------------------------
 
 // Var Declaration (Legacy)
-var oldVariable = "Purana tareeqa"; 
+var oldVariable = "Old way"; 
 // Architechtural Note: Highly discouraged in modern production due to lack of 
 // block-scoping and unpredictable behaviors stemming from variable hoisting.
 
 // Let Declaration (Mutable Block-Scoped Variable)
-let editable = "Isko change kar sakte hain";
-editable = "Nayi value"; // Permitted: Re-assignment is explicitly supported.
+let editable = "ca't change";
+editable = "new value"; // Permitted: Re-assignment is explicitly supported.
 
 // Const Declaration (Immutable Block-Scoped Reference)
 const fixedValue = "Yeh lock hai"; 
