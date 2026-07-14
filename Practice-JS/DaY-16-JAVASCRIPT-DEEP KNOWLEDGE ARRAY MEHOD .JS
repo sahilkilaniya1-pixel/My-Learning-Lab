@@ -1,9 +1,10 @@
 /**
- * THE ULTIMATE JAVASCRIPT ARRAY METHODS GUIDE
- * This script contains solutions to the assignment exercises along with 
- * a comprehensive breakdown of basic and advanced array methods in JavaScript.
+ * 🚀 THE ULTIMATE JAVASCRIPT ARRAY METHODS GUIDE (HINGLISH VERSION)
+ * Is file mein assignments ke solutions ke sath-sath advanced array concepts
+ * (Mutability, Chaining, Big-O, Sparse Arrays, Array-Like Objects) ko
+ * bilkul saral aur asaan Hinglish mein samjhaya gaya hai.
  * 
- * Perfect for pushing to GitHub as a master study reference.
+ * GitHub par upload karne aur interview preparation ke liye ekdum perfect sheet!
  */
 
 // =========================================================================
@@ -18,21 +19,21 @@ function questionOne() {
     let a = [2, 4, 6, 2, 0, 56, 32, 65, 78, 65, 78, 95];
 
     // 1. Sort in increasing and decreasing order
-    // We use the spread operator [...a] to avoid modifying (mutating) the original array.
-    let increasing = [...a].sort((x, y) => x - y); // (x - y) sorts numbers from low to high
-    let decreasing = [...a].sort((x, y) => y - x); // (y - x) sorts numbers from high to low
-    console.log(increasing);
-    console.log(decreasing);
+    // Original array ko mutation (badlaav) se bachane ke liye humne spread operator [...a] ka use kiya hai.
+    let increasing = [...a].sort((x, y) => x - y); // (x - y) yaani chote se bada (Ascending)
+    let decreasing = [...a].sort((x, y) => y - x); // (y - x) yaani bade se chota (Descending)
+    console.log("Increasing:", increasing);
+    console.log("Decreasing:", decreasing);
 
     // 2. Find the product (multiply) of the two biggest numbers
     let sortedDesc = [...a].sort((x, y) => y - x);
-    let multiplyTwoBiggest = sortedDesc[0] * sortedDesc[1]; // Indices 0 and 1 hold the largest numbers
-    console.log(multiplyTwoBiggest);
+    let multiplyTwoBiggest = sortedDesc[0] * sortedDesc[1]; // Descending array ke pehle do elements sabse bade honge
+    console.log("Product of 2 Biggest:", multiplyTwoBiggest);
 
     // 3. Find the product of the smallest and biggest number
     let sortedInc = [...a].sort((x, y) => x - y);
-    let multiplySmallestBiggest = sortedInc[0] * sortedInc[sortedInc.length - 1]; // First index * last index
-    console.log(multiplySmallestBiggest);
+    let multiplySmallestBiggest = sortedInc[0] * sortedInc[sortedInc.length - 1]; // Pehla (sabse chota) * Aakhri (sabse bada)
+    console.log("Product of Extremes:", multiplySmallestBiggest);
     console.log("\n");
 }
 questionOne();
@@ -43,13 +44,13 @@ function questionTwo() {
     console.log("--- Question 2 ---");
     // 1. Convert array into a string
     let arr = [2, 4, 5, 3, 5, 3, 2, 5, "a", "b"];
-    let arrayToString = arr.join(","); // Joins all elements separated by a comma
-    console.log(arrayToString);
+    let arrayToString = arr.join(","); // Saare elements ko comma (,) se jodkar single string bana dega
+    console.log("Array to String:", arrayToString);
 
     // 2. Convert string into an array
     let str = "Aayush";
-    let stringToArray = str.split(""); // Splits the string at every character boundary
-    console.log(stringToArray);
+    let stringToArray = str.split(""); // Har character ko alag-alag karke array ka element bana dega
+    console.log("String to Array:", stringToArray);
     console.log("\n");
 }
 questionTwo();
@@ -60,9 +61,9 @@ function questionThree() {
     console.log("--- Question 3 ---");
     let names = ["Aayush", "Sahil", "Akshya"];
     
-    // .map() creates a brand new array by transforming every single element in the loop
+    // .map() loop chala kar har element ko transform karta hai aur ek brand new array banakar deta hai
     let lengths = names.map(name => name.length); 
-    console.log(lengths);
+    console.log("Lengths of Names:", lengths);
     console.log("\n");
 }
 questionThree();
@@ -79,9 +80,9 @@ function questionFour() {
         { name: "Vikram", marks: 45 }, { name: "Tanvi", marks: 83 }
     ];
 
-    // To sort objects, we target their inner properties (x.marks and y.marks) inside the comparator function
-    students.sort((x, y) => x.marks - y.marks); // Sorts students from lowest to highest marks
-    console.log(students);
+    // Objects ko sort karne ke liye hum comparator function ke andar unki inner properties (marks) ko target karte hain.
+    students.sort((x, y) => x.marks - y.marks); // Sabse kam marks se sabse zyada marks (Ascending order)
+    console.log("Sorted Students:", students);
     console.log("\n");
 }
 questionFour();
@@ -98,19 +99,19 @@ function questionFive() {
     ];
 
     // 1. Find the first user who is active and over the age of 18
-    // .find() returns the VERY FIRST matching element and stops scanning
+    // .find() pure array mein se dhoondhega aur pehla matching element milte hi wahi ruk jayega (Short-circuit!)
     let activeAdult = users.find(user => user.isActive === true && user.age > 18);
-    console.log(activeAdult);
+    console.log("Active Adult found:", activeAdult);
 
     // 2. Check if every user in the list is active
-    // .every() returns true ONLY if the condition passes for all elements
+    // .every() tabhi true dega jab sab ke sab users active (isActive === true) honge
     let isAllActive = users.every(user => user.isActive === true);
-    console.log(isAllActive);
+    console.log("Are all users active?:", isAllActive);
 
     // 3. Check if at least one user is under the age of 18
-    // .some() returns true if AT LEAST ONE element passes the condition
+    // .some() check karta hai ki kya kam-se-kam ek bhi banda minor (age < 18) hai
     let hasMinor = users.some(user => user.age < 18);
-    console.log(hasMinor);
+    console.log("Does the list have any minor?:", hasMinor);
     console.log("\n");
 }
 questionFive();
@@ -123,21 +124,22 @@ questionFive();
 console.log("=== RUNNING ADVANCED CORE CONCEPTS ===\n");
 
 // --- 1. MUTABILITY VS IMMUTABILITY ---
-// Mutable methods mutate (change) the original data structure.
+// Mutable methods original data structure ke memory address ko badal dete hain.
 let originalArray = ["Apple", "Banana"];
-originalArray.push("Mango"); // Direct alteration
-console.log(originalArray);
+originalArray.push("Mango"); // Direct original array mein change kar diya (Mutation)
+console.log("Mutated Array:", originalArray);
 
-// Immutable methods do not affect the source; they generate fresh copies.
+// Immutable methods original data ko bina chhede, background mein ek fresh copy generate karte hain.
 let numericArray = [1, 2, 3];
-let newArrayCopy = numericArray.map(num => num * 10);
-console.log(numericArray);
-console.log(newArrayCopy);
+let newArrayCopy = numericArray.map(num => num * 10); // original array [1, 2, 3] surakshit hai!
+console.log("Original Array (Intact):", numericArray);
+console.log("New Copy (Transformed):", newArrayCopy);
 console.log("\n");
 
 
 // --- 2. METHOD CHAINING ---
-// Linking multiple array operations sequentially to pass data forward without assigning dummy variables.
+// Jab hum ek se zyada array operations ko ek line se link karte hain taaki beech mein
+// faltu ke temporary variables na banane padein. Isme ek loop ka output doosre ka input banta hai.
 const dashboardData = [
     { name: "John", isActive: true, score: 80 },
     { name: "Jane", isActive: false, score: 90 },
@@ -145,48 +147,48 @@ const dashboardData = [
 ];
 
 let finalScoreSum = dashboardData
-    .filter(item => item.isActive === true)  // Filters out inactive items
-    .map(item => item.score)                 // Extracts scores -> [80, 70]
-    .reduce((accum, curr) => accum + curr, 0); // Adds scores together -> 150
+    .filter(item => item.isActive === true)    // Sabse pehle inactive users ko bahar pheka
+    .map(item => item.score)                   // Bache huye active logon ke scores nikale -> [80, 70]
+    .reduce((accum, curr) => accum + curr, 0); // Un saare scores ko aapas mein jodh diya -> 150
 
-console.log(finalScoreSum);
+console.log("Chained Total Score Sum:", finalScoreSum);
 console.log("\n");
 
 
 // --- 3. TIME COMPLEXITY (BIG O PERFORMANCE) ---
-console.log("--- Performance Insights ---");
-console.log(".push() / .pop() runs in O(1) - Instant execution since items are manipulated at the end.");
-console.log(".unshift() / .shift() runs in O(n) - Slower because every subsequent index needs to re-align.");
-console.log(".find() / .filter() runs in O(n) - Linear scan checking elements one by one.");
+console.log("--- Performance Insights (Big-O) ---");
+console.log(".push() / .pop() runs in O(1) - Superfast! Kyunki isme array ke end mein change hota hai, kisi element ko aage-piche nahi khiskana padta.");
+console.log(".unshift() / .shift() runs in O(n) - Slow! Kyunki pehle position par naya element aane se baaki saare elements ko naye indexes par shift hona padta hai.");
+console.log(".find() / .filter() runs in O(n) - Linear scan. Ek-ek karke element check karne padte hain jab tak match na mile.");
 console.log("\n");
 
 
 // --- 4. SPARSE ARRAYS (THE INTERVIEW TRAP) ---
-// Arrays containing empty slot boundaries.
-let sparseArr = [1, , , 4]; // Length is 4, but indices 1 and 2 are blank
-console.log(sparseArr.length);
+// Sparse Arrays yaani wo arrays jisme beech-beech ke index slots khaali (empty/holes) hote hain.
+let sparseArr = [1, , , 4]; // Iska length 4 hai, par index 1 aur 2 par kuch nahi hai
+console.log("Sparse Array Length:", sparseArr.length);
 
 console.log("Iterating through Sparse Array:");
 sparseArr.forEach((element, index) => {
-    // Array iterators entirely skip unassigned empty slots!
+    // 💡 INTERVIEW TRAP: JS ke built-in iteration methods (forEach, map, etc.) empty slots ko skip kar dete hain!
     console.log(`Index ${index}: ${element}`);
 });
 console.log("\n");
 
 
 // --- 5. ARRAY-LIKE OBJECTS ---
-// Objects with indexed elements and a length property, but lacking array methods.
+// Aise objects jinke paas numerical indices aur 'length' property hoti hai, par array ke methods (.map, .filter) nahi hote.
 function handleArrayLike() {
-    // The 'arguments' object inside standard functions is an array-like object
-    console.log(Array.isArray(arguments));
+    // Standard functions ke andar milne wala 'arguments' object ek Array-like object hai.
+    console.log("Is 'arguments' a true array?:", Array.isArray(arguments));
     
-    // Converting it into an authentic array using Array.from()
+    // Isko modern dynamic array banane ke liye hum Array.from() ka use karte hain.
     let trueArray = Array.from(arguments);
-    console.log(Array.isArray(trueArray));
+    console.log("Is converted array a true array?:", Array.isArray(trueArray));
     
-    // Now you can safely call array transformations
+    // Conversion ke baad ab aap is par bindas array methods chala sakte ho!
     let calculated = trueArray.map(v => v * 2);
-    console.log(calculated);
+    console.log("Mapped Arguments Array:", calculated);
 }
 handleArrayLike(10, 20, 30);
 

@@ -1,138 +1,111 @@
 // =========================================================================
-// 11. Array Flattening (.flat())
+// 11. ARRAY FLATTENING (.flat())
 // =========================================================================
-// What it does: When dealing with arrays inside arrays (Nested Arrays), 
-// .flat() extracts all sub-array elements and concatenates them into a 
-// single-level flat array structure.
+// Kab use karein?: Jab arrays ke andar arrays (nested arrays) ki khichdi bani ho,
+// aur hume unhe nikal kar ek simple, single-level flat array banana ho.
 
 const nestedArray = [1, 2, [3, 4, [5, 6]]];
 
-// Flattening up to 2 levels deep
+// Depth parameter '2' ka matlab hai ki 2 level andar tak jaakar arrays ko kholo
 let flatArray = nestedArray.flat(2); 
 console.log("11. Flat Array Output:", flatArray);
 // EXPECTED OUTPUT: [1, 2, 3, 4, 5, 6]
 
 /*
-  Line-by-Line Explanation:
-  - .flat(2): The depth parameter '2' specifies how many levels deep a nested array structure should be flattened. 
-  - Architechtural Tip: If the array nesting depth is unknown dynamically, you can pass 'Infinity' (e.g., .flat(Infinity)) to completely flatten all layers.
+  💡 Pro Tip: Agar nesting kitni gehri hai yeh pata na ho, toh depth mein 'Infinity' 
+  pass kar do (.flat(Infinity)). Yeh saare levels ko nichod kar ekdum flat kar dega!
 */
 
 
 // =========================================================================
-// 12. Transforming & Flattening Map (.flatMap())
+// 12. TRANSFORMING & FLATTENING MAP (.flatMap())
 // =========================================================================
-// What it does: This method is a high-performance combination of running 
-// .map() followed immediately by a 1-level deep .flat(). It maps each element 
-// using a transformation function and flattens the result into a clean sequence.
+// Kab use karein?: Yeh .map() aur 1-level deep .flat() ka dhasu combo pack hai.
+// Pehle har element ko transform karega, fir unhe ek level flat karke return karega.
 
 const sentences = ["Hello World", "JavaScript is awesome"];
 
+// Har sentence ko words mein split kar rahe hain aur sath hi sath flat bhi kar rahe hain
 let words = sentences.flatMap(str => str.split(" "));
 console.log("12. flatMap Output:", words);
 // EXPECTED OUTPUT: ['Hello', 'World', 'JavaScript', 'is', 'awesome']
 
 /*
-  Line-by-Line Explanation:
-  - str.split(" "): Splits each individual string element into a sub-array of words separated by spaces.
-  - .flatMap(): Instead of creating an awkward multi-dimensional structure like [['Hello', 'World'], ['JavaScript', ...]], it executes efficiently to directly yield a clean, flattened array of strings.
+  🧠 Under the hood: 
+  Agar hum sirf .map() chalate toh output milta: [['Hello', 'World'], ['JavaScript', 'is', 'awesome']].
+  flatMap ne bina kisi extra performance cost ke ise direct single-level array bana diya!
 */
 
 
 // =========================================================================
-// 13. Filling Elements (.fill())
+// 13. FILLING ELEMENTS (.fill())
 // =========================================================================
-// What it does: It modifies (mutates) the original elements in an array by 
-// filling them with a static value from a specified starting index to an ending index.
+// Kab use karein?: Jab array ke dabbo mein manually koi static value thosni ho.
+// WARNING: Yeh method original array ko mutate (change) kar deta hai!
 
 const fillNumbers = [1, 2, 3, 4, 5];
 
-// Fill with 0 from index 1 up to index 4 (end index is exclusive)
+// Index 1 se lekar Index 4 tak (4 included nahi hoga) '0' bhar do
 fillNumbers.fill(0, 1, 4);
 console.log("13. Filled Array Output:", fillNumbers);
 // EXPECTED OUTPUT: [1, 0, 0, 0, 5]
 
-/*
-  Line-by-Line Explanation:
-  - .fill(0, 1, 4): The first argument (0) is the static value to insert. The second argument (1) is the starting index boundary. The third argument (4) is the ending index location, which is not included in the modification.
-  - CRITICAL WARNING: This method directly mutates the original reference array.
-*/
-
 
 // =========================================================================
-// 14. In-Place Element Copying (.copyWithin())
+// 14. IN-PLACE ELEMENT COPYING (.copyWithin())
 // =========================================================================
-// What it does: It copies a specific sequence of array elements within the 
-// same array and pastes them onto a target index position without altering 
-// the array's total length.
+// Kab use karein?: Apne hi array ke ek hisse ko copy karke, usi array ke kisi doosre 
+// index par chipka dena (overwrite) bina array ki length badle.
+// WARNING: Yeh bhi original array ko change (mutate) karta hai!
 
 const sequence = ["A", "B", "C", "D", "E"];
 
-// Copy the element at index 3 ('D') and paste/overwrite it at target index 0
+// Index 3 ('D') ko uthao aur use index 0 par paste kar do (index 4 exclusive hai)
 sequence.copyWithin(0, 3, 4);
 console.log("14. copyWithin Output:", sequence);
 // EXPECTED OUTPUT: ["D", "B", "C", "D", "E"]
 
-/*
-  Line-by-Line Explanation:
-  - .copyWithin(0, 3, 4): The first parameter (0) is the target sequence index to overwrite. The second parameter (3) is the starting index to read data from. The final parameter (4) is the ending reading boundary (exclusive).
-  - CRITICAL WARNING: Like .fill(), this performs an in-place structural mutation.
-*/
-
 
 // =========================================================================
-// 15. Immutable Safe Reversing (.toReversed())
+// 15. IMMUTABLE SAFE REVERSING (.toReversed())
 // =========================================================================
-// Note: This is a modern ECMAScript feature (ES2023+).
-// What it does: The old legacy .reverse() method used to destroy and mutate 
-// the original array state. .toReversed() safely returns a flipped clone 
-// without mutating the source dataset.
+// Note: Modern ES2023+ standard feature.
+// Kab use karein?: Purana .reverse() original array ki band baja deta tha (mutate karta tha).
+// .toReversed() bina original ko chhede, safely ek ulta kiya hua naya clone array deta hai.
 
 const originalDataset = [1, 2, 3];
 const reversedDataset = originalDataset.toReversed();
 
-console.log("15a. Safe Reversed Array:", reversedDataset); // EXPECTED OUTPUT: [3, 2, 1]
-console.log("15b. Intact Original Array:", originalDataset); // EXPECTED OUTPUT: [1, 2, 3]
-
-/*
-  Line-by-Line Explanation:
-  - .toReversed(): Allocates a separate chunk of memory to clone the array entries, modifies their index sequence backwards, and yields that safe mutation-free copy.
-*/
+console.log("15a. Safe Reversed Array:", reversedDataset);   // EXPECTED OUTPUT: [3, 2, 1]
+console.log("15b. Intact Original Array:", originalDataset); // EXPECTED OUTPUT: [1, 2, 3] (Surakshit!)
 
 
 // =========================================================================
-// 16. Immutable Safe Sorting (.toSorted())
+// 16. IMMUTABLE SAFE SORTING (.toSorted())
 // =========================================================================
-// Note: This is a modern ECMAScript feature (ES2023+).
-// What it does: Instead of having to manually write alternative spread logic 
-// like [...array].sort(), modern JavaScript engines use .toSorted() to safely 
-// sort items while keeping the base source array clean.
+// Note: Modern ES2023+ standard feature.
+// Kab use karein?: Bina [...arr].sort() jaisi tricks lagaye, safe sorting karke naya array paane ke liye.
 
 const rawScores = [30, 10, 20];
 const immutablySortedScores = rawScores.toSorted((x, y) => x - y);
 
 console.log("16a. Safe Sorted Scores:", immutablySortedScores); // EXPECTED OUTPUT: [10, 20, 30]
-console.log("16b. Intact Original Scores:", rawScores);         // EXPECTED OUTPUT: [30, 10, 20]
+console.log("16b. Intact Original Scores:", rawScores);         // EXPECTED OUTPUT: [30, 10, 20] (No change!)
 
-/*
-  Line-by-Line Explanation:
-  - .toSorted(): Implicitly clones the collection under the hood, uses the callback comparator function logic to balance elements, and passes back a secure independent sorted copy.
-*/
 
 // =========================================================================
-// 17. Adding/Removing from the End (.push() & .pop())
+// 17. ADDING/REMOVING FROM THE END (.push() & .pop())
 // =========================================================================
-// What it does: These two methods interact exclusively with the very end 
-// of an array. Both methods directly mutate the original array structure.
+// Dono methods array ke aakhri kone (Tail) se khelte hain aur array ko mutate karte hain.
 
 let structuralFruits = ["Apple", "Banana"];
 
-// Adding to the end
+// Push: Array ke end mein naya element ghusata hai
 structuralFruits.push("Mango"); 
 console.log("17a. Array after .push():", structuralFruits);
 // EXPECTED OUTPUT: ["Apple", "Banana", "Mango"]
 
-// Removing from the end
+// Pop: Array ke aakhri element ko bahar nikal deta hai aur wahi element return karta hai
 let poppedFruit = structuralFruits.pop(); 
 console.log("17b. Array after .pop():", structuralFruits);
 console.log("17c. Extracted Element (.pop value):", poppedFruit);
@@ -140,144 +113,86 @@ console.log("17c. Extracted Element (.pop value):", poppedFruit);
 // Array after .pop(): ["Apple", "Banana"]
 // Extracted Element: "Mango"
 
-/*
-  Line-by-Line Explanation:
-  - .push("Mango"): Appends the specified string element directly onto the end of the collection.
-  - .pop(): Truncates the absolute final element from the collection, modifies the length property, and returns that isolated element.
-*/
-
 
 // =========================================================================
-// 18. Adding/Removing from the Start (.unshift() & .shift())
+// 18. ADDING/REMOVING FROM THE START (.unshift() & .shift())
 // =========================================================================
-// What it does: These methods interact exclusively with the beginning of 
-// an array. Both methods directly mutate the original array and trigger index re-indexing.
+// Dono methods array ke aage wale gate (Head) se khelte hain.
+// WARNING: Yeh slow hote hain kyunki aage badhne par baaki saare elements ke indexes re-index hote hain!
 
 let processingTeam = ["Bob", "Charlie"];
 
-// Adding to the start
+// Unshift: Shuruat mein naya element jodta hai
 processingTeam.unshift("Alice"); 
-console.log(processingTeam);
+console.log("18a. Array after .unshift():", processingTeam);
 // EXPECTED OUTPUT: ["Alice", "Bob", "Charlie"]
 
-// Removing from the start
+// Shift: Sabse pehla element bahar nikal leta hai
 let shiftedPerson = processingTeam.shift(); 
-console.log(processingTeam);
-console.log(shiftedPerson);
+console.log("18b. Array after .shift():", processingTeam);
+console.log("18c. Extracted Element (.shift value):", shiftedPerson);
 // EXPECTED OUTPUTS:
 // Array after .shift(): ["Bob", "Charlie"]
 // Extracted Element: "Alice"
 
-/*
-  Line-by-Line Explanation:
-  - .unshift("Alice"): Prepends the string element to the beginning of the array, shifting all existing elements to a higher index.
-  - .shift(): Decouples the very first element at index 0, shifts all remaining elements down by one index position, and returns the removed element.
-*/
-
 
 // =========================================================================
-// 19. Cutting an Array Subset (.slice())
+// 19. CUTTING AN ARRAY SUBSET (.slice())
 // =========================================================================
-// What it does: It extracts a shallow copy of a portion of an array into 
-// a brand-new array object. It leaves the original source array completely untouched.
+// Kab use karein?: Cake ka ek tukda kaatne ke liye, bina cake ko kharab kiye!
+// Yeh original array ko chhue bina uska ek hissa naye array mein copy karke deta hai.
 
 const targetAnimals = ["Ant", "Bison", "Camel", "Duck", "Elephant"];
 
-// Slice from index 1 up to index 4 (end index is exclusive)
+// Index 1 se start karo aur index 4 se pehle tak kaat lo (index 4 excluded hai)
 let subArrayResult = targetAnimals.slice(1, 4);
-console.log(subArrayResult);
-console.log(targetAnimals);
+console.log("19a. Slice Result:", subArrayResult);
+console.log("19b. Original Array:", targetAnimals);
 // EXPECTED OUTPUTS:
-// Extracted Slice Array: ["Bison", "Camel", "Duck"]
-// Base Source Array Check: ["Ant", "Bison", "Camel", "Duck", "Elephant"]
-
-/*
-  Line-by-Line Explanation:
-  - .slice(1, 4): The first argument (1) determines the index to begin extractions ("Bison"). The second argument (4) specifies the end index marker; extraction halts right before this index location ("Elephant").
-*/
+// Slice Result: ["Bison", "Camel", "Duck"]
+// Original Array: ["Ant", "Bison", "Camel", "Duck", "Elephant"]
 
 
 // =========================================================================
-// 20. The Multi-Purpose Content Modifier (.splice())
+// 20. THE SWISS ARMY KNIFE OF ARRAYS (.splice())
 // =========================================================================
-// What it does: Known as the Swiss Army knife of arrays because it changes the 
-// contents of an array by removing existing elements, replacing elements, and/or 
-// adding new elements in place. This operation mutates the original reference data.
+// Kab use karein?: Jab array ke beech mein se elements hatane hon, naye dalne hon, 
+// ya modify karne hon. WARNING: Yeh asli array ke dhaanchan ko badal (mutate) deta hai.
 
 const calendarMonths = ["Jan", "March", "April", "June"];
 
-// Action 1: Insert "Feb" at index position 1, deleting 0 elements
+// Action 1: Index 1 par jao, '0' elements delete karo, aur "Feb" ghusa do!
 calendarMonths.splice(1, 0, "Feb");
-console.log(calendarMonths);
+console.log("20a. Splice Insert:", calendarMonths);
 // EXPECTED OUTPUT: ["Jan", "Feb", "March", "April", "June"]
 
-// Action 2: Delete 1 element located precisely at index position 3 ("April")
+// Action 2: Index 3 par jo bhi hai use uthao aur use poora delete kar do (1 count)
 calendarMonths.splice(3, 1);
-console.log(calendarMonths);
+console.log("20b. Splice Delete:", calendarMonths);
 // EXPECTED OUTPUT: ["Jan", "Feb", "March", "June"]
 
-/*
-  Line-by-Line Explanation:
-  - .splice(index, deleteCount, item1, item2...): The first parameter dictates the insertion/deletion coordinates. The second parameter determines the deletion volume. Subsequent parameters represent new items being injected.
-*/
-
 
 // =========================================================================
-// 21. Merging Independent Arrays (.concat())
+// 21. MERGING INDEPENDENT ARRAYS (.concat())
 // =========================================================================
-// What it does: It merges two or more arrays together. This method does 
-// not alter or mutate the existing arrays, but instead returns a brand-new combined array.
+// Kab use karein?: Do alag arrays ko milakar ek bada naya joint-array banane ke liye.
 
 const alphabetGroup1 = ["a", "b"];
 const alphabetGroup2 = ["c", "d"];
 
 const concatenationResult = alphabetGroup1.concat(alphabetGroup2);
-console.log(concatenationResult);
+console.log("21. Concat Result:", concatenationResult);
 // EXPECTED OUTPUT: ["a", "b", "c", "d"]
 
-/*
-  Line-by-Line Explanation:
-  - .concat(): Generates a clean, brand-new instance array matching the length of both merged structures combined.
-  - Production Note: While modern developers often use the ES6 spread operator syntax `[...arr1, ...arr2]`, `.concat()` remains a standard approach.
-*/
-
 
 // =========================================================================
-// 22. Standard String Conversion (.toString())
+// 22. STANDARD STRING CONVERSION (.toString())
 // =========================================================================
-// What it does: Returns a string representing the specified array and its elements. 
-// It works similarly to `.join(",")` by converting elements and gluing them with comma separators.
+// Kab use karein?: Pure array ko comma-separated simple string mein badalne ke liye.
 
 const genericElements = [1, 2, "a", "b"];
 const stringifiedResult = genericElements.toString();
 
-console.log(stringifiedResult);
+console.log("22. toString Output:", stringifiedResult);
 // EXPECTED OUTPUT: "1,2,a,b"
-
-/*
-  Line-by-Line Explanation:
-  - .toString(): Automatically converts all elements inside the collection into a simple, flat string format separated exclusively by commas.
-*/
-
-
-// =========================================================================
-// 🏁 FINAL ARCHITECTURAL CLASSIFICATION
-// =========================================================================
-// Review this categorization mapping to understand the fundamental usage groups
-// of the 22 core array methods:
-/*
-  1. Searching Methods:
-     -> .find(), .findIndex(), .includes(), .some(), .every()
-
-  2. Transformation Methods:
-     -> .map(), .filter(), .reduce(), .flat(), .flatMap()
-
-  3. Sorting & Ordering:
-     -> .sort(), .toSorted(), .reverse(), .toReversed()
-
-  4. Mutating Operations (Add/Remove/Modify):
-     -> .push(), .pop(), .shift(), .unshift(), .splice(), .fill(), .copyWithin()
-
-  5. Utility & Conversion:
-     -> .join(), .split(), .slice(), .concat(), .toString()
-*/
+console.log("\n-------------------------------------------");
