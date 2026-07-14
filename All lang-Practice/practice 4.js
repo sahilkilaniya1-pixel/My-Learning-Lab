@@ -12,22 +12,43 @@ function reversedWordBuiltin(str){
 }
 console.log(reversedWordBuiltin("sahil"));
 
-function countword(str, char){
+function wordCount(str, char){
     let count =0;
-    for(let i = 0; i<str.length; i++){
-        if(str [i]=== char){
+    for(let i =0; i<str.length; i++){
+        if(str[i]===char){
             count ++;
         }
     }
     return count;
 }
-console.log(countword("sahil", "a"));
-console.log(countword("sahil", "l"));
+console.log(wordCount("sahil", "a"));
+console.log(wordCount("sahil", "l"));
 
-function countchar(str, char){
-    return str.split(char).length -1;
+
+
+function countWord(str,char){
+    return str.split("").reverse().join("");
 }
-console.log(countword("sahil", "a"));
+console.log(countWord("sahil","a"));
+
+
+
+function countCharManual(str, char){
+    let count =0;
+    for(let i=0; i<str.length; i++){
+        if(str[i] === char){
+            count ++;
+        }
+    }
+    return count;
+}
+console.log(countCharManual("sahil","a"));
+
+
+
+
+
+
 
 
 
