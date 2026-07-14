@@ -78,6 +78,11 @@ function hasKeyManual(obj,searchKey){
 console.log(hasKeyManual({name:"sahil",age: 20},"age"));
 
 
+function hasKeybuitlin(obj, searchKey){
+    return searchKey in obj;
+}
+console.log(hasKeyManual({name:"sahil",age: 20},"age"));
+
 
 
 
