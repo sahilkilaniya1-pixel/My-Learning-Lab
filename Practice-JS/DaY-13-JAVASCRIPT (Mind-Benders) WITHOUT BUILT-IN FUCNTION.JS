@@ -1,90 +1,118 @@
 // =========================================================================
-// Pattern 12: Object Equality (Deep Comparison of Two Objects)
+// JAVASCRIPT FOUNDATION: ADVANCED ALGORITHMS & CORE CODING PATTERNS (PART 3)
 // =========================================================================
-// Problem Statement: In JavaScript, using strict equality (===) on two different 
-// objects always returns false, even if they contain identical data, because 
-// they point to different memory references. Without using any external libraries, 
-// write a function to check if the data inside two objects is exactly the same.
-//
-// Approach:
-// We need to iterate through the keys of both objects and verify that every key's 
-// value in 'obj1' matches the corresponding key's value in 'obj2'.
+
+// =========================================================================
+// PATTERN 12: OBJECT EQUALITY (Deep Comparison of Two Objects)
+// =========================================================================
+
+/**
+ * 🎯 QUESTION 12: Check Object Equality (Shallow level)
+ * * Task: Do alag-alag objects ke andar ka data bilkul same hai ya nahi, yeh check karna hai.
+ * JS mein `===` lagane par reference check hota hai, isliye hume manually values match karni padengi.
+ * 
+ * * Logic:
+ * 1. Pehle manually dono objects ki keys count karo (bina Object.keys() ke). Agar dono ke pass barabar number of keys hi nahi hain, toh baat wahin khatam! Return false.
+ * 2. Fir `for...in` loop se ek-ek key uthao. Check karo ki kya woh key `obj2` mein exist karti hai aur dono ki values bilkul same hain ya nahi.
+ * 
+ * * Note (Bonus Mindset): Yeh code shallow check karta hai (nested objects ke liye deep check ke liye recursion lagta hai). Par basic objects ke liye yeh perfect aur fast hai!
+ */
+
 function areObjectsEqual(obj1, obj2) {
-    // 1. Manually count the keys of both objects (Without using Object.keys())
+    // 1. Manually dono objects ki keys count karenge taaki key-length mismatch turant pta chal sake
     let count1 = 0;
     for (let key in obj1) count1++;
     
     let count2 = 0;
     for (let key in obj2) count2++;
 
-    // If the number of keys does not match, the objects are not equal
+    // Agar keys ka count hi barabar nahi hai, toh dono objects same ho hi nahi sakte!
     if (count1 !== count2) return false;
 
-    // 2. Loop through the keys to compare their values
+    // 2. Ab loop chalao aur har ek key ki value compare karo
     for (let key in obj1) {
-        // If the key doesn't exist in obj2, or the values do not match
+        // - `obj2[key] === undefined` se pata chalta hai ki kya woh key dusre object mein hai bhi ya nahi
+        // - `obj1[key] !== obj2[key]` se hum aapas ki values match karte hain
         if (obj1[key] !== obj2[key]) {
-            return false;
+            return false; // Kahin bhi gadbad mili toh turant jhoot bol do!
         }
     }
 
-    // Return true if all keys and values match perfectly
+    // Agar sab kuch thik nikal gaya, toh badhaai ho, objects andar se judwaa (equal) hain!
     return true; 
 }
 
-console.log(areObjectsEqual({a: 1, b: 2}, {a: 1, b: 2})); // Output: true
-console.log(areObjectsEqual({a: 1, b: 2}, {a: 1, b: 3})); // Output: false
+console.log("--- Pattern 12: Object Equality Demo ---");
+console.log("Are equal?:", areObjectsEqual({a: 1, b: 2}, {a: 1, b: 2})); // Expected Output: true
+console.log("Are equal?:", areObjectsEqual({a: 1, b: 2}, {a: 1, b: 3})); // Expected Output: false
+console.log("\n-------------------------------------------");
 
 
 // =========================================================================
-// Pattern 13: Flatten a Nested Array (Without using .flat())
+// PATTERN 13: FLATTEN A NESTED ARRAY (Without using .flat())
 // =========================================================================
-// Problem Statement: Given a nested array containing multiple levels of arrays 
-// (e.g., [1, [2, 3], [4, [5]] ]), flatten it into a single-level array 
-// [1, 2, 3, 4, 5] without using the built-in .flat() method.
-//
-// Approach (Using Recursion):
-// We will iterate through each element of the array.
-// - If the element is a normal value -> push it into the result array.
-// - If the element is an array -> recursively call the helper function for that nested array.
+
+/**
+ * 🎯 QUESTION 13: Flatten Nested Array (Recursion Pattern)
+ * * Task: Ek array ke andar kitne bhi nested arrays ho (jaise [1, [2, 3], [4, [5]] ]), 
+ * use todkar ek simple single-level array [1, 2, 3, 4, 5] banana hai bina `.flat()` ke.
+ * 
+ * * Logic: Iske liye recursion (ek function jo khud ko call kare) sabse dhasu tarika hai!
+ * 1. Ek `extract` naam ka helper function banayein jo har ek element ko check karega.
+ * 2. Agar current element khud ek array hai (iska pata lagane ke liye check karenge ki kya uska type 'object' hai, woh null nahi hai, aur uske paas ek 'length' property hai)...
+ *    ...toh hum us array ke andar ghusenge (loop chalaenge) aur phir se `extract()` ko call kar denge (Recursion!).
+ * 3. Agar woh ek normal number/value hai, toh sidhe use humare `result` array mein daal denge.
+ */
+
 function flattenArray(arr) {
     let result = [];
 
-    // Helper function to evaluate and extract each element
+    // Helper function jo andar tak ghus kar saare elements ko chhaanega (extract karega)
     function extract(element) {
-        // Check if the element is an array without using built-in array methods
+        // JS mein array ka type checking ka desi aur solid jugad bina built-in Array.isArray() ke:
         if (typeof element === "object" && element !== null && element.length !== undefined) {
-            // If it's an array, iterate through its contents
+            // Agar element ek array hai, toh uske saare elements par fir se extract function run karo
             for (let i = 0; i < element.length; i++) {
-                extract(element[i]); // Recursion: Evaluate the inner elements
+                extract(element[i]); // Recursion: Andar wale array ke dabba ko bhi kholo!
             }
         } else {
-            // If it's a standard literal value, push it to the result array
+            // Agar normal value hai, toh bindass result array ke end mein insert kar do
             result[result.length] = element;
         }
     }
 
-    extract(arr); // Initiate the extraction process with the main array
+    extract(arr); // Sabse pehle poore main array ko andar bhejo
     return result;
 }
 
-console.log(flattenArray([1, [2, 3], [4, [5]]])); 
-// Output: [1, 2, 3, 4, 5]
+console.log("--- Pattern 13: Flatten Array Demo ---");
+console.log("Flattened Array:", flattenArray([1, [2, 3], [4, [5]]])); 
+// Expected Output: [1, 2, 3, 4, 5]
+console.log("\n-------------------------------------------");
 
 
 // =========================================================================
-// Pattern 14: String to Number Conversion (Without parseInt() or Number())
+// PATTERN 14: STRING TO NUMBER CONVERSION (Without parseInt() or Number())
 // =========================================================================
-// Problem Statement: Given a numerical string like "4321", convert it into a 
-// pure mathematical number 4321 without using parseInt(), parseFloat(), 
-// Number(), or the unary plus (+) operator.
-//
-// Approach (Mathematical & Mapping Logic):
-// We map each character digit to its actual numerical equivalent using a lookup table.
-// As we traverse the string from left to right, we multiply the existing total by 10 
-// to shift the place value, and then add the current digit.
-// For example: "4" -> 4, next is "3" -> (4 * 10) + 3 = 43, next is "2" -> (43 * 10) + 2 = 432, etc.
+
+/**
+ * 🎯 QUESTION 14: Convert String to Number Mathematically
+ * * Task: "4321" string ko bina JS ke functions (parseInt, Number, ya + operator) ke number `4321` mein badalna hai.
+ * 
+ * * Logic: Pure Math aur Place Value ka kamaal!
+ * 1. Sabse pehle string ke har character digit ('0' to '9') ko map karne ke liye ek lookup table (`digitMap`) bana lo.
+ * 2. Ab string ke upar left to right loop chalao.
+ * 3. Har naye step par jab hum aage badhte hain, toh purane value ko 10 se multiply karte hain (taaki uska dhasaka/place-value shift ho jaye) aur naya unit digit usme plus kar dete hain.
+ * 
+ * * Example step-by-step for "432":
+ *   - Start: num = 0
+ *   - Step 1: Char '4' -> Map value = 4.  Naya num = (0 * 10) + 4 = 4
+ *   - Step 2: Char '3' -> Map value = 3.  Naya num = (4 * 10) + 3 = 43
+ *   - Step 3: Char '2' -> Map value = 2.  Naya num = (43 * 10) + 2 = 432!
+ */
+
 function stringToNumber(str) {
+    // Har string character digit ka actual number value map kar diya
     const digitMap = { 
         '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, 
         '5': 5, '6': 6, '7': 7, '8': 8, '9': 9 
@@ -94,14 +122,17 @@ function stringToNumber(str) {
 
     for (let i = 0; i < str.length; i++) {
         let char = str[i];
-        let digit = digitMap[char]; // Map character to digit
+        let digit = digitMap[char]; // Char ko direct actual number mein convert kiya table se
         
-        num = (num * 10) + digit; // Shift place value and append the current digit
+        // Math magic: Purani values ko left shift (multiply by 10) karo aur naya digit unit place par jod do
+        num = (num * 10) + digit; 
     }
 
     return num;
 }
 
-let result = stringToNumber("4321");
-console.log(result);         // Output: 4321
-console.log(typeof result);  // Output: "number"
+console.log("--- Pattern 14: String to Number Demo ---");
+let convertedNum = stringToNumber("4321");
+console.log("Converted Value:", convertedNum);     // Expected Output: 4321
+console.log("Type of Output: ", typeof convertedNum); // Expected Output: "number"
+console.log("\n-------------------------------------------");
