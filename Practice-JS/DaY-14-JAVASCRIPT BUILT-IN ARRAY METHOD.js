@@ -1,17 +1,21 @@
 // =========================================================================
-// JavaScript Built-in Array Methods Reference Guide
+// JAVASCRIPT BUILT-IN ARRAY METHODS REFERENCE GUIDE
 // =========================================================================
-// Description: A comprehensive, production-ready reference guide demonstrating 
-// essential JavaScript array methods with explicit outputs and architectural insights.
+// Description: JavaScript ke built-in array methods ka ultimate production-ready
+// cheat-sheet guide. Isme hum har ek modern array method (.sort, .map, .filter, etc.)
+// ke core mechanics, time complexity, aur behtareen deshi Hinglish explanations ko 
+// line-by-line dekhenge.
 
 // -------------------------------------------------------------------------
-// Initial Setup Data
+// Initial Setup Data (Humara Test Data)
 // -------------------------------------------------------------------------
 const numbersArray = [2, 4, 6, 2, 0, 56, 32, 65, 78, 65, 78, 95];
 
 const mixedArray = [2, 4, 5, 3, 5, 3, 2, 5, "a", "b"];
 
 const namesList = ["Aayush", "Sahil", "Akshya"];
+
+const fruits = ["Apple", "Banana", "Mango"]; // Loop side-effect test ke liye
 
 const usersDataset = [
   { name: "John", age: 17, isActive: true },
@@ -20,116 +24,115 @@ const usersDataset = [
   { name: "Alice", age: 25, isActive: true }
 ];
 
+
 // =========================================================================
-// 1. Array Sorting (.sort())
+// 1. ARRAY SORTING (.sort())
 // =========================================================================
 
-// Ascending Order Implementation
+// --- A. Ascending Order (Chote se Bada) ---
+// Note: [...numbersArray] spread operator ka use karke humne original array ki 
+// shallow copy banayi hai taaki original data mutate (change) na ho!
 const ascendingResult = [...numbersArray].sort((x, y) => x - y);
-console.log(ascendingResult);
+console.log("1. Built-in Ascending Sorted:", ascendingResult);
 // EXPECTED OUTPUT: [0, 2, 2, 4, 6, 32, 56, 65, 65, 78, 78, 95]
 
-// Descending Order Implementation
+
+// --- B. Descending Order (Bade se Chota) ---
 const descendingResult = [...numbersArray].sort((x, y) => y - x);
-console.log(descendingResult);
+console.log("2. Built-in Descending Sorted:", descendingResult);
 // EXPECTED OUTPUT: [95, 78, 78, 65, 65, 56, 32, 6, 4, 2, 2, 0]
 
 /*
-  Line-by-Line Explanation:
-  - [...numbersArray]: Uses the spread operator to create a shallow copy. This prevents structural mutation of the original array.
-  - (x, y) => x - y: Comparator function. If the result is negative, 'x' is ordered before 'y', creating an ascending sequence.
-  - (x, y) => y - x: Reverses the logic. If 'y' minus 'x' is positive, higher values bubble to the front.
+  🧠 Under the Hood (Sort Mechanism):
+  - `(x, y) => x - y`: Yeh humara comparator function hai. 
+    Agar return value < 0 (negative) aati hai, toh 'x' pehle aayega 'y' se.
+    Agar return value > 0 (positive) aati hai, toh 'y' pehle aayega 'x' se.
+  - JS engine background mein iske liye V8 engine ka highly optimized Timsort algorithm chalata hai.
 */
 
+
 // =========================================================================
-// 2. Extrapolated Mathematical Products
+// 2. EXTRAPOLATED MATHEMATICAL PRODUCTS
 // =========================================================================
 
-// Product of the two largest numbers
+// --- A. Product of Two Largest Numbers ---
 const sortedDesc = [...numbersArray].sort((x, y) => y - x);
-const productOfTwoLargest = sortedDesc[0] * sortedDesc[1];
-console.log(productOfTwoLargest);
+const productOfTwoLargest = sortedDesc[0] * sortedDesc[1]; // Sabse bade pehle do elements uthaye
+console.log("3. Product of 2 Largest:", productOfTwoLargest);
 // EXPECTED OUTPUT: 7410 (Calculated via 95 * 78)
 
-// Product of the smallest and largest numbers
+
+// --- B. Product of Extremes (Min * Max) ---
 const sortedAsc = [...numbersArray].sort((x, y) => x - y);
+// sortedAsc[0] = sabse chota (Min), sortedAsc[sortedAsc.length - 1] = sabse bada (Max)
 const productOfExtremes = sortedAsc[0] * sortedAsc[sortedAsc.length - 1];
-console.log(ProdproductOfExtremes);
+console.log("4. Product of Extremes:", productOfExtremes);
 // EXPECTED OUTPUT: 0 (Calculated via 0 * 95)
 
-/*
-  Line-by-Line Explanation:
-  - sortedDesc[0] & [1]: Safely extracts the top two maximum values after a descending sort.
-  - sortedAsc[sortedAsc.length - 1]: Dynamically targets the final index position of an ascending array, guaranteeing the max value.
-*/
 
 // =========================================================================
-// 3. Data Type Conversions (.join() & .split())
+// 3. DATA TYPE CONVERSIONS (.join() & .split())
 // =========================================================================
 
-// Array to String Serialization
+// --- A. Array to String (.join()) ---
+// Array ke saare elements ko aapas mein chipka kar ek akela String bana deta hai
 const serializedString = mixedArray.join(",");
-console.log(serializedString);
+console.log("5. Serialized String:", serializedString);
 // EXPECTED OUTPUT: "2,4,5,3,5,3,2,5,a,b"
 
-// String to Array Deserialization
-const stringSample = "sahil";
-const deserializedArray = stringSample.split("");
-console.log(deserializedArray);
+
+// --- B. String to Array (.split()) ---
+// Ek string ko bataye huye delimiter ke basis par kaat kar array mein convert karta hai
+const stringSample = "Aayush"; // Output ke sath match karne ke liye humne ise "Aayush" rakha hai
+const deserializedArray = stringSample.split(""); // Empty string "" dene par ek-ek character alag ho jata hai
+console.log("6. Deserialized Array:", deserializedArray);
 // EXPECTED OUTPUT: ['A', 'a', 'y', 'u', 's', 'h']
 
-/*
-  Line-by-Line Explanation:
-  - .join(","): Glues elements into a singular string, inserting the specified delimiter parameter between each element.
-  - .split(""): Evaluates a string and cuts it at every matching instance of the delimiter. An empty string breaks it by individual characters.
-*/
 
 // =========================================================================
-// 4. Transformative Projections (.map())
+// 4. TRANSFORMATIVE PROJECTIONS (.map())
 // =========================================================================
 
+// Map loop chala kar, har ek element par callback function chalata hai 
+// aur ek brand-new same-length ka array return karta hai.
 const transformationResult = namesList.map(name => name.length);
-console.log(transformationResult);
-// EXPECTED OUTPUT: [6, 5, 6]
+console.log("7. Transformation Result (.map):", transformationResult);
+// EXPECTED OUTPUT: [6, 5, 6] (Names ki character length ka array)
 
-/*
-  Line-by-Line Explanation:
-  - .map(): Allocation mechanism that loops over elements, handles the transformation callback, and creates a clean array of identical length.
-  - name => name.length: Evaluates the specific length property of each string element dynamically.
-*/
 
 // =========================================================================
-// 5. Advanced Predicate Lookups (.find(), .every(), .some())
+// 5. ADVANCED PREDICATE LOOKUPS (.find(), .every(), .some())
 // =========================================================================
 
-// Finding a specific model structure
+// --- A. .find() ---
+// Poore array mein dhoondhega aur jo pehla element condition true karega, use return kar ke exit ho jayega
 const matchedUser = usersDataset.find(user => user.isActive === true && user.age > 18);
-console.log(matchedUser);
+console.log("8. Matched User (.find):", matchedUser);
 // EXPECTED OUTPUT: { name: "Bob", age: 19, isActive: true }
 
-// Absolute universal condition evaluation
+
+// --- B. .every() ---
+// "Sab ke sab pass hone chahiye!" Agar ek bhi element condition fail karega, toh result turant FALSE!
 const functionalSanityCheck = usersDataset.every(user => user.isActive === true);
-console.log(functionalSanityCheck);
-// EXPECTED OUTPUT: false (Fails due to Jane being inactive)
+console.log("9. Sanity Check (.every):", functionalSanityCheck);
+// EXPECTED OUTPUT: false (Kyunki Jane active nahi hai, yaani 'isActive === false')
 
-// Existential verification checks
+
+// --- C. .some() ---
+// "Koi ek bhi chalega!" Agar pure array mein koi ek bnda bhi condition pass kar de, toh result TRUE!
 const existenceEvaluation = usersDataset.some(user => user.age < 18);
-console.log(existenceEvaluation);
-// EXPECTED OUTPUT: true (Passes due to John being 17)
+console.log("10. Existence Check (.some):", existenceEvaluation);
+// EXPECTED OUTPUT: true (Kyunki John 17 ka hai, yaani 18 se chota hai)
 
-/*
-  Line-by-Line Explanation:
-  - .find(): Short-circuits and terminates operations the exact moment the callback returns a truthy evaluation, returning that element.
-  - .every(): Structural integrity method ensuring every item yields truthy; immediately drops to false if any exception occurs.
-  - .some(): Validates structural existence; returns true if a single array element matches the internal evaluation criteria.
-*/
 
 // =========================================================================
-// 6. Conditional Subset Filtering (.filter())
+// 6. CONDITIONAL SUBSET FILTERING (.filter())
 // =========================================================================
 
+// Pure array par filter chalakar, sirf un elements ko naye array mein save karta hai 
+// jo condition pass (true return) karte hain.
 const filteredSubset = usersDataset.filter(user => user.isActive === true);
-console.log(filteredSubset);
+console.log("11. Filtered Subset (.filter):", filteredSubset);
 /* 
   EXPECTED OUTPUT:
   [
@@ -139,32 +142,28 @@ console.log(filteredSubset);
   ]
 */
 
-/*
-  Line-by-Line Explanation:
-  - .filter(): Allocates a new array container, looping over all items and copying over elements that strictly pass the internal boolean check.
-*/
 
 // =========================================================================
-// 7. Data Collection Accumulation (.reduce())
+// 7. DATA COLLECTION ACCUMULATION (.reduce())
 // =========================================================================
 
 const expenseList = [100, 250, 500, 80];
+// reduce() hume poore array ko single value mein collapse (summarize) karne ka mauka deta hai.
+// accumulator = upar tak ka jama-khata (running total)
+// current = is round ka element
+// 0 = accumulator ki initial state (seed value)
 const runningGrandTotal = expenseList.reduce((accumulator, current) => accumulator + current, 0);
-console.log(runningGrandTotal);
+console.log("12. Running Grand Total (.reduce):", runningGrandTotal);
 // EXPECTED OUTPUT: 930
 
-/*
-  Line-by-Line Explanation:
-  - .reduce(): Transforms an entire data array down into one distinct output type using a sequential execution loop.
-  - accumulator: The historical variable bucket carrying values across array transitions.
-  - 0: The explicit seed value assigned to the accumulator before calculations begin.
-*/
 
 // =========================================================================
-// 8. Side-Effect Iterations (.forEach())
+// 8. SIDE-EFFECT ITERATIONS (.forEach())
 // =========================================================================
 
-console.log("13. Stream Processing Output Initialization:");
+console.log("13. Stream Processing Output (.forEach):");
+// forEach sirf elements ko stream karke action lene ke kaam aata hai (jaise print, DB save etc.)
+// Iska return value humesha undefined hota hai, isliye iska use calculations store karne ke liye nahi karte!
 fruits.forEach((fruit, index) => {
   console.log(` -> Element detected at positional index [${index}]: ${fruit}`);
 });
@@ -175,34 +174,25 @@ fruits.forEach((fruit, index) => {
   -> Element detected at positional index [2]: Mango
 */
 
-/*
-  Line-by-Line Explanation:
-  - .forEach(): Explicitly loops through values to execute isolated external mutations or operations. It yields no direct return expression value.
-*/
 
 // =========================================================================
-// 9. Index Determination Lookups (.findIndex())
+// 9. INDEX DETERMINATION LOOKUPS (.findIndex())
 // =========================================================================
 
 const genericScores = [45, 72, 98, 60];
+// findIndex exact match hone par index location (0, 1, 2...) bhejega. 
+// Kuch na milne par -1 return karega.
 const targetIndexResult = genericScores.findIndex(score => score >= 75);
-console.log(targetIndexResult);
-// EXPECTED OUTPUT: 2 (Points directly to the index location of 98)
+console.log("14. Target Index (.findIndex):", targetIndexResult);
+// EXPECTED OUTPUT: 2 (Kyunki 98 index 2 par hai)
 
-/*
-  Line-by-Line Explanation:
-  - .findIndex(): Scans values horizontally. The exact moment the boolean predicate returns true, it returns that index coordinate rather than the object value.
-*/
 
 // =========================================================================
-// 10. Presence Verification Validation (.includes())
+// 10. PRESENCE VERIFICATION VALIDATION (.includes())
 // =========================================================================
 
 const logisticsCart = ["Laptop", "Mouse", "Keyboard"];
-console.log(logisticsCart.includes("Trimmer")); // EXPECTED OUTPUT: false
-console.log(logisticsCart.includes("Mouse"));     // EXPECTED OUTPUT: true
-
-/*
-  Line-by-Line Explanation:
-  - .includes(): Directly scans reference configurations inside primitive collections for strict parity and returns a structural boolean response.
-*/
+// Direct simple items dhoondhne ka sabse short shortcut! Return types strictly boolean hote hain.
+console.log("15. Includes 'Trimmer'?:", logisticsCart.includes("Trimmer")); // Expected: false
+console.log("16. Includes 'Mouse'?:", logisticsCart.includes("Mouse"));     // Expected: true
+console.log("\n-------------------------------------------");

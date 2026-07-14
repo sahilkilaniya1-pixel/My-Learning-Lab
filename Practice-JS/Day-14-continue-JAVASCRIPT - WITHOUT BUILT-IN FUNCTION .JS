@@ -1,12 +1,13 @@
 // =========================================================================
-// JavaScript Array Manipulation: Pure Custom Algorithm Implementation
+// JAVASCRIPT ARRAY MANIPULATION: PURE CUSTOM ALGORITHM IMPLEMENTATION
 // =========================================================================
-// Description: A comprehensive reference guide implementing complex array operations
-// entirely from scratch WITHOUT using built-in methods (.sort, .map, .filter, etc.).
-// Written natively using control structures for deep architectural clarity.
+// Description: Ekdum zero level se, bina kisi built-in Array methods (.sort, 
+// .map, .filter, etc.) ka use kiye, custom JavaScript algorithms ka master guide.
+// Core control structures (Loops, If-Else) ka use karke poore data structures ko
+// aasan aur behtareen desi Hinglish language mein samjhaya gaya hai.
 
 // -------------------------------------------------------------------------
-// Initial Setup Data
+// Initial Setup Data (Humara Test Data)
 // -------------------------------------------------------------------------
 const numbersArray = [2, 4, 6, 2, 0, 56, 32, 65, 78, 65, 78, 95];
 
@@ -21,37 +22,54 @@ const usersDataset = [
   { name: "Alice", age: 25, isActive: true }
 ];
 
-// Helper Function: Creates a shallow copy of an array without using slice/spread
+/**
+ * 🛠️ Helper Function: Clone Array (Shallow Copy)
+ * * Task: Ek array ki bilkul alag, naye memory reference wali copy banana.
+ * * Kyun?: Taaki humara original array galti se bhi mutate (change) na ho jaye!
+ * * Trick: Bina .slice() ya spread operator [...] ke, hum naye array ke index position 
+ *   par purane values ko manually map kar rahe hain.
+ */
 function cloneArray(source) {
   let clone = [];
   for (let i = 0; i < source.length; i++) {
+    // result[result.length] wali trick se bina .push() ke element end mein insert ho jata hai
     clone[clone.length] = source[i];
   }
   return clone;
 }
 
+
 // =========================================================================
-// 1. Array Sorting (Custom Bubble Sort)
+// 1. ARRAY SORTING (Custom Bubble Sort)
 // =========================================================================
 
-// Ascending Order Implementation from scratch
+// --- A. Ascending Order (Chote se Bada) ---
 const ascendingResult = cloneArray(numbersArray);
+
+// Nested loops: Bubble sort ka asool hai ki har poore round (i) ke baad, 
+// sabse bada element automatically end mein "bubble up" hokar set ho jata hai.
 for (let i = 0; i < ascendingResult.length; i++) {
+  // -1 - i isliye kyunki aakhir ke sorted elements ko dubara check karne ki zaroorat nahi hai
   for (let j = 0; j < ascendingResult.length - 1 - i; j++) {
+    // Agar left wala element right wale se bada hai, toh dono ki seats adla-badli (swap) kar do!
     if (ascendingResult[j] > ascendingResult[j + 1]) {
-      let temp = ascendingResult[j];
+      let temp = ascendingResult[j]; // Temp dabba swap karne ke liye
       ascendingResult[j] = ascendingResult[j + 1];
       ascendingResult[j + 1] = temp;
     }
   }
 }
-console.log(ascendingResult);
+console.log("1. Ascending Sorted:", ascendingResult);
 // EXPECTED OUTPUT: [0, 2, 2, 4, 6, 32, 56, 65, 65, 78, 78, 95] 
 
-// Descending Order Implementation from scratch
+
+// --- B. Descending Order (Bade se Chota) ---
 const descendingResult = cloneArray(numbersArray);
+
 for (let i = 0; i < descendingResult.length; i++) {
   for (let j = 0; j < descendingResult.length - 1 - i; j++) {
+    // Logic ekdum same hai, bas yahan check karenge: agar left wala right wale se CHOTA hai,
+    // toh use right mein dhakel do (bade numbers ko aage laao!)
     if (descendingResult[j] < descendingResult[j + 1]) {
       let temp = descendingResult[j];
       descendingResult[j] = descendingResult[j + 1];
@@ -59,154 +77,149 @@ for (let i = 0; i < descendingResult.length; i++) {
     }
   }
 }
-console.log(descendingResult);
+console.log("2. Descending Sorted:", descendingResult);
 // EXPECTED OUTPUT: [95, 78, 78, 65, 65, 56, 32, 6, 4, 2, 2, 0]
 
-/*
-  Line-by-Line Explanation:
-  - cloneArray(): Creates an isolated copy manually so our sorting operations don't mutate the original numbersArray.
-  - Nested For Loops: Standard Bubble Sort strategy. It sequentially compares adjacent indices.
-  - if (arr[j] > arr[j + 1]): For ascending order, if the left item is larger than the right item, they swap positions using a temporary storage variable ('temp').
-  - if (arr[j] < arr[j + 1]): For descending order, it forces smaller numbers to migrate to the tail end instead.
-*/
 
 // =========================================================================
-// 2. Extrapolated Mathematical Products
+// 2. EXTRAPOLATED MATHEMATICAL PRODUCTS
 // =========================================================================
 
-// Finding the two largest numbers cleanly without built-in functions
+// --- A. Find the Product of Two Largest Numbers ---
 let max1 = -Infinity;
 let max2 = -Infinity;
+
 for (let i = 0; i < numbersArray.length; i++) {
+  // Case 1: Agar current number abhi tak ke sabse bade 'max1' se bhi bada nikal gaya
   if (numbersArray[i] > max1) {
-    max2 = max1;
-    max1 = numbersArray[i];
-  } else if (numbersArray[i] > max2) {
+    max2 = max1;             // Purana max1 ab doosre number par khisak gaya (demotion!)
+    max1 = numbersArray[i];  // Naya king (max1) mil gaya!
+  } 
+  // Case 2: Agar number max1 se toh chota hai par max2 se bada hai, toh sirf max2 update hoga
+  else if (numbersArray[i] > max2) {
     max2 = numbersArray[i];
   }
 }
 const productOfTwoLargest = max1 * max2;
-console.log(productOfTwoLargest);
+console.log("3. Product of 2 Largest:", productOfTwoLargest);
 // EXPECTED OUTPUT: 7410 (Calculated via 95 * 78)
 
-// Finding the absolute minimum and maximum element manually
+
+// --- B. Find Product of Absolute Extremes (Min * Max) ---
 let absoluteMin = numbersArray[0];
 let absoluteMax = numbersArray[0];
+
 for (let i = 1; i < numbersArray.length; i++) {
+  // Agar koi number absoluteMin se bhi chota hai, use new min bana do
   if (numbersArray[i] < absoluteMin) absoluteMin = numbersArray[i];
+  // Agar koi number absoluteMax se bhi bada hai, use new max bana do
   if (numbersArray[i] > absoluteMax) absoluteMax = numbersArray[i];
 }
 const productOfExtremes = absoluteMin * absoluteMax;
-console.log(productOfExtremes);
+console.log("4. Product of Extremes:", productOfExtremes);
 // EXPECTED OUTPUT: 0 (Calculated via 0 * 95)
 
-/*
-  Line-by-Line Explanation:
-  - Tracking max1 and max2: We loop through the collection once. If the current number beats max1, the old max1 value is demoted to max2, and the current element takes over max1.
-  - Min/Max Search: By setting our initial boundary parameters to index 0, we can run a quick direct comparison on remaining values to find extremes in a single run.
-*/
 
 // =========================================================================
-// 3. Data Type Conversions (Custom Join & Split Algorithms)
+// 3. DATA TYPE CONVERSIONS (Custom Join & Split Algorithms)
 // =========================================================================
 
-// Custom Array to String Serialization (Replicating .join(","))
+// --- A. Custom Array to String (Replicating .join(",")) ---
 let serializedString = "";
 for (let i = 0; i < mixedArray.length; i++) {
-  serializedString += mixedArray[i];
+  serializedString += mixedArray[i]; // String mein element jodo
+  
+  // Aakhir wale element ke baad comma (,) nahi aana chahiye, isliye length - 1 ka check
   if (i < mixedArray.length - 1) {
     serializedString += ",";
   }
 }
-console.log(serializedString);
+console.log("5. Serialized String:", serializedString);
 // EXPECTED OUTPUT: "2,4,5,3,5,3,2,5,a,b"
 
-// Custom String to Array Deserialization (Replicating .split(""))
+
+// --- B. Custom String to Array (Replicating .split("")) ---
 const stringSample = "Aayush";
 const deserializedArray = [];
+
 for (let i = 0; i < stringSample.length; i++) {
+  // String internally array ki tarah indexable hoti hai. 
+  // Hum har character ko manually naye array ke dynamic position par copy kar rahe hain.
   deserializedArray[deserializedArray.length] = stringSample[i];
 }
-console.log(deserializedArray);
+console.log("6. Deserialized Array:", deserializedArray);
 // EXPECTED OUTPUT: ['A', 'a', 'y', 'u', 's', 'h']
 
-/*
-  Line-by-Line Explanation:
-  - String Serialization loop: Appends each element to a string literal. The condition 'i < length - 1' ensures that trailing commas are omitted from the tail configuration.
-  - String Deserialization loop: Since a string is internally indexable, we can safely loop through its sequence and allocate characters directly via bracket assignment onto the raw container array.
-*/
 
 // =========================================================================
-// 4. Transformative Projections (Replicating .map())
+// 4. TRANSFORMATIVE PROJECTIONS (Replicating .map())
 // =========================================================================
 
 const transformationResult = [];
 for (let i = 0; i < namesList.length; i++) {
+  // Har ek string uthao, uski length nikaalo aur result array mein push kar do.
+  // result[result.length] dynamic push ka superfast alternative hai!
   transformationResult[transformationResult.length] = namesList[i].length;
 }
-console.log(transformationResult);
+console.log("7. Transformation Result (.map):", transformationResult);
 // EXPECTED OUTPUT: [6, 5, 6]
 
-/*
-  Line-by-Line Explanation:
-  - transformationResult[transformationResult.length]: A high-efficiency alternative to using .push() that appends items using the dynamic length state of the destination target.
-  - namesList[i].length: Measures the string size of each index position during programmatic traversal.
-*/
 
 // =========================================================================
-// 5. Advanced Predicate Lookups (Replicating .find(), .every(), .some())
+// 5. ADVANCED PREDICATE LOOKUPS (Replicating .find(), .every(), .some())
 // =========================================================================
 
-// Replicating .find() functionality
+// --- A. Custom .find() ---
 let matchedUser = undefined;
 for (let i = 0; i < usersDataset.length; i++) {
+  // Jo user condition ko meet karega (Active ho aur 18+ ho), use match user bana do
   if (usersDataset[i].isActive === true && usersDataset[i].age > 18) {
     matchedUser = usersDataset[i];
-    break; // Break execution immediately upon first successful hit
+    break; // Shuruat ka pehla banda milte hi loop ko tod do (No extra execution!)
   }
 }
-console.log(matchedUser);
+console.log("8. Matched User (.find):", matchedUser);
 // EXPECTED OUTPUT: { name: "Bob", age: 19, isActive: true }
 
-// Replicating .every() functionality
-let functionalSanityCheck = true;
+
+// --- B. Custom .every() ---
+let functionalSanityCheck = true; // Maan lo ki pehle se sab sahi (true) hai
 for (let i = 0; i < usersDataset.length; i++) {
+  // Agar ek bhi user inactive (isActive !== true) mil gaya, toh hamara condition fail!
   if (usersDataset[i].isActive !== true) {
-    functionalSanityCheck = false;
-    break; // Short circuit completely if an exception is encountered
+    functionalSanityCheck = false; 
+    break; // Ek bhi gunehgar milte hi short-circuit (break) kar do!
   }
 }
-console.log(functionalSanityCheck);
+console.log("9. Sanity Check (.every):", functionalSanityCheck);
 // EXPECTED OUTPUT: false
 
-// Replicating .some() functionality
-let existenceEvaluation = false;
+
+// --- C. Custom .some() ---
+let existenceEvaluation = false; // Maan lo ki koi bhi candidate condition pass nahi karega
 for (let i = 0; i < usersDataset.length; i++) {
+  // Agar ek bhi 18 saal se chota bacha mil gaya, toh existence 'true' ho jayegi
   if (usersDataset[i].age < 18) {
     existenceEvaluation = true;
-    break; // Satisfied upon detecting a single match
+    break; // Ek mil gaya na? Bas kaam poora! Break early!
   }
 }
-console.log(existenceEvaluation);
+console.log("10. Existence Check (.some):", existenceEvaluation);
 // EXPECTED OUTPUT: true
 
-/*
-  Line-by-Line Explanation:
-  - break Statements: Essential to mimic the optimized short-circuit mechanics of built-in evaluation logic. 
-  - Structural Integrity (Every vs Some): Every assumes absolute compliance and seeks any rule-breaker to invalidate early, while Some assumes complete failure and searches for a lone validator to approve early.
-*/
 
 // =========================================================================
-// 6. Conditional Subset Filtering (Replicating .filter())
+// 6. CONDITIONAL SUBSET FILTERING (Replicating .filter())
 // =========================================================================
 
 const filteredSubset = [];
 for (let i = 0; i < usersDataset.length; i++) {
+  // Filter algorithm: Agar filter condition 'true' aati hai, toh hi data payload ko naye container mein copy karo
   if (usersDataset[i].isActive === true) {
     filteredSubset[filteredSubset.length] = usersDataset[i];
   }
 }
-console.log(filteredSubset);
+console.log("11. Filtered Subset (.filter):", filteredSubset);
 /* 
   EXPECTED OUTPUT:
   [
@@ -216,35 +229,31 @@ console.log(filteredSubset);
   ]
 */
 
-/*
-  Line-by-Line Explanation:
-  - Filter Algorithm: Allocates an isolated destination container array. The data payload inside the conditional sequence block is copied over to the new array ONLY if the isActive property evaluation returns true.
-*/
 
 // =========================================================================
-// 7. Data Collection Accumulation (Replicating .reduce())
+// 7. DATA COLLECTION ACCUMULATION (Replicating .reduce())
 // =========================================================================
 
 const expenseList = [100, 250, 500, 80];
-let runningGrandTotal = 0; // Explicit default starter state seed
+let runningGrandTotal = 0; // Humara accumulator (starter value is 0)
+
 for (let i = 0; i < expenseList.length; i++) {
+  // Har iteration mein current element ko hum accumulator ke andar manually add karte jaa rahe hain
   runningGrandTotal += expenseList[i];
 }
-console.log(runningGrandTotal);
+console.log("12. Running Grand Total (.reduce):", runningGrandTotal);
 // EXPECTED OUTPUT: 930
 
-/*
-  Line-by-Line Explanation:
-  - Accumulation Algorithm: Emulates a basic data aggregator. It initializes an external numeric reference bucket ('runningGrandTotal') and adds each sequential structural index element into it over the lifetime of the iteration loop.
-*/
 
 // =========================================================================
-// 8. Side-Effect Iterations (Replicating .forEach())
+// 8. SIDE-EFFECT ITERATIONS (Replicating .forEach())
 // =========================================================================
 
-const fruits = ["Apple", "Banana", "Mango"]; // Declared to resolve structural runtime initialization
-console.log("13. Stream Processing Output Initialization:");
+const fruits = ["Apple", "Banana", "Mango"];
+console.log("13. Stream Processing Output (.forEach):");
+
 for (let i = 0; i < fruits.length; i++) {
+  // Yeh loop koi value transform nahi karta, bas seedhe external side-effects (console logging) chalata hai
   console.log(` -> Element detected at positional index [${i}]: ${fruits[i]}`);
 }
 /*
@@ -254,51 +263,44 @@ for (let i = 0; i < fruits.length; i++) {
   -> Element detected at positional index [2]: Mango
 */
 
-/*
-  Line-by-Line Explanation:
-  - Iteration Engine: A standard linear loop executing an un-returned template literal script inside the runtime pipeline. This provides zero functional transformation value back to the program, but fires explicit targeted side-effects.
-*/
 
 // =========================================================================
-// 9. Index Determination Lookups (Replicating .findIndex())
+// 9. INDEX DETERMINATION LOOKUPS (Replicating .findIndex())
 // =========================================================================
 
 const genericScores = [45, 72, 98, 60];
-let targetIndexResult = -1; // Default error indicator if no element satisfies the loop parameters
+let targetIndexResult = -1; // Default -1 (taaki match na hone par error state standard rahe)
+
 for (let i = 0; i < genericScores.length; i++) {
+  // Agar score 75 se bada ya equal hai, toh us index number ko save karke ruk jao
   if (genericScores[i] >= 75) {
     targetIndexResult = i;
-    break;
+    break; // Milte hi loop se exit!
   }
 }
-console.log(targetIndexResult);
+console.log("14. Target Index (.findIndex):", targetIndexResult);
 // EXPECTED OUTPUT: 2
 
-/*
-  Line-by-Line Explanation:
-  - Index Lookup matching: We initialize the baseline variable to -1. If our validation gate passes, the index cursor context 'i' is captured, and structural parsing is instantly aborted via break.
-*/
 
 // =========================================================================
-// 10. Presence Verification Validation (Replicating .includes())
+// 10. PRESENCE VERIFICATION VALIDATION (Replicating .includes())
 // =========================================================================
 
 const logisticsCart = ["Laptop", "Mouse", "Keyboard"];
 
-// Helper function to check structural inclusion
+/**
+ * * logic: Pooray array par loop chalao, agar element strict match (===) ho gaya,
+ * toh turant return 'true' kar do. Poora loop khatam hone par bhi na mile, toh 'false' bhej do.
+ */
 function evaluateInclusion(targetArray, lookupItem) {
   for (let i = 0; i < targetArray.length; i++) {
     if (targetArray[i] === lookupItem) {
-      return true;
+      return true; // Match found! Exit execution immediately.
     }
   }
-  return false;
+  return false; // Loop complete ho gaya par item kahi nahi mila.
 }
 
-console.log(evaluateInclusion(logisticsCart, "Trimmer")); // EXPECTED OUTPUT: false
-console.log(evaluateInclusion(logisticsCart, "Mouse"));     // EXPECTED OUTPUT: true
-
-/*
-  Line-by-Line Explanation:
-  - evaluateInclusion(): Iterates horizontally through data sequences. If strict equality (===) hits a positive match, it returns true early. If the loop finishes completely without matching, the execution flow falls through to return false.
-*/
+console.log("15. Includes 'Trimmer'?:", evaluateInclusion(logisticsCart, "Trimmer")); // Expected: false
+console.log("16. Includes 'Mouse'?:", evaluateInclusion(logisticsCart, "Mouse"));     // Expected: true
+console.log("\n-------------------------------------------");
