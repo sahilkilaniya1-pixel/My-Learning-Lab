@@ -7,6 +7,8 @@ if(withdrawalAmount <= balance){
 }
 
 
+// > (Bada hai): 10 > 5 $\rightarrow$ True< (Chhota hai): 3 < 1 $\rightarrow$ False>= (Bada hai ya barabar hai): 18 >= 18 $\rightarrow$ True<= (Chhota hai ya barabar hai): 5 <= 2 $\rightarrow$ False=== (Bilkul barabar hai): 5 === 5 $\rightarrow$ True | "Rahul" === "Amit" $\rightarrow$ False
+
 // let marks = 88;
 // if(marks >=90){
 //     console.log("Grade A");
@@ -30,3 +32,15 @@ if(marks >=90){
 }
 
 
+let totalBill = 1200;
+if(totalBill > 1000){
+    console.log("Apko mili free Delivery");
+} else {
+    console.log("$50 Delivery charges lagege");
+}
+
+
+const friends = ["Rahul","amit","Sahil","Sneha"];
+for(let i =0; i<friends.length; i++){
+    console.log("Hello " + friends[i]);
+}
