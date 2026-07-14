@@ -7,13 +7,26 @@ if(withdrawalAmount <= balance){
 }
 
 
-let marks = 88;
+// let marks = 88;
+// if(marks >=90){
+//     console.log("Grade A");
+// } else if(marks >= 75) {
+//     console.log("Grade B");
+// } else if(marks >= 35) {
+//     console.log("Grade C");
+// } else {
+//     console.log("Fail");
+// }
+
+let marks = 80;
 if(marks >=90){
     console.log("Grade A");
-} else if(marks >= 75) {
+}else if(marks >=75){
     console.log("Grade B");
-} else if(marks >= 35) {
+} else if( marks >= 60){
     console.log("Grade C");
 } else {
-    console.log("Fail");
+    console.log("Grade D Fail");
 }
+
+
