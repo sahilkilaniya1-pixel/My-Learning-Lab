@@ -1,40 +1,73 @@
-Module 2: Text Architecture & Typography (Heading, Paragraph, and Semantic Text)
+=========================================================================
+🚀 MODULE 2: TEXT ARCHITECTURE & TYPOGRAPHY (HEADING, PARAGRAPH & SEMANTIC)
+=========================================================================
+Description: Browser website ke text ko kaise read aur rank karta hai, semantic 
+importance (Meaning) aur visual styles ke beech ka asli farq kya hai.
 
-Browser text ko kaise read karta hain, ab hum wo seekhenge.
+-------------------------------------------------------------------------
+1. HEADINGS (<h1> to <h6>) - Hierarchy aur Importance
+-------------------------------------------------------------------------
+HTML mein total 6 type ki headings hoti hain. Inka kaam sirf text ka size 
+bada-chota karna nahi, balki code ki hierarchy (importance) batana hota hai:
 
-1.Heading(<h1> to <h6>).
-HTML mein 6 type ki headings hoti hain.
+* <h1> (The King Tag): Yeh sabse badi aur sabse important heading hoti hai. 
+  Pure HTML page par koshish karke SURF EK HI <h1> tag hona chahiye. Google 
+  ka Search Engine crawler sabse pehle aapke <h1> ko hi padhta hai taaki 
+  wo samajh sake ki page kis main topic par bana hai.
+* <h6> (The Smallest): Yeh hierarchy mein sabse choti aur sabse kam 
+  important heading hoti hai.
 
-::: <h1> sabse badi aur sabse important hoti hain. Pure HTML page par sirf ek hi <h1> tag hona chahiye. Google search engine sabse phele apke <h1> ko hi padhta hai ki page kis baare mein hain.
+⚠️ INTERVIEW WARNING / COMMON MISTAKE:
+Naye developers aksar kisi normal text ko bada dikhane ke liye bina soche 
+<h1> ya <h2> use kar lete hain. Yeh bilkul galat practice hai! Text ka size 
+bada ya chota karna CSS (Layout styling) ka kaam hai. HTML tags ka kaam sirf 
+browser aur Google ko text ka "Matlab" (Importance) batana hai.
 
-::: <h6> sabse choti aur sabse kam important hoti hain.
+-------------------------------------------------------------------------
+2. STRUCTURAL TAGS (Dhaancha Khada Karne Wale Tags)
+-------------------------------------------------------------------------
+* <p> (Paragraph Tag):
+  Yeh text ko ek block mein break karta hai. Jab aap <p> use karte ho, toh 
+  browser automatically paragraph ke upar aur niche thodi khali jagah 
+  (default margin) chodh deta hai.
 
-Galti mat karna :: Log aksar text ko bada dikhane  ke liye <h1> use kar lete hain. yeh galat hai! text bada dikhane ke liye CSS use hoti hai. HTML tags sirf importance batane ke liye hote hain.
+* <br> (Line Break):
+  Yeh ek Empty tag ya Self-Closing tag hai (yaani iska koi aakhri closing 
+  companion </br> nahi hota). Yeh chalte huye text ko wahi rok kar turant 
+  agli nayi line par bhej deta hai, bina paragraph badle.
 
+* <hr> (Horizontal Rule):
+  Yeh bhi ek self-closing tag hai. Yeh pure page par ek patli si horizontal 
+  line (laker) khinch deta hai. Iska use tab kiya jata hai jab aapko website 
+  par koi bada topic ya section change karna ho.
 
-2.Structural Tags.
+-------------------------------------------------------------------------
+3. SEMANTIC EMPHASIS (Visual Style vs Asli Meaning)
+-------------------------------------------------------------------------
+Aksar log sochte hain ki <b> aur <strong> dono ka kaam text ko bold karna hai, 
+aur <i> aur <em> dono ka kaam italic karna hai. Par search engines aur screen 
+readers ke liye dono ka matlab bilkul alag hai:
 
-::: <p>(Paragraph): Text ko block mein break karta hai aur automatic upar-niche thodi khali jagah(margin) chod deta hain.
+* <b> (Bold Style) vs <strong> (Semantic Importance)
+  - <b>: Yeh sirf text ko aankhon ke liye mota (visual style) karta hai. 
+    Browser ke liye iska koi special ya important matlab nahi hota.
+  - <strong>: Yeh text ko physically bold bhi karta hai aur sath hi Google 
+    + Browser ko bolta hai ki: "Bhai, yeh text pure page mein sabse zaroori 
+    hissa hai." Jo blind log screen reader use karte hain, unka software 
+    <strong> waale text ko thoda zor dekar (loudly) padhta hai.
 
-:::<br>(Line Break): Ye ek Empty tag ya Self-Closing tag hai (isko koi closing companion <br> nahi hota) . Ye chalte huye text ko wahi rok kar naye line par bhej deta hai.
+* <i> (Italic Style) vs <em> (Emphasis)
+  - <i>: Yeh text ko sirf design ya style dene ke liye tedha (italic) karta hai.
+  - <em>: Yeh browser ko batata hai ki is specific shabd par stress (zor) dena 
+    hai, jisse sentence ka tone badal jata hai.
 
-:::<hr>(Horizontal Rule): Yeh bhi self-closing tag hai. yeh page par ek horizontal line khinch deta hai jb aapko koi topic change karna ho.
-
-
-3.Semantic Emphasis(Style vs Meaning)
-aksar log sochte hain ki <b> aur <strong> dono ka kaam text ko bold karna hai. Lekin coding ki duniya mein inka matlab alag hai:
-
-:::<b> (Bold): Yeh sirf text ko mota (visual style) kar deta hain.Browser ke Liye iska koi special matlab nahi hai.
-
-:::<strong> : Yeh text ko bold bhi karta hai aur browser  + Google ko batata hai ki Yeh text bahut zarooi(important) Hai. Screen readers is text to thoda zor se padhte hain.
-
-:::<i> vs <em> (Emphasis): Same logic yahan bhi hai. <i> sirf text ko tedhs (italic) karta hai style ke liye, jabki <em> batata hai ki is shabd par stress/zor dena hai.
-
-
-Example code jise aap dhyan se dekhiye:
+🛠️ LIVE CODE EXAMPLE FOR NOTES:
 <p>Humaara mission hai <strong>HTML5 mein expert</strong> banna.</p>
+<!-- Yahan 'HTML5 mein expert' par sabse zyada zor diya gaya hai -->
+
 <p>Is kitab ke lekhak ka naam <i>Rahul Sharma</i> hai.</p>
+<!-- Yahan 'Rahul Sharma' ko sirf ek unique name style dene ke liye italic kiya hai -->
 
-
-
-
+=========================================================================
+=== END OF MODULE 2 NOTES ===
+=========================================================================
