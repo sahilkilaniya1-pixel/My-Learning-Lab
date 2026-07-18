@@ -1,1 +1,9 @@
 Module 2: Text Architecture & Typography (Heading, Paragraph, and Semantic Text)
+
+Browser text ko kaise read karta hain, ab hum wo seekhenge.
+
+1.Heading(<h1> to <h6>)
+HTML mein 6 type ki headings hoti hain.
+
+<h1> sabse badi aur sabse important hoti hain. Pure HTML page par sirf ek hi <h1> tag hona chahiye. Google search engine sabse phele apke <h1> ko hi padhta hai ki page kis baare mein hain.
+
