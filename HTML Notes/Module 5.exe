@@ -7,3 +7,5 @@ HTML5 Form sirf data lene ke liye nahi hote, ye browser ke andar hi user ki gala
 
 :: Action: jab user submit button dabayega, toh yeh saara data kisi file ya server ke pass jayega, wo address yahan likha jata hain.
 ::Method: Data bhejne ke do tareeqe hain:
+    ::GET: ye data ko browser ke URL bar mein upar dikha deta hain(security ke liye kharab hai. search box ke liye accha hai).
+    ::POST: ye data ko piche se (hidden tarike se) bhejta hai (passwords aur personal data ke liye hamesha POST use hota hai).
