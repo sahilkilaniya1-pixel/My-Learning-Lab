@@ -8,4 +8,27 @@ web pages par content ko thode organize tarike se dikhane ke liye list aur media
     :: <ol type="A"> ->>Ab numbering 1,2,3 ki jagah A B c mein aayegi
                     (type="i" se roman numbers ban jayege).
     :: <ol start="5"> ->> numbering seedhe 5 se shuru hogi (5,6,7..).
-    
+
+<ol type="I" start="3">
+    <li>HTML Core</li> <!-- Yeh III dikhayega -->
+    <li>CSS Styling</li> <!-- Yeh IV dikhayega -->
+</ol>
+
+
+2.Multimedia Deep Control (<Video> & <audio>)
+Apne phele video lagana seekha, ab uske Advanced Attributes dekhiye jo badi websites use karti hain:
+
+::autoplay: Page load hote ki video apne aap chalne lagegi.
+::muted : Video bina aawaz ke shuru hogi.(Note: Aaj kal ke browsers bina
+        muted ke autoplay allow nahi karte, taaki user pareshan na ho).
+
+::loop : Video khatam hote he apne aap dobara shuru hojayegi (jaise 
+        Instagram reels).
+:: poster="...": Video chalne se phele jo thumbnail phto dikhti hai, wo
+            is Attributes se lagti hai.
+
+
+<video controls autoplay muted loop poster="thumbnail.jpg" width="600">
+    <source src="course-video.mp4" type="video/mp4">
+</video>
+
