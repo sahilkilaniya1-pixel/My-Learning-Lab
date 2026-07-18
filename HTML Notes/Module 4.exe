@@ -1,34 +1,60 @@
-Module 4: List & Multimedia Control(Advanced Attributes)
+=========================================================================
+🚀 MODULE 4: LIST & MULTIMEDIA CONTROL (ADVANCED ATTRIBUTES)
+=========================================================================
+Description: Web pages par data ko organized structural format mein dikhana 
+aur modern browsers ke mutabik Audio/Video media engines ko control karna.
 
-web pages par content ko thode organize tarike se dikhane ke liye list aur media use hote hian.
+-------------------------------------------------------------------------
+1. LIST TYPES (Data Ko Organize Karne Ka Tareeka)
+-------------------------------------------------------------------------
+HTML mein content ko list format mein dikhane ke liye main do tarike hote hain:
 
-1.List Types
-:Unordered List (<ul>): Bullet points ke liye. Iska default style dot(disc) hota hai. Par hum css se ise badal skte hain.
-:Ordered List (<ol>): Isme numbering hoti hain. HTML5 mein iske Pass kuch cool Attributes hain:
-    :: <ol type="A"> ->>Ab numbering 1,2,3 ki jagah A B c mein aayegi
-                    (type="i" se roman numbers ban jayege).
-    :: <ol start="5"> ->> numbering seedhe 5 se shuru hogi (5,6,7..).
+* Unordered List (<ul>):
+  Yeh bullet points banane ke liye use hota hai. Iska default visual style 
+  ek solid dot (disc) hota hai, jise hum CSS ke zariye badal sakte hain.
 
+* Ordered List (<ol>):
+  Yeh data ki proper numbering (1, 2, 3...) karne ke liye use hota hai. 
+  HTML5 ke andar iske paas kuch bohot useful aur cool attributes hain:
+  1. type="..." ──> Isse aap numbering ka format badal sakte ho.
+     - type="A" (Capital letters: A, B, C...)
+     - type="a" (Small letters: a, b, c...)
+     - type="I" (Capital Roman numbers: I, II, III...)
+     - type="i" (Small Roman numbers: i, ii, iii...)
+  2. start="..." ──> Isse aap numbering ki starting position control kar sakte ho.
+     Agar start="5" likha hai, toh ginti seedhe 5 se shuru hogi.
+
+🛠️ LIVE CODE EXAMPLE FOR LISTS:
 <ol type="I" start="3">
-    <li>HTML Core</li> <!-- Yeh III dikhayega -->
-    <li>CSS Styling</li> <!-- Yeh IV dikhayega -->
+    <li>HTML Core</li>    <!-- Output: III. HTML Core -->
+    <li>CSS Styling</li>   <!-- Output: IV. CSS Styling -->
 </ol>
 
+-------------------------------------------------------------------------
+2. MULTIMEDIA DEEP CONTROL (<video> & <audio>)
+-------------------------------------------------------------------------
+HTML5 mein multimedia ko setup karne ke liye external software nahi lagte, 
+lekin user experience ko top-notch banane ke liye high-level attributes hote hain:
 
-2.Multimedia Deep Control (<Video> & <audio>)
-Apne phele video lagana seekha, ab uske Advanced Attributes dekhiye jo badi websites use karti hain:
+🛠️ ADVANCED MULTIMEDIA ATTRIBUTES:
+* controls: Video/Audio ke niche play, pause, aur volume ke native buttons dikhata hai.
+* autoplay: Web page load hote hi media file apne aap chalne lagti hai.
+* muted: Media bina kisi aawaz (silent mode) ke shuru hota hai.
+  ⚠️ BROWSER SECURITY RULE: Aaj kal ke modern browsers (Chrome, Safari, Edge) 
+  bina 'muted' attribute ke 'autoplay' ko block kar dete hain, taaki website 
+  open hote hi sudden tez aawaz se user pareshan na ho.
+* loop: Video/Audio khatam hote hi apne aap dobara zero se shuru ho jayegi 
+  (Jaise Instagram Reels ya YouTube Loops).
+* poster="...": Video chalne se pehle screen par jo Thumbnail photo dikhata hai, 
+  wo isi attribute ke raste lagayi jaati hai.
 
-::autoplay: Page load hote ki video apne aap chalne lagegi.
-::muted : Video bina aawaz ke shuru hogi.(Note: Aaj kal ke browsers bina
-        muted ke autoplay allow nahi karte, taaki user pareshan na ho).
-
-::loop : Video khatam hote he apne aap dobara shuru hojayegi (jaise 
-        Instagram reels).
-:: poster="...": Video chalne se phele jo thumbnail phto dikhti hai, wo
-            is Attributes se lagti hai.
-
-
+🛠️ LIVE CODE EXAMPLE FOR MULTIMEDIA:
 <video controls autoplay muted loop poster="thumbnail.jpg" width="600">
     <source src="course-video.mp4" type="video/mp4">
+    <!-- Browser fallback text agar format support na kare -->
+    Aapka browser video tag support nahi karta hai.
 </video>
 
+=========================================================================
+=== END OF MODULE 4 NOTES ===
+=========================================================================
