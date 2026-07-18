@@ -1,3 +1,6 @@
 Module 5: Form Elements & Input Validations (Deep Dive)
 
 HTML5 Form sirf data lene ke liye nahi hote, ye browser ke andar hi user ki galat galtiyon ko rokte hain (bina complex programming ke).
+
+1. The <from> Action & Method
+<form action="submit_data.php" method="POST">
