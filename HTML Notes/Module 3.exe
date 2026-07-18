@@ -8,3 +8,5 @@ Anchor tag website par links banane ke liye use hota hain. iska sabse important 
 <a href="https://google.com" target="_blank" title="Google par jao">Google Kholein</a>
 
 ::href: Isme hum us jagah ka URL ya address dalte hain jahan user ko     bhejna hain.
+::target="_blank" : agar yeh nahi likhoge, toh link usi tab mein khul jayegi aur user aapki websites se bahar chala jayega. _blank likhne se link hamesha naye tab (new tab) mein khulegi.
+::title : jab user link ke upar apna mouse le jayega (hover karega), toh ek chota sa tooltip box dikhega jisme ye text likha hoga.
