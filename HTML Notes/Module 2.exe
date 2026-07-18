@@ -19,3 +19,7 @@ Galti mat karna :: Log aksar text ko bada dikhane  ke liye <h1> use kar lete hai
 :::<br>(Line Break): Ye ek Empty tag ya Self-Closing tag hai (isko koi closing companion <br> nahi hota) . Ye chalte huye text ko wahi rok kar naye line par bhej deta hai.
 
 :::<hr>(Horizontal Rule): Yeh bhi self-closing tag hai. yeh page par ek horizontal line khinch deta hai jb aapko koi topic change karna ho.
+
+
+3.Semantic Emphasis(Style vs Meaning)
+aksar log sochte hain ki <b> aur
