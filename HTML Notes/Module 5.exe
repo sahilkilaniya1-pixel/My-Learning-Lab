@@ -4,3 +4,6 @@ HTML5 Form sirf data lene ke liye nahi hote, ye browser ke andar hi user ki gala
 
 1. The <from> Action & Method
 <form action="submit_data.php" method="POST">
+
+:: Action: jab user submit button dabayega, toh yeh saara data kisi file ya server ke pass jayega, wo address yahan likha jata hain.
+::Method: Data bhejne ke do tareeqe hain:
