@@ -9,3 +9,14 @@ HTML5 Form sirf data lene ke liye nahi hote, ye browser ke andar hi user ki gala
 ::Method: Data bhejne ke do tareeqe hain:
     ::GET: ye data ko browser ke URL bar mein upar dikha deta hain(security ke liye kharab hai. search box ke liye accha hai).
     ::POST: ye data ko piche se (hidden tarike se) bhejta hai (passwords aur personal data ke liye hamesha POST use hota hai).
+
+
+
+2.PowerFul HTML5 Validation Attributes
+::required: isko input tag mein likh dene se user us dabbe ko khali     chhod sakta.
+
+::pattern (Regular Expression): Sabse advanced validation! Agar aap chahte hain ki user sirf 10 digit ka mobile number hi dale, toh aap pattern set kar sakte hain:
+
+<input type="tel" pattern="[0-9]{10}" placeholder="10 Digit Number">
+
+::min aur max: Numbers ya dates par limits lagane k liye. jaise agar umar 18 se 60 ke beech honi chahiye:
