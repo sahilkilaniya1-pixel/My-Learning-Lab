@@ -30,4 +30,7 @@ HTML file hai.
 
 3.Images Tag(<img>)
 Photo dikhane ke liye hum <img> use karte hain. yeh ek Self-closing/Empty tag hai (iska koi </img> nahi hota).
+<img src="avatar.jpg" alt="Rahul Kumar ki Profile Photo" width="200" height="200">
 
+::(Alternative Text): iske do sabse bada fayde hain:
+:Agar user ka internet slow hai aur image load nahi hui, toh wahan ye text dikhega taaki pata 
