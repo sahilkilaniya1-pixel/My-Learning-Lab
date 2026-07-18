@@ -10,3 +10,20 @@ Anchor tag website par links banane ke liye use hota hain. iska sabse important 
 ::href: Isme hum us jagah ka URL ya address dalte hain jahan user ko     bhejna hain.
 ::target="_blank" : agar yeh nahi likhoge, toh link usi tab mein khul jayegi aur user aapki websites se bahar chala jayega. _blank likhne se link hamesha naye tab (new tab) mein khulegi.
 ::title : jab user link ke upar apna mouse le jayega (hover karega), toh ek chota sa tooltip box dikhega jisme ye text likha hoga.
+
+
+2.File Paths: Absolute vs Relative(Raste ka khel)
+Jab Aap apni website mein koi Photo lagate ho(<img>) ya koi dusra page jodte ho, toh do tareeqon se rasta diya jata hai.
+
+::Absolute Path: kisi dusri website ko poora address (
+    Jaise: [https://example.com/photo.jpg](https://example.com/photo.jpg)
+). yeh tab use hota hai jab file internet par kahin aur ho.
+
+:: Relative Path: ye aapke computer ke folder ke hisab se chalta hain.
+:: src="logo.png"->> iska matlab file usi same folder mein hai jahan aapki
+HTML file hai.
+:: src="Images/logo.png"  ->> iska matlab HTML file ke pass ek image naam ka foler hai, aur photo uske ander hai.
+:: src="../logo.png" ->>  ../ ka matlab hota hain ek foler bahar (peeche)jaana. Agar aapka code kisi sub-folder ke andar hai aur photo bahar padi hai, toh ../ use hoga.
+
+
+
