@@ -13,3 +13,24 @@ B.Markup :: tags ko use karke text ko "mark" karna taaki browser samajh sake ki 
 2.Modern HTML5 vs Purani HTML`
 pheble (HTML4 mein) agar websites par video chalani hoti thi, Toh Adobe Flash Player jaise external software ki zaroorat padti thi . HTML5 ne aakar sab badal diya . Isne browser ko itna strong bana diya ki wo bina kisi Software ke video, audio, graphics, aur heavy animations ko akele  run kr skta hain.
 
+3.Core Engine(The BoilerPplate)Deep Dive
+jab hum VS Code mein (! )daba kr enter krte hain toh   yeh code aata hain . iski ek-ek line ka asli matlab samajhiye.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<!DOCTYPE HTML> : ye koi HTML tag nahi hain. ye ek Declaration hain jo browser ko btata hain ki  ye Modern HTML5 ka code hain, ise naye rule se chalao.
+"Agar aap ise nahi likhenge, toh browser Quirks mode(purane zamane ke tareeke ) mein chala jayega aur naye tags support nahi karenge".
+
+
