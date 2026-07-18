@@ -2,4 +2,9 @@ Module 4: List & Multimedia Control(Advanced Attributes)
 
 web pages par content ko thode organize tarike se dikhane ke liye list aur media use hote hian.
 
-
+1.List Types
+:Unordered List (<ul>): Bullet points ke liye. Iska default style dot(disc) hota hai. Par hum css se ise badal skte hain.
+:Ordered List (<ol>): Isme numbering hoti hain. HTML5 mein iske Pass kuch cool Attributes hain:
+    :: <ol type="A"> ->>Ab numbering 1,2,3 ki jagah A B c mein aayegi
+                    (type="i" se roman numbers ban jayege).
+    :: <ol start="5"> ->> numbering seedhe 5 se shuru hogi (5,6,7..).
