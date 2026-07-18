@@ -1,36 +1,68 @@
-Module 3 : Hyperlinks, Images aur Deep Path Routing
+=========================================================================
+🚀 MODULE 3: HYPERLINKS, IMAGES AUR DEEP PATH ROUTING
+=========================================================================
+Description: Web pages ko aapas mein connect karna, Relative aur Absolute paths 
+ka asli mechanical khel, aur Images ko structural tareeqe se manage karna.
 
-Ab hum seekhenge ki web pages ko dusre web pages se kaise jodte hain, aur browser mein files ka path kaise set kiya jata hain. yahan sabse zyaada log galti karte  hain, islye dhyan se samajhna.
-
-1.Hyperlinks( <a> -Anchor Tag )
-Anchor tag website par links banane ke liye use hota hain. iska sabse important attribute hai href (Hyperlinks Refrence).
+-------------------------------------------------------------------------
+1. HYPERLINKS (<a> - Anchor Tag) - Web Pages Ko Jodna
+-------------------------------------------------------------------------
+Anchor tag ka use website par links banane ke liye hota hai. Iska sabse main 
+aur compulsory attribute hai 'href' (Hypertext Reference):
 
 <a href="https://google.com" target="_blank" title="Google par jao">Google Kholein</a>
 
-::href: Isme hum us jagah ka URL ya address dalte hain jahan user ko     bhejna hain.
-::target="_blank" : agar yeh nahi likhoge, toh link usi tab mein khul jayegi aur user aapki websites se bahar chala jayega. _blank likhne se link hamesha naye tab (new tab) mein khulegi.
-::title : jab user link ke upar apna mouse le jayega (hover karega), toh ek chota sa tooltip box dikhega jisme ye text likha hoga.
+🛠️ ATTRIBUTE BREAKDOWN:
+* href: Iske andar hum us target web page ya destination ka address (URL) 
+  dalte hain jahan hume user ko bhejna hai.
+* target="_blank": Agar aap yeh nahi likhoge, toh link usi chalte huyen tab 
+  mein khul jayegi aur user aapki website se bahar chala jayega. target="_blank" 
+  likhne se browser hamesha link ko ek Naye Tab (New Tab) mein kholta hai.
+* title: Jab user is link ke upar apna mouse pointer le jata hai (hover karta hai), 
+  toh ek chota sa helpful tooltip box dikhta hai jisme title ka text show hota hai.
 
+-------------------------------------------------------------------------
+2. FILE PATHS: ABSOLUTE VS RELATIVE (Raste Ka Asli Khel)
+-------------------------------------------------------------------------
+Jab aap apni website mein koi photo lagate ho (<img>) ya koi doosra internal 
+page jodte ho, toh computer engine ko rasta (path) do tarike se bataya jata hai:
 
-2.File Paths: Absolute vs Relative(Raste ka khel)
-Jab Aap apni website mein koi Photo lagate ho(<img>) ya koi dusra page jodte ho, toh do tareeqon se rasta diya jata hai.
+* Absolute Path (Poora Address):
+  Jab file aapke computer par nahi balki internet par kisi teesri website ya 
+  server par padi ho. Isme poora protocol likhna padta hai.
+  Example: href="https://example.com/assets/photo.jpg"
 
-::Absolute Path: kisi dusri website ko poora address (
-    Jaise: [https://example.com/photo.jpg](https://example.com/photo.jpg)
-). yeh tab use hota hai jab file internet par kahin aur ho.
+* Relative Path (Aapke Folders Ka Rasta):
+  Yeh aapke project folder ke current structure ke hisab se chalta hai. Isme 3 
+  main rules hote hain jo hamesha yaad rakhne hain:
+  1. src="logo.png" ──> Iska matlab file usi SAME folder mein padi hai jahan 
+     aapki HTML file hai.
+  2. src="images/logo.png" ──> Iska matlab HTML file ke bilkul barabar mein ek 
+     'images' naam ka folder hai, aur photo us folder ke andar rakhi hai.
+  3. src="../logo.png" ──> Isme '../' ka matlab hota hai EK FOLDER BAHAR 
+     (PEECHE) JAANA. Agar aapka HTML code kisi inner sub-folder ke andar band hai 
+     aur photo usse ek step piche main directory mein hai, toh piche jaane ke 
+     liye '../' lagate hain.
 
-:: Relative Path: ye aapke computer ke folder ke hisab se chalta hain.
-:: src="logo.png"->> iska matlab file usi same folder mein hai jahan aapki
-HTML file hai.
-:: src="Images/logo.png"  ->> iska matlab HTML file ke pass ek image naam ka foler hai, aur photo uske ander hai.
-:: src="../logo.png" ->>  ../ ka matlab hota hain ek foler bahar (peeche)jaana. Agar aapka code kisi sub-folder ke andar hai aur photo bahar padi hai, toh ../ use hoga.
+-------------------------------------------------------------------------
+3. IMAGES TAG (<img>) - Visual Media Architecture
+-------------------------------------------------------------------------
+Website par photo dikhane ke liye hum <img> tag use karte hain. Yeh ek 
+Self-closing ya Empty tag hai (yaani iska koi ending </img> companion nahi hota):
 
-
-
-
-3.Images Tag(<img>)
-Photo dikhane ke liye hum <img> use karte hain. yeh ek Self-closing/Empty tag hai (iska koi </img> nahi hota).
 <img src="avatar.jpg" alt="Rahul Kumar ki Profile Photo" width="200" height="200">
 
-::(Alternative Text): iske do sabse bada fayde hain:
-:Agar user ka internet slow hai aur image load nahi hui, toh wahan ye text dikhega taaki pata 
+🛠️ ATTRIBUTE BREAKDOWN:
+* src (Source): Photo ka relative ya absolute file path.
+* alt (Alternative Text) ──> SKI SAKHT ZAROORAT HAI! Iske do sabse bade fayde hain:
+  1. Slow Internet / Broken Link: Agar user ka internet slow hai ya image delete 
+     ho gayi hai, toh photo ki jagah yeh text dikhega taaki user ko pata chal sake 
+     ki yahan kis cheez ki photo thi.
+  2. Accessibility & SEO: Blind log jo screen reader software use karte hain, unka 
+     software is alt text ko padh kar sunata hai. Google ka robot bhi photo ko dekh 
+     nahi sakta, wo alt text se hi pehchanta hai ki photo kis baare mein hai.
+* width aur height: Photo ka size pixel (px) mein fix karne ke liye.
+
+=========================================================================
+=== END OF MODULE 3 NOTES ===
+=========================================================================
