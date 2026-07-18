@@ -2,8 +2,18 @@ Module 2: Text Architecture & Typography (Heading, Paragraph, and Semantic Text)
 
 Browser text ko kaise read karta hain, ab hum wo seekhenge.
 
-1.Heading(<h1> to <h6>)
+1.Heading(<h1> to <h6>).
 HTML mein 6 type ki headings hoti hain.
 
-<h1> sabse badi aur sabse important hoti hain. Pure HTML page par sirf ek hi <h1> tag hona chahiye. Google search engine sabse phele apke <h1> ko hi padhta hai ki page kis baare mein hain.
+::: <h1> sabse badi aur sabse important hoti hain. Pure HTML page par sirf ek hi <h1> tag hona chahiye. Google search engine sabse phele apke <h1> ko hi padhta hai ki page kis baare mein hain.
 
+::: <h6> sabse choti aur sabse kam important hoti hain.
+
+Galti mat karna :: Log aksar text ko bada dikhane  ke liye <h1> use kar lete hain. yeh galat hai! text bada dikhane ke liye CSS use hoti hai. HTML tags sirf importance batane ke liye hote hain.
+
+
+2.Structural Tags.
+
+::: <p>(Paragraph): Text ko block mein break karta hai aur automatic upar-niche thodi khali jagah(margin) chod deta hain.
+
+:::<br>(Line Break): Ye ek Empty tag ya Self-Closing tag hai (isko koi closing companion <br> nahi hota) . Ye chalte huye text ko wahi rok kar naye line par bhej deta hai.
