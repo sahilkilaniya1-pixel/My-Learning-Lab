@@ -34,3 +34,8 @@ jab hum VS Code mein (! )daba kr enter krte hain toh   yeh code aata hain . iski
 "Agar aap ise nahi likhenge, toh browser Quirks mode(purane zamane ke tareeke ) mein chala jayega aur naye tags support nahi karenge".
 
 
+<html lang="en">: lang ="en" attribute search engines(google) aur screen reader (jo blind logon ke liye website padhte hain) ko batata hai ki is website ki main language English hain.
+
+<meta charset = "UTF-8">: Character Encoding. yeh duniya ki lagbag har bhasha ke har ek akshar. emoji aur symbol ko browser par sahi se dikhane ki guarantee leta hain. agar yeh na ho, toh kabhi-kabhi text ki jgha ajeeb se dibbe ``dikhane lagte hain.
+
+<meta name="viewport" content="width=device-with, initial scale=1.0">: yeh line website ko Responsive(Mobile-friendly) banane ke liye sabse zaroori hain. yeh browser ko bolti hai ki website ki width ki width utni hi rakho jitni user ke mobile ya laptop ki screen ki width hai.
