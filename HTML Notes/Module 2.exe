@@ -22,4 +22,6 @@ Galti mat karna :: Log aksar text ko bada dikhane  ke liye <h1> use kar lete hai
 
 
 3.Semantic Emphasis(Style vs Meaning)
-aksar log sochte hain ki <b> aur
+aksar log sochte hain ki <b> aur <strong> dono ka kaam text ko bold karna hai. Lekin coding ki duniya mein inka matlab alag hai:
+
+:::<b> (Bold): Yeh sirf text ko mota (visual style)
