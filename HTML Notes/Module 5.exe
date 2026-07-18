@@ -20,3 +20,5 @@ HTML5 Form sirf data lene ke liye nahi hote, ye browser ke andar hi user ki gala
 <input type="tel" pattern="[0-9]{10}" placeholder="10 Digit Number">
 
 ::min aur max: Numbers ya dates par limits lagane k liye. jaise agar umar 18 se 60 ke beech honi chahiye:
+
+<input type="tel" pattern="[0-9]{10}" placeholder="10 Digit Number">
