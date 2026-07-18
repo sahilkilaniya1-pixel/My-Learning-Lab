@@ -1,1 +1,8 @@
 phele samajhte hain ki HTML5 aakhir hain kya aur purani HTML se alag kyun hain.
+
+
+1.HTML kya hain ?(The Backbone)
+HTML(Hyper Text Markup Language) koi Programming Language nhi hain (isme koi login ya loop nahi hote). ye ek Markup Language hai.. iska kaam Browser ko yeh batana hain ki apki website ka structure kaisa hoga.
+
+.HyperText:: Aisa text jo aapas mein link ke zariye juda hoga(kisi link par click karke dusre page par jaana).
+
