@@ -27,3 +27,14 @@ aksar log sochte hain ki <b> aur <strong> dono ka kaam text ko bold karna hai. L
 :::<b> (Bold): Yeh sirf text ko mota (visual style) kar deta hain.Browser ke Liye iska koi special matlab nahi hai.
 
 :::<strong> : Yeh text ko bold bhi karta hai aur browser  + Google ko batata hai ki Yeh text bahut zarooi(important) Hai. Screen readers is text to thoda zor se padhte hain.
+
+:::<i> vs <em> (Emphasis): Same logic yahan bhi hai. <i> sirf text ko tedhs (italic) karta hai style ke liye, jabki <em> batata hai ki is shabd par stress/zor dena hai.
+
+
+Example code jise aap dhyan se dekhiye:
+<p>Humaara mission hai <strong>HTML5 mein expert</strong> banna.</p>
+<p>Is kitab ke lekhak ka naam <i>Rahul Sharma</i> hai.</p>
+
+
+
+
