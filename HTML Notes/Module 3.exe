@@ -1,3 +1,10 @@
 Module 3 : Hyperlinks, Images aur Deep Path Routing
 
 Ab hum seekhenge ki web pages ko dusre web pages se kaise jodte hain, aur browser mein files ka path kaise set kiya jata hain. yahan sabse zyaada log galti karte  hain, islye dhyan se samajhna.
+
+1.Hyperlinks( <a> -Anchor Tag )
+Anchor tag website par links banane ke liye use hota hain. iska sabse important attribute hai href (Hyperlinks Refrence).
+
+<a href="https://google.com" target="_blank" title="Google par jao">Google Kholein</a>
+
+::href: Isme hum us jagah ka URL ya address dalte hain jahan user ko     bhejna hain.
