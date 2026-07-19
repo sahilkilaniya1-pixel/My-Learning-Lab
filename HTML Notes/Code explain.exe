@@ -1,0 +1,213 @@
+================================================================================
+          GLOBAL TECH SUMMIT 2026 - COMPLETE LINE-BY-LINE EXPLANATION
+================================================================================
+
+Yeh guide aapko poori tarah se samjhayegi ki website ke code mein kaun sa tag 
+aur kaun si Bootstrap class KYUN aur KAISE use ki gayi hai.
+
+--------------------------------------------------------------------------------
+1. DOCUMENT ROOT & SETUP (Line 1 to 3)
+--------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+-> Kyun use kiya? Yeh browser ko batata hai ki hum HTML ka sabse latest aur modern 
+   version yaani HTML5 use kar rahe hain. Iske bina browser purane rules lagane lagta hai.
+
+<html lang="hi">
+-> Kyun use kiya? Yeh pure webpage ka main root tag hai. lang="hi" se hum search 
+   engines (jaise Google) ko batate hain ki is page ka main content Hindi/Hinglish mein hai.
+
+--------------------------------------------------------------------------------
+2. HEAD SECTION - METADATA & BOOTSTRAP CDN (Line 4 to 17)
+--------------------------------------------------------------------------------
+
+<head>
+-> Kyun use kiya? Head tag ke andar wo saari information aati hai jo background mein 
+   kaam karti hai aur website ko set karti hai (jaise title, fonts, aur external links).
+
+<meta charset="UTF-8" />
+-> Kyun use kiya? Yeh browser ko order deta hai ki page par duniya ki koi bhi bhasha, 
+   special symbols aur emojis (🌐, 🎥, ₹) bina kisi error ke bilkul sahi se dikhane hain.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-> Kyun use kiya? Mobile optimization ke liye sabse important line! 
+   - width=device-width: Webpage ka size user ke mobile/desktop screen ke mutabik auto-adjust hoga.
+   - initial-scale=1.0: Website ko mobile par loads hote hi abnormal zoom hone se rokta hai.
+
+<title>Global Tech Summit 2026 | Future of Web</title>
+-> Kyun use kiya? Browser ke sabse upar tab bar mein jo naam likha hua aata hai, yeh usko set karta hai.
+
+<!-- Bootstrap 5 CSS CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" ... />
+-> Kyun use kiya? Is link tag se humne Bootstrap framework ko online joda hai. Isse hume 
+   hazaaron lines ki CSS khud nahi likhni padti, bas taiyar Bootstrap classes use karni hoti hain.
+
+--------------------------------------------------------------------------------
+3. WEBSITE BODY & HEADER NAVIGATION (Line 18 to 36)
+--------------------------------------------------------------------------------
+
+<body class="bg-light text-dark">
+-> Kyun use kiya? Body tag ke andar website ka wo saara content aata hai jo user ko screen par dikhta hai.
+   - bg-light: Poore background ko ek premium, soft light-gray color deta hai.
+   - text-dark: Saare text ko dark charcoal color deta hai taaki padhne mein aasan ho (readability).
+
+<header class="bg-dark text-white text-center py-5 shadow-sm">
+-> Kyun use kiya? <header> ek semantic tag hai jo batata hai ki yeh website ka top intro section hai.
+   - bg-dark: Background ko black/dark karta hai.
+   - text-white: Text ko safed (white) karta hai taaki kale background par acche se dikhe.
+   - text-center: Header ke andar ke saare text aur links ko horizontal center mein align karta hai.
+   - py-5: Padding-Y (Top aur Bottom) mein 3rem (~48px) ka badhiya space deta hai taaki header khula-khula lage.
+   - shadow-sm: Header ke niche ek patli, modern parchaai (shadow) lagata hai.
+
+<div class="container">
+-> Kyun use kiya? Bootstrap ka sabse important component. Yeh content ko screen ke dono side se 
+   barabar margins dekar center mein samet leta hai, jisse content corners se chipakta nahi hai.
+
+<h1 class="display-4 fw-bold">🌐 Global Tech Summit 2026</h1>
+-> Kyun use kiya? 
+   - display-4: Normal h1 se bada, thin aur zyada stylish heading font deta hai.
+   - fw-bold: Font weight ko bold (mota) banata hai.
+
+<p class="lead text-light-50"><em>...</em></p>
+-> Kyun use kiya? 
+   - lead: Paragraph ke text ko standard size se thoda bada aur attractive banata hai.
+   - text-light-50: Safed rang ke text ko 50% transparent karta hai, jisse sub-title main heading se alag dikhe.
+   - <em>: Text ko italic (tircha) karne ke liye.
+
+<nav class="nav justify-content-center mt-3">
+-> Kyun use kiya? <nav> menu links ke liye semantic tag hai.
+   - nav: Links ko ek horizontal flex-line mein set karta hai.
+   - justify-content-center: Saare links ko center mein lata hai.
+   - mt-3: Margin-Top dekar heading se thoda niche karta hai.
+
+<a class="nav-link text-white fw-semibold px-3" href="#about">...</a>
+-> Kyun use kiya? href="#about" ek anchor link hai. Jab user ispe click karega, toh page auto-scroll 
+   hokar niche usi section par chala jayega jahan id="about" likha hai.
+   - fw-semibold: Text ko semi-bold mota karta hai.
+   - px-3: Padding-X (Left aur Right) mein gap banata hai taaki links aapas mein chipke na.
+
+--------------------------------------------------------------------------------
+4. MAIN BODY - SECTION 1: VIDEO & AUDIO MULTIMEDIA (Line 37 to 69)
+--------------------------------------------------------------------------------
+
+<main class="container my-5">
+-> Kyun use kiya? <main> engine ko batata hai ki yahan se page ka asli content shuru ho raha hai.
+   - my-5: Margin-Y (Top aur Bottom) mein bada gap deta hai taaki main body header aur footer se dur rahe.
+
+<section id="about" class="mb-5 p-4 bg-white rounded shadow-sm">
+-> Kyun use kiya? <section> ek naya topic block shuru karta hai. Isme humne id="about" diya hai taaki header link yahan land kar sake.
+   - mb-5: Margin-Bottom se niche wale section ko push karta hai.
+   - p-4: Is pure card box ke andar chaaro taraf padding (space) banata hai.
+   - bg-white: Card ka background bilkul pure white rakhta hai jo gray body par ubar kar dikhta hai.
+   - rounded: Corners ko soft-curved (golaai) deta hai.
+
+<h2 class="text-primary border-bottom pb-2 mb-3">
+-> Kyun use kiya? 
+   - text-primary: Heading ko Bootstrap ka standard Corporate Blue color deta hai.
+   - border-bottom: Heading ke thik niche ek sundar dividing line kheecha deta hai.
+
+<div class="ratio ratio-16x9 my-3 mx-auto shadow-sm rounded" style="max-width: 640px">
+-> Kyun use kiya? Bootstrap ka magic aspect ratio box! Yeh video player ko responsive banata hai, 
+   jisse mobile phone par bhi video bina kate ya bina stretch huye bilkul sahi choti-badi hoti hai.
+   - style="max-width: 640px": Laptop ya badi screen par video ko bohot zyada phailne se rokta hai.
+   - mx-auto: Video box ko page ke horizontal center mein rakhta hai.
+
+<video controls muted poster="..." loop class="rounded">
+-> Kyun use kiya? HTML5 ka native video player hai.
+   - controls: Play, pause aur volume buttons lata hai.
+   - muted: Video ko default silent rakhta hai (modern browsers bina mute kiye auto-play block kar dete hain).
+   - poster: Video play hone se pehle jo image (thumbnail) dikhegi, yeh wohi hai.
+   - loop: Video khatam hote hi apne aap dobara shuru ho jayegi.
+   - <source src="..." type="video/mp4" />: Video file ka exact source path aur format define karta hai.
+
+<audio controls>
+-> Kyun use kiya? MP3 audio file ko webpage par embed aur play karne ke liye use hota hai.
+
+--------------------------------------------------------------------------------
+5. SECTION 2: COMPLEX & RESPONSIVE GRID TABLE (Line 70 to 110)
+--------------------------------------------------------------------------------
+
+<div class="table-responsive">
+-> Kyun use kiya? Agar table badi ho aur mobile screen choti ho, toh poori website ka 
+   layout kharab nahi hota. Yeh class table ke niche ek scrollbar la deti hai sirf mobile ke liye.
+
+<table class="table table-bordered table-striped align-middle mt-3">
+-> Kyun use kiya? Grid format mein data sajane ke liye.
+   - table: Bootstrap ke padding aur text formatting styles lagata hai.
+   - table-bordered: Table ke har box (cell) ke chaaro taraf grid borders banata hai.
+   - table-striped: Alternate rows ko alag color deta hai (ek white, ek light-gray) taaki data padhne mein aasan ho.
+   - align-middle: Dabbo ke andar ka text vertically bilkul center-middle mein align hota hai.
+
+<thead class="table-success text-center">
+-> Kyun use kiya? Table ke header row ko ek premium light green background color (table-success) deta hai.
+
+<td class="fw-bold text-nowrap">
+-> Kyun use kiya? text-nowrap se time string (e.g., 10:00 AM) toot kar do lines mein nahi jata, ek hi line mein rahta hai.
+
+<td rowspan="2" class="text-center table-light fw-bold text-success fs-5">
+-> Kyun use kiya? Rowspan="2" ka matlab hai ki yeh single cell vertically DO rows ko aapas mein merge (jod) 
+   kar raha hai, kyunki dono slots ka price same hai. fs-5 font size ko bada karta hai.
+
+<tr class="table-warning text-center">
+-> Kyun use kiya? table-warning se is row ka color soft yellow highlighter jaisa ho jata hai taaki mega panel alag se highlight ho.
+
+<td colspan="3" class="fw-bold text-dark">
+-> Kyun use kiya? Colspan="3" horizontally TEEN cells ko merge karke ek lamba single box bana deta hai.
+
+--------------------------------------------------------------------------------
+6. SECTION 3: ADVANCED FORM WITH VALIDATIONS (Line 111 to 216)
+--------------------------------------------------------------------------------
+
+<form action="#" method="POST" enctype="multipart/form-data" class="mt-4">
+-> Kyun use kiya? User se data collect karne ka engine.
+   - method="POST": Data ko backend server par securely/hidden tarike se bhejta hai taaki details URL mein leak na ho.
+   - enctype="multipart/form-data": JAB BHI form mein file upload tag (type="file") hota hai, tab is attribute ko likhna mandatory hai, warna file server par kabhi send nahi hogi.
+
+<fieldset class="border p-4 rounded mb-4 bg-light">
+<legend class="float-none w-auto px-2 fw-bold text-secondary fs-5">
+-> Kyun use kiya? Fieldset aur Legend form ke alag-alag hisson ko ek neat group border box aur heading ke sath organize karte hain.
+
+<label for="fname" class="form-label fw-semibold">
+<input type="text" class="form-control" id="fname" ... />
+-> Kyun use kiya? 
+   - for="fname" aur id="fname": Yeh dono same hone se accessibility badhti hai. User jaise hi text label par click karega, uska input box active ho jayega.
+   - form-control: Bootstrap ki sabse populer class. Input boxes ko sleek full-width banati hai aur click karne par blue glow effect deti hai.
+   - required: Form tab tak submit nahi hoga jab tak user is box ko bhar nahi deta.
+
+<input type="email" ... />
+-> Kyun use kiya? type="email" lagane se browser khud check karega ki input mein '@' aur '.' symbol hai ya nahi.
+
+<input type="tel" pattern="[0-9]{10}" ... />
+-> Kyun use kiya? 
+   - type="tel": Phone numbers input ke liye.
+   - pattern="[0-9]{10}": Yeh ek strict validation lagata hai ki user sirf 0 se 9 tak ke digits hi bhar sakta hai aur total count pure 10 hone chahiye.
+
+<input type="number" min="18" max="100" ... />
+-> Kyun use kiya? min="18" constraint se agar koi apni age 18 se kam fill karega toh form submit hone se mana kar dega.
+
+<select class="form-select">
+-> Kyun use kiya? Dropdown menu banane ke liye. form-select ise standard modern look deta hai.
+
+<div class="form-check form-check-inline">
+<input type="radio" id="veg" name="food" ... />
+-> Kyun use kiya? Radio selection panel. 
+   - name="food": Dono radio buttons ka name same rakha hai taaki user dono mein se koi EK hi choose kar sake.
+   - form-check-inline: Radio choices ko upar-niche aane ki jagah ek hi line mein side-by-side bitha deta hai.
+
+<div class="d-flex gap-2 justify-content-end">
+-> Kyun use kiya? Flexbox active karta hai. justify-content-end se dono buttons right side mein shift ho jate hain aur gap-2 unke beech halka space banata hai.
+
+<button type="submit"> / <button type="reset">
+-> Kyun use kiya? type="submit" saare validations check karke form bhejta hai, aur type="reset" ek click mein poore form ko bilkul khali (blank) kar deta hai.
+
+--------------------------------------------------------------------------------
+7. WEBSITE FOOTER & JAVASCRIPT ENGINE (Line 217 to 235)
+--------------------------------------------------------------------------------
+
+<footer class="bg-dark text-white-50 text-center py-4 mt-5 border-top border-secondary">
+-> Kyun use kiya? Website ka sabse aakhri copyright area. text-white-50 se text halka dull ho jata hai jo professional lagta hai.
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ...></script>
+-> Kyun use kiya? HTML body tag close hone se thik pehle humne Bootstrap ki JavaScript file jodi hai. Yeh file dropdowns, modals, transitions aur responsive mobile toggles ko chalane ka kaam karti hai.
+================================================================================
