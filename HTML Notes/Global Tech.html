@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <!-- Module 1: Core Engine & Responsiveness -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Tech Summit 2026 | Future of Web</title>
+
+    <!-- 🟢 Bootstrap 5 CSS CDN Joda -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-light text-dark">
+    <!-- ================= WEBSITE HEADER (Bootstrap Styled) ================= -->
+    <header class="bg-dark text-white text-center py-5 shadow-sm">
+      <div class="container">
+        <h1 class="display-4 fw-bold">🌐 Global Tech Summit 2026</h1>
+        <p class="lead text-light-50">
+          <em
+            >Duniya ki sabse badi Web Development Conference mein aapka swagat
+            hai!</em
+          >
+        </p>
+
+        <!-- Navigation Styled with Bootstrap Pills -->
+        <nav class="nav justify-content-center mt-3">
+          <a class="nav-link text-white fw-semibold px-3" href="#about"
+            >Summit ke Baare Mein</a
+          >
+          <a class="nav-link text-white fw-semibold px-3" href="#schedule"
+            >Schedule & Tickets</a
+          >
+          <a class="nav-link text-white fw-semibold px-3" href="#register"
+            >VIP Pass Registration</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT AREA ================= -->
+    <main class="container my-5">
+      <!-- Section 1: About & Background Video -->
+      <section id="about" class="mb-5 p-4 bg-white rounded shadow-sm">
+        <h2 class="text-primary border-bottom pb-2 mb-3">
+          🎥 Summit Trailer & Highlights
+        </h2>
+        <p>
+          Dekhein ki <strong>Tech Summit 2026</strong> mein kya khass hone wala
+          hai. Niche diye gaye video ko play karein:
+        </p>
+
+        <!-- Video Container responsive styling -->
+        <div
+          class="ratio ratio-16x9 my-3 mx-auto shadow-sm rounded"
+          style="max-width: 640px"
+        >
+          <video
+            controls
+            muted
+            poster="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=640"
+            loop
+            class="rounded"
+          >
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            Aapka browser video tag support nahi karta.
+          </video>
+        </div>
+
+        <p class="mt-4">
+          Sath hi, humaare Chief Organizer ka welcome speech audio suniye:
+        </p>
+        <div class="p-2 bg-light rounded d-inline-block">
+          <audio controls>
+            <source
+              src="https://www.w3schools.com/html/horse.mp3"
+              type="audio/mpeg"
+            />
+            Aapka browser audio tag support nahi karta.
+          </audio>
+        </div>
+      </section>
+
+      <!-- Section 2: Conference Schedule (Modernized Bootstrap Table) -->
+      <section id="schedule" class="mb-5 p-4 bg-white rounded shadow-sm">
+        <h2 class="text-primary border-bottom pb-2 mb-3">
+          📅 Event Schedule & Ticket Pricing
+        </h2>
+        <p>
+          Apne time ke hisab se slots chunein. Humaare special workshops ka
+          detail niche hai:
+        </p>
+
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped align-middle mt-3">
+            <thead class="table-success text-center">
+              <tr>
+                <th>Time Slots</th>
+                <th>Day 1 (Web Architecture)</th>
+                <th>Day 2 (Advanced HTML5 APIs)</th>
+                <th>Pass Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-bold text-nowrap">10:00 AM - 01:00 PM</td>
+                <td>HTML5 Core Engine Deep Dive</td>
+                <td>Next-Gen Browser Storage & APIs</td>
+                <td
+                  rowspan="2"
+                  class="text-center table-light fw-bold text-success fs-5"
+                >
+                  ₹1,499<br /><span
+                    class="badge bg-secondary text-wrap fs-6 fw-normal"
+                    >Standard Pass</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-nowrap">02:00 PM - 04:00 PM</td>
+                <td>Semantic SEO & Accessibility</td>
+                <td>Web Graphics using Canvas 2D</td>
+              </tr>
+              <tr class="table-warning text-center">
+                <td colspan="3" class="fw-bold text-dark">
+                  🔥 Mega Panel Discussion: Future of Web Development
+                  (2026-2030)
+                </td>
+                <td class="fw-bold text-danger text-nowrap">FREE (For All)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Advanced Form with Bootstrap Styling -->
+      <section id="register" class="p-4 bg-white rounded shadow-sm">
+        <h2 class="text-primary border-bottom pb-2 mb-3">
+          📝 VIP Seat Reservation Form
+        </h2>
+        <p class="text-muted">
+          Seat limited hain! Kripya sahi details bharein taaki aapka pass cancel
+          na ho.
+        </p>
+
+        <form
+          action="#"
+          method="POST"
+          enctype="multipart/form-data"
+          class="mt-4"
+        >
+          <!-- Grouping 1: Identity -->
+          <fieldset class="border p-4 rounded mb-4 bg-light">
+            <legend class="float-none w-auto px-2 fw-bold text-secondary fs-5">
+              1. Attendee Identity (Aapki Pehchan)
+            </legend>
+
+            <div class="mb-3">
+              <label for="fname" class="form-label fw-semibold"
+                >Full Name:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="fname"
+                name="fullname"
+                placeholder="Jaise: Aman Verma"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="uemail" class="form-label fw-semibold"
+                >Official Email:</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="uemail"
+                name="email"
+                placeholder="aman@company.com"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="uphone" class="form-label fw-semibold"
+                >Mobile Number (10 Digits Only):</label
+              >
+              <input
+                type="tel"
+                class="form-control"
+                id="uphone"
+                name="phone"
+                pattern="[0-9]{10}"
+                placeholder="9876543210"
+                required
+              />
+              <div class="form-text text-muted">
+                (Bina +91 ya 0 ke sirf 10 digit dalein)
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="uage" class="form-label fw-semibold"
+                >Your Age (Strictly 18+ Allowed):</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="uage"
+                name="age"
+                min="18"
+                max="100"
+                placeholder="18"
+                required
+              />
+            </div>
+          </fieldset>
+
+          <!-- Grouping 2: Ticket & Customizations -->
+          <fieldset class="border p-4 rounded mb-4 bg-light">
+            <legend class="float-none w-auto px-2 fw-bold text-secondary fs-5">
+              2. Pass & Preferences (Pasand)
+            </legend>
+
+            <div class="mb-3">
+              <label for="ticket_type" class="form-label fw-semibold"
+                >Choose Ticket Category:</label
+              >
+              <select id="ticket_type" name="ticket" class="form-select">
+                <option value="standard">Standard Pass - ₹1499</option>
+                <option value="vip">VIP Access Pass - ₹2999</option>
+                <option value="student">Student Discount Pass - ₹499</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label d-block fw-semibold"
+                >Select Your Food Preference:</label
+              >
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="veg"
+                  name="food"
+                  value="veg"
+                  checked
+                />
+                <label class="form-check-label" for="veg"
+                  >Pure Vegetarian</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="nonveg"
+                  name="food"
+                  value="nonveg"
+                />
+                <label class="form-check-label" for="nonveg"
+                  >Non-Vegetarian</label
+                >
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="doc" class="form-label fw-semibold"
+                >Upload College/Company ID Card (PDF/Image):</label
+              >
+              <input
+                type="file"
+                class="form-control"
+                id="doc"
+                name="id_proof"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="note" class="form-label fw-semibold"
+                >Any Special Dietary or Accessibility Needs?</label
+              >
+              <textarea
+                id="note"
+                class="form-control"
+                name="user_note"
+                rows="4"
+                placeholder="Agar aapko wheelchair ya koi aur help chahiye toh yahan likhein..."
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <!-- Form Submission Controls -->
+          <div class="d-flex gap-2 justify-content-end">
+            <button type="submit" class="btn btn-primary px-4 shadow-sm">
+              🔒 Securely Book My Pass
+            </button>
+            <button type="reset" class="btn btn-outline-secondary px-4">
+              Clear Fields
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER (Bootstrap Styled) ================= -->
+    <footer
+      class="bg-dark text-white-50 text-center py-4 mt-5 border-top border-secondary"
+    >
+      <div class="container">
+        <p class="mb-1">© 2026 Global Tech Summit. All rights reserved.</p>
+        <p class="mb-0">
+          <small
+            >Managed globally. Designed by a Proud HTML5 & Bootstrap
+            Expert.</small
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- 🟢 Bootstrap 5 JS Bundle Joda (Toggle elements aur responsive grids ke liye) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
