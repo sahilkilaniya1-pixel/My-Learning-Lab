@@ -8,34 +8,35 @@
   <body>
     <!-- Website header (semantic) -->
     <header>
-      <h1>Global tech Summit 2026</h1>
-      \
+      <h1>Global Tech Summit 2026</h1>
       <p>
-        <em
-          >Duniya ki sabse badi Web Devlopment Confrence mein aapka sawagat
-          hain</em
+        <strong
+          >Duniya ki sabse badi Web Development Conference mein aapka swagat
+          hai</strong
         >
       </p>
 
-      <!-- Module 3: navigation  & Path Routin-->
+      <!-- Navigation links (Case sensitive matching IDs fixed) -->
       <nav>
-        <a href="#about">Summit ke baare mein </a> |
-        <a href="#schedule">Schedule & Tickets </a> |
-        <a href="#register">VIP Pass registration </a> |
+        <a href="#about">Summit ke baare mein</a> |
+        <a href="#schedule">Schedule & Tickets</a> |
+        <a href="#register">VIP Pass Registration</a>
       </nav>
     </header>
 
     <hr />
-    <!-- Main COntent Aera -->
+
+    <!-- Main Content Area -->
     <main>
-      <!-- Section 1: About & Background Video (Module 4) -->
-      <section id="About">
-        <h2>Summit Trailer & highlights</h2>
+      <!-- Section 1: About & Background Video (ID changed to lower-case 'about') -->
+      <section id="about">
+        <h2>Summit Trailer & Highlights</h2>
         <p>
-          Dekhein ki <strong>tech Summit 2026</strong>mein kya khass hone waa
-          hain. Niche diye gaye video ko playe karein:
+          Dekhein ki <strong>Tech Summit 2026</strong> mein kya khaas hone wala
+          hai. Niche diye gaye video ko play karein:
         </p>
-        <!-- Video with Autoplay restrictions, Loop & placeholder poster -->
+
+        <!-- Video Element -->
         <video
           width="640"
           height="360"
@@ -51,7 +52,7 @@
           Aapka browser video tag support nahi karta.
         </video>
 
-        <p>Sath hi, HumaareChief Organizer ka Welcome Speech audio suniye:</p>
+        <p>Saath hi, Humaare Chief Organizer ka Welcome Speech audio suniye:</p>
         <audio controls>
           <source
             src="https://www.w3schools.com/html/horse.mp3"
@@ -63,46 +64,46 @@
 
       <hr />
 
-      <!-- Section 2: confrense Schedule (Module 2& 5: Complex Table) -->
-      <section id="Schedule">
+      <!-- Section 2: Conference Schedule (ID changed to lower-case 'schedule') -->
+      <section id="schedule">
         <h2>Events Schedule & Tickets Pricing</h2>
         <p>
-          Apna time ke hisab se slots chunein. Humaare special workshops ka
-          detials niche hai:
+          Apne time ke hisab se slots chunein. Humaare special workshops ki
+          details niche hain:
         </p>
         <table border="1" cellpadding="12" cellspacing="0">
           <thead>
             <tr bgcolor="#d1e7dd">
               <th>Time Slots</th>
-              <th>Day 1(Web Architecture)</th>
-              <th>Dat2 (Advanced HTML5 APIs)</th>
+              <th>Day 1 (Web Architecture)</th>
+              <th>Day 2 (Advanced HTML5 APIs)</th>
               <th>Pass Price</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>10:00 AM- 01:00 PM</strong></td>
+              <td><strong>10:00 AM - 01:00 PM</strong></td>
               <td>HTML5 Core Engine Deep Dive</td>
-              <td>Next-Gen Browser Strorage & APIs</td>
-              <!-- Rowspan used to group price for morning sessions -->
-              <td rowspan="=2" align="center">
-                <strong>$1,499</strong><br />(Standard pass
+              <td>Next-Gen Browser Storage & APIs</td>
+              <!-- Fixed: Cleaned extra '=' sign inside rowspan -->
+              <td rowspan="2" align="center">
+                <strong>$1,499</strong><br />(Standard Pass)
               </td>
             </tr>
             <tr>
               <td><strong>02:00 PM - 04:00 PM</strong></td>
               <td>Semantic SEO & Accessibility</td>
-              <td>Web Graphics using CAnvas 2D</td>
+              <td>Web Graphics using Canvas 2D</td>
             </tr>
             <tr>
-              <!-- Colspan used to merge table cells horizontally for single mega events -->
+              <!-- Colspan merges cells horizontally -->
               <td colspan="3" align="center" bgcolor="#fff3cd">
                 <strong
-                  >Mega Panel Discussion: Future of web Development
+                  >Mega Panel Discussion: Future of Web Development
                   (2026-2030)</strong
                 >
               </td>
-              <td><strong>FREE</strong>(For ALL)</td>
+              <td><strong>FREE</strong> (For ALL)</td>
             </tr>
           </tbody>
         </table>
@@ -110,80 +111,91 @@
 
       <hr />
 
-      <!-- Section 3: Advanced Form with Validation (module 5) -->
-      <section id="" register>
+      <!-- Section 3: Form Section (Fixed Id configuration) -->
+      <section id="register">
         <h2>VIP Seat Reservation Form</h2>
         <p>
-          Seat limited hain! kripya sahi details taaki aapka pass cancelna ho.
+          Seats limited hain! Kripya sahi details bharein taaki aapka pass
+          cancel na ho.
         </p>
 
-        <!-- Grouping 1: Identity -->
-        <fieldset>
-          <legend>
-            <strong>1. Attendence Identity (Aapki pechan)</strong>
-          </legend>
-          <br />
-          <label for="fname">Full name:</label>
-          <input
-            type="text"
-            id="fname"
-            name="fullname"
-            placeholder="Jaise:Sahil"
-            required
-          />
-          <br /><br />
-
-          <label for="uemail">Official Email</label>
-          <input
-            type="email"
-            id="uemail"
-            name="email"
-            placeholder="sahil@comapany.com"
-            required
-          />
-          <br /><br />
-
-          <label for="uphone">Mobile Number (10 Digits Only):</label>
-          <!-- Regular Expression (Patterns) validation -->
-          <input
-            type="tel"
-            id="uphone"
-            name="phone"
-            pattern="[0-9]{10}"
-            placeholder="12345678910"
-            required
-          />
-          <small>(Bina +91 ya 0 ke shirf 10 digit dalein)</small>
-          <br /><br />
-
-          <label for="uage">Your Age(Strictly +18 Allowed):</label>
-          <!-- Min Validation Constraint -->
-          <input
-            type="number"
-            id="uage"
-            name="age"
-            min="18"
-            max="100"
-            placeholder="18"
-            required
-          >
-        </fieldset>
-
-        <br>
-         <!-- Grouping 2: Ticket & Customizations -->
+        <!-- Fixed: Wrapped controls inside proper semantic <form> container -->
+        <form action="#" method="POST">
+          <!-- Grouping 1: Identity -->
           <fieldset>
-              <legend><strong>2. Pass & Preferences (Pasand)</strong></legend>
-              <br>
-              <label for="ticket_type">Choose Ticket Category:</label>
-              <select id="ticket_type" name="ticket`">
-                <option value="Standard">Standard Pass-$1499</option>
-                <option value="vip">VIP Access Pass - $2999</option>
-                <option value="student">student Discount Pass - $499</option>
-              </select>
-              <br><br>
+            <legend>
+              <strong>1. Attendee Identity (Aapki Pehchan)</strong>
+            </legend>
+            <br />
+            <label for="fname">Full Name:</label>
+            <input
+              type="text"
+              id="fname"
+              name="fullname"
+              placeholder="Jaise: Sahil"
+              required
+            />
+            <br /><br />
 
-              
+            <label for="uemail">Official Email:</label>
+            <input
+              type="email"
+              id="uemail"
+              name="email"
+              placeholder="sahil@company.com"
+              required
+            />
+            <br /><br />
+
+            <label for="uphone">Mobile Number (10 Digits Only):</label>
+            <!-- Fixed: Fixed internal placeholder layout alignment to exactly 10 digits -->
+            <input
+              type="tel"
+              id="uphone"
+              name="phone"
+              pattern="[0-9]{10}"
+              placeholder="9876543210"
+              required
+            />
+            <br />
+            <small style="color: gray"
+              >(Bina +91 ya 0 ke sirf 10 digit dalein)</small
+            >
+            <br /><br />
+
+            <label for="uage">Your Age (Strictly +18 Allowed):</label>
+            <input
+              type="number"
+              id="uage"
+              name="age"
+              min="18"
+              max="100"
+              placeholder="18"
+              required
+            />
           </fieldset>
+
+          <br />
+
+          <!-- Grouping 2: Ticket & Customizations -->
+          <fieldset>
+            <legend><strong>2. Pass & Preferences (Pasand)</strong></legend>
+            <br />
+            <label for="ticket_type">Choose Ticket Category:</label>
+            <!-- Fixed: Removed structural typo breaking name attribute boundaries -->
+            <select id="ticket_type" name="ticket_category">
+              <option value="Standard">Standard Pass - $1499</option>
+              <option value="vip">VIP Access Pass - $2999</option>
+              <option value="student">Student Discount Pass - $499</option>
+            </select>
+          </fieldset>
+
+          <br />
+          <!-- Added: Standard Form processing submission button triggers execution -->
+          <button type="submit" style="padding: 10px 20px; cursor: pointer">
+            Book My Pass Now 🚀
+          </button>
+        </form>
       </section>
     </main>
   </body>
