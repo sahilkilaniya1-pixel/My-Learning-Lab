@@ -111,26 +111,52 @@
       <hr />
 
       <!-- Section 3: Advanced Form with Validation (module 5) -->
-       <section id=""register>
-                  <h2>VIP Seat Reservation Form</h2>
-                  <p>Seat limited hain! kripya sahi details taaki aapka pass cancelna ho. </p>
+      <section id="" register>
+        <h2>VIP Seat Reservation Form</h2>
+        <p>
+          Seat limited hain! kripya sahi details taaki aapka pass cancelna ho.
+        </p>
 
+        <!-- Grouping 1: Identity -->
+        <fieldset>
+          <legend>
+            <strong>1. Attendence Identity (Aapki pechan)</strong>
+          </legend>
+          <br />
+          <label for="fname">Full name:</label>
+          <input
+            type="text"
+            id="fname"
+            name="fullname"
+            placeholder="Jaise:Sahil"
+            required
+          />
+          <br /><br />
 
-                  <!-- Grouping 1: Identity -->
-                   <fieldset>
-                      <legend><strong>1. Attendence Identity (Aapki pechan)</strong></legend>
-                      <br>
-                      <label for="fname">Full name:</label>
-                      <input type="text" id="fname" name="fullname" placeholder="Jaise:Sahil" required>
-                      <br><br>
+          <label for="uemail">Official Email</label>
+          <input
+            type="email"
+            id="uemail"
+            name="email"
+            placeholder="sahil@comapany.com"
+            required
+          />
+          <br /><br />
 
-                      <label for="uemail">Official Email</label>
-                      <input type="email" id="uemail" name="email" placeholder="sahil@comapany.com" required>
-                      <br><br>
-
-                      
-                   </fieldset>
-       </section>
+          <label for="uphone">Mobile Number (10 Digits Only):</label>
+          <!-- Regular Expression (Patterns) validation -->
+          <input
+            type="tel"
+            id="uphone"
+            name="phone"
+            pattern="[0-9]{10}"
+            placeholder="12345678910"
+            required
+          />
+          <small>(Bina +91 ya 0 ke shirf 10 digit dalein)</small>
+          <br /><br />
+        </fieldset>
+      </section>
     </main>
   </body>
 </html>
