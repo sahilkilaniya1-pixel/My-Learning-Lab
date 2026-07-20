@@ -11,12 +11,13 @@
 
 # Agar 2 se zyada conditions hon, to hum beech mein elif(else if) ka use karte hain:
 
-mark = 85
-if mark >=90:
+marks = 85
+
+if marks >= 90:
     print("Grade: A+")
-elif mark >=80:
+elif marks >= 80:
     print("Grade: A")
-elif mark >=75:
+elif marks >= 60:
     print("Grade: B")
 else:
-    print("Grade: C /Fail")
+    print("Grade: C / Fail")
