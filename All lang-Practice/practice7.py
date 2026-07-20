@@ -6,3 +6,6 @@
 # print(newbill)
 
 
+# BirthYear = int(input("enter the birthyear: "))
+# current_age = 2026 - birth_year
+# print(BirthYear+21)
