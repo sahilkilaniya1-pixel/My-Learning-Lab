@@ -31,7 +31,20 @@
 
 
 
-num1 = float(input("Enter the first number: "))
-numb2 = float(input("Enter the second number: "))
+# num1 = float(input("Enter the first number: "))
+# num2 = float(input("Enter the second number: "))
+# operation = input("kya karna hain? (+,-,*,/):")
 
-if
+# if operation == "+":
+#     print("result:",num1+num2)
+# elif operation == "-":
+#     print("result:",num1 - num2)
+# elif operation == "*":
+#     print("result:", num1* num2)
+# elif operation == "/":
+#     if num2 !=0:
+#         print("reslt:" num1/num2)
+#     else:
+#         print("0 se divide nahi kar sakte!")
+# else:
+#     print("galat operation chuna aapne!")
