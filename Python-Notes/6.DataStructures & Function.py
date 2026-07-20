@@ -23,3 +23,13 @@ def greet_user(username):
 #function ko chalana (call karna)
 greet_user("rahul")
 greet_user("sahil")
+
+
+
+def add_number(x, y):
+    answer = x+y
+    return answer
+
+# function ko call kiya aur result ek varibale mein save kar liye
+result = add_number(15, 25)
+print ("sum is:", result)  #40
