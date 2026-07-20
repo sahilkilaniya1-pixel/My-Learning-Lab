@@ -19,4 +19,4 @@ elif mark >=80:
 elif mark >=75:
     print("Grade: B")
 else:
-    print("Grade: C")
+    print("Grade: C /Fail")
