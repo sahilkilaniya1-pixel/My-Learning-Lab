@@ -12,8 +12,8 @@
 
 
 
-num =input("Enter the number: ")
-if(num%2==0):
+num =int(input("Enter the number: "))
+if num%2==0:
     print("Even")
-else :
+else:
     print("Odd")
