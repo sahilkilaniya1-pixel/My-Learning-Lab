@@ -1,0 +1,1 @@
+# Jab humein ek he code ko bina baar-baar likhe kai baar chalana ho, tab hum loop ka use karte hain. Python mein do tarah ke loops hote hain:
