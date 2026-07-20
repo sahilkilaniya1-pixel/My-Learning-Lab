@@ -12,8 +12,17 @@
 
 
 
-num =int(input("Enter the number: "))
-if num%2==0:
-    print("Even")
-else:
-    print("Odd")
+# num =int(input("Enter the number: "))
+# if num%2==0:
+#     print("Even")
+# else:
+#     print("Odd")
+
+
+traffic_color =("red","yellow","green")
+if traffic_color >= "red":
+    print("STOP")
+elif traffic_color >= "yellow":
+    print("GET READY!")
+else traffic_color >= "green":
+    print("GO!")
