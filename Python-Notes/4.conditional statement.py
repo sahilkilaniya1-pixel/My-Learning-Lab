@@ -2,11 +2,11 @@
 
 # Python ka sabse bada rule (identation): Python mein curly brackets nahi hote. if ke andar ky code chalega, ye batane ke liye hum line ke shuruat mein 4 spaces (ya ek Tab) ka gap dete hain.
 
-# age = int(input("Enter your age: "))
-# if age >=18:
-#     print("Aap vote de sakte hain")
-# else:
-#     print("Aap abhi chhote hain, vote nahi de sakte. ")
+age = int(input("Enter your age: "))
+if age >=18:
+    print("Aap vote de sakte hain")
+else:
+    print("Aap abhi chhote hain, vote nahi de sakte. ")
 
 
 # Agar 2 se zyada conditions hon, to hum beech mein elif(else if) ka use karte hain:
