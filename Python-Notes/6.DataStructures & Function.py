@@ -9,3 +9,7 @@ print(fruits[1])
 
 fruits.append("Graphes")
 print(fruits)
+
+
+# 2)Functions (Code ka remote control)
+a
