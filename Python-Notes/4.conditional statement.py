@@ -7,3 +7,16 @@ if age >=18:
     print("Aap vote de sakte hain")
 else:
     print("Aap abhi chhote hain, vote nahi de sakte. ")
+
+
+# Agar 2 se zyada conditions hon, to hum beech mein elif(else if) ka use karte hain:
+
+mark = 85
+if mark >=90:
+    print("Grade: A+")
+elif mark >=80:
+    print("Grade: A")
+elif mark >=75:
+    print("Grade: B")
+else:
+    print("Grade: C")
