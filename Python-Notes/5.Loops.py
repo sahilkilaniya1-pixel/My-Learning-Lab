@@ -11,3 +11,8 @@ for i in range (1,6):
 
 #  B) While loop (condition ke hisab se chalne wala)
 # ye tab tak chalta retha hai jab tak iski condition Ture rethi hai. Jaise hi condition False hui, loop ruk jata hai.
+countdown = 5
+while countdown >0:
+    print(countdown)
+    countdown = countdown -1
+print("boom")
