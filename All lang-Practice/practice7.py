@@ -9,3 +9,11 @@
 # BirthYear = int(input("enter the birthyear: "))
 # current_age = 2026 - birth_year
 # print(BirthYear+21)
+
+
+
+num =input("Enter the number: ")
+if(num%2==0):
+    print("Even")
+else :
+    print("Odd")
