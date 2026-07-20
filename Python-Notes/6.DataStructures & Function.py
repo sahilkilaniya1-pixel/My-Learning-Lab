@@ -6,3 +6,6 @@
 fruits = ["apple","Banana","Mango","Orange"]
 print(fruits[0])
 print(fruits[1])
+
+fruits.append("Graphes")
+print(fruits)
