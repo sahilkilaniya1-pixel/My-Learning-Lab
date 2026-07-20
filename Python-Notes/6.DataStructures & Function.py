@@ -16,3 +16,10 @@ print(fruits)
 
 # iske liye hum function banate hain. Function code ka ek tudka hota hai jise hum ek naam de dete hain, aur jab bhi zaroorat ho, bas uska naam lekar use "call" kar lete hain. iske liye def keywords ka use hota hai.
 
+#Function banana (Define Karna)
+def greet_user(username):
+    print("Welcome back,"+ username+"!Happy Coding.")
+
+#function ko chalana (call karna)
+greet_user("rahul")
+greet_user("sahil")
