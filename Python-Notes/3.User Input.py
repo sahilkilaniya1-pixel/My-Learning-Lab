@@ -4,4 +4,7 @@
 
 name= input("Enter your name: ")
 # age= input("Enter your age ")
-print("Hello"+ name)
+print("Hello "+ name)
+
+age = int(input("enter your age: "))
+print(age+5)
