@@ -19,12 +19,19 @@
 #     print("Odd")
 
 
-traffic_color =input("enter the color (red,yellow,green):").lower()
-if traffic_color == "red":
-    print("STOP")
-elif traffic_color == "yellow":
-  print("GET READY!")
-elif traffic_color == "green":
-    print("GO!")
-else:
-    print("invalid color")
+# traffic_color =input("enter the color (red,yellow,green):").lower()
+# if traffic_color == "red":
+#     print("STOP")
+# elif traffic_color == "yellow":
+#   print("GET READY!")
+# elif traffic_color == "green":
+#     print("GO!")
+# else:
+#     print("invalid color")
+
+
+
+num1 = float(input("Enter the first number: "))
+numb2 = float(input("Enter the second number: "))
+
+if
