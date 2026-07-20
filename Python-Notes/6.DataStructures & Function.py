@@ -12,4 +12,7 @@ print(fruits)
 
 
 # 2)Functions (Code ka remote control)
-a
+# Sochiye aapko ek bada kaam (jaise user ko bill calcuate karna ) apne program mein 5 alag- alag jagha par karna hai. Agar aap baar- baar wahi code likhenge to code bohot lamba hojayega.
+
+# iske liye hum function banate hain. Function code ka ek tudka hota hai jise hum ek naam de dete hain, aur jab bhi zaroorat ho, bas uska naam lekar use "call" kar lete hain. iske liye def keywords ka use hota hai.
+
