@@ -51,3 +51,8 @@
 
 
 
+marks = [75,80,92,65,88]
+total =0;
+for mark in marks:
+    total = total +mark
+print("total marks", total)
