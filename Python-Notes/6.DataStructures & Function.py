@@ -83,27 +83,3 @@ with open("notes.txt","r") as file:
 # 2.View Contact: Abhi tak jitne contacts save hue hain, uhne screen par print kijiye.
 # 3.Search Contanct: User se naam poochna hai aur agar wo naam saved hai, to unka phone Number screen par dikhana hai.
 # 4.Exits: program ko band kar dena hai (break keywords ka use karke). 
-
-contact ={}
-while True:
-    print("--Contact Book Menu--")
-    print("1.Add Contact")
-    print("2.View All Contacts")
-    print("3.Search contanct")
-    print("4.Exit")
-
-    choice = input("choose your choice (1-4):")
-    if choice =="1":
-        name=input("enter your name: ")
-        pass
-    elif choice =="2":
-        contact = int(input("Enter your contanct number: "))
-        pass
-    elif choice =="3":
-        search_contact=input("Enter contact name: ")
-        pass
-    elif choice =="4":
-        
-        pass
-    else :
-        print ("wrong option! Please select btw 1 to 4.")
