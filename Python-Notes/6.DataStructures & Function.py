@@ -41,3 +41,17 @@ print ("sum is:", result)  #40
 # Abhi tak aapne list seekhi, jahan data ek sequence (0,1,2...) mein store hota tha. Lekin agar aapko aisa data store karna ho jahan har cheez ka ek label ho (jaise Name -> sahil, Age -> 22, city -> Rohtak),to hum Dictionary use karte hain.
 
 # Dictionary ko curl barackets {} mein  likha jata hai, aur isme key: Value ke pairs hote hain.
+
+student = {
+    "name":"sahil",
+    "agar": 22,
+    "cource":"python"
+}
+print (student["name"])
+
+student["city"]="Delhi"
+student["age"] = 23
+
+for key, value in student.items();
+    print()
+    
