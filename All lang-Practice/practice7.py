@@ -85,3 +85,21 @@ while True:
     elif choice ==2:
         if not contact:
             print("Abhi koi contact save nhi ")
+        else:
+            print("--Aapke saare Contacts--")
+            for name, phone in contact.items():
+                print(f"Name: {name} | phone: {phone}")
+    
+    elif choice ==3:
+        search_name = input("Enter contact name to search:")
+        if search_name in contact:
+            print(f"Found! {search_name}: {contact[search_name]}")
+        else:
+            print(f"'{search_name}'name ka koi contact nahi hain mila!")
+    
+    elif choice == "4":
+        print("Contact book band horahi hain. Goodbye!")
+        break
+    
+    else :
+        print("Wrong option! Please select between 1 and 4")
