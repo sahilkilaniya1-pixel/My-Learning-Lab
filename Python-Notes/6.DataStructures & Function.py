@@ -82,4 +82,4 @@ with open("notes.txt","r") as file:
 # 1.Add Contanct: user se Name aur Phone Number input lijiye. is contanct ko ek dictionary ya file mein save kijiye.
 # 2.View Contact: Abhi tak jitne contacts save hue hain, uhne screen par print kijiye.
 # 3.Search Contanct: User se naam poochna hai aur agar wo naam saved hai, to unka phone Number screen par dikhana hai.
-#  
+# 4.Exits: program ko band kar dena hai (break keywords ka use karke). 
