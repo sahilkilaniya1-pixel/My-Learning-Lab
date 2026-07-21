@@ -63,3 +63,11 @@ for key, value in student.items();
 # "w" = write mode(nayi file banata hai. purana data mita deta hai).
 # "a" = Append mode(Purane data ke aage naya data jodta hai).
 # "r" = read mode (File ko padhta hai).
+
+with open("note.txt","w")as file:
+    file.write("Hello ye mera phela saved data hain. \n")
+    file.write("Python seekhna mazedar hai")
+print("Data saved successfully")
+
+with open("notes.txt","r") as file:
+    content
