@@ -94,5 +94,11 @@ while True:
     choice = input("choose your choice (1-4):")
     if choice =="1":
         pass
-    else choice =="2":
+    elif choice =="2":
         pass
+    elif choice =="3":
+        pass
+    elif choice =="4":
+        pass
+    else :
+        print
