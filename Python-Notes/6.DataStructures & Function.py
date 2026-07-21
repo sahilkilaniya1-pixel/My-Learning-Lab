@@ -52,7 +52,7 @@ print (student["name"])
 student["city"]="Delhi"
 student["age"] = 23
 
-for key, value in student.items();
+for key, value in student.items():
     print()
 
 
