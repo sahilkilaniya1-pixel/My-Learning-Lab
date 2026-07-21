@@ -67,39 +67,45 @@
 
 
 
-contact = {}
+contact = {}  # Empty dictionary contacts store karne ke liye
+
 while True:
-    print("--Contact Book Menu--")
-    print("1.Add contact")
-    print("2.View all contacts")
-    print("3.Search contact")
-    print("4.Exit")
+    print("\n-- Contact Book Menu --")
+    print("1. Add Contact")
+    print("2. View All Contacts")
+    print("3. Search Contact")
+    print("4. Exit")
 
-    choice = input("Choose your choice (1-4):")
+    choice = input("Choose your choice (1-4): ")
 
-    if choice ==1;
+    # 🟢 Option 1: Contact Add Karo
+    if choice == "1":
         name = input("Enter contact name: ")
         phone = input("Enter contact number: ")
-        contact_name = phone
-        print(f"contact '{name}' successfully save ho gaya!")
-    elif choice ==2:
+        contact[name] = phone  # Dictionary mein Name = Key, Phone = Value
+        print(f"✅ Contact '{name}' successfully save ho gaya!")
+
+    # 🟢 Option 2: Saare Contacts Dekho
+    elif choice == "2":
         if not contact:
-            print("Abhi koi contact save nhi ")
+            print("📭 Abhi koi contact save nahi hai!")
         else:
-            print("--Aapke saare Contacts--")
+            print("\n--- Aapke Saare Contacts ---")
             for name, phone in contact.items():
-                print(f"Name: {name} | phone: {phone}")
-    
-    elif choice ==3:
-        search_name = input("Enter contact name to search:")
+                print(f"Name: {name} | Phone: {phone}")
+
+    # 🟢 Option 3: Contact Dhoondho
+    elif choice == "3":
+        search_name = input("Enter contact name to search: ")
         if search_name in contact:
-            print(f"Found! {search_name}: {contact[search_name]}")
+            print(f"🔍 Found! {search_name}: {contact[search_name]}")
         else:
-            print(f"'{search_name}'name ka koi contact nahi hain mila!")
-    
+            print(f"❌ '{search_name}' naam ka koi contact nahi mila!")
+
+    # 🟢 Option 4: Program Se Bahar Niklo
     elif choice == "4":
-        print("Contact book band horahi hain. Goodbye!")
-        break
-    
-    else :
-        print("Wrong option! Please select between 1 and 4")
+        print("👋 Contact Book band ho rahi hai. Goodbye!")
+        break  # Loop ko rokne ke liye break zaroori hai
+
+    else:
+        print("⚠️ Wrong option! Please select between 1 and 4.")
