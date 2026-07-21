@@ -64,3 +64,24 @@
 
 # # 2. Function Call (Arguments paas karke)
 # introduce_me("Sahil", "Delhi")
+
+
+
+contact = {}
+while True:
+    print("--Contact Book Menu--")
+    print("1.Add contact")
+    print("2.View all contacts")
+    print("3.Search contact")
+    print("4.Exit")
+
+    choice = input("Choose your choice (1-4):")
+
+    if choice ==1;
+        name = input("Enter contact name: ")
+        phone = input("Enter contact number: ")
+        contact_name = phone
+        print(f"contact '{name}' successfully save ho gaya!")
+    elif choice ==2:
+        if not contact:
+            print("Abhi koi contact save nhi ")
