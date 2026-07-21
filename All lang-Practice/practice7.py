@@ -59,8 +59,8 @@
 
 
 # 1. Function ki definition (parameters ke sath)
-def introduce_me(name, city):
-    print(f"Mera naam {name} hai aur main {city} se hoon.")
+# def introduce_me(name, city):
+#     print(f"Mera naam {name} hai aur main {city} se hoon.")
 
-# 2. Function Call (Arguments paas karke)
-introduce_me("Sahil", "Delhi")
+# # 2. Function Call (Arguments paas karke)
+# introduce_me("Sahil", "Delhi")
