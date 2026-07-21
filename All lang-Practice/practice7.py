@@ -51,8 +51,3 @@
 
 
 
-sum = [52,80,92,65,88]
-tota = 0;
-for(let i =0; i<num.length; i++){
-       
-}
