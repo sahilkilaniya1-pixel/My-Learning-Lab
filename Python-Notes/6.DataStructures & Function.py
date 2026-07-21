@@ -89,16 +89,21 @@ while True:
     print("--Contact Book Menu--")
     print("1.Add Contact")
     print("2.View All Contacts")
+    print("3.Search contanct")
     print("4.Exit")
 
     choice = input("choose your choice (1-4):")
     if choice =="1":
+        name=input("enter your name: ")
         pass
     elif choice =="2":
+        contact = int(input("Enter your contanct number: "))
         pass
     elif choice =="3":
+        search_contact=input("Enter contact name: ")
         pass
     elif choice =="4":
+        
         pass
     else :
         print ("wrong option! Please select btw 1 to 4.")
