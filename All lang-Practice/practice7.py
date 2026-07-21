@@ -48,3 +48,11 @@
 #         print("0 se divide nahi kar sakte!")
 # else:
 #     print("galat operation chuna aapne!")
+
+
+
+sum = [52,80,92,65,88]
+tota = 0;
+for(let i =0; i<num.length; i++){
+       
+}
