@@ -54,4 +54,12 @@ student["age"] = 23
 
 for key, value in student.items();
     print()
-    
+
+
+# 4) File Handling (Data ko Permanently save karna)
+# Jab aapka Python program band hota hai, to saara data delete ho jata hai.Agar aap chahate hain ki data computer ki ek .tet file mein save hojaye taaki baad mein bhi mile, to hum File Handling use karte hain.
+
+# Python mein open() function ka use hota hai:
+# "w" = write mode(nayi file banata hai. purana data mita deta hai).
+# "a" = Append mode(Purane data ke aage naya data jodta hai).
+# "r" = read mode (File ko padhta hai).
