@@ -33,3 +33,11 @@ def add_number(x, y):
 # function ko call kiya aur result ek varibale mein save kar liye
 result = add_number(15, 25)
 print ("sum is:", result)  #40
+
+
+
+
+# 3) Dictionaries (key-Values Store)
+# Abhi tak aapne list seekhi, jahan data ek sequence (0,1,2...) mein store hota tha. Lekin agar aapko aisa data store karna ho jahan har cheez ka ek label ho (jaise Name -> sahil, Age -> 22, city -> Rohtak),to hum Dictionary use karte hain.
+
+# Dictionary ko curl barackets {} mein  likha jata hai, aur isme key: Value ke pairs hote hain.
