@@ -73,3 +73,13 @@ with open("notes.txt","r") as file:
     content = file.read()
     print("file ka content")
     print(content)
+
+
+
+# Project Design & Requirement:
+# Aapko ek aisa program banana hai jo while True Loop par chale (yaani jab tak user exit na kare, tab tak chalta rahe),
+# Program shuru hote he user ko 4 opetions dikhayiye:
+# 1.Add Contanct: user se Name aur Phone Number input lijiye. is contanct ko ek dictionary ya file mein save kijiye.
+# 2.View Contact: Abhi tak jitne contacts save hue hain, uhne screen par print kijiye.
+# 3.Search Contanct: User se naam poochna hai aur agar wo naam saved hai, to unka phone Number screen par dikhana hai.
+#  
