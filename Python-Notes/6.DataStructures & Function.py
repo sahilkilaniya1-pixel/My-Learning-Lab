@@ -70,4 +70,6 @@ with open("note.txt","w")as file:
 print("Data saved successfully")
 
 with open("notes.txt","r") as file:
-    content
+    content = file.read()
+    print("file ka content")
+    print(content)
