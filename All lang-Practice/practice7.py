@@ -67,45 +67,47 @@
 
 
 
-contact = {}  # Empty dictionary contacts store karne ke liye
+# contact = {}  # Empty dictionary contacts store karne ke liye
 
-while True:
-    print("\n-- Contact Book Menu --")
-    print("1. Add Contact")
-    print("2. View All Contacts")
-    print("3. Search Contact")
-    print("4. Exit")
+# while True:
+#     print("\n-- Contact Book Menu --")
+#     print("1. Add Contact")
+#     print("2. View All Contacts")
+#     print("3. Search Contact")
+#     print("4. Exit")
 
-    choice = input("Choose your choice (1-4): ")
+#     choice = input("Choose your choice (1-4): ")
 
-    # 🟢 Option 1: Contact Add Karo
-    if choice == "1":
-        name = input("Enter contact name: ")
-        phone = input("Enter contact number: ")
-        contact[name] = phone  # Dictionary mein Name = Key, Phone = Value
-        print(f"✅ Contact '{name}' successfully save ho gaya!")
+#     # 🟢 Option 1: Contact Add Karo
+#     if choice == "1":
+#         name = input("Enter contact name: ")
+#         phone = input("Enter contact number: ")
+#         contact[name] = phone  # Dictionary mein Name = Key, Phone = Value
+#         print(f"✅ Contact '{name}' successfully save ho gaya!")
 
-    # 🟢 Option 2: Saare Contacts Dekho
-    elif choice == "2":
-        if not contact:
-            print("📭 Abhi koi contact save nahi hai!")
-        else:
-            print("\n--- Aapke Saare Contacts ---")
-            for name, phone in contact.items():
-                print(f"Name: {name} | Phone: {phone}")
+#     # 🟢 Option 2: Saare Contacts Dekho
+#     elif choice == "2":
+#         if not contact:
+#             print("📭 Abhi koi contact save nahi hai!")
+#         else:
+#             print("\n--- Aapke Saare Contacts ---")
+#             for name, phone in contact.items():
+#                 print(f"Name: {name} | Phone: {phone}")
 
-    # 🟢 Option 3: Contact Dhoondho
-    elif choice == "3":
-        search_name = input("Enter contact name to search: ")
-        if search_name in contact:
-            print(f"🔍 Found! {search_name}: {contact[search_name]}")
-        else:
-            print(f"❌ '{search_name}' naam ka koi contact nahi mila!")
+#     # 🟢 Option 3: Contact Dhoondho
+#     elif choice == "3":
+#         search_name = input("Enter contact name to search: ")
+#         if search_name in contact:
+#             print(f"🔍 Found! {search_name}: {contact[search_name]}")
+#         else:
+#             print(f"❌ '{search_name}' naam ka koi contact nahi mila!")
 
-    # 🟢 Option 4: Program Se Bahar Niklo
-    elif choice == "4":
-        print("👋 Contact Book band ho rahi hai. Goodbye!")
-        break  # Loop ko rokne ke liye break zaroori hai
+#     # 🟢 Option 4: Program Se Bahar Niklo
+#     elif choice == "4":
+#         print("👋 Contact Book band ho rahi hai. Goodbye!")
+#         break  # Loop ko rokne ke liye break zaroori hai
 
-    else:
-        print("⚠️ Wrong option! Please select between 1 and 4.")
+#     else:
+#         print("⚠️ Wrong option! Please select between 1 and 4.")
+
+
