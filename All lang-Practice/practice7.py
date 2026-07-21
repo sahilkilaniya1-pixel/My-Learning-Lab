@@ -51,8 +51,9 @@
 
 
 
-mark = [75,80,92,65,88]
-total =0;
-for mark in mark:
-    total = total+mark
-print("Total mark:", total)
+# mark = [75,80,92,65,88]
+# total =0;
+# for mark in mark:
+#     total = total+mark
+# print("Total mark:", total)
+
