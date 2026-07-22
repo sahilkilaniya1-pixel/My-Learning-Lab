@@ -10,3 +10,6 @@ import requests
 
 # Live API de data mangwana
 response = requests.get("https://api.github.com")
+# Status code 200 ka matlab hota hain success!
+if response.status_code == 200:
+    print("Internet connection successful! ")
