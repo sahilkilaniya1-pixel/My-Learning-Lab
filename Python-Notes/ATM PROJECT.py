@@ -43,3 +43,14 @@ while True:
     print("4.Exit")
 
     choice = input("enter choice(1-4):")
+    try:
+        amt = float(input("Enter deposit amount:"))
+        user_acc.deposit(amt)
+    except ValueError:
+        print("Invalid amount!")
+
+    elif choice == "3":
+        pass
+    elif choice = "4":
+        print("Thank you for using out ATM!")
+        break
