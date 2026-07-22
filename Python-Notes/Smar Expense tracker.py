@@ -5,4 +5,4 @@
 # Add Expense:Amount($), Category(Food,rent,shopping),aur Description
 # Save Data: Data .json ya.txt file mein save ho taaki app restart hone par bhi kharchon ka record safe rahe.
 # View Summary: Total kharcha kitna hua kis category mein kitne paise gaye.
-# 
+# Budget alert: Agar total expense $10,000 se upar ho jaye, to screen par WARNING: budget Exceeded! ka alert show kare.
