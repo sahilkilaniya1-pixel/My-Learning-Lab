@@ -11,3 +11,4 @@
 # 2.Logic & arhitecture
 # Kharchon ko list of dictionaries mein store kijiye: [{"Amount":200,"category":"Food"}, ...].
 # Save/Load ke liye python ki inbuilt json library ka use kijiye (json.dump aur json.load).
+# App structure ko OOPs(class ExpenseTracker: )ke roop mein design kihiye.
