@@ -13,5 +13,13 @@
 class Car:
     # Constructor (details set karne k liye)
     def __init__(self,brand,color):
-        self.brand=brand #Attributes (property)
-        self.color =
+        self.brand = brand #Attributes (property)
+        self.color = color #Attributes (Property)
+    
+    # Method (Apki car kya kaam kar sakti hain)
+    def start_engine(self):
+        print(f"{self.brand} car start hogai hai!")
+
+# Real Objectt banana (Instantiate karna)
+car1 = Car("thar", "Black")
+car2 = Car("Bmw","Blue")
