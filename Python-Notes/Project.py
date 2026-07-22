@@ -24,3 +24,15 @@ root.title("My first desktop app")
 root.geometry("300x200")
 
 # Button ka function
+def on_function_click():
+    label.config(text="hello, sahil!")
+
+# UI components
+label = tk.Label(root, text="Button dabaiye!", font=("Arial",12))
+label.pack(pady=10)
+
+btn=tk.button(root,text="Click me", command=on_button_click)
+btn.pack()
+
+# App ko open rakhna
+root.mainloop()
