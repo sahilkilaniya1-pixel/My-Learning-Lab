@@ -32,4 +32,12 @@ class ExpenseTracker:
         with open(self.filename, "w") as file:
             json.dump(self.expenses, file,indent=4)
 
-    
+    def add_expense (self,amount,category,description):
+        self.expenses:{
+            "amount":amount,
+            "category":category,
+            "description":description
+        }
+        self.expenses.append(expenses)
+        self.save_expenses()
+        print("Expense added and saved successfully")
