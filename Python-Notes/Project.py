@@ -21,3 +21,6 @@ import tkinter as tk
 # Main window banana
 root = tk.TK()
 root.title("My first desktop app")
+root.geometry("300x200")
+
+# Button ka function
