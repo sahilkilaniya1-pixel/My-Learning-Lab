@@ -20,40 +20,67 @@
 # try-except ka use karke ensure kijiye ki agar user amount mein text de to app crash na ho.
 
 class Account:
-    def __init__(self, holder_name, balance=10000):
-        self.holder_name =holder_name
+    def __init__(self, holder_name, balance=1000):
+        self.holder_name = holder_name
         self.balance = balance
 
     def check_balance(self):
-        print(f"{self.holder_name},aapka balance: ${self.balance}")
+        print(f"💰 {self.holder_name}, aapka balance: ₹{self.balance}")
 
-    def deposit(self,amount):
-        deposite = float(input("Enter the deposit amount"))
-        pass
+    def deposit(self, amount):
+        # 🟢 Positive amount check karke add karenge
+        if amount > 0:
+            self.balance += amount
+            print(f"✅ ₹{amount} successfully deposit ho gaye!")
+            self.check_balance()
+        else:
+            print("❌ Invalid amount! Deposit amount 0 se bada hona chahiye.")
 
-    def withdrwa(self, amount):
-        
-        pass
+    def withdraw(self, amount):
+        # 🟢 Check karenge ki paise hain bhi ya nahi
+        if amount <= 0:
+            print("❌ Invalid amount! Amount 0 se bada hona chahiye.")
+        elif amount > self.balance:
+            print(f"❌ Insufficient Balance! Aapke paas sirf ₹{self.balance} hain.")
+        else:
+            self.balance -= amount
+            print(f"✅ ₹{amount} successfully withdraw ho gaye!")
+            self.check_balance()
 
-user_acc = Account("Sahil",5000) #Starting with 5000
+
+# --- Main ATM Code ---
+user_acc = Account("Sahil", 5000)  # Starting with ₹5000
 
 while True:
-    print("--ATM SYSTEM--")
-    print("1.Check Balance")
-    print("2.Deposite money")
-    print("3.Withdraw Money")
-    print("4.Exit")
-
-    choice = input("enter choice(1-4):")
-    try:
-        amt = float(input("Enter deposit amount:"))
-        user_acc.deposit(amt)
-    except ValueError:
-        print("Invalid amount!")
-
+    print("\n--- 🏦 ATM SYSTEM ---")
+    print("1. Check Balance")
+    print("2. Deposit Money")
+    print("3. Withdraw Money")
+    print("4. Exit")
+    
+    choice = input("Enter choice (1-4): ")
+    
+    if choice == "1":
+        user_acc.check_balance()
+        
+    elif choice == "2":
+        try:
+            amt = float(input("Enter deposit amount: ₹"))
+            user_acc.deposit(amt)
+        except ValueError:
+            print("❌ Invalid input! Kripya sirf numbers daalein.")
+            
     elif choice == "3":
-        withdraw =int(input("Enter the withdraw amount: "))
-        pass
-    elif choice = "4":
-        print("Thank you for using out ATM!")
+        # 🟢 Withdraw handle karne ke liye code
+        try:
+            amt = float(input("Enter withdraw amount: ₹"))
+            user_acc.withdraw(amt)
+        except ValueError:
+            print("❌ Invalid input! Kripya sirf numbers daalein.")
+            
+    elif choice == "4":
+        print("🎉 Thank you for using our ATM! Have a great day!")
         break
+        
+    else:
+        print("⚠️ Invalid choice! Please select between 1 and 4.")
