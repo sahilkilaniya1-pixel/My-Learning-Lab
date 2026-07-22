@@ -4,3 +4,5 @@
 # Terminal ya Command Prompt mein aise install karte hain:
 # pip install requests
 
+# 2. Live data Internet se Mangwana (Requests)
+# python ke request module se hum kisi bhi websites ya API se live internet data la sakte hain(jaise live Weather, crypto prices, News).
