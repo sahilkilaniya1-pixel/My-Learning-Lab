@@ -28,3 +28,7 @@ car2 = Car("Bmw","Blue")
 print(car1.brand)
 car1.start_engine()
 car2.start_engine()
+
+# 2.Exception Handling (try-except)
+# Code likhte waqt agar user koi galat input de de (jaise number ki jagah text daal de),to program crach (stop)ho jata hai.Program ko crash hone se bachane ke liye hum try-excpet ka use karte hain.
+
