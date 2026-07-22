@@ -17,3 +17,7 @@ if response.status_code == 200:
 
 # 3.Graphical Interface-GUI(tkinter)
 # Ab tak aapne jitne bhi projects banaye wo sab black-screen (Console/terminal) par chal rahe the. Lekin real applications mein Windows.Buttons, Text Boxes hote hain. Python mein ye sab (tkinter) library se banta hai.
+import tkinter as tk
+# Main window banana
+root = tk.TK()
+root.title("My first desktop app")
