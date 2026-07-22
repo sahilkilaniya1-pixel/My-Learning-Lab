@@ -18,3 +18,28 @@
 # Class ka ek object banaiye(e.g. user_acc = Account ("Sahil",5000)).
 # User ko menu dikhaiye: 1.Check Balance, 2.Deposit, 3.withdraw, 4.Exit.
 # try-except ka use karke ensure kijiye ki agar user amount mein text de to app crash na ho.
+
+class Account:
+    def __init__(self, holder_name, balance=10000):
+        self.holder_name =holder_name
+        self.balance = balance
+
+    def check_balance(self):
+        print(f"{self.holder_name},aapka balance: ${self.balance}")
+
+    def deposit(self,amount):
+        pass
+
+    def withdrwa(self, amount):
+        pass
+
+user_acc = Account("Sahil",5000) #Starting with 5000
+
+while True:
+    print("--ATM SYSTEM--")
+    print("1.Check Balance")
+    print("2.Deposite money")
+    print("3.Withdraw Money")
+    print("4.Exit")
+
+    choice = input("enter choice(1-4):")
