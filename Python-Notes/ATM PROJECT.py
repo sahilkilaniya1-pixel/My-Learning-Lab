@@ -17,3 +17,4 @@
 # 3.Main program loop:
 # Class ka ek object banaiye(e.g. user_acc = Account ("Sahil",5000)).
 # User ko menu dikhaiye: 1.Check Balance, 2.Deposit, 3.withdraw, 4.Exit.
+# try-except ka use karke ensure kijiye ki agar user amount mein text de to app crash na ho.
