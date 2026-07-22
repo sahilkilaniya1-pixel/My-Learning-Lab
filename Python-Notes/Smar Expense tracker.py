@@ -6,3 +6,8 @@
 # Save Data: Data .json ya.txt file mein save ho taaki app restart hone par bhi kharchon ka record safe rahe.
 # View Summary: Total kharcha kitna hua kis category mein kitne paise gaye.
 # Budget alert: Agar total expense $10,000 se upar ho jaye, to screen par WARNING: budget Exceeded! ka alert show kare.
+
+
+# 2.Logic & arhitecture
+# Kharchon ko list of dictionaries mein store kijiye: [{"Amount":200,"category":"Food"}, ...].
+# Save/Load ke liye python ki inbuilt json library ka use kijiye (json.dump aur json.load).
