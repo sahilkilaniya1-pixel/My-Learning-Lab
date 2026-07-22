@@ -23,3 +23,8 @@ class Car:
 # Real Objectt banana (Instantiate karna)
 car1 = Car("thar", "Black")
 car2 = Car("Bmw","Blue")
+
+# Object ki details access karna aur kaam karwana
+print(car1.brand)
+car1.start_engine()
+car2.start_engine()
