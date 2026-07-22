@@ -12,3 +12,20 @@
 # Kharchon ko list of dictionaries mein store kijiye: [{"Amount":200,"category":"Food"}, ...].
 # Save/Load ke liye python ki inbuilt json library ka use kijiye (json.dump aur json.load).
 # App structure ko OOPs(class ExpenseTracker: )ke roop mein design kihiye.
+
+
+import json
+
+class ExpenseTracker:
+    def __init__(self, filename="expenses.json"):
+        self.filename =filename
+        self.expenses =self.load_expenses()
+
+    def load_expenses(self):
+        try:
+            with open(self.filename,"r") as file:
+                return json.load(file)
+        except (FilenotFoundError, json.JSONDecodeError):
+            return[]
+
+    
