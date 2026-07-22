@@ -13,3 +13,7 @@ response = requests.get("https://api.github.com")
 # Status code 200 ka matlab hota hain success!
 if response.status_code == 200:
     print("Internet connection successful! ")
+
+
+# 3.Graphical Interface-GUI(tkinter)
+# Ab tak aapne jitne bhi projects banaye wo sab black-screen (Console/terminal) par chal rahe the. Lekin real applications mein Windows.Buttons, Text Boxes hote hain. Python mein ye sab (tkinter) library se banta hai.
