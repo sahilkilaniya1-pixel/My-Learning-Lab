@@ -7,4 +7,7 @@
 # holder_name(User ka naam)
 # balance(Starting paise, e.g.1000)
 
-# 2.
+# 2.Methods(Class ke andar ke functions):
+# check_balance(): Current balance screen par dikhaya.
+# deposit(amout): account mein paise add kare aur naya balance bataye.
+# withdraw(amount):Account se paise nikale.
