@@ -6,32 +6,22 @@
 
 # 2. Live data Internet se Mangwana (Requests)
 # python ke request module se hum kisi bhi websites ya API se live internet data la sakte hain(jaise live Weather, crypto prices, News).
-import requests
-
-# Live API de data mangwana
-response = requests.get("https://api.github.com")
-# Status code 200 ka matlab hota hain success!
-if response.status_code == 200:
-    print("Internet connection successful! ")
-
-
-# 3.Graphical Interface-GUI(tkinter)
-# Ab tak aapne jitne bhi projects banaye wo sab black-screen (Console/terminal) par chal rahe the. Lekin real applications mein Windows.Buttons, Text Boxes hote hain. Python mein ye sab (tkinter) library se banta hai.
 import tkinter as tk
+
 # Main window banana
-root = tk.TK()
-root.title("My first desktop app")
+root = tk.Tk()
+root.title("Mera Pehla Desktop App")
 root.geometry("300x200")
 
 # Button ka function
-def on_function_click():
-    label.config(text="hello, sahil!")
+def on_button_click():
+    label.config(text="Hello, Sahil!")
 
-# UI components
-label = tk.Label(root, text="Button dabaiye!", font=("Arial",12))
+# UI Components
+label = tk.Label(root, text="Button dabaiye!", font=("Arial", 12))
 label.pack(pady=10)
 
-btn=tk.button(root,text="Click me", command=on_button_click)
+btn = tk.Button(root, text="Click Me", command=on_button_click)
 btn.pack()
 
 # App ko open rakhna
