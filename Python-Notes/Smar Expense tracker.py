@@ -14,30 +14,44 @@
 # App structure ko OOPs(class ExpenseTracker: )ke roop mein design kihiye.
 
 
+
 import json
 
 class ExpenseTracker:
     def __init__(self, filename="expenses.json"):
-        self.filename =filename
-        self.expenses =self.load_expenses()
+        self.filename = filename
+        self.expenses = self.load_expenses()
 
     def load_expenses(self):
         try:
-            with open(self.filename,"r") as file:
+            with open(self.filename, "r") as file:
                 return json.load(file)
-        except (FilenotFoundError, json.JSONDecodeError):
-            return[]
+        except (FileNotFoundError, json.JSONDecodeError):
+            return []
 
     def save_expenses(self):
         with open(self.filename, "w") as file:
-            json.dump(self.expenses, file,indent=4)
+            json.dump(self.expenses, file, indent=4)
 
-    def add_expense (self,amount,category,description):
-        self.expenses:{
-            "amount":amount,
-            "category":category,
-            "description":description
+    def add_expense(self, amount, category, description):
+        expense = {
+            "amount": amount,
+            "category": category,
+            "description": description
         }
-        self.expenses.append(expenses)
+        self.expenses.append(expense)
         self.save_expenses()
-        print("Expense added and saved successfully")
+        print("✅ Expense added and saved successfully!")
+
+    def show_summary(self):
+        total = sum(item["amount"] for item in self.expenses)
+        print(f"\n📊 Total Spent: ₹{total}")
+        
+        # Budget Warning Check
+        if total > 10000:
+            print("⚠️ WARNING: Budget ₹10,000 exceed ho chuka hai!")
+
+# --- Main Program ---
+tracker = ExpenseTracker()
+
+# Yahan while loop banaiye menu ke saath (1. Add Expense, 2. View Summary, 3. Exit)
