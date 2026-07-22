@@ -28,9 +28,11 @@ class Account:
         print(f"{self.holder_name},aapka balance: ${self.balance}")
 
     def deposit(self,amount):
+        deposite = float(input("Enter the deposit amount"))
         pass
 
     def withdrwa(self, amount):
+        
         pass
 
 user_acc = Account("Sahil",5000) #Starting with 5000
@@ -50,6 +52,7 @@ while True:
         print("Invalid amount!")
 
     elif choice == "3":
+        withdraw =int(input("Enter the withdraw amount: "))
         pass
     elif choice = "4":
         print("Thank you for using out ATM!")
