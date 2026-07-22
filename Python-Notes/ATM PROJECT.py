@@ -11,3 +11,4 @@
 # check_balance(): Current balance screen par dikhaya.
 # deposit(amout): account mein paise add kare aur naya balance bataye.
 # withdraw(amount):Account se paise nikale.
+    # Validation: Agar user balance se zayda paise nikalne ki koshish kare(e.g.balance 1000 hai aur withdraw 5000 karna chahe).to dikhaiye: "Insufficient Balance! Aapke pass itne paise nahi hain."
