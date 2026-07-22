@@ -4,4 +4,5 @@
 # Ek complete application jo aapke daily/monthly kharche(expenses)track kare.
 # Add Expense:Amount($), Category(Food,rent,shopping),aur Description
 # Save Data: Data .json ya.txt file mein save ho taaki app restart hone par bhi kharchon ka record safe rahe.
+# View Summary: Total kharcha kitna hua kis category mein kitne paise gaye.
 # 
