@@ -6,3 +6,7 @@
 
 # 2. Live data Internet se Mangwana (Requests)
 # python ke request module se hum kisi bhi websites ya API se live internet data la sakte hain(jaise live Weather, crypto prices, News).
+import requests
+
+# Live API de data mangwana
+response = requests.get("https://api.github.com")
