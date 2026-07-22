@@ -8,3 +8,10 @@
 # Standard Syntax:
 #  __init__(): ye ek special function hota hai jise Constructor khete hain. Jab bhi koi naya object banta hai, ye automatically chal jata hai.
 # self: ye batata hai ki  hum particular object ki baat kar rahe hain.
+
+# BluePrint (class) banana
+class Car:
+    # Constructor (details set karne k liye)
+    def __init__(self,brand,color):
+        self.brand=brand #Attributes (property)
+        self.color =
