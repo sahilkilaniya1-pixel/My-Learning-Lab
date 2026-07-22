@@ -28,4 +28,8 @@ class ExpenseTracker:
         except (FilenotFoundError, json.JSONDecodeError):
             return[]
 
+    def save_expenses(self):
+        with open(self.filename, "w") as file:
+            json.dump(self.expenses, file,indent=4)
+
     
