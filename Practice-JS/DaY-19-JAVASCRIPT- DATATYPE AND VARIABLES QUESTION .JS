@@ -64,3 +64,9 @@ let num1= 5;
 let num2="5"
 console.log(num1+num2);
 console.log(num1*num2);
+
+// Question 2:
+let obj1 ={val:100};
+let obj2 ={val:100};
+console.log(obj1==obj2);
+
