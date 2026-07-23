@@ -38,3 +38,14 @@ let arr2 =arr1;
 arr2.push(4);
 console.log("arr1:",arr1);
 console.log("arr2:",arr2);
+
+// Question 3: block Scope vs function Scope (Advanced)
+function testScope(){
+    if(true){
+        var x = "var variable";
+        let y = "Let variable";
+    }
+    console.log(x);
+    // console.log(y);
+}
+testScope();
