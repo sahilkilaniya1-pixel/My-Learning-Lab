@@ -49,3 +49,5 @@ function testScope(){
     // console.log(y);
 }
 testScope();
+// var Function-scoped hota haini, isliye if block ke bahar bhi access ho gaya.
+// let Block-Scoped {} hota hai, isliye if block khatam hote hi y destory ho jata hai aur if ke bahar error deta hai.
