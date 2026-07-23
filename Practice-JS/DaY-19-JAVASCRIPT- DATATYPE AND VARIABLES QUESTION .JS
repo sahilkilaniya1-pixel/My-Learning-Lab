@@ -51,3 +51,8 @@ function testScope(){
 testScope();
 // var Function-scoped hota haini, isliye if block ke bahar bhi access ho gaya.
 // let Block-Scoped {} hota hai, isliye if block khatam hote hi y destory ho jata hai aur if ke bahar error deta hai.
+
+// Question 4: Const Object Mutation (Advanced)
+const user = {name:"sahil", age:25};
+user.age = 26;
+console.log(user);
