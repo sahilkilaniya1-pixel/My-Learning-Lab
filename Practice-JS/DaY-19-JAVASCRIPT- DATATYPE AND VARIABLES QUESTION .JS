@@ -70,3 +70,10 @@ let obj1 ={val:100};
 let obj2 ={val:100};
 console.log(obj1==obj2);
 
+// Quesiton 3:
+let a = [10];
+let b = a;
+b=[20];
+b.push(30);
+console.log("a:",a);
+console.log("b:",b);
