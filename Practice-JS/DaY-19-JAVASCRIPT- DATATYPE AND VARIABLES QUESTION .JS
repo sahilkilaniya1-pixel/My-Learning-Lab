@@ -71,9 +71,17 @@ let obj2 ={val:100};
 console.log(obj1==obj2);
 
 // Quesiton 3:
-let a = [10];
-let b = a;
-b=[20];
-b.push(30);
+let c = [10];
+let d = c;
+d=[20];
+d.push(30);
 console.log("a:",a);
 console.log("b:",b);
+
+// Question 4:
+var e = 1;
+function demo() {
+  console.log(e);
+  var e = 2;
+}
+demo();
