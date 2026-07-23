@@ -56,3 +56,11 @@ testScope();
 const user = {name:"sahil", age:25};
 user.age = 26;
 console.log(user);
+// Const ka matlab hota hai ki aap varibale ki binding/reference change nahi kar sakte (user ==... nahi kr sakte - Line B error degi).lekin const object ki andar ke properties ko chnage (mutate )kar sakte ho (Line A bilkul valid hai).
+
+
+// In question ko dhyan se dekho aur inka Output /Reason khud nikalne ki koshish karo:
+let num1= 5;
+let num2="5"
+console.log(num1+num2);
+console.log(num1*num2);
