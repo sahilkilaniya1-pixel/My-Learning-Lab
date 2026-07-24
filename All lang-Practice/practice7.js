@@ -17,7 +17,7 @@ copy.details.price = 60000;
 console.log("Original name:", original.name);
 console.log("Original.details.price:",original.details.price);
 
-
+// 🎯 Question 4: Closures & Lexical Scope
 function createCounter(){
     let count =0;
     return function(){
@@ -30,3 +30,13 @@ const counter2 = createCounter();
 console.log(counter1());
 console.log(counter1());
 console.log(counter2());
+
+// 🎯 Question 5: Object Immutability (Object.freeze)
+const person = Object.freeze({
+    name: "sahil",
+    address: {city: "Rohtak"}
+});
+person.name="kilaniya";
+person.address.city = "Mumbai";
+console.log(person.name);
+console.log(person.address.city);
