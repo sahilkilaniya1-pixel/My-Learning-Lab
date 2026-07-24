@@ -148,3 +148,18 @@ function shadowDemo(){
 }
 shadowDemo();
 console.log("Global;", x);
+
+// Question 4: Closures & Lexical Scope
+function createCounter(){
+    let count =0;
+    return function(){
+        count ++;
+        return count;
+    };
+}
+const counter1 = createCounter();
+const counter2 = createCounter();
+
+console.log(counter1());
+console.log(counter1());
+console.log(counter2());
