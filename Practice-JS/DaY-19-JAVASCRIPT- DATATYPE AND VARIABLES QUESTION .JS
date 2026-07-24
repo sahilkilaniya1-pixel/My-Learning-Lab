@@ -125,3 +125,13 @@ for (let j=0; j <3; j++){
 }
 
 // Question 2: Shallow copy vs Deep mutation (Spread Operator..)
+let original ={
+    name: "Laptop",
+    details : {brand: "Dell", price:50000}
+};
+let copy = {...original};
+copy.name="phone";
+copy.details.price=60000;
+
+console.log("original name:",original.name);
+console.log("original price:", original.details.price);
