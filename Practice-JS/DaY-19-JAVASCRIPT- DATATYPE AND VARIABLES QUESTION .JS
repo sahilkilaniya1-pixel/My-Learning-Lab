@@ -103,3 +103,14 @@ const user2 = user1;
 user2.role = "Lead";
 console.log(user1.role);  //"Lead"
 console.log(user1 === user2); //true
+
+
+// Question 3: Function Parameters & Refernce Break
+let Numbers = [1,2,3,4];
+function modifyArray(arr){
+    arr.push(5);
+    arr = [10,20,30];
+    arr.push(40);
+}
+modifyArray(Numbers);
+console.log(Numbers);
