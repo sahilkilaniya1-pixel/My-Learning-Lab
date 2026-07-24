@@ -114,3 +114,12 @@ function modifyArray(arr){
 }
 modifyArray(Numbers);
 console.log(Numbers);
+
+// =====================================================================
+// Question =1: Loop Scoping (var vs let inside Asynchronous Code)
+for (var i=0; i< 3; i++){
+    setTimeout(() => console.log("Var:",i),100);
+}
+for (let j=0; j <3; j++){
+    setTimeout(() => console.log("let:", j),100);
+}
