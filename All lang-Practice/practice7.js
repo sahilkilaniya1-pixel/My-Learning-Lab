@@ -6,7 +6,7 @@ for(let j=0; j<3; j++){
     setTimeout(()=> console.log("let:",j),100)
 }
 
-// Question 2: Shallow copy vs deep mutation (Spread Operator..)
+// // Question 2: Shallow copy vs deep mutation (Spread Operator..)
 let original = {
     name: "Laptop",
     details: {brand:"Dell", price: 50000}
@@ -18,3 +18,15 @@ console.log("Original name:", original.name);
 console.log("Original.details.price:",original.details.price);
 
 
+function createCounter(){
+    let count =0;
+    return function(){
+        count++;
+    };
+}
+const counter1 = createCounter();
+const counter2 = createCounter();
+
+console.log(counter1());
+console.log(counter1());
+console.log(counter2());
