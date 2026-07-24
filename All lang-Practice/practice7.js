@@ -16,3 +16,5 @@ copy.name = "Phone",
 copy.details.price = 60000;
 console.log("Original name:", original.name);
 console.log("Original.details.price:",original.details.price);
+
+
