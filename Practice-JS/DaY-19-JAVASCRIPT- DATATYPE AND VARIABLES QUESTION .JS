@@ -169,7 +169,7 @@ Code:
 // ----------------------------------------------------------------------------------------------------
 // 🔹 QUESTION 1: LOOP SCOPING (var vs let WITH setTimeout)
 // ----------------------------------------------------------------------------------------------------
-Code:
+// Code:
   for (var i = 0; i < 3; i++) {
       setTimeout(() => console.log("Var:", i), 100);
   }
@@ -278,7 +278,7 @@ Code:
 // ----------------------------------------------------------------------------------------------------
 // 🔹 QUESTION 5: OBJECT IMMUTABILITY (Object.freeze - SHALLOW FREEZE)
 // ----------------------------------------------------------------------------------------------------
-Code:
+// Code:
   const person = Object.freeze({
       name: "Sahil",
       address: { city: "Rohtak" }
@@ -290,15 +290,15 @@ Code:
   console.log(person.name);
   console.log(person.address.city);
 
-Output:
-  "Sahil"
-  "Delhi"
+// Output:
+//   "Sahil"
+//   "Delhi"
 
-💡 Explanation & Reason:
-  - `Object.freeze()` sirf **Shallow Freeze** karta hai (sirf top-level properties ko immutable/read-only banata hai).
-  - `person.name = "Aman"` attempt fail ho jata hai (non-strict mode mein silently ignore hota hai, strict mode mein error deta hai). Name "Sahil" hi rehta hai.
-  - Nested objects (`address`) freeze nahi hote. `person.address.city = "Delhi"` mutation success ho jayegi aur city change ho kar "Delhi" ban jayegi.
+// 💡 Explanation & Reason:
+//   - `Object.freeze()` sirf **Shallow Freeze** karta hai (sirf top-level properties ko immutable/read-only banata hai).
+//   - `person.name = "Aman"` attempt fail ho jata hai (non-strict mode mein silently ignore hota hai, strict mode mein error deta hai). Name "Sahil" hi rehta hai.
+//   - Nested objects (`address`) freeze nahi hote. `person.address.city = "Delhi"` mutation success ho jayegi aur city change ho kar "Delhi" ban jayegi.
 
-// ====================================================================================================
-=== END OF JAVASCRIPT CONCEPT & PRACTICE SHEET ===
-// ====================================================================================================
+// // ====================================================================================================
+// === END OF JAVASCRIPT CONCEPT & PRACTICE SHEET ===
+// // ====================================================================================================
