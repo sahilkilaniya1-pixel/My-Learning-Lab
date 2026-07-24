@@ -85,3 +85,12 @@ function demo() {
   var e = 2;
 }
 demo();
+
+
+// Question 1: Temporal Dead Zone(TDZ) & Scope
+let f =10;
+function testTDZ(){
+    console.log(f);
+    let f = 20;
+}
+testTDZ();
