@@ -135,3 +135,16 @@ copy.details.price=60000;
 
 console.log("original name:",original.name);
 console.log("original price:", original.details.price);
+
+// Ouestion 3: Variable Shadowing & iIIlegal Shadowing
+let x = 100;
+function shadowDemo(){
+    let x = 200; //Line 1
+    if(true){
+        let x = 300; //line 2
+        console.log("Inside IF:", x);
+    }
+    console.log("Inside function:",x);
+}
+shadowDemo();
+console.log("Globale;", x);
