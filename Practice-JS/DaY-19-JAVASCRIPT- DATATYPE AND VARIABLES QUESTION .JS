@@ -95,3 +95,11 @@ demo();
 // }
 // testTDZ();
 
+
+// Question 2: Object Re-Assighnment vs Mutation
+const user1 = {name: "Aman", role: "Dev"};
+const user2 = user1;
+
+user2.role = "Lead";
+console.log(user1.role);
+console.log(user1 === user2);
