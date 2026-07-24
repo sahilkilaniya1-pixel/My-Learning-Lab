@@ -147,4 +147,4 @@ function shadowDemo(){
     console.log("Inside function:",x);
 }
 shadowDemo();
-console.log("Globale;", x);
+console.log("Global;", x);
