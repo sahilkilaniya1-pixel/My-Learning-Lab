@@ -163,3 +163,15 @@ const counter2 = createCounter();
 console.log(counter1());
 console.log(counter1());
 console.log(counter2());
+
+// Question 5: Object Immutability (Object.freeze)
+const person = Object.freeze({
+    name:"Sahil",
+    address: {city: "Rohtak"}
+});
+
+person.name = "Sahil";
+person.address.city = "Rohtak";
+
+console.log(person.name);
+console.log(person.address.city);
