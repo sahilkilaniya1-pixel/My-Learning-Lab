@@ -5,16 +5,6 @@ but for innr loop we will use (j)  ye tay karta hai ki har line ke andar kitne s
 */
 
 
-// for(let i =1; i<=totalRows; i++){
-//     let pattern = "";
-
-//     for (let j =1; j <=columns; j++){
-//         pattern +="*";
-//     }
-//     console.log(pattern);
-// }
-
-
 
 let n = 5;
 for(let i=0; i<=n; i++){
