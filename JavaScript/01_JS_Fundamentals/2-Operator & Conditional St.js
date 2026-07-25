@@ -59,24 +59,25 @@ console.log("assignA =", assignA); // 1^4 = 1
 // Strict Equal to: === (Checks both value and data type)
 // Strict Not equal to: !==
 
-let compA = 5;
-let compB = 5;
-console.log("5 == 5 :", compA == compB); // true
+// let compA = 5;
+// let compB = 5;
+// console.log("5 == 5 :", compA == compB); // true
 
-// Loose equality (Type Coercion occurs)
-let xStr = 5;
-let yStr = "5";
-console.log("5 == '5' :", xStr == yStr); // true
+// // Loose equality (Type Coercion occurs)
+// let xStr = 5;
+// let yStr = "5";
+// console.log("5 == '5' :", xStr == yStr); // true
 
-// Strict equality (No Type Coercion)
-console.log("5 === '5' :", xStr === yStr); // false
+// // Strict equality (No Type Coercion)
+// console.log("5 === '5' :", xStr === yStr); // false
 
-// Strict inequality
-console.log("5 !== '5' :", xStr !== yStr); // true
 
-// Greater than or equal to / Less than or equal to
-console.log("5 <= 5 :", compA <= compB); // true
-console.log("5 >= 5 :", compA >= compB); // true
+// // Strict inequality
+// console.log("5 !== '5' :", xStr !== yStr); // true
+
+// // Greater than or equal to / Less than or equal to
+// console.log("5 <= 5 :", compA <= compB); // true
+// console.log("5 >= 5 :", compA >= compB); // true
 
 
 // Logical Operators ===================================
