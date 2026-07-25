@@ -19,9 +19,7 @@ obj2.name = "golu";
 console.log(obj2.name); //golu
 
 
-// let  -> redeclare  but not re assign
-// var  -> redeclare and resign
-//  but const -> cant be resign or redeclare
+
 
 /**
 number
@@ -37,4 +35,10 @@ symbol
 array
 funcition
 object
+
+
+
+let  -> redeclare  but not re assign
+var  -> redeclare and resign
+but const -> cant be resign or redeclare
 **/
