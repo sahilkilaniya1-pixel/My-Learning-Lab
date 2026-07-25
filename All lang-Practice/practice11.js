@@ -5,7 +5,7 @@ for (let i = 1; i <= n; i++) {
 
   // 1. Pehle spaces add karo
   for (let j = 1; j <= n - i; j++) {
-    row += "*";
+    row += " ";
   }
 
   // 2. Phir stars add karo
