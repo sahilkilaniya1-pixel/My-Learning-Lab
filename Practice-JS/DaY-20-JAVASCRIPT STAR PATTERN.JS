@@ -27,3 +27,5 @@ let s = 5;
     }
     console.log(row);
  }
+
+//  Inverted Right Triangle:
