@@ -40,20 +40,32 @@ for (let i = n; i >= 1; i--) {
   console.log(row);
 }
 
-
 // left pascal triangle:
-let n=5;
-for(let i=0; i<=n; i++){
+let n = 5;
+for (let i = 0; i <= n; i++) {
   let row = "";
 
-  for(let j=1; j<=n-1; j++){
-    row +=" ";
+  for (let j = 1; j <= n - 1; j++) {
+    row += " ";
   }
 
-  for(let k =1; k<=i; k++){
+  for (let k = 1; k <= i; k++) {
     row += "*";
   }
   console.log(row);
 }
 
-// 
+// Inverted Left Triangle:
+let n = 5;
+
+for (let i = n; i >= 1; i--) {
+  let row = "";
+  for (let j = 1; j <= n - i; j++) {
+    row += " ";
+  }
+  for (let k = 1; k <= i; k++) {
+    row += "*";
+  }
+
+  console.log(row);
+}
