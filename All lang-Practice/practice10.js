@@ -22,6 +22,7 @@ console.log(obj2.name); //golu
 
 
 /**
+7-permittive 
 number
 string
 boolean
@@ -31,7 +32,7 @@ bigint
 symbol
 
 
-
+3-non-permittive
 array
 funcition
 object
