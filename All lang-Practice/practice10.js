@@ -17,3 +17,24 @@ const obj1 = {name: "Sahil"};
 const obj2 =  obj1;
 obj2.name = "golu";
 console.log(obj2.name); //golu
+
+
+// let  -> redeclare  but not re assign
+// var  -> redeclare and resign
+//  but const -> cant be resign or redeclare
+
+/**
+number
+string
+boolean
+null
+undefinded
+bigint
+symbol
+
+
+
+array
+funcition
+object
+**/
