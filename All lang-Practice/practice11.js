@@ -30,8 +30,8 @@
 let i =1;
 while (i<=6){
   if(i==3)
-    break;
+    continue;
   else
-    console.log(i)
-  i++
+    console.log("hii")
+  i++;
 }
