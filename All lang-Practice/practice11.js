@@ -143,3 +143,39 @@
 //     }
 //     console.log(row);
 // }
+
+let n = 5;
+
+// PART 1: Upper Pyramid (Lines 1 to 5)
+for (let i = 1; i <= n; i++) {
+  let row = "";
+
+  // 1. Spaces (1 se n - i tak)
+  for (let s = 1; s <= n - i; s++) {
+    row += " ";
+  }
+
+  // 2. Stars (1 se 2 * i - 1 tak)
+  for (let j = 1; j <= 2 * i - 1; j++) {
+    row += "*";
+  }
+
+  console.log(row);
+}
+
+// PART 2: Lower Pyramid (Lines 1 to 4)
+for (let i = 1; i <= n - 1; i++) {
+  let row = "";
+
+  // 1. Spaces: Har line mein badhenge (1 se i tak)
+  for (let s = 1; s <= i; s++) {
+    row += " ";
+  }
+
+  // 2. Stars: Har line mein ghatenge [2 * (n - i) - 1]
+  for (let j = 1; j <= 2 * (n - i) - 1; j++) {
+    row += "*";
+  }
+
+  console.log(row);
+}
