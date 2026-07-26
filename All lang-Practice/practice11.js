@@ -21,8 +21,17 @@
 //     console.log(i);
 // }
 
+// let i =1;
+// while(i<6){
+//   console.log(i)
+//   i++;
+// }
+
 let i =1;
-while(i<6){
-  console.log(i)
-  i++;
+while (i<=6){
+  if(i==3)
+    break;
+  else
+    console.log(i)
+  i++
 }
