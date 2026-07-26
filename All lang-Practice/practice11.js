@@ -14,9 +14,15 @@
 //   }
 // }
 
-for(let i=1; i<=6; i++){
-  if(i==3)
-    continue;
-  else
-    console.log(i);
+// for(let i=1; i<=6; i++){
+//   if(i==3)
+//     continue;
+//   else
+//     console.log(i);
+// }
+
+i =1;
+while(i<=10) {
+  console.log("sahil");
+  i++;
 }
