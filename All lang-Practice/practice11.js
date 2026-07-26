@@ -21,17 +21,31 @@
 //     console.log(i);
 // }
 
-let i =1;
-while(i<6){
-  console.log(i)
-  i++;
-}
-
 // let i =1;
-// while (i<=6){
-//   if(i==3)
-//     continue;
-//   else
-//     console.log("i")
+// while(i<6){
+//   console.log(i)
 //   i++;
 // }
+// 
+// let i =5;
+// while(i<5){
+//     console.log("Inside the loop");
+//     if(i==3){
+//         i++;
+//         continue;
+//     }
+//     else
+//         console.log(i)
+//     i++;
+// }
+// let i =1;
+// do {
+//     console.log("Sahil");
+//     i++;
+// }while(1<=10);
+// let count = 10;
+
+// do {
+//   console.log("Count is: " + count);
+//   count++;
+// } while (count < 5);
