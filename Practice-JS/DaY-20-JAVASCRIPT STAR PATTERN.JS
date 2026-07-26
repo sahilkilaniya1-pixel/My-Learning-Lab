@@ -96,3 +96,5 @@ for (let i = 1; i <= n; i++) {
   }
   console.log(row);
 }
+
+// Dimond star pyramid:
