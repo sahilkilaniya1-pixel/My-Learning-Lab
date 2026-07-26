@@ -21,17 +21,17 @@
 //     console.log(i);
 // }
 
-// let i =1;
-// while(i<6){
-//   console.log(i)
-//   i++;
-// }
-
 let i =1;
-while (i<=6){
-  if(i==3)
-    continue;
-  else
-    console.log("hii")
+while(i<6){
+  console.log(i)
   i++;
 }
+
+// let i =1;
+// while (i<=6){
+//   if(i==3)
+//     continue;
+//   else
+//     console.log("i")
+//   i++;
+// }
