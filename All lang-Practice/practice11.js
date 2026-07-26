@@ -115,8 +115,11 @@ for (let i = 1; i <= n; i++) {
   for (let s = 1; s <= n - i; s++) {
     row += " ";
   }
-  for (let j = i; j <= 2 * i - 1; j++) {
+  for (let j = 1; j <= 2 *(n-i+1)-1; j++) {
     row += "*";
   }
   console.log(row);
 }
+
+
+
