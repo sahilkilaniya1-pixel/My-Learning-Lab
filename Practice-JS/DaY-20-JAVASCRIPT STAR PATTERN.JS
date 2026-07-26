@@ -73,3 +73,4 @@ for (let i = n; i >= 1; i--) {
 
 
 // Pyramid Star Pattern:
+s
