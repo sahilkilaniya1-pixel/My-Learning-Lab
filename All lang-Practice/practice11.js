@@ -188,15 +188,36 @@
 // for(let i=n-1; i>=1; i--){
 //   console.log("*".repeat(i));
 // }
-let n =5;
-for(let i=1; i<=n; i++){
-  let row ="";
-  for(let j=1; j<=n; j++){
-    if(i===1 || i===n || j===1|| j===n){
-      row +="*";
-    } else{
-      row+=" ";
-    }
-  }
-  console.log(row);
-}
+// let n =5;
+// for(let i=1; i<=n; i++){
+//   let row ="";
+//   for(let j=1; j<=n; j++){
+//     if(i===1 || i===n || j===1|| j===n){
+//       row +="*";
+//     } else{
+//       row+=" ";
+//     }
+//   }
+//   console.log(row);
+// }
+
+
+
+// let n =5;
+// for(let i=1; i<=n; i++){
+//   let row = "";
+//   for(let j=1; j<=i; j++){
+//     row +="*";
+//   }
+//   console.log(row);
+// }
+
+// let n =5;
+// for(let i=1; i<=n; i++){
+//   let row = "";
+//   for(let j=1; j<=n-i+1; j++){
+//     row +="*";
+//   }
+//   console.log(row);
+// }
+
