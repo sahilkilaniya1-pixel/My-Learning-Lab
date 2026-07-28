@@ -21,19 +21,24 @@
 
 // Corrected Code
 // Input lene ke liye prompt
-let age = 18;
-let city = rohtak;
-let age = Number(prompt("Enter your age:"));
-let city = prompt("Enter the city:");
-if (age >= 18 && age < 60)
-    if (city === "rohtak") {
-        console.log("Eligible for vote in " + city);
-    } else {
-        console.error("Voting is only allowed for residents of Rohtak!");
-    }
-else{
-    console.log("Not Eligible for vote due to age criteria.");
+// let age = 18;
+// let city = rohtak;
+// let age = Number(prompt("Enter your age:"));
+// let city = prompt("Enter the city:");
+// if (age >= 18 && age < 60)
+//     if (city === "rohtak") {
+//         console.log("Eligible for vote in " + city);
+//     } else {
+//         console.error("Voting is only allowed for residents of Rohtak!");
+//     }
+// else{
+//     console.log("Not Eligible for vote due to age criteria.");
+// }
+
+
+let x = 50;
+if(x% 2==0){
+    console.log("Even");
+} else{
+    console.log("Odd");
 }
-
-// ATM
-
