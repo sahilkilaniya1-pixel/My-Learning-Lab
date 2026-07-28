@@ -267,8 +267,6 @@
 //   console.log(row);
 // }
 
-
-
 // Alphabet Varient (A, AB, ABC)::
 // let n =5;
 // for(let i=1; i<=n; i++){
@@ -280,18 +278,28 @@
 //     console.log(row);
 // }
 
-
-
 // Pattern Type 2: Continuous Counting Pattern (Floyd's Pattern)
-let n =4;
-let count =1;
+// let n =4;
+// let count =1;
 
-for(let i=1; i<=n; i++){
-    let row ="";
+// for(let i=1; i<=n; i++){
+//     let row ="";
 
-    for(let j=1; j<=i; j++){
-        row += count + " ";
-        count ++;
-    }
-    console.log(row);
+//     for(let j=1; j<=i; j++){
+//         row += count + " ";
+//         count ++;
+//     }
+//     console.log(row);
+// }
+
+let n = 5;
+let count = 1;
+for (let i = 1; i <= n; i++) {
+  let row = "";
+
+  for (let j = 1; j <= i; j++) {
+    row += count + " ";
+    count++;
+  }
+  console.log(row);
 }
