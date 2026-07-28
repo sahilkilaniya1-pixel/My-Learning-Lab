@@ -106,3 +106,22 @@
 // if (userCartCount ?? 5) {
 //   console.log("B:", userCartCount ?? 5);
 // }
+
+// let marks = 75;
+
+// let result = marks > 80 ? "A" : marks > 60 ? "B" : "C";
+
+// console.log(result);
+
+function deleteDatabase() {
+  console.log("Database Deleted!");
+  return true;
+}
+
+// let isAdmin = false;
+
+// if (isAdmin && deleteDatabase()) {
+//   console.log("Action Completed.");
+// } else {
+//   console.log("Access Denied.");
+// }
