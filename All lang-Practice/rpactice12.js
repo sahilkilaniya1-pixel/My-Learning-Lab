@@ -44,9 +44,19 @@
 // }
 
 
-let age = 25;
-if(age >=18){
-    console.log("Adult")
-} else{
-    console.loh("Not an adult")
+// let age = 25;
+// if(age >=18){
+//     console.log("Adult")
+// } else{
+//     console.loh("Not an adult")
+// };
+
+
+const x =10;
+if(x>0){
+    console.log("Positive");
+} else if(x<0){
+    console.log("Negative.");
+} else {
+    console.log("Zero");
 };
