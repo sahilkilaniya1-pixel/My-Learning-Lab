@@ -136,3 +136,19 @@ function deleteDatabase() {
 // console.log(typeof x);
 // console.log(typeof y);
 
+
+/*
+Freezing" if temperature is less than 0.
+"Cold" if temperature is between 0 and 15 (inclusive).
+"Pleasant" if temperature is between 16 and 25 (inclusive).
+"Hot" if temperature is greater than 25
+*/
+
+getWeatherAdvice(tempInCelsius)
+if( temp >0){
+  console.log("Freezing temp");
+} else if(temp >0 && temp <15){
+  console.log("Cold");
+} else if(temp >16 && temp <25){
+  console.log("Pleasant");
+}
