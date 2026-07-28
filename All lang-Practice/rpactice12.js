@@ -93,3 +93,16 @@
 // } else {
 //   console.log("No score found!");
 // }
+
+
+// let userCartCount = 0;
+
+// Test A: Using Logical OR
+// if (userCartCount || 5) {
+//   console.log("A:", userCartCount || 5);
+// }
+
+// // Test B: Using Nullish Coalescing
+// if (userCartCount ?? 5) {
+//   console.log("B:", userCartCount ?? 5);
+// }
