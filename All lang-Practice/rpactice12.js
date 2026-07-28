@@ -36,9 +36,17 @@
 // }
 
 
-let x = 50;
-if(x% 2==0){
-    console.log("Even");
+// let x = 50;
+// if(x% 2==0){
+//     console.log("Even");
+// } else{
+//     console.log("Odd");
+// }
+
+
+let age = 25;
+if(age >=18){
+    console.log("Adult")
 } else{
-    console.log("Odd");
-}
+    console.loh("Not an adult")
+};
