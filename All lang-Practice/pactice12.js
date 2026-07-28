@@ -154,3 +154,9 @@ Freezing" if temperature is less than 0.
 // } else{
 //   console.log("Hot");
 // }
+let leapyar = 2000;
+if (leapyear /4==0){
+  console.log("it is leapyear")
+} else if (leapyear /4!==0){
+  console.log("not leapyear");
+}
