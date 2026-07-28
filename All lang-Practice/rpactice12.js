@@ -126,12 +126,13 @@ function deleteDatabase() {
 //   console.log("Access Denied.");
 // }
 
-let condition = true;
+// let condition = true;
 
-if (condition) {
-  var x = 10;
-  let y = 20;
-}
+// if (condition) {
+//   var x = 10;
+//   let y = 20;
+// }
 
-console.log(typeof x);
-console.log(typeof y);
+// console.log(typeof x);
+// console.log(typeof y);
+
