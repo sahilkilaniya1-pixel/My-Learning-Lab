@@ -145,12 +145,12 @@ Freezing" if temperature is less than 0.
 */
 
 let temp = 54;
-getWeatherAdvice(tempInCelsius)
-if( temp >0){
+if( temp <=0){
   console.log("Freezing temp");
-} else if(temp >0 && temp <15){
+} else if(temp >0 && temp <=15){
   console.log("Cold");
-} else if(temp >16 && temp <25){
+} else if(temp >16 && temp <=25){
   console.log("Pleasant");
-} else (temp < 25)
+} else{
   console.log("Hot");
+}
