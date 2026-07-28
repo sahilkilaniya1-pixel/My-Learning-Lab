@@ -52,11 +52,36 @@
 // };
 
 
-const x =10;
-if(x>0){
-    console.log("Positive");
-} else if(x<0){
-    console.log("Negative.");
-} else {
-    console.log("Zero");
-};
+// const x =10;
+// if(x>0){
+//     console.log("Positive");
+// } else if(x<0){
+//     console.log("Negative.");
+// } else {
+//     console.log("Zero");
+// // };
+
+// const marks = 85;
+// let branch;
+
+// switch (true){
+//     case marks >=90:
+//         branch = "Computer science engineering";
+//         break;
+//     case marks >=80:
+//         branch = "Mechnical engineering";
+//         break;
+//     case marks >=70:
+//         branch = "Chemical engineering";
+//         break;
+//     case marks >=60:
+//         branch = "Electronics and communication";
+//         break;
+//     case marks >=50:
+//         branch = "Civil engineering";
+//         break;
+//     default:
+//         branch = "Bio technology"
+//         break;
+// }
+// console.log(`student branch name is: ${branch}`);
