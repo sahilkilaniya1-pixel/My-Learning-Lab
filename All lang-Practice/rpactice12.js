@@ -85,3 +85,11 @@
 //         break;
 // }
 // console.log(`student branch name is: ${branch}`);
+
+// let score = 0;
+
+// if (score) {
+//   console.log("Score saved!");
+// } else {
+//   console.log("No score found!");
+// }
