@@ -47,5 +47,11 @@ else if(option ===2){
 else if (option ===3){
     if(amount <=0){
         console.log("invalid withdrawal amount");
+    } else if (amount > accBalance){
+        console.log("Insufficient balance Transaction";)
+    } else {
+        accBalance -= amount;
+        console.log(`${amount} withdraw successfully`);
+        console.log(`remainig balance :${accBalance}`);
     }
 }
