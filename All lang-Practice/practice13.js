@@ -17,7 +17,7 @@
 //     }
 // }
 
-// Step 1: Initial ATM Data Setup
+
 const CORRECT_PIN = 1234;
 let accountBalance = 5000;
 
@@ -30,7 +30,7 @@ function runATM(enteredPin, option, amount = 0) {
 
   console.log("PIN Verified Successfully!\n");
   if (option === 1) {
-    console.log(` Current Account Balance: ₹${accountBalance}`);
+    console.log(`Current Account Balance: ₹${accountBalance}`);
   } else if (option === 2) {
     if (amount <= 0) {
       console.log("Invalid deposit amount! Please enter a positive value.");
@@ -57,3 +57,6 @@ function runATM(enteredPin, option, amount = 0) {
     console.log("Invalid Option! Please select between 1 and 4.");
   }
 }
+
+
+
