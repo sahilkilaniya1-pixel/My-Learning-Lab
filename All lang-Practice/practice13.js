@@ -37,7 +37,7 @@ function runATM(enteredPin, option, amount = 0) {
     } else {
       accountBalance += amount;
       console.log(`${amount} deposited successfully!`);
-      console.log(`Updated Balance: ₹${accountBalance}`);
+      console.log(`Updated Balance: ${accountBalance}`);
     }
   } else if (option === 3) {
     if (amount <= 0) {
@@ -49,7 +49,7 @@ function runATM(enteredPin, option, amount = 0) {
       console.log(
         `${amount} withdrawn successfully! Please collect your cash.`,
       );
-      console.log(`Remaining Balance: ₹${accountBalance}`);
+      console.log(`Remaining Balance: ${accountBalance}`);
     }
   } else if (option === 4) {
     console.log("Thank you for using our ATM. Have a great day!");
