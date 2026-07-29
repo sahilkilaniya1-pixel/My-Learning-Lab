@@ -35,5 +35,11 @@ if(option ==1){
 }
 
 else if(option ===2){
-    
+    if(amount <=0){
+        console.log("Invalid  deposit amount please enter a positive vale:")
+    } else {
+        accBalance += amount;
+        console.log(`${amount} deposited successfully`);
+        console.log(`$updated balance:`);
+    }
 }
