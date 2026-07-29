@@ -18,3 +18,13 @@
 // }
 
 
+const correct_pin = 1234;
+let accBalance = 5000;
+
+function runATM(enteredPin, option, amounut = 0){
+    console.log("ATM Machine Operation");
+}
+
+if(enteredPin !== correct_pin){
+    console.log("Incorrect pin");
+}
