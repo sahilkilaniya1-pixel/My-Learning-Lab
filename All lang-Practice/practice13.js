@@ -22,7 +22,7 @@ const CORRECT_PIN = 1234;
 let accountBalance = 5000;
 
 function runATM(enteredPin, option, amount = 0) {
-  console.log("=== ATM Machine Operations ===");
+  console.log("ATM Machine Operations");
   if (enteredPin !== CORRECT_PIN) {
     console.log("Incorrect PIN! Access Denied.");
     return;
