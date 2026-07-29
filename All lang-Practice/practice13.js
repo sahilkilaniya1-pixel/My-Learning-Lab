@@ -55,3 +55,6 @@ else if (option ===3){
         console.log(`remainig balance :${accBalance}`);
     }
 }
+else if(optioin ===4){
+    console.log("Thank you for using our ATM.");
+}
