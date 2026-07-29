@@ -30,7 +30,7 @@ function runATM(enteredPin, option, amount = 0) {
 
   console.log("PIN Verified Successfully!\n");
   if (option === 1) {
-    console.log(`💳 Current Account Balance: ₹${accountBalance}`);
+    console.log(` Current Account Balance: ₹${accountBalance}`);
   }
   else if (option === 2) {
     if (amount <= 0) {
