@@ -36,8 +36,8 @@ function runATM(enteredPin, option, amount = 0) {
       console.log("Invalid deposit amount! Please enter a positive value.");
     } else {
       accountBalance += amount;
-      console.log(`${amount} deposited successfully!`);
-      console.log(`Updated Balance: ${accountBalance}`);
+      console.log(amount,"posited successfully!");
+      console.log(Updated Balance,"accountBalance");
     }
   } else if (option === 3) {
     if (amount <= 0) {
