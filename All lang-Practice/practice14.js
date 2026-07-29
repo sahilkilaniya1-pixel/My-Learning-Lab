@@ -13,7 +13,10 @@ for(let i=1; i<=n; i++){
     let row = "";
     
     for(let j=1; j<=i; j++){
-        row +="*";
+        row +=" ";
+    }
+    for(let s =1; s<=2*n-1; s++){
+        row+="*";
     }
     console.log(row);
 }
