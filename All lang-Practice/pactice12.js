@@ -165,3 +165,10 @@ Freezing" if temperature is less than 0.
 // }
 // checkLeapyear(2000);
 
+
+// let leapyear = 2000;
+// if (leapyear % 4===0){
+//   console.log("is is leapyear");
+// } else {
+//   console.log("not leapyear");
+// }
