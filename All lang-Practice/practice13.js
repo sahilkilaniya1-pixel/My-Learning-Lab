@@ -43,3 +43,9 @@ else if(option ===2){
         console.log(`$updated balance:`);
     }
 }
+
+else if (option ===3){
+    if(amount <=0){
+        console.log("invalid withdrawal amount");
+    }
+}
