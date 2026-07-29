@@ -28,3 +28,12 @@ function runATM(enteredPin, option, amounut = 0){
 if(enteredPin !== correct_pin){
     console.log("Incorrect pin");
 }
+console.log("PIN verified successfully");
+
+if(option ==1){
+    console.log(`current account balance: ${accountBalance}`);
+}
+
+else if(option ===2){
+    
+}
