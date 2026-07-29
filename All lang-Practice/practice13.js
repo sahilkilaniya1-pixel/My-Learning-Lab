@@ -17,48 +17,45 @@
 //     }
 // }
 
+// Step 1: Initial ATM Data Setup
+const CORRECT_PIN = 1234;
+let accountBalance = 5000;
 
-const correct_pin = 1234;
-let accBalance = 5000;
+function runATM(enteredPin, option, amount = 0) {
+  console.log("=== ATM Machine Operations ===");
+  if (enteredPin !== CORRECT_PIN) {
+    console.log("Incorrect PIN! Access Denied.");
+    return;
+  }
 
-function runATM(enteredPin, option, amounut = 0){
-    console.log("ATM Machine Operation");
-}
-
-if(enteredPin !== correct_pin){
-    console.log("Incorrect pin");
-}
-console.log("PIN verified successfully");
-
-if(option ==1){
-    console.log(`current account balance: ${accountBalance}`);
-}
-
-else if(option ===2){
-    if(amount <=0){
-        console.log("Invalid  deposit amount please enter a positive vale:")
+  console.log("PIN Verified Successfully!\n");
+  if (option === 1) {
+    console.log(`💳 Current Account Balance: ₹${accountBalance}`);
+  }
+  else if (option === 2) {
+    if (amount <= 0) {
+      console.log("Invalid deposit amount! Please enter a positive value.");
     } else {
-        accBalance += amount;
-        console.log(`${amount} deposited successfully`);
-        console.log(`$updated balance:`);
+      accountBalance += amount;
+      console.log(`${amount} deposited successfully!`);
+      console.log(`Updated Balance: ₹${accountBalance}`);
     }
-}
-
-else if (option ===3){
-    if(amount <=0){
-        console.log("invalid withdrawal amount");
-    } else if (amount > accBalance){
-        console.log("Insufficient balance Transaction";)
+  }
+  else if (option === 3) {
+    if (amount <= 0) {
+      console.log("Invalid withdrawal amount!");
+    } else if (amount > accountBalance) {
+      console.log("Insufficient Balance! Transaction Failed.");
     } else {
-        accBalance -= amount;
-        console.log(`${amount} withdraw successfully`);
-        console.log(`remainig balance :${accBalance}`);
+      accountBalance -= amount; // accountBalance = accountBalance - amount
+      console.log(`${amount} withdrawn successfully! Please collect your cash.`);
+      console.log(`Remaining Balance: ₹${accountBalance}`);
     }
-}
-else if(optioin ===4){
-    console.log("Thank you for using our ATM.");
-}
-
-else{
-    console.log("Invalid  option please select between 1 and 4");
+  }
+  else if (option === 4) {
+    console.log("Thank you for using our ATM. Have a great day!");
+  }
+  else {
+    console.log("Invalid Option! Please select between 1 and 4.");
+  }
 }
