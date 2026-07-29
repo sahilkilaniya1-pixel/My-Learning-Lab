@@ -58,3 +58,7 @@ else if (option ===3){
 else if(optioin ===4){
     console.log("Thank you for using our ATM.");
 }
+
+else{
+    console.log("Invalid  option please select between 1 and 4");
+}
