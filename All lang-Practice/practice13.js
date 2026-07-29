@@ -31,8 +31,7 @@ function runATM(enteredPin, option, amount = 0) {
   console.log("PIN Verified Successfully!\n");
   if (option === 1) {
     console.log(` Current Account Balance: ₹${accountBalance}`);
-  }
-  else if (option === 2) {
+  } else if (option === 2) {
     if (amount <= 0) {
       console.log("Invalid deposit amount! Please enter a positive value.");
     } else {
@@ -40,22 +39,21 @@ function runATM(enteredPin, option, amount = 0) {
       console.log(`${amount} deposited successfully!`);
       console.log(`Updated Balance: ₹${accountBalance}`);
     }
-  }
-  else if (option === 3) {
+  } else if (option === 3) {
     if (amount <= 0) {
       console.log("Invalid withdrawal amount!");
     } else if (amount > accountBalance) {
       console.log("Insufficient Balance! Transaction Failed.");
     } else {
-      accountBalance -= amount; // accountBalance = accountBalance - amount
-      console.log(`${amount} withdrawn successfully! Please collect your cash.`);
+      accountBalance -= amount;
+      console.log(
+        `${amount} withdrawn successfully! Please collect your cash.`,
+      );
       console.log(`Remaining Balance: ₹${accountBalance}`);
     }
-  }
-  else if (option === 4) {
+  } else if (option === 4) {
     console.log("Thank you for using our ATM. Have a great day!");
-  }
-  else {
+  } else {
     console.log("Invalid Option! Please select between 1 and 4.");
   }
 }
