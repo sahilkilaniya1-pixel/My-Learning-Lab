@@ -138,7 +138,7 @@ for (let i = 1; i <= n; i++) {
   let row = "";
 
   for (let j = 1; j <= i; j++) {
-    if (i == 1 || j == 1 || (i == 2 && j == 2) || (i == 4 && j == 4)) {
+    if (i == j || j == j) {
       row += "*";
     } else {
       row += "";
