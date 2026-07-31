@@ -99,17 +99,34 @@
 //   console.log(row);
 // }
 
+//
+// let n = 5;
+// for (let i = 1; i <= n; i++) {
+//   let row = "";
 
+//   for (let j = 1; j <= i; j++) {
+//     if (i == 1 || j == 1 || (i == 2 && j == 2) || (i == 4 && j == 4)) {
+//       row += "*";
+//     } else {
+//       row += "";
+//     }
+//   }
+//   console.log(row);
+// }
 
-let n =5;
-for(let i =1; i<=n; i++){
-    let row = " ";
+let n = 5;
+for (let i = 1; i <= n; i++) {
+  let row = "";
 
-    for(let j=1; j<=i; j++){
-        row="*";
-    }
-    for(let s=1; s<=n; s++){
+  for (let j = 1; j <= n - i; j++) {
+    row += " ";
+  }
+  for(let k=1; k<=(2*i-1); k++){
+    if(k==1|| k==(2*i-1)||i==n){
+        row+="*";
+    }else{
         row+=" ";
     }
-    console.log(row);
+  }
+  console.log(row);
 }
