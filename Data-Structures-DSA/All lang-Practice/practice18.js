@@ -15,3 +15,16 @@
 
 
 
+// let row = 3;
+// let coln = 7;
+// for(let i=1; i<=row; i++){
+//     let row ="";
+
+//     for(let j=1; j<=coln; j++){
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+
+
