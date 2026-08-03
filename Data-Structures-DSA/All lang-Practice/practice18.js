@@ -105,10 +105,6 @@
 //   console.log(row);
 // }
 
-
-
-
-
 // let n = 5;
 // for (let i = 1; i <= n; i++) {
 //     let row = "";
@@ -121,15 +117,6 @@
 
 //     console.log(row);
 // }
-
-
-
-
-
-
-
-
-
 
 // let n = 5;
 // for (let i = 1; i <= n; i++) {
@@ -146,21 +133,19 @@
 //     console.log(row);
 // }
 
-
-
-
-let a =  [12,15,17,1,8,12,34];
+let a = [12, 15, 17, 1, 8, 12, 34];
 let firstMax = a[2];
-let secondMax =a[1];
+let secondMax = a[1];
 let firstMin = a[3];
-for(let i=0; i<a.length; i++){
-    let num = a;
-    if(num > firstMax){
-        secondMax = firstMax;
-        firstMax = num;
-    }else if(num > secondMax && num !== firstMax){
-        secondMax = num;
-    }
+a.sort();
+for (let i = 0; i < a.length; i++) {
+  let num = a;
+  if (num > firstMax) {
+    secondMax = firstMax;
+    firstMax = num;
+  } else if (num > secondMax && num !== firstMax) {
+    secondMax = num;
+  }
 }
 console.log("1st Max:", firstMax);
 console.log("2nd Max:", secondMax);
