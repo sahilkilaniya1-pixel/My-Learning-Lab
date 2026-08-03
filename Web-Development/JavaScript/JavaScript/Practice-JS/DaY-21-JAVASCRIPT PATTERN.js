@@ -11,6 +11,7 @@
 //   console.log(row);
 // }
 
+// Q7 .Horizontal Triangle
 // let row = 3;
 // let coln = 7;
 // for(let i=1; i<=3; i++){
@@ -22,10 +23,10 @@
 //     console.log(row);
 // }
 
+// Q5. Alternate Line Triangle
 // let n = 5;
 // for (let i = 1; i <= n; i++) {
 //   let row = "";
-
 //   for (let j = 1; j <= i; j++) {
 //     if (i == 1 || j == 1 || (i == 2 && j == 2) || (i == 4 && j == 4)) {
 //       row += "*";
@@ -36,6 +37,7 @@
 //   console.log(row);
 // }
 
+// Q3. Inverted Right Triangle
 // let  n = 5;
 // for(let i=n; i>=1; i--){
 //     let row ="";
@@ -45,6 +47,7 @@
 //     console.log(row);
 // }
 
+// Q10. Inverted Left Triangle
 // let n = 5;
 // for (let i = 1; i <= n; i++) {
 //   let row = "";
@@ -57,6 +60,7 @@
 //   console.log(row);
 // }
 
+// Q9. Left-Aligned Triangle
 // let n = 5;
 // for(let i=1; i<=n; i++){
 //     let row ="";
@@ -69,6 +73,7 @@
 //     console.log(row);
 // }
 
+// Q12. Right Parallelogram
 // let n =5;
 // for(let i=1; i<=n; i++){
 //     let row="";
@@ -81,6 +86,7 @@
 //     console.log(row);
 // }
 
+// Q13. Left Parallelogram
 // let n =5;
 // for(let i=1; i<=n; i++){
 //     let row="";
@@ -93,6 +99,7 @@
 //     console.log(row);
 // }
 
+// Q14. Wide Space Triangle
 // let n = 3;
 // for (let i = 1; i <= n; i++) {
 //   let row = "";
