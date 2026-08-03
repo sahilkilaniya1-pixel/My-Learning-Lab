@@ -17,10 +17,10 @@
 
 // let row = 3;
 // let coln = 7;
-// for(let i=1; i<=row; i++){
+// for(let i=1; i<=3; i++){
 //     let row ="";
 
-//     for(let j=1; j<=coln; j++){
+//     for(let j=1; j<=7; j++){
 //         row += "*";
 //     }
 //     console.log(row);
