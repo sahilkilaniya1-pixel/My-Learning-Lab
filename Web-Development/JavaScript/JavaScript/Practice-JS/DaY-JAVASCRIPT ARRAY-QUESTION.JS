@@ -60,5 +60,6 @@ Logic: sabhi elements ko ek step peeche (left side) shift karo aur last index ko
 let arr = [10,20,30,40];
 
 for(let i=0; i<arr.length-1; i+=){
-    
+    arr[i]=arr[i+1];//aage wale elements ko peeche lao
 }
+arr.length = arr.length-1;//last extra elements hata do
