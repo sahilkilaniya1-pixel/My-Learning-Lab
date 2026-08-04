@@ -40,3 +40,12 @@ for(let i=arr.length-1; i>=0; i--){
 }
 arr[0]= newElement;//0th position par naya element
 //arr:[5,10,20,30]
+
+/*
+2.Element hatana (Deletion)
+A.End se element hatana (manual pop)
+Logic: Array ki length ko i kam kar do.
+*/
+let arr = [10,20,30,40];
+arr.length=arr.length-1;
+//arr:[10,20,30]
