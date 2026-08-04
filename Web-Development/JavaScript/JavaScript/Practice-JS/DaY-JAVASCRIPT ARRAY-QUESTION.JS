@@ -63,3 +63,4 @@ for(let i=0; i<arr.length-1; i+=){
     arr[i]=arr[i+1];//aage wale elements ko peeche lao
 }
 arr.length = arr.length-1;//last extra elements hata do
+//arr:[20,30,40]
