@@ -17,5 +17,6 @@ let arr = [10, 20, 30, 40, 50];
 Part 2:Basic operation(bina built-in functions ke)
 
 1.Elements Add Karna(Insertion)
-A.Array ke aakhiri(End) mein ele
+A.Array ke aakhiri(End) mein elements jodna (Manual push)
+Logic:: Aakhiri index arr.length hota hai. Wahan direct value rakh do.
 */
