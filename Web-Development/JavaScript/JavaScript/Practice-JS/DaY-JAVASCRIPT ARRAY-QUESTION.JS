@@ -29,5 +29,5 @@ arr[arr.length] = newElement;
 /*
 B:Array ke shuru (Start) mein element jodna (manual unshift)
 
-Logic:sabhi
+Logic:sabhi elements ko ek step aage (right side) shift karna hoga, fir 0 index par nayi value rakhni hogi.
 */
