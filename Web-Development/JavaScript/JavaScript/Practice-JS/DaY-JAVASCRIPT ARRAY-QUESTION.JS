@@ -7,7 +7,7 @@ let arr = [10, 20, 30, 40, 50];
 //Index:    0,  1,  2,  3,  4
 
 /*
-Element Access: arr[0]-> 10, arr[4]->50
-
-
+-Element Access: arr[0]-> 10, arr[4]->50
+-Length: Array mein kitne elements hain, ye arr.length se  pata chalta hain (yahan 5).
+-Last Element index: Always arr.length -1(yahan 5-1=4)
 */
