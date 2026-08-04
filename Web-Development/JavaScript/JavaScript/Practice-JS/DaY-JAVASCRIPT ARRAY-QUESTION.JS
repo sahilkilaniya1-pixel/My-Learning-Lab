@@ -34,3 +34,7 @@ Logic:sabhi elements ko ek step aage (right side) shift karna hoga, fir 0 index 
 
 let arr = [10,20,30];
 let newElement = 5;
+//Right to left loop chalayege taaki overwrite na hon
+for(let i=arr.length-1; i>=0; i--){
+    
+}
