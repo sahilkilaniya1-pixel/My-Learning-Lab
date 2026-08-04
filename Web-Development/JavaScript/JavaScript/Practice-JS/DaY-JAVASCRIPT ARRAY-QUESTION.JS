@@ -64,3 +64,10 @@ for(let i=0; i<arr.length-1; i+=){
 }
 arr.length = arr.length-1;//last extra elements hata do
 //arr:[20,30,40]
+
+
+/*
+part 3: Intermediate Logic & Operations
+1.Reversing an Array (Two-pointer technique)
+Bina arr.reverse() ke array ko ulta karna.
+*/
