@@ -24,4 +24,6 @@ let arr = [10,20,30];
 let newElement = 40;
 
 arr[arr.length] = newElement;
-//ar
+//arr ab [10,20,30,40] ho gaya
+
+
