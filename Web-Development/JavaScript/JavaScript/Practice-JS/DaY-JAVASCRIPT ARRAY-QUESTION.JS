@@ -20,3 +20,8 @@ Part 2:Basic operation(bina built-in functions ke)
 A.Array ke aakhiri(End) mein elements jodna (Manual push)
 Logic:: Aakhiri index arr.length hota hai. Wahan direct value rakh do.
 */
+let arr = [10,20,30];
+let newElement = 40;
+
+arr[arr.length] = newElement;
+//ar
