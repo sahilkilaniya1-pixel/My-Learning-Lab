@@ -31,3 +31,5 @@ B:Array ke shuru (Start) mein element jodna (manual unshift)
 
 Logic:sabhi elements ko ek step aage (right side) shift karna hoga, fir 0 index par nayi value rakhni hogi.
 */
+
+let arr = [10,20,30];
