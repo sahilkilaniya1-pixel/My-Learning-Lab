@@ -26,4 +26,8 @@ let newElement = 40;
 arr[arr.length] = newElement;
 //arr ab [10,20,30,40] ho gaya
 
+/*
+B:Array ke shuru (Start) mein element jodna (manual unshift)
 
+Logic:sabhi
+*/
