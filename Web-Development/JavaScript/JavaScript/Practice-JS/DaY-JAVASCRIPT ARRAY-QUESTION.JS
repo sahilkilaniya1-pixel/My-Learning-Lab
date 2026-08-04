@@ -71,3 +71,6 @@ part 3: Intermediate Logic & Operations
 1.Reversing an Array (Two-pointer technique)
 Bina arr.reverse() ke array ko ulta karna.
 */
+// Ek pointer left = 0 par rakho.
+// Ek pointer right = arr.length - 1 par rakho.
+// Dono ki value swap karo aur pointers ko pass laao jab tak left < right hai.
