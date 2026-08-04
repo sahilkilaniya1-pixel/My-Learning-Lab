@@ -36,5 +36,6 @@ let arr = [10,20,30];
 let newElement = 5;
 //Right to left loop chalayege taaki overwrite na hon
 for(let i=arr.length-1; i>=0; i--){
-    
+    arr[i+1]=arr[i];
 }
+arr[0]= newElement;//
