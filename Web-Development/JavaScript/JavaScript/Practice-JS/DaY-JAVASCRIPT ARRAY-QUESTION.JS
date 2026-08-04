@@ -49,3 +49,16 @@ Logic: Array ki length ko i kam kar do.
 let arr = [10,20,30,40];
 arr.length=arr.length-1;
 //arr:[10,20,30]
+
+
+
+
+/*
+B.Start se element hatana (Manual shift)
+Logic: sabhi elements ko ek step peeche (left side) shift karo aur last index ko hata do.
+*/
+let arr = [10,20,30,40];
+
+for(let i=0; i<arr.length-1; i+=){
+    
+}
