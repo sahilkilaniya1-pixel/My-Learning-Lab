@@ -11,3 +11,11 @@ let arr = [10, 20, 30, 40, 50];
 -Length: Array mein kitne elements hain, ye arr.length se  pata chalta hain (yahan 5).
 -Last Element index: Always arr.length -1(yahan 5-1=4)
 */
+
+
+/* 
+Part 2:Basic operation(bina built-in functions ke)
+
+1.Elements Add Karna(Insertion)
+A.Array ke aakhiri(End) mein ele
+*/
