@@ -33,3 +33,4 @@ Logic:sabhi elements ko ek step aage (right side) shift karna hoga, fir 0 index 
 */
 
 let arr = [10,20,30];
+let newElement = 5;
