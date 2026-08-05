@@ -95,5 +95,5 @@ while(left< right){
         pairFound = true;
         console.log("pair: ${arr[left]},${arr[right]}");
         break;
-    }
+    }else if
 }
