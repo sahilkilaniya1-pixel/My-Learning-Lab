@@ -97,5 +97,7 @@ while(left< right){
         break;
     }else if (currentSum<targetSum){
         left++;
+    }else {
+        right--;
     }
 }
