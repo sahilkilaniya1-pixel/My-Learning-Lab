@@ -26,29 +26,23 @@
 // }
 // console.log(foundIndex);
 
-
-
-
 // B. Binary Search (Sorted Array ke liye — Fast Search)Time Complexity: O(log N)
-let arr = [2,4,5,815,12,16,38,56,72,91];
+let arr = [2, 4, 5, 815, 12, 16, 38, 56, 72, 91];
 let target = 56;
 
 let low = 0;
-let high = arr.length-1;
+let high = arr.length - 1;
 let resultIndex = -1;
 
-while(low<=high){
-    let mid = Math.floor((low+high)/2);
-    if(arr[mid]===target){
-        resultIndex = mid;
-        break;
-    }else if(arr[mid]<target){
-        low = mid+1;
-    }else{
-        high= mid-1;
-    }
+while (low <= high) {
+  let mid = Math.floor((low + high) / 2);
+  if (arr[mid] === target) {
+    resultIndex = mid;
+    break;
+  } else if (arr[mid] < target) {
+    low = mid + 1;
+  } else {
+    high = mid - 1;
+  }
 }
-
-
-
-
+console.log(resultIndex);
