@@ -66,3 +66,34 @@ if(arr.length >0){
     arr.length =i+1;
 }
 console.log(arr);
+
+
+
+
+
+
+/*
+Part 4: Advanced Patterns for Hard Questions
+Mushkil questions solve karne ke liye 3 main patterns use hote hain:
+
+Pattern 1: Two Pointers Pattern
+Kab use karein: Sorted array mein pairs dhoondna, palindromes check karna, zero ko end mein shift karna.
+
+Example Problem: Check karo kya array mein koi aisa pair hai jiska sum = K ho (Sorted Array).
+*/
+
+
+let arr = [1,2,4,7,11,15];
+let targetSum = 15;
+let left = 0;
+let right = arr.length-1;
+let pairFound = false;
+while(left< right){
+    let currentSum = arr[left]+arr[right];
+
+    if(currentSum=== targetSum){
+        pairFound = true;
+        console.log("pair: ${arr[left]},${arr[right]}");
+        break;
+    }
+}
