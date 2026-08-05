@@ -64,3 +64,42 @@ console.log("After Reverse :", arrayToReverse); // Expected Output: [10, 20, 30,
 
 
 
+
+
+
+/**
+ * ==========================================
+ * PROBLEM 03: Find Second Largest Element
+ * ==========================================
+ * Goal: Find second distinct largest number without sorting the array.
+ * Approach: Single Pass Search (Tracking Top 2 Extremes)
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ */
+
+// Input Data
+const data = [12, 35, 1, 10, 34, 1];
+
+let largest = -Infinity;
+let secondLargest = -Infinity;
+
+// Logic: Update largest and secondLargest dynamically
+for (let i = 0; i < data.length; i++) {
+    const current = data[i];
+
+    if (current > largest) {
+        // Demote previous largest to secondLargest
+        secondLargest = largest;
+        largest = current;
+    } else if (current > secondLargest && current !== largest) {
+        // Update secondLargest if current falls between top two
+        secondLargest = current;
+    }
+}
+
+console.log("Input Array    :", data);
+console.log("Largest Value  :", largest);        // Expected: 35
+console.log("Second Largest :", secondLargest);  // Expected: 34
+
+
+
