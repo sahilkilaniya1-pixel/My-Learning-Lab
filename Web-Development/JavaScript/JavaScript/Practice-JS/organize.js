@@ -1,35 +1,36 @@
 const fs = require('fs');
 const path = require('path');
 
-// Target directory (jahan saari files hain)
 const targetDir = __dirname;
 
-// Categories definition based on keywords
+// Expanded keyword mappings
 const categories = {
-  '01-basics-and-control-flow': ['loop', 'if-else', 'cinema', 'core', 'datatype', 'variable'],
-  '02-arrays-and-strings': ['array', 'string', 'words', 'min-max', 'in-built-function', 'leetcode'],
-  '03-objects-and-functions': ['object', 'e-commerce', 'function'],
-  '04-logic-building-and-patterns': ['pattern', 'star', 'mind-benders', 'logical-patterns']
+  '01-basics-and-control-flow': ['datatype', 'variable', 'function', 'if-else', 'cinema', 'core', 'loop'],
+  '02-arrays-and-strings': ['array', 'string', 'words', 'min-max', 'inbuilt', 'built-in', 'leetcode'],
+  '03-objects-and-functions': ['object', 'e-commerce'],
+  '04-logic-building-and-patterns': ['pattern', 'star', 'mind-bender', 'logical']
 };
 
 function sanitizeFileName(filename) {
-  // Ignore special files
-  if (['organize.js', 'note.txt', 'tempCodeRunnerFile.js', 'README.md'].includes(filename)) {
+  // Ignore specific helper files
+  if (['organize.js', 'note.txt', 'tempcoderunnerfile.js', 'readme.md'].includes(filename.toLowerCase())) {
     return null;
   }
 
-  // Process only JS files
-  if (!filename.endsWith('.js')) return null;
+  // Handle double extension or trailing .js cases
+  if (!filename.toLowerCase().includes('.js')) return null;
 
-  // Clean filename: lowercase, replace spaces/underscores with hyphens, remove duplicate hyphens
-  let cleanName = filename
+  let nameWithoutExt = filename.replace(/\.js$/i, '').trim();
+
+  // Clean special characters like brackets, extra spaces, hyphens
+  let cleanName = nameWithoutExt
     .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/_+/g, '-')
-    .replace(/-\./g, '.')
-    .replace(/-+/g, '-');
+    .replace(/[()]/g, '')         // Remove brackets ()
+    .replace(/[\s_]+/g, '-')       // Replace spaces and underscores with -
+    .replace(/-+/g, '-')           // Replace multiple hyphens with single -
+    .replace(/^-|-$/g, '');        // Trim starting/ending hyphens
 
-  return cleanName;
+  return cleanName + '.js';
 }
 
 function getCategory(filename) {
@@ -39,33 +40,39 @@ function getCategory(filename) {
       return folder;
     }
   }
-  return '05-miscellaneous'; // Fallback folder if no match
+  return '05-miscellaneous'; // Default for generic names like Day-9, Day-18, etc.
 }
 
 function organizeFiles() {
-  const files = fs.readdirSync(targetDir);
+  const items = fs.readdirSync(targetDir);
 
-  files.forEach(file => {
-    const cleanName = sanitizeFileName(file);
-    if (!cleanName) return; // Skip non-target files
+  items.forEach(item => {
+    const fullPath = path.join(targetDir, item);
+    
+    // Process only files in main folder
+    if (!fs.statSync(fullPath).isFile()) return;
 
-    const categoryFolder = getCategory(file);
+    const cleanName = sanitizeFileName(item);
+    if (!cleanName) return;
+
+    const categoryFolder = getCategory(item);
     const destFolder = path.join(targetDir, categoryFolder);
 
-    // Create category folder if it doesn't exist
     if (!fs.existsSync(destFolder)) {
       fs.mkdirSync(destFolder, { recursive: true });
     }
 
-    const oldPath = path.join(targetDir, file);
     const newPath = path.join(destFolder, cleanName);
 
-    // Move and rename file
-    fs.renameSync(oldPath, newPath);
-    console.log(`Moved: ${file} ➔ ${categoryFolder}/${cleanName}`);
+    try {
+      fs.renameSync(fullPath, newPath);
+      console.log(`✓ Moved: ${item} ➔ ${categoryFolder}/${cleanName}`);
+    } catch (err) {
+      console.error(`X Error moving ${item}:`, err.message);
+    }
   });
 
-  console.log('\n SUCCESS: All files organized automatically!');
+  console.log('\n✨ Sabhi files organize ho gayi hain!');
 }
 
 organizeFiles();
