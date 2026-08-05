@@ -11,9 +11,6 @@
 // }
 // console.log(arr);
 
-
-
-
 //  2. Linear Search & Binary Search
 // let arr = [10,51,15,65,4,15];
 // let target = 10;
@@ -25,10 +22,6 @@
 //     }
 // }
 // console.log(foundIndex);
-
-
-
-
 
 // B. Binary Search (Sorted Array ke liye — Fast Search)Time Complexity: O(log N)
 // let arr = [2, 4, 5, 815, 12, 16, 38, 56, 72, 91];
@@ -49,9 +42,6 @@
 // }
 // console.log(resultIndex);
 
-
-
-
 // 3. Remove Duplicates from Sorted Array (In-Place)
 // Bina extra space / new array ke duplicates hatana.
 // let arr = [1,1,2,2,3,4,4,5];
@@ -67,11 +57,6 @@
 // }
 // console.log(arr);
 
-
-
-
-
-
 /*
 Part 4: Advanced Patterns for Hard Questions
 Mushkil questions solve karne ke liye 3 main patterns use hote hain:
@@ -81,7 +66,6 @@ Kab use karein: Sorted array mein pairs dhoondna, palindromes check karna, zero 
 
 Example Problem: Check karo kya array mein koi aisa pair hai jiska sum = K ho (Sorted Array).
 */
-
 
 // let arr = [1, 2, 4, 7, 11, 15];
 // let targetSum = 15;
@@ -105,10 +89,6 @@ Example Problem: Check karo kya array mein koi aisa pair hai jiska sum = K ho (S
 
 // console.log(pairFound);
 
-
-
-
-
 // Q= Find largest number::
 // let arr=[10,15,2,4];
 // let max = arr[0];
@@ -119,14 +99,38 @@ Example Problem: Check karo kya array mein koi aisa pair hai jiska sum = K ho (S
 // }
 // console.log(max);
 
-
 // Q: Counter array [5,12,8,20,3]
-let arr = [5,12,8,20,3]
-let max=0;
-let target = 10;
-for(let i=1; i<arr.length; i++){
-    if(arr[i]> target){
-        max++;
+// let arr = [5,12,8,20,3]
+// let max=0;
+// let target = 10;
+// for(let i=1; i<arr.length; i++){
+//     if(arr[i]> target){
+//         max++;
+//     }
+// }
+// console.log(max);
+
+// Question: find Positive Numbers sum
+// let numbers = [4, -2, 7, -5, 10, -1, 3];
+// let sum = 0;
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] >= 0) {
+//     sum += numbers[i];
+//   }
+// }
+// console.log(sum);
+
+function findSmallest(arr) {
+  let smallest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+      smallest = arr[i];
     }
+  }
+  return smallest;
 }
-console.log(max);
+
+let numbers = [15, 4, 32, 8, 2, 19];
+let result = findSmallest(numbers);
+
+console.log(result);
