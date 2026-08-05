@@ -101,4 +101,4 @@ while(left< right){
         right--;
     }
 }
-console.log(arr);
+console.log(pairFound);
