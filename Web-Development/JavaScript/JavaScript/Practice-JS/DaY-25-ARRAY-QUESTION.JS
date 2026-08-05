@@ -1,43 +1,29 @@
-// let arr = [2,0,4,0,5]
-// let result = [];
-// for(let i=0; i<arr.length; i++){
-//     if(arr[i]!==0){
-//         result[i]=arr[i]
-//     }
-//     console.log(result);
-// }
+/**
+ * ==========================================
+ * PROBLEM 01: Remove All Zeros From Array
+ * ==========================================
+ * Goal: Filter out all zeros from an array without using inbuilt .filter() or .push()
+ * Approach: Index Pointer Traversal
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
+ */
+
+// Input Data
+const numbers = [2, 0, 4, 0, 5];
+const result = [];
+let targetIndex = 0; // Pointer to track position in result array
+
+// Logic: Traverse through input array
+for (let i = 0; i < numbers.length; i++) {
+    // If element is non-zero, store it at targetIndex
+    if (numbers[i] !== 0) {
+        result[targetIndex] = numbers[i];
+        targetIndex++; // Move target pointer forward
+    }
+}
+
+// Console Outputs
+console.log("Original Array :", numbers);
+console.log("Non-Zero Array :", result); // Expected Output: [2, 4, 5]
 
 
-
-
-// let arr = [ 50, 40, 30, 20, 10 ];
-// let right = 0;
-// let left = arr.length - 1;
-// while (right < left) {
-//   let temp = arr[right];
-//   arr[right] = arr[left];
-//   arr[left] = temp;
-// //   left++;
-// //   right--;
-//     right++;
-//     left--
-// }
-// console.log(arr);
-
-
-
-
-// let numbers = [12, 35, 1, 10, 34, 1];
-// let largest = -Infinity;
-// let secondlargest = -Infinity;
-// for (let i = 0; i < numbers.length; i++) {
-//     let current = numbers[i];
-//     if (current > largest) {
-//         secondlargest = largest;
-//         largest = current;
-//     } else if (current > secondlargest && current !== largest) {
-//         secondlargest = current;
-//     }
-// }
-// console.log("Largest:", largest);            
-// console.log("Second Largest:", secondlargest);
