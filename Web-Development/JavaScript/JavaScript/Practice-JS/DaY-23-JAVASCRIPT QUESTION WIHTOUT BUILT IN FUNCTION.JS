@@ -54,18 +54,18 @@
 
 // 3. Remove Duplicates from Sorted Array (In-Place)
 // Bina extra space / new array ke duplicates hatana.
-let arr = [1,1,2,2,3,4,4,5];
-if(arr.length >0){
-    let i=0
-    for(let j=1; j<arr.length; j++){
-        if(arr[j]!==arr[i]){
-            i++;
-            arr[i]=arr[j];
-        }
-    }
-    arr.length =i+1;
-}
-console.log(arr);
+// let arr = [1,1,2,2,3,4,4,5];
+// if(arr.length >0){
+//     let i=0
+//     for(let j=1; j<arr.length; j++){
+//         if(arr[j]!==arr[i]){
+//             i++;
+//             arr[i]=arr[j];
+//         }
+//     }
+//     arr.length =i+1;
+// }
+// console.log(arr);
 
 
 
@@ -101,3 +101,4 @@ while(left< right){
         right--;
     }
 }
+console.log(arr);
