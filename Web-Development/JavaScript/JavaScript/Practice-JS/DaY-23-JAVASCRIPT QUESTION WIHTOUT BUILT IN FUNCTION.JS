@@ -83,22 +83,24 @@ Example Problem: Check karo kya array mein koi aisa pair hai jiska sum = K ho (S
 */
 
 
-let arr = [1,2,4,7,11,15];
+let arr = [1, 2, 4, 7, 11, 15];
 let targetSum = 15;
 let left = 0;
-let right = arr.length-1;
+let right = arr.length - 1;
 let pairFound = false;
-while(left< right){
-    let currentSum = arr[left]+arr[right];
 
-    if(currentSum=== targetSum){
-        pairFound = true;
-        console.log("pair: ${arr[left]},${arr[right]}");
-        break;
-    }else if (currentSum<targetSum){
-        left++;
-    }else {
-        right--;
-    }
+while (left < right) {
+  let currentSum = arr[left] + arr[right];
+
+  if (currentSum === targetSum) {
+    pairFound = true;
+    console.log(`pair: ${arr[left]}, ${arr[right]}`);
+    break;
+  } else if (currentSum < targetSum) {
+    left++;
+  } else {
+    right--;
+  }
 }
+
 console.log(pairFound);
