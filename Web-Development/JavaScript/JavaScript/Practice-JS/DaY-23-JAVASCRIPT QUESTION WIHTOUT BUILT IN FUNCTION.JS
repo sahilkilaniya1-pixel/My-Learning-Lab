@@ -122,11 +122,11 @@ Example Problem: Check karo kya array mein koi aisa pair hai jiska sum = K ho (S
 
 // Q: Counter array [5,12,8,20,3]
 let arr = [5,12,8,20,3]
-let max=[];
-let target = 10
+let max=0;
+let target = 10;
 for(let i=1; i<arr.length; i++){
     if(arr[i]> target){
-        count++;
+        max++;
     }
 }
 console.log(max);
