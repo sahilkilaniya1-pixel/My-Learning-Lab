@@ -103,3 +103,43 @@ console.log("Second Largest :", secondLargest);  // Expected: 34
 
 
 
+
+
+
+
+/**
+ * ==========================================
+ * PROBLEM 04: Check If Array Is Sorted
+ * ==========================================
+ * Goal: Determine if array elements are arranged in non-decreasing order.
+ * Approach: Adjacent Pair Comparison with Early Exit
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ */
+
+// Function Wrapper to test multiple cases cleanly
+function checkIfSorted(arr) {
+    let isSorted = true;
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        // If current element is greater than next element, sorting fails
+        if (arr[i] > arr[i + 1]) {
+            isSorted = false;
+            break; // Stop execution immediately (Performance Optimization)
+        }
+    }
+
+    return isSorted;
+}
+
+// Test Cases
+const sortedArr = [10, 20, 30, 40, 50];
+const unsortedArr = [10, 20, 15, 40, 50];
+
+console.log("Testing [10, 20, 30, 40, 50] -> Is Sorted?", checkIfSorted(sortedArr));   // Expected: true
+console.log("Testing [10, 20, 15, 40, 50] -> Is Sorted?", checkIfSorted(unsortedArr)); // Expected: false
+
+
+
+
+
