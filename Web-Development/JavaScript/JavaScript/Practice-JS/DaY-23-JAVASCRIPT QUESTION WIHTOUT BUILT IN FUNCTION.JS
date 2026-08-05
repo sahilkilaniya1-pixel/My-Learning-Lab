@@ -110,11 +110,23 @@ Example Problem: Check karo kya array mein koi aisa pair hai jiska sum = K ho (S
 
 
 // Q= Find largest number::
-let arr=[10,15,2,4];
-let max = arr[0];
+// let arr=[10,15,2,4];
+// let max = arr[0];
+// for(let i=1; i<arr.length; i++){
+//     if(arr[i]>max){
+//         max = arr[i];
+//     }
+// }
+// console.log(max);
+
+
+// Q: Counter array [5,12,8,20,3]
+let arr = [5,12,8,20,3]
+let max=[];
+let target = 10
 for(let i=1; i<arr.length; i++){
-    if(arr[i]>max){
-        max = arr[i];
+    if(arr[i]> target){
+        count++;
     }
 }
 console.log(max);
