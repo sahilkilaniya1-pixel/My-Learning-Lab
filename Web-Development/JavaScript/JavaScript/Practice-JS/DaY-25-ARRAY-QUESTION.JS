@@ -40,17 +40,13 @@ console.log("Non-Zero Array :", result); // Expected Output: [2, 4, 5]
 
 // Input Data
 const arrayToReverse = [50, 40, 30, 20, 10];
-let leftPointer = 0;                             // Start of array
-let rightPointer = arrayToReverse.length - 1;   // End of array
+let leftPointer = 0;                   
+let rightPointer = arrayToReverse.length - 1;
 console.log("Before Reverse:", [...arrayToReverse]);
-// Logic: Swap elements until pointers meet in the middle
 while (leftPointer < rightPointer) {
-    // Swap using temporary variable
     const temp = arrayToReverse[leftPointer];
     arrayToReverse[leftPointer] = arrayToReverse[rightPointer];
     arrayToReverse[rightPointer] = temp;
-
-    // Shift pointers inward
     leftPointer++;
     rightPointer--;
 }
