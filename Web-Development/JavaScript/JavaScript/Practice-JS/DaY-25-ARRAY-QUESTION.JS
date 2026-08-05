@@ -12,7 +12,6 @@
 const numbers = [2, 0, 4, 0, 5];
 const result = [];
 let targetIndex = 0; // Pointer to track position in result array
-
 // Logic: Traverse through input array
 for (let i = 0; i < numbers.length; i++) {
     // If element is non-zero, store it at targetIndex
