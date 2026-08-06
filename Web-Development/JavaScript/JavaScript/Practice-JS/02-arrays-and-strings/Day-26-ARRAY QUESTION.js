@@ -36,35 +36,50 @@
 
 // Question 4: Merge Two Sorted Arrays (Without Inbuilt Sort)
 
-let arr1 = [1, 3, 5];
-let arr2 = [2, 4, 6];
+// let arr1 = [1, 3, 5];
+// let arr2 = [2, 4, 6];
 
-let result = [];
-let i = 0;
-let j = 0;
-let k = 0;
+// let result = [];
+// let i = 0;
+// let j = 0;
+// let k = 0;
 
-while (i < arr1.length && j < arr2.length) {
-  if (arr1[i] < arr2[j]) {
-    result[k] = arr1[i];
-    i++;
-  } else {
-    result[k] = arr2[j];
-    j++;
-  }
-  k++;
+// while (i < arr1.length && j < arr2.length) {
+//   if (arr1[i] < arr2[j]) {
+//     result[k] = arr1[i];
+//     i++;
+//   } else {
+//     result[k] = arr2[j];
+//     j++;
+//   }
+//   k++;
+// }
+// while (i < arr1.length) {
+//   result[k] = arr1[i];
+//   i++;
+//   k++;
+// }
+// while (j < arr2.length) {
+//   result[k] = arr2[j];
+//   j++;
+//   k++;
+// }
+// console.log(result);
+
+
+
+
+
+
+
+
+let arr = [4, 2, 8, 10, 5];
+let target = 5;
+let foundIndex = -1;
+for (let i = 1; i < arr.length; i++) {
+	if (arr[i] === target) {
+		foundIndex = i;
+		break;
+	}
 }
-while (i < arr1.length) {
-  result[k] = arr1[i];
-  i++;
-  k++;
-}
-while (j < arr2.length) {
-  result[k] = arr2[j];
-  j++;
-  k++;
-}
-console.log(result);
-
-
-
+console.log(foundIndex);

@@ -1,0 +1,76 @@
+// class Solution {
+//     search(arr, x) {
+//         let index=-1;
+//         for (let i = 0; i < arr.length; i++) {
+//             if (arr[i] === x) {
+//                 index=i;
+//                 break;
+//             }
+//         }
+//         return index; 
+//     }
+// }
+
+
+
+
+// Pre-defined input arrays
+// let a = [11, 7, 1, 13, 21, 3, 7, 3];
+// let b = [11, 3, 7, 1, 7];
+// const freqMap = new Map();
+// for (const num of a) {
+//     freqMap.set(num, (freqMap.get(num) || 0) + 1);
+// }
+
+// let isSubset = true;
+
+// // Check if elements of 'b' exist in 'a' with sufficient frequency
+// for (const num of b) {
+//     if (!freqMap.has(num) || freqMap.get(num) === 0) {
+//         isSubset = false;
+//         break; // Stop checking further as 'b' cannot be a subset
+//     }
+//     freqMap.set(num, freqMap.get(num) - 1);
+// }
+
+// console.log(isSubset); // Outputs: true or false 
+
+// let a = [11, 7, 1, 13, 21, 3, 7, 3];
+// let b = [11, 3, 7, 1, 7];
+// let i=0,j=0;
+// a.sort((a,b), a-b)
+// b.sort((a,b), a-b)
+// console.log(a);
+// console.log(b);
+
+// while(b){}
+
+
+
+
+
+
+
+// let a = [11, 7, 1, 13, 21, 3, 7, 3,];
+// let b = [11, 3, 7, 1, 7,45,];
+// let i=0,j=0,count=0;
+// a.sort((a,b) => a-b)
+// b.sort((a,b) => a-b)
+
+// while(j<b.length && i<a.length){
+//     if(b[j]==a[i]){
+//         count++;
+//         i++;
+//         j++;
+//     }
+//     else if(b[j]>a[i]){
+//         i++;
+//     }
+// }
+// if(count == b.length){
+//     console.log("subset")
+// }
+// else{
+//     console.log("not a subset")
+// }
+
