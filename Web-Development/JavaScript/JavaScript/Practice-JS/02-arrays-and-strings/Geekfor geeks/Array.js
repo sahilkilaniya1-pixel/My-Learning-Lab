@@ -127,3 +127,6 @@ console.log("Matching Values:", valEqualToPos([15, 2, 45, 12, 7])); // Output: [
 
 
 
+
+
+
