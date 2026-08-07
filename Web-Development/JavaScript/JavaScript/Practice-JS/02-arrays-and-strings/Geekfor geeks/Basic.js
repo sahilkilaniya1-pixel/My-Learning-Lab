@@ -273,3 +273,24 @@ Input: n = 1004
 Output: 1554
 Explanation: There are two zeroes in 1004 on replacing all zeroes with 5, the new number will be 1554.
  */
+class Solution {
+  convertFive(n) {
+    if (n === 0) return 5;
+
+    let result = 0;
+    let place = 1;
+
+    while (n > 0) {
+      let digit = n % 10;
+
+      if (digit === 0) {
+        digit = 5;
+      }
+      result = result + digit * place;
+
+      place = place * 10;
+      n = Math.floor(n / 10);
+    }
+    return result;
+  }
+}
