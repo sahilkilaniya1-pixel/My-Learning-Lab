@@ -240,3 +240,26 @@ class Solution {
     return count;
   }
 }
+
+// Question 12:
+/*Given an array of arr[] positive integers where all numbers occur even number of times except one number which occurs odd number of times. Return that number.
+
+Examples:
+
+Input:arr[] = [1, 2, 3, 2, 3, 1, 3]
+Output: 3
+Explaination: 3 occurs three times. */
+class Solution {
+  getOddOccurrence(arr) {
+    let counts = {};
+
+    for (let num of arr) {
+      counts[num] = (counts[num] || 0) + 1;
+    }
+    for (let key in counts) {
+      if (counts[key] % 2 !== 0) {
+        return Number(key);
+      }
+    }
+  }
+}
