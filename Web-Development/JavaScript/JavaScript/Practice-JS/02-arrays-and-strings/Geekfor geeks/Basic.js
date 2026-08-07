@@ -176,3 +176,12 @@ Skip second element: 2
 Take third element: 3
 Skip fourth element: 4
  */
+class Solution {
+  getAlternates(arr) {
+    let result = [];
+    for (let i = 0; i < arr.length; i += 2) {
+      result.push(arr[i]);
+    }
+    return result;
+  }
+}
