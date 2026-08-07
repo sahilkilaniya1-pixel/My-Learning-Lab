@@ -370,3 +370,22 @@ class Solution {
     }
   }
 }
+
+// Question 18:
+/*Given an array arr[] of integers and an index i(0-based index). Return the element present at the index i in the array.
+
+Examples:
+
+Input: i = 2 , arr[] = [10, 20, 30, 40, 50]
+Output: 30
+Explanation: The value of arr[2] is 30 .
+ */
+class Solution {
+  findElementAtIndex(i, arr) {
+    for (let index = 0; index < arr.length; index++) {
+      if (index === i) {
+        return arr[index];
+      }
+    }
+  }
+}
