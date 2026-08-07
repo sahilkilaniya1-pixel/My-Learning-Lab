@@ -400,3 +400,17 @@ Examples :
 Input: start = 2, end = 5, arr[] =  [1, 4, 5, 2, 7, 8, 3]
 Output: true
 Explanation: All integers within the range [2, 5] are 2, 3, 4, and 5, and all of them are present in the array. Therefore, the answer is true for this test case. */
+class Solution {
+  checkElements(start, end, arr) {
+    let output = [];
+    for (let i = 0; i < arr.length; i++) {
+      output[arr[i]] = true;
+    }
+    for (let num = start; num <= end; num++) {
+      if (output[num] != true) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
