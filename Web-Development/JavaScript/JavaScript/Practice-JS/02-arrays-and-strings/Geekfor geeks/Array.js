@@ -94,3 +94,78 @@
 //         return [min, max];
 //     }
 // }
+
+
+
+
+// var num, rem, rev =0, original;
+// nuw = 121;
+// original=num;
+// while(num>0){
+//     rem - num %10;
+//     rev = rev * 10+rem;
+//     num=Math.flooer(num/10);
+// }
+// if(original===rev){
+//     console.log("Number is palindrome");
+// }
+// else{
+//     console.log("Number is not palindrome");
+// }
+
+
+
+
+
+// let arr = [1,2,3,4,5];
+// let result = [];
+// target[0] = 5;
+// for (let i = arr.length - 1; i >= 0; i--) {
+//   result[newIndex] = arr[i];
+//   newIndex++;
+// }
+// console.log(result);
+
+
+
+
+
+
+
+
+
+
+// let arr = [1, 2, 3, 4,5];
+// let start = 0;
+// let end = arr.length - 1;
+
+// while (start < end) {
+//   let temp = arr[start];
+//   arr[start] = arr[end];
+//   arr[end] = temp;
+//   start++;
+//   end--;
+// }
+// for (let i = arr.length; i > 0; i--) {
+//   arr[i] = arr[i - 1];
+// }
+// arr[0] = 5;
+// console.log(arr); 
+
+
+
+
+
+
+// let arr=[1,2,3,4,5];
+// for(let i=arr.length-1; i>0; i--){
+//     temp = arr[i-1]
+//     arr[i-1]= arr[i]
+//     arr[i]=temp
+// }
+// console.log(arr);
+
+
+
+
+
