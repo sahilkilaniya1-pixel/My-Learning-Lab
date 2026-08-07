@@ -229,3 +229,14 @@ Input: x = 9, arr[] = [10, 1, 2, 8, 4, 5]
 Output: 5
 Explanation: The 5 elements are 1, 2, 8, 4 and 5.
  */
+class Solution {
+  countOfElements(x, arr) {
+    let count = 0;
+    for (let num of arr) {
+      if (num <= x) {
+        count++;
+      }
+    }
+    return count;
+  }
+}
