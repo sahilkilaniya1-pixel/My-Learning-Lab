@@ -40,3 +40,12 @@ Input: a[] = [11, 7, 1, 13, 21, 3, 7, 3], b[] = [11, 3, 7, 1, 7]
 Output: true
 Explanation: b[] is a subset of a[]
  */
+class solution {
+    isSubset(a,b) {
+        a.sort((x,y)=>x-y);
+        b.sort((x,y)=>x-y);
+        let i=0;
+        let j=0;
+    }
+    
+}
