@@ -7,12 +7,9 @@
 //                 break;
 //             }
 //         }
-//         return index; 
+//         return index;
 //     }
 // }
-
-
-
 
 // Pre-defined input arrays
 // let a = [11, 7, 1, 13, 21, 3, 7, 3];
@@ -33,7 +30,7 @@
 //     freqMap.set(num, freqMap.get(num) - 1);
 // }
 
-// console.log(isSubset); // Outputs: true or false 
+// console.log(isSubset); // Outputs: true or false
 
 // let a = [11, 7, 1, 13, 21, 3, 7, 3];
 // let b = [11, 3, 7, 1, 7];
@@ -44,12 +41,6 @@
 // console.log(b);
 
 // while(b){}
-
-
-
-
-
-
 
 // let a = [11, 7, 1, 13, 21, 3, 7, 3,];
 // let b = [11, 3, 7, 1, 7,45,];
@@ -74,10 +65,6 @@
 //     console.log("not a subset")
 // }
 
-
-
-
-
 // class Solution {
 //     getMinMax(arr) {
 //         if (arr.length === 0) return [];
@@ -95,9 +82,6 @@
 //     }
 // }
 
-
-
-
 // var num, rem, rev =0, original;
 // nuw = 121;
 // original=num;
@@ -113,10 +97,6 @@
 //     console.log("Number is not palindrome");
 // }
 
-
-
-
-
 // let arr = [1,2,3,4,5];
 // let result = [];
 // target[0] = 5;
@@ -125,15 +105,6 @@
 //   newIndex++;
 // }
 // console.log(result);
-
-
-
-
-
-
-
-
-
 
 // let arr = [1, 2, 3, 4,5];
 // let start = 0;
@@ -150,12 +121,7 @@
 //   arr[i] = arr[i - 1];
 // }
 // arr[0] = 5;
-// console.log(arr); 
-
-
-
-
-
+// console.log(arr);
 
 // let arr=[1,2,3,4,5];
 // for(let i=arr.length-1; i>0; i--){
@@ -165,7 +131,19 @@
 // }
 // console.log(arr);
 
+// /**
+//  * @param {number[]} arr
+//  * @returns {number[]}
+//  */
+// function valEqualToPos(arr) {
+//     let ans = [];
 
+//     for (let i = 0; i < arr.length; i++) {
+//         // Position is 1-based index (i + 1)
+//         if (arr[i] === i + 1) {
+//             ans.push(arr[i]);
+//         }
+//     }
 
-
-
+//     return ans;
+// }
