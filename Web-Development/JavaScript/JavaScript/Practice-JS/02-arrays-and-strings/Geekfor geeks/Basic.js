@@ -332,3 +332,12 @@ Explanation: 90 is inserted at index 5(0-based indexing). After inserting, array
 Input: arr[] = [1, 2, 3, 4, 5], index = 2, val = 90
 Output: [1, 2, 90, 3, 4, 5]
 Explanation: 90 is inserted at index 2(0-based indexing). After inserting, array elements are like [1, 2, 90, 3, 4, 5]. */
+class Solution {
+  insertAtIndex(arr, index, val) {
+    for (let i = arr.length; i > index; i--) {
+      arr[i] = arr[i - 1];
+    }
+    arr[index] = val;
+    return arr;
+  }
+}
