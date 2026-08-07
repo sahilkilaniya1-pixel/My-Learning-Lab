@@ -341,3 +341,12 @@ class Solution {
     return arr;
   }
 }
+
+// Question 16:
+/*Given an array arr[] and two elements x and y, return the element that occurs more frequently. If both elements have the same frequency, return the smaller one.
+
+Examples:
+
+Input: arr[] = [1, 1, 2, 2, 3, 3, 4, 4, 4, 4, 5], x = 4, y = 5
+Output: 4
+Explanation: frequency of 4 is 4.frequency of 5 is 1.Since 4>1 so return 4 */
