@@ -1,149 +1,129 @@
-// class Solution {
-//     search(arr, x) {
-//         let index=-1;
-//         for (let i = 0; i < arr.length; i++) {
-//             if (arr[i] === x) {
-//                 index=i;
-//                 break;
-//             }
-//         }
-//         return index;
-//     }
-// }
+/**
+ * -------------------------------------------------------------
+ * 1. LINEAR SEARCH
+ * Task: Array mein x element ka index dhoondhna.
+ * -------------------------------------------------------------
+ */
+function linearSearch(arr, x) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === x) {
+            return i;
+        }
+    }
+    return -1;
+}
+console.log("=== 1. Linear Search ===");
+console.log("Index of 13:", linearSearch([11, 7, 1, 13, 21, 3], 13)); // Output: 3
+/**
+ * -------------------------------------------------------------
+ * 2. SUBSET CHECK (Frequency Map Approach)
+ * Task: Check karna ki kya array 'b', array 'a' ka subset hai.
+ * -------------------------------------------------------------
+ */
+function isSubset(a, b) {
+    const freqMap = new Map();
+    for (const num of a) {
+        freqMap.set(num, (freqMap.get(num) || 0) + 1);
+    }
 
-// Pre-defined input arrays
-// let a = [11, 7, 1, 13, 21, 3, 7, 3];
-// let b = [11, 3, 7, 1, 7];
-// const freqMap = new Map();
-// for (const num of a) {
-//     freqMap.set(num, (freqMap.get(num) || 0) + 1);
-// }
+    for (const num of b) {
+        if (!freqMap.has(num) || freqMap.get(num) === 0) {
+            return false;
+        }
+        freqMap.set(num, freqMap.get(num) - 1);
+    }
+    return true;
+}
 
-// let isSubset = true;
+/**
+ * -------------------------------------------------------------
+ * 3. FIND MINIMUM AND MAXIMUM
+ * Task: Array ka smallest aur largest element nikalna.
+ * -------------------------------------------------------------
+ */
+function getMinMax(arr) {
+    if (arr.length === 0) return [];
+    let min = arr[0];
+    let max = arr[0];
 
-// // Check if elements of 'b' exist in 'a' with sufficient frequency
-// for (const num of b) {
-//     if (!freqMap.has(num) || freqMap.get(num) === 0) {
-//         isSubset = false;
-//         break; // Stop checking further as 'b' cannot be a subset
-//     }
-//     freqMap.set(num, freqMap.get(num) - 1);
-// }
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min) min = arr[i];
+        if (arr[i] > max) max = arr[i];
+    }
+    return [min, max];
+}
 
-// console.log(isSubset); // Outputs: true or false
+/**
+ * -------------------------------------------------------------
+ * 4. PALINDROME NUMBER CHECK
+ * Task: Check karna ki kya number ulta karne par bhi same rehta hai.
+ * -------------------------------------------------------------
+ */
+function isPalindrome(num) {
+    let original = num;
+    let rev = 0;
 
-// let a = [11, 7, 1, 13, 21, 3, 7, 3];
-// let b = [11, 3, 7, 1, 7];
-// let i=0,j=0;
-// a.sort((a,b), a-b)
-// b.sort((a,b), a-b)
-// console.log(a);
-// console.log(b);
+    while (num > 0) {
+        let rem = num % 10;
+        rev = rev * 10 + rem;
+        num = Math.floor(num / 10);
+    }
+    return original === rev;
+}
 
-// while(b){}
+/**
+ * -------------------------------------------------------------
+ * 5. REVERSE AN ARRAY IN-PLACE
+ * Task: Array ke elements ko ulta karna.
+ * -------------------------------------------------------------
+ */
+function reverseArray(arr) {
+    let start = 0;
+    let end = arr.length - 1;
 
-// let a = [11, 7, 1, 13, 21, 3, 7, 3,];
-// let b = [11, 3, 7, 1, 7,45,];
-// let i=0,j=0,count=0;
-// a.sort((a,b) => a-b)
-// b.sort((a,b) => a-b)
+    while (start < end) {
+        let temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+    return arr;
+}
 
-// while(j<b.length && i<a.length){
-//     if(b[j]==a[i]){
-//         count++;
-//         i++;
-//         j++;
-//     }
-//     else if(b[j]>a[i]){
-//         i++;
-//     }
-// }
-// if(count == b.length){
-//     console.log("subset")
-// }
-// else{
-//     console.log("not a subset")
-// }
+/**
+ * -------------------------------------------------------------
+ * 6. VALUE EQUAL TO 1-BASED POSITION
+ * Task: Un elements ko dhoondna jinki value unke index (i + 1) ke barabar ho.
+ * -------------------------------------------------------------
+ */
+function valEqualToPos(arr) {
+    let ans = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === i + 1) {
+            ans.push(arr[i]);
+        }
+    }
+    return ans;
+}
 
-// class Solution {
-//     getMinMax(arr) {
-//         if (arr.length === 0) return [];
-//         let min = arr[0];
-//         let max = arr[0];
-//         for (let i = 1; i < arr.length; i++) {
-//             if (arr[i] < min) {
-//                 min = arr[i];
-//             }
-//             if (arr[i] > max) {
-//                 max = arr[i];
-//             }
-//         }
-//         return [min, max];
-//     }
-// }
+// =============================================================
+// TESTING ALL FUNCTIONS (CONSOLE OUTPUTS)
+// =============================================================
 
-// var num, rem, rev =0, original;
-// nuw = 121;
-// original=num;
-// while(num>0){
-//     rem - num %10;
-//     rev = rev * 10+rem;
-//     num=Math.flooer(num/10);
-// }
-// if(original===rev){
-//     console.log("Number is palindrome");
-// }
-// else{
-//     console.log("Number is not palindrome");
-// }
 
-// let arr = [1,2,3,4,5];
-// let result = [];
-// target[0] = 5;
-// for (let i = arr.length - 1; i >= 0; i--) {
-//   result[newIndex] = arr[i];
-//   newIndex++;
-// }
-// console.log(result);
 
-// let arr = [1, 2, 3, 4,5];
-// let start = 0;
-// let end = arr.length - 1;
 
-// while (start < end) {
-//   let temp = arr[start];
-//   arr[start] = arr[end];
-//   arr[end] = temp;
-//   start++;
-//   end--;
-// }
-// for (let i = arr.length; i > 0; i--) {
-//   arr[i] = arr[i - 1];
-// }
-// arr[0] = 5;
-// console.log(arr);
 
-// let arr=[1,2,3,4,5];
-// for(let i=arr.length-1; i>0; i--){
-//     temp = arr[i-1]
-//     arr[i-1]= arr[i]
-//     arr[i]=temp
-// }
-// console.log(arr);
+console.log("\n=== 3. Minimum & Maximum ===");
+console.log("[Min, Max]:", getMinMax([11, 7, 1, 13, 21, 3])); // Output: [1, 21]
 
-// /**
-//  * @param {number[]} arr
-//  * @returns {number[]}
-//  */
-// function valEqualToPos(arr) {
-//     let ans = [];
+console.log("\n=== 4. Palindrome Number Check ===");
+console.log("Is 121 Palindrome?:", isPalindrome(121)); // Output: true
+console.log("Is 123 Palindrome?:", isPalindrome(123)); // Output: false
 
-//     for (let i = 0; i < arr.length; i++) {
-//         // Position is 1-based index (i + 1)
-//         if (arr[i] === i + 1) {
-//             ans.push(arr[i]);
-//         }
-//     }
+console.log("\n=== 5. Reverse Array ===");
+console.log("Reversed Array:", reverseArray([1, 2, 3, 4, 5])); // Output: [5, 4, 3, 2, 1]
 
-//     return ans;
-// }
+console.log("\n=== 6. Value Equal to Position ===");
+console.log("Matching Values:", valEqualToPos([15, 2, 45, 12, 7])); // Output: [2]
