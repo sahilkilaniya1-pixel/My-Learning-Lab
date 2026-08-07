@@ -138,3 +138,29 @@ class Solution {
     return sum;
   }
 }
+
+// Question 8:
+/*Given an array arr[]. Find the elements whose value is equal to the position where they appear.
+
+Note: There can be more than one element in the array which have the same value as its position. You need to include the position of every such element.
+
+Examples:
+
+Input: arr[] = [15, 2, 45, 4, 7]
+Output: [2, 4]
+Explanation: Here, arr[2] = 2 exists here and arr[4] = 4 exists.
+Input: arr[] = [1]
+Output: [1]
+Explanation: Here arr[1] = 1 exists.
+*/
+class Solution {
+  valEqualToPos(arr) {
+    let ans = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === i + 1) {
+        ans.push(arr[i]);
+      }
+    }
+    return ans;
+  }
+}
