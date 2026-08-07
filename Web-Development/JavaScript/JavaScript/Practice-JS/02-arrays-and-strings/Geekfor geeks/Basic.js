@@ -21,3 +21,15 @@ Input: arr[] = [1, 8, 7, 56, 90]
 Output: 90
 Explanation: The largest element of the given array is 90.
  */
+
+class Solution{
+    largest(arr){
+        let max = arr[0];
+        for(let i=1; i<arr.length;i++){
+            if(arr[i]>max){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+}
