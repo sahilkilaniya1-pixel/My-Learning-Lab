@@ -34,7 +34,10 @@ function isSubset(a, b) {
     }
     return true;
 }
-
+console.log("\n=== 2. Array Subset Check ===");
+let a = [11, 7, 1, 13, 21, 3, 7, 3];
+let b = [11, 3, 7, 1, 7];
+console.log("Is 'b' a subset of 'a'?:", isSubset(a, b)); // Output: true
 /**
  * -------------------------------------------------------------
  * 3. FIND MINIMUM AND MAXIMUM
@@ -52,7 +55,8 @@ function getMinMax(arr) {
     }
     return [min, max];
 }
-
+console.log("\n=== 3. Minimum & Maximum ===");
+console.log("[Min, Max]:", getMinMax([11, 7, 1, 13, 21, 3])); // Output: [1, 21]
 /**
  * -------------------------------------------------------------
  * 4. PALINDROME NUMBER CHECK
@@ -70,7 +74,9 @@ function isPalindrome(num) {
     }
     return original === rev;
 }
-
+console.log("\n=== 4. Palindrome Number Check ===");
+console.log("Is 121 Palindrome?:", isPalindrome(121)); // Output: true
+console.log("Is 123 Palindrome?:", isPalindrome(123)); // Output: false
 /**
  * -------------------------------------------------------------
  * 5. REVERSE AN ARRAY IN-PLACE
@@ -90,7 +96,8 @@ function reverseArray(arr) {
     }
     return arr;
 }
-
+console.log("\n=== 5. Reverse Array ===");
+console.log("Reversed Array:", reverseArray([1, 2, 3, 4, 5])); // Output: [5, 4, 3, 2, 1]
 /**
  * -------------------------------------------------------------
  * 6. VALUE EQUAL TO 1-BASED POSITION
@@ -106,24 +113,17 @@ function valEqualToPos(arr) {
     }
     return ans;
 }
-
-// =============================================================
-// TESTING ALL FUNCTIONS (CONSOLE OUTPUTS)
-// =============================================================
-
-
-
-
-
-console.log("\n=== 3. Minimum & Maximum ===");
-console.log("[Min, Max]:", getMinMax([11, 7, 1, 13, 21, 3])); // Output: [1, 21]
-
-console.log("\n=== 4. Palindrome Number Check ===");
-console.log("Is 121 Palindrome?:", isPalindrome(121)); // Output: true
-console.log("Is 123 Palindrome?:", isPalindrome(123)); // Output: false
-
-console.log("\n=== 5. Reverse Array ===");
-console.log("Reversed Array:", reverseArray([1, 2, 3, 4, 5])); // Output: [5, 4, 3, 2, 1]
-
 console.log("\n=== 6. Value Equal to Position ===");
 console.log("Matching Values:", valEqualToPos([15, 2, 45, 12, 7])); // Output: [2]
+
+
+
+
+
+
+
+
+
+
+
+
