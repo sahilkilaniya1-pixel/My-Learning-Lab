@@ -306,3 +306,17 @@ Input: arr[] = [1, 2, 3, 4, 5]
 Output: 3 2
 Explanation: There are 3 odd elements (1, 3, 5) and 2 even elements (2 and 4).
  */
+class Solution {
+  countOddEven(arr) {
+    let even = 0;
+    let odd = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 == 0) {
+        even++;
+      } else {
+        odd++;
+      }
+    }
+    return [odd, even];
+  }
+}
