@@ -444,7 +444,7 @@ class Solution {
 /* given an array arr[], the task is to find whether the arr is palindrome or not. if the arr is palindrome the return true  else return false. 
 Note: An array is said to be palindrome if its reverse array matches the original array.
 Example:
-Input: arr=[1,2,3,2,1]
+Input: arr=[1,2,3,2,1] 
 Output: true
 Explanation: if we reverse, we get [1,2,3,2,1] which is the same as before. so, the answer is true.*/
 class Solution {
@@ -468,3 +468,14 @@ Input: arr[]= ["Geek","Greeks","Geeksfor","GeeksforGeek","GeeksforGeeks"]
 Output:"GeelsforGeeks"
 Explanation: Name "GeeksforGeeks" has maximum length among all names.
 */
+class Solution {
+  longest(arr) {
+    let longestnumber = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i].length > longestnumber.length) {
+        longestnumber = arr[i];
+      }
+    }
+    return longestnumber;
+  }
+}
