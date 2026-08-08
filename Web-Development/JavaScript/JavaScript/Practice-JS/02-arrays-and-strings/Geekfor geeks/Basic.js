@@ -483,5 +483,5 @@ class Solution {
 // Question 22: - Last coin in a game of Alternates
 /*Given an array integer arr[], representing the values of coins arranged in a row.
 -Two players play a game by picking coins alternately.
--At each turn, a player can pick a coin from either the beginning or the end of the array. Both players follow a greedy stratedy, i.e, they always pick the coin with theu]
+-At each turn, a player can pick a coin from either the beginning or the end of the array. Both players follow a greedy stratedy, i.e, they always pick the coin with the maximum value among the two avilable ends.
 */
