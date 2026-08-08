@@ -493,8 +493,5 @@ output= 1
 Explanation: 
 Players always pick the longer coin from the two ends.
 pick 9, remaining array: [5,3,1,6]
-pick 6, remaining array: [5,3,1]
-pick 5, remaining array: [3,1]
-pick 3, remaining array: [1]
-Final output:1
+
 */
