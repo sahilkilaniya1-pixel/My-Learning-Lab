@@ -371,7 +371,7 @@ class Solution {
   }
 }
 
-// Question 18:
+// Question 17:
 /*Given an array arr[] of integers and an index i(0-based index). Return the element present at the index i in the array.
 
 Examples:
@@ -390,7 +390,7 @@ class Solution {
   }
 }
 
-// Question 19:
+// Question 18:
 /*Given an array arr[] containing distinct positive integers, and two integers start and end defining a range. Determine if the array contains all elements within inclusive range [start, end].
 
 Note: If the array contains all elements in the given range return true otherwise return false.
@@ -415,7 +415,7 @@ class Solution {
   }
 }
 
-// Question 20:
+// Question 19:
 /*Given a sorted array arr[] and a value target, return an array of size 2. The first value is the number of elements less than or equal to the target, and the second value is the number of elements greater than or equal to the target.
 
 Examples:
@@ -441,7 +441,7 @@ class Solution {
 }
 
 
-// Question 21:
+// Question 20:
 /* given an array arr[], the task is to find whether the arr is palindrome or not. if the arr is palindrome the return true  else return false. 
 Note: An array is said to be palindrome if its reverse array matches the original array.
 Example:
@@ -462,3 +462,13 @@ class Solution{
     return true;
   }
 }
+
+
+
+// Question: 21
+/*Given an array [] containing strings of names. Your task is to return the longest string. if there are multiple names of the  longest size, return the first ouccuring name.
+Input: arr[]= ["Geek","Greeks","Geeksfor","GeeksforGeek","GeeksforGeeks"]
+Output:"GeelsforGeeks"
+Explanation: Name "GeeksforGeeks" has maximum length among all names.
+*/
+
