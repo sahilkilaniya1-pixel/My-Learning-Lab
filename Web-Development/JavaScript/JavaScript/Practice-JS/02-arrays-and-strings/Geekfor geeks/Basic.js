@@ -479,3 +479,6 @@ class Solution {
     return longestnumber;
   }
 }
+
+
+// Question 22: - Last coin in a game of Alternates
