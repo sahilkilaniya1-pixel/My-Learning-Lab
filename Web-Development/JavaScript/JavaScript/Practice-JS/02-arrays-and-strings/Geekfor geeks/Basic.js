@@ -1,4 +1,7 @@
 // Question 1:
+
+const { RiWhatsappLine } = require("react-icons/ri");
+
 /*Given an array, arr[] of n integers, and an integer element x, find whether element x is present in the array. Return the index of the first occurrence of x in the array, or -1 if it doesn't exist.
 Examples:
 Input: arr[] = [1, 2, 3, 4], x = 3
@@ -498,3 +501,17 @@ pick 5, remaining array: [3,1]
 pick 3, remaining array: [1]
 Final output:1
 */
+class Solution {
+  findLastCoin(arr) {
+    let left = 0;
+    let right = arr.length - 1;
+    while (left < right) {
+      if (arr[left] > arr[right]) {
+        left++;
+      } else {
+        right++;
+      }
+    }
+    return arr[left];
+  }
+}
