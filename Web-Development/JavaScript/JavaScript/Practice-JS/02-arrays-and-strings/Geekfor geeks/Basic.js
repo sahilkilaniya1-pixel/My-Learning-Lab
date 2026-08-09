@@ -539,10 +539,10 @@ class Solution {
 }
 
 
-//Question 23- Given an array arr that is not completely filled and a value val, you have to insert the value at the end of the array.
+//Question 23 - Array End Insert
+// Given an array arr that is not completely filled and a value val, you have to insert the value at the end of the array.
 /* Examples :
 Input: arr[] = [1, 2, 3, 4, 5], val = 90
 Output: [1, 2, 3, 4, 5, 90]
 Explanation: After inserting 90 at the end, we have array elements as 1 2 3 4 5 90.
-
 */
