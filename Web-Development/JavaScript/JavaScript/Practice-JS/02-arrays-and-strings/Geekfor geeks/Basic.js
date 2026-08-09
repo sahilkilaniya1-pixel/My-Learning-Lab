@@ -543,5 +543,6 @@ class Solution {
 /* Examples :
 Input: arr[] = [1, 2, 3, 4, 5], val = 90
 Output: [1, 2, 3, 4, 5, 90]
+Explanation: After inserting 90 at the end, we have array elements as 1 2 3 4 5 90.
 
 */
