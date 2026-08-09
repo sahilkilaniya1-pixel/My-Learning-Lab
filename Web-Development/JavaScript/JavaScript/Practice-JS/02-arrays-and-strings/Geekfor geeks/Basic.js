@@ -521,6 +521,6 @@ class Solution {
 /*Given an array arr[], swap the kth element from the beginning with the kth element from the end.
 Note: 1-based indexing is followed.
 Examples :
-
+Input: arr[] = [1, 2, 3, 4, 5, 6, 7, 8], k = 3
 
  */
