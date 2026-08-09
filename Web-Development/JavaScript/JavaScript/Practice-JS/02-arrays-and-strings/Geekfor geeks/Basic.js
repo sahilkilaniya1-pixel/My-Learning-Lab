@@ -520,6 +520,7 @@ class Solution {
 // Question: 23- Swap kth elements
 /*Given an array arr[], swap the kth element from the beginning with the kth element from the end.
 Note: 1-based indexing is followed.
+Examples :
 
 
  */
