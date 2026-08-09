@@ -502,16 +502,19 @@ pick 3, remaining array: [1]
 Final output:1
 */
 class Solution {
-  findLastCoin(arr) {
-    let left = 0;
-    let right = arr.length - 1;
-    while (left < right) {
-      if (arr[left] > arr[right]) {
-        left++;
+  coin(arr) {
+    let start = 0;
+    let end = arr.length - 1;
+    while (start < end) {
+      if (arr[start] > arr[end]) {
+        start++;
       } else {
-        right++;
+        end--;
       }
     }
-    return arr[left];
+
+    return arr[start];
   }
 }
+
+// Question: 23-
