@@ -21,4 +21,4 @@ delete car.model; //Delete
 
 
 // Checking Existence & Iteration
-const person = {}
+const person = {name: "sahil", role:"security"};
