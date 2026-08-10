@@ -28,3 +28,5 @@ console.log(combined);   //{ a: 1, b: 2, c: 3 }
 const original = {name:"Sahil", address:{city:"Haryana"}};
 // 1:Shallow copy (nested object reference copy hota hain)
 const shallowCopy = {...original};
+shallowCopy.address.city ="Mumbai";
+console.log(original.address.city);
