@@ -31,3 +31,6 @@ console.log(person.hasOwnProperty("name")); //true
 for(let key in person){
     console.log(key, person[key]);
 }
+
+
+// Built-in Utility Methods
