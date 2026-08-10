@@ -34,3 +34,4 @@ console.log(original.address.city);
 
 // 2. Deep Copy (Independent copy)
 const deepCopy = structuredClone(original);
+deepCopy.address.city = "Bangalore";
