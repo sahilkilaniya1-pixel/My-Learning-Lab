@@ -11,3 +11,7 @@ console.log(user["Current City"]);
 
 // Dynamic Key Access
 console.log(user.age);
+
+
+// Adding, Modifying & Deleting Properties
+const car = {brand:"Tata"};
