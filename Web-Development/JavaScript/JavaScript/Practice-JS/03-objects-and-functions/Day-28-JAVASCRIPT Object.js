@@ -35,3 +35,11 @@ console.log(original.address.city);
 // 2. Deep Copy (Independent copy)
 const deepCopy = structuredClone(original);
 deepCopy.address.city = "Bangalore";
+console.log(original.address.city);
+
+
+
+// Object Protection
+const obj = {a:1};
+Object.freeze(obj); //sab block kr deta hain.
+
