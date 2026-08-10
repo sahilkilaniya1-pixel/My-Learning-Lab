@@ -25,4 +25,6 @@ const person = {name: "sahil", role:"security"};
 
 //Check if key exists
 console.log("role"in person); //true
-console.log(person.hasOwnProperty("name"));
+console.log(person.hasOwnProperty("name")); //true
+
+//loop through keys
