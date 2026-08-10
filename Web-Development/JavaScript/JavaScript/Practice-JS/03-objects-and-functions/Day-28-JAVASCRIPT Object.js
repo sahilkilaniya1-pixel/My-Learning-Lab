@@ -30,3 +30,6 @@ const original = {name:"Sahil", address:{city:"Haryana"}};
 const shallowCopy = {...original};
 shallowCopy.address.city ="Mumbai";
 console.log(original.address.city);
+
+
+// 2. Deep Copy (Independent copy)
