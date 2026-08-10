@@ -11,3 +11,5 @@ console.log(user1.getFullName());
 
 // Destructuring & Spread Operator
 const config = {host: "localhost", port:8080};
+
+//Rename variables and add default values
