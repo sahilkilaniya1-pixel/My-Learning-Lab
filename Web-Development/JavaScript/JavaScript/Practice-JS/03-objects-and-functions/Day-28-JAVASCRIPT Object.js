@@ -14,3 +14,6 @@ const config = {host: "localhost", port:8080};
 
 //Rename variables and add default values
 const {host: domain,port,timeout = 5000}= config;
+console.log(domain, port, timeout);  //"Localhost", 8080,5000
+
+//Merging Object using Spread Operators
