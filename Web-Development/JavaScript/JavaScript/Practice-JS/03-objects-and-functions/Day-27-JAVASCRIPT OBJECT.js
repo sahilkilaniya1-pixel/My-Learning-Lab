@@ -5,3 +5,4 @@ const use = {
     age: 23,
     "Current City":"Rohtak",
 };
+console.log(user.name);
