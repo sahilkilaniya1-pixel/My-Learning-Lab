@@ -22,3 +22,6 @@ delete car.model; //Delete
 
 // Checking Existence & Iteration
 const person = {name: "sahil", role:"security"};
+
+//Check if key exists
+console.log("role"in person);
