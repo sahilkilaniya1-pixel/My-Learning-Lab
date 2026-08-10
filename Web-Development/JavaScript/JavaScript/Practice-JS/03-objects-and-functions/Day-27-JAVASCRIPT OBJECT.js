@@ -16,4 +16,5 @@ console.log(user.age);
 // Adding, Modifying & Deleting Properties
 const car = {brand:"Tata"};
 car.model = "Nexon"; //Add new car
-car.brand = "Mahindra";
+car.brand = "Mahindra"; //update existing key
+delete car.model; 
