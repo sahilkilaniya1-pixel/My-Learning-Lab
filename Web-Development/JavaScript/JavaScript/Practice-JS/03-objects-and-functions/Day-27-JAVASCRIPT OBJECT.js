@@ -6,4 +6,4 @@ const user = {
     "Current City":"Rohtak",
 };
 console.log(user.name);
-console.log("Current city");
+console.log(user["Current City"]);
