@@ -43,3 +43,5 @@ console.log(original.address.city);
 const obj = {a:1};
 Object.freeze(obj); //sab block kr deta hain.
 
+const obj2= {b:2};
+Object.seal(obj2);
