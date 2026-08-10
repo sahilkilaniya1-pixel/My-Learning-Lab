@@ -8,3 +8,6 @@ const user = {
 // Dot Notation vs Bracket Notation
 console.log(user.name);
 console.log(user["Current City"]);
+
+// Dynamic Key Access
+console.log(user.age);
