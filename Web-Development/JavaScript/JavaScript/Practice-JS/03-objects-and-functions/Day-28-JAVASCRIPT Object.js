@@ -25,4 +25,4 @@ console.log(combined);   //{ a: 1, b: 2, c: 3 }
 
 
 // Shallow Copy vs Deep Copy
-const original = {}
+const original = {name:"Sahil", address:{city:"Haryana"}};
