@@ -28,3 +28,6 @@ console.log("role"in person); //true
 console.log(person.hasOwnProperty("name")); //true
 
 //loop through keys
+for(let key in person){
+    console.log(key, person[key]);
+}
