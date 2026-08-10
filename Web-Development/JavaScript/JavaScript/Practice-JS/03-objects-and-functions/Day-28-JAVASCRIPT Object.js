@@ -21,3 +21,7 @@ const base = {a:1};
 const extra = {b:2};
 const combined = {...base, ...extra, c:3};  
 console.log(combined);   //{ a: 1, b: 2, c: 3 }
+
+
+
+// Shallow Copy vs Deep Copy
