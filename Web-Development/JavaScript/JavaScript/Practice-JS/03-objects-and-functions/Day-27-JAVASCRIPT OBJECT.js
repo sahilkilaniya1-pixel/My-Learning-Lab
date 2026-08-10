@@ -35,3 +35,4 @@ for(let key in person){
 
 // Built-in Utility Methods
 console.log(Object.keys(person));  //["name","role"]
+console.log(Object.values(person)); //["Aman",Security]
