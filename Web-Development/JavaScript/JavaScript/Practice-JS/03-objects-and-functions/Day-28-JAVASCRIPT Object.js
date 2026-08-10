@@ -13,3 +13,4 @@ console.log(user1.getFullName());
 const config = {host: "localhost", port:8080};
 
 //Rename variables and add default values
+const {host: domain,port,timeout = 5000}= config;
