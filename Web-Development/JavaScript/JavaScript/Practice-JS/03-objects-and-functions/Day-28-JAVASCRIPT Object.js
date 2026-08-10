@@ -17,3 +17,7 @@ const {host: domain,port,timeout = 5000}= config;
 console.log(domain, port, timeout);  //"Localhost", 8080,5000
 
 //Merging Object using Spread Operators
+const base = {a:1};
+const extra = {b:2};
+const combined = {...base, ...extra, c:3};  
+console.log(combined);   //{ a: 1, b: 2, c: 3 }
