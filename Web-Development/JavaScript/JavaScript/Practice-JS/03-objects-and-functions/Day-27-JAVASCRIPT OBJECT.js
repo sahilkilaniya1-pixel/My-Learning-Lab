@@ -17,4 +17,8 @@ console.log(user.age);
 const car = {brand:"Tata"};
 car.model = "Nexon"; //Add new car
 car.brand = "Mahindra"; //update existing key
-delete car.model; //Delete Key
+delete car.model; //Delete 
+
+
+// Checking Existence & Iteration
+const person = {}
