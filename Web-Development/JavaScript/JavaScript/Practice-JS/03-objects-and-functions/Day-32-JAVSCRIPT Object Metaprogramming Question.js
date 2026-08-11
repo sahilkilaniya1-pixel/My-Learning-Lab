@@ -21,6 +21,8 @@ const handler = {
     //SET Trap: jab bhi koi property update/add ki jayegi
     set(targetObject, property, value, receiver){
         if(property ==="age" && type of value !=="number")
-            throw new TypeError("Age humesha number honi cahiye")
+            throw new TypeError("Age humesha number honi cahiye");
     }
+    targetObject[property] = value;
+
 }
