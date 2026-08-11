@@ -5,5 +5,7 @@ Metaprogramming ka matlab hota hain "Code write karna jo doosre code ko inspect,
 
 // 1. Proxy Component Architecture
 /* 
-Proxy ke 3
+Proxy ke 3 main parts hote hain:'
+1-Target:Original object jisko aap wrap kar rahe ho.
+2-
 */
