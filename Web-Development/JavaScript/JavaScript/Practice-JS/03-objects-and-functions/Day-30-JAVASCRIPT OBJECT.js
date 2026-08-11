@@ -36,3 +36,6 @@ student.study(); //output: Sahil padh raha hain. (Apna khud ka hai).
 
 console.log(student.hasOwnProperty("name")); //true 
 console.log(student.hasOwnProperty("isAlive")); //False
+
+
+// Prototype Optimization (Memory Saving Pattern)
