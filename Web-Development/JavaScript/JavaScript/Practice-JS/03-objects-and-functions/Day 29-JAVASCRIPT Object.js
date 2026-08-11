@@ -38,3 +38,5 @@ console.log(person.id);
 /*Redux ya custom state engine */
 
 
+/*Hidden Descriptor Read karna: Object.getOwnPropertyDescriptor */
+
