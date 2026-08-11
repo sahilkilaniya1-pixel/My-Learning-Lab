@@ -37,3 +37,4 @@ console.log(userProxy.city); // Output: "Key Not Found" (Default undefined ke ba
 
 // Validation Check
 userProxy.age = 24; //successfully set
+// userProxy.age = "twenty-four"; //Throws typeError!
