@@ -24,3 +24,6 @@ console.log(person.id);
 // 1. Writable Test:
 person.id = 999;
 console.log(person.id); //Output: 101 (change nahi hua)
+
+//2.Enumerable Test:
+console.log()
