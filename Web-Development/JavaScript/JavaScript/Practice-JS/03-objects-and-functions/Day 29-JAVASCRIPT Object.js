@@ -20,4 +20,4 @@ person.id=200; //Ignore hoga (Strict mode me error dega)
 console.log(person.id);
 
 
-// Getters & Setters
+// 1. Writable Test:
