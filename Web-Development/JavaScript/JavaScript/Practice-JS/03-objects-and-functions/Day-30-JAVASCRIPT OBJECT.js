@@ -39,3 +39,4 @@ console.log(student.hasOwnProperty("isAlive")); //False
 
 
 // Prototype Optimization (Memory Saving Pattern)
+/*Mano aapka 10,000 Users Banane Hain. agar aap har 
