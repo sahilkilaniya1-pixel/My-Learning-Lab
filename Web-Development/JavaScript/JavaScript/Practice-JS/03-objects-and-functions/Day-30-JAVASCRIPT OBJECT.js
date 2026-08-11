@@ -16,3 +16,9 @@ jab aap kisi object ki Property access karte ho: user.age
 
 
 // Object.create() se Direct Prototype Linking
+const human  = {
+    isAlive: true,
+    eat(){
+        console.log()
+    }
+}
