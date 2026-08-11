@@ -13,5 +13,5 @@ Object.defineProperties(person,"id",{
     valee: 101,
     writeable: false, //Read-only
     enumerable:false, //Object.keys() me hide hoga
-
+    configurable:false //Delete nahi ho sakta
 })
