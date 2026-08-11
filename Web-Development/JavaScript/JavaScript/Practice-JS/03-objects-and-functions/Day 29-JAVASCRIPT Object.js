@@ -15,3 +15,6 @@ Object.defineProperties(person,"id",{
     enumerable:false, //Object.keys() me hide hoga
     configurable:false //Delete nahi ho sakta
 });
+
+person.id=200; //Ignore hoga (Strict mode me error dega)
+console.log(person.id);
