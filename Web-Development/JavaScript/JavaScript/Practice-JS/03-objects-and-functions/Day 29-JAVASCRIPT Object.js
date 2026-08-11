@@ -21,13 +21,6 @@ console.log(person.id);
 
 
 
-const user1 = {
-  firstName: "Sahil",
-  lastName: "Kilaniya",
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`;
-  },
-};
 // 1. Writable Test:
-User1.id = 999;
-console.log(User.id);
+person.id = 999;
+console.log(person.id);
