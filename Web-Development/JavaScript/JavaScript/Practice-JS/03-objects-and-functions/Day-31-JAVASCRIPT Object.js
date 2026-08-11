@@ -37,3 +37,4 @@ console.log(userAccount.balance);  //"1,000"
 
 // Using Setter
 
+userAccount.balance = 5000;
