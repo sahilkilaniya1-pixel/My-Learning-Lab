@@ -11,18 +11,21 @@ Proxy ke 3 main parts hote hain:'
 3-Traps: Methods jo standard operations (Read, Write,Delte) ko intercept karte hain.
 */
 
-const target = {name:"Sahil", age:23};
-const handler = {
-    get(targetObject, property, receiver){
-        console.log(`Property '${property}'read ki gaye hai.`);
-        return property in targetObject ? targetObject[property] : "Key Not Found";
-    },
+const target = { name: "Sahil", age: 23 };
 
-    //SET Trap: jab bhi koi property update/add ki jayegi
-    set(targetObject, property, value, receiver){
-        if(property ==="age" && type of value !=="number")
-            throw new TypeError("Age humesha number honi cahiye");
+const handler = {
+  // GET Trap: Jab bhi koi property read ki jayegi
+  get(targetObject, property, receiver) {
+    console.log(`Property '${property}' read ki gayi hai.`);
+    return property in targetObject ? targetObject[property] : "Key Not Found";
+  },
+
+  // SET Trap: Jab bhi koi property update/add ki jayegi
+  set(targetObject, property, value, receiver) {
+    if (property === "age" && typeof value !== "number") {
+      throw new TypeError("Age humesha number honi chahiye!");
     }
     targetObject[property] = value;
-
-}
+    return true; // Success return karna zaroori hai
+  }
+};
