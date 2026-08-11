@@ -26,4 +26,7 @@ person.id = 999;
 console.log(person.id); //Output: 101 (change nahi hua)
 
 //2.Enumerable Test:
-console.log()
+console.log(Object.keys(person));
+for(let key in user){
+    console
+}
