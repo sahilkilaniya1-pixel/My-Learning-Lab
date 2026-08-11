@@ -7,5 +7,6 @@ Metaprogramming ka matlab hota hain "Code write karna jo doosre code ko inspect,
 /* 
 Proxy ke 3 main parts hote hain:'
 1-Target:Original object jisko aap wrap kar rahe ho.
-2-
+2-Handle: configuration Object jisme "Traps" (interception methods)hote hain.
+
 */
