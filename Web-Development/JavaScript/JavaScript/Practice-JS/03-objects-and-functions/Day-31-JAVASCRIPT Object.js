@@ -24,6 +24,10 @@ const userAccount = {
             return;
         }
 
-        if
+        if (amount<0){
+            console.error("ERROR: balance negative nahi ho sakta");
+            return;
+        }
+        this._rawBalance = amount;
     }
-}
+};
