@@ -31,3 +31,4 @@ const userAccount = {
         this._rawBalance = amount;
     }
 };
+// Accessing Getters (Method ki tarah () nahi lagate)
