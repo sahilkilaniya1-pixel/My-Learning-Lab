@@ -23,4 +23,12 @@ const human  = {
     }
 };
 // Child object banana aur prototype link set karna
-const student = Object.create(human);
+const student = Object.create(human);//student ka [[Prototype]] =human
+
+student.name = "Sahil"; //Own Property
+student.study = function(){
+    console.log(`${this.name} padh raha hai.`);
+};
+
+//Check Properties
+student.eat();
