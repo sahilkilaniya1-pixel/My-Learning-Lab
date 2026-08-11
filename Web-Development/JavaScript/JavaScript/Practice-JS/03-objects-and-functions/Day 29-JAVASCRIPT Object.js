@@ -9,7 +9,7 @@ configurable: Delete ya settings change ho sakti hain ya nahi.
 */
 
 const person = {};
-Object.defineProperties(person,"id",{
+Object.defineProperty(person,"id",{
     valee: 101,
     writeable: false, //Read-only
     enumerable:false, //Object.keys() me hide hoga
@@ -18,3 +18,6 @@ Object.defineProperties(person,"id",{
 
 person.id=200; //Ignore hoga (Strict mode me error dega)
 console.log(person.id);
+
+
+// Getters & Setters
