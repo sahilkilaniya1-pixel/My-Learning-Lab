@@ -32,4 +32,7 @@ const handler = {
 
 const userProxy = new Proxy (target, handler);
 
-console.log(userProxy.name);
+console.log(userProxy.name); // Logs: "Property 'name' read ki gayi hai." -> "Sahil"
+console.log(userProxy.city); // Output: "Key Not Found" (Default undefined ke bajaye)
+
+// Validation Check
