@@ -8,5 +8,6 @@ har js object ke pass ek internal link hota hai jisee [[prototype]] bolte hain (
 jab aap kisi object ki Property access karte ho: user.age
 
 1.JS sabse phele dekhta hai: Kya age Property khud user object ke andar hai?
-2.
+2.Agar HAAN-> js user ke [[prototype]] parent object me jaker dhoondhta hai.
+
 */
