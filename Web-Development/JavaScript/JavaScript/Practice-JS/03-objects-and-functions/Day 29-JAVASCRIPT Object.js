@@ -21,3 +21,5 @@ console.log(person.id);
 
 
 // 1. Writable Test:
+User.id = 999;
+console.log(User.id);
