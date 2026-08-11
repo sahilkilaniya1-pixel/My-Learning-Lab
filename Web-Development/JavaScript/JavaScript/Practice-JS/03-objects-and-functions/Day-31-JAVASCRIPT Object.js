@@ -7,4 +7,9 @@ const userAccount = {
     firstname :"Sahil",
     lastname: "Kilaniya",
     _rawBalance: 1000, //'_'standar notation hai private/internal data ke liye
+
+    //Getter: Computed Property (read access)
+    get fullname(){
+        return
+    }
 }
