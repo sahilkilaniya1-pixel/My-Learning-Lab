@@ -19,7 +19,7 @@ jab aap kisi object ki Property access karte ho: user.age
 const human  = {
     isAlive: true,
     eat(){
-        console.log(`${this.name}khana kha raha hai.`);
+        console.log(`${this.name} khana kha raha hai.`);
     }
 };
 // Child object banana aur prototype link set karna
@@ -32,4 +32,4 @@ student.study = function(){
 
 //Check Properties
 student.eat();  //Output: Sahil khana kha raha hai.(parent se mila).
-student.study(); //output:
+student.study(); //output: Sahil padh raha hain. (Apna khud ka hai).
