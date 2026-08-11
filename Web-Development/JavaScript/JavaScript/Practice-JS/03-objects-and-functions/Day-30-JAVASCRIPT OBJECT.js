@@ -32,3 +32,4 @@ student.study = function(){
 
 //Check Properties
 student.eat();  //Output: Sahil khana kha raha hai.(parent se mila).
+student.study(); //output:
