@@ -41,3 +41,4 @@ console.log(student.hasOwnProperty("isAlive")); //False
 // Prototype Optimization (Memory Saving Pattern)
 /*Mano aapka 10,000 Users Banane Hain. agar aap har 
 Object ke andar Login() function likhoge, toh 10,000 
+functions memory me space ghereinge.*/
