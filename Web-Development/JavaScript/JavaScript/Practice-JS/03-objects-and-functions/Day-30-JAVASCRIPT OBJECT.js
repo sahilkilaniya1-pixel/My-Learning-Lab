@@ -51,10 +51,14 @@ function User(name, role){
 //Memory Optimization: Method ko Prototype me rakho!
 //Memory me shif 1 baare store hoga, chahe 1 lakh user bane.
 User.prototype.login = function(){
-    console.log(`${this.name}logged in!`);
+    console.log(`${this.name} logged in!`);
 };
 const user1 = new User("Sahil","Admin");
 const user2 = new User("Kilaniya","user");
 
 user1.login(); //Sahil logged in!
 user2.login(); //Kilaniya logged in !
+
+
+//Dono same function instance ko point kar raha hain:
+console.log(user1.login === user2.login);
