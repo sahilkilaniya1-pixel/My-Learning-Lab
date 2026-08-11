@@ -10,6 +10,6 @@ const userAccount = {
 
     //Getter: Computed Property (read access)
     get fullname(){
-        return
+        return `${this.firstname} ${this.lastname}`;
     }
 }
