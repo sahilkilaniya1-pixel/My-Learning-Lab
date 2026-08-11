@@ -20,7 +20,8 @@ const userAccount = {
     //SETTER: Validation (write access)
     set balance(amount){
         if(typeof amount !=='number'){
-            console.error("ERROR:")
+            console.error("ERROR: Amount number hona chahiye");
+            return;
         }
     }
 }
