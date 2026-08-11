@@ -42,3 +42,8 @@ console.log(student.hasOwnProperty("isAlive")); //False
 /*Mano aapka 10,000 Users Banane Hain. agar aap har 
 Object ke andar Login() function likhoge, toh 10,000 
 functions memory me space ghereinge.*/
+
+// Aap ise Prototype se optimize karte ho:
+function User(name, role){
+    
+}
