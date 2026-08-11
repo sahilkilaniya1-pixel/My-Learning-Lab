@@ -50,3 +50,6 @@ function User(name, role){
 }
 //Memory Optimization: Method ko Prototype me rakho!
 //Memory me shif 1 baare store hoga, chahe 1 lakh user bane.
+User.prototype.login = function(){
+    console.log(`${this.name}logged in!`);
+};
