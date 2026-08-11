@@ -29,3 +29,7 @@ const handler = {
     return true; // Success return karna zaroori hai
   }
 };
+
+const userProxy = new Proxy (target, handler);
+
+console.log()
