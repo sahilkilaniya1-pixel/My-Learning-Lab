@@ -23,3 +23,4 @@ const human  = {
     }
 };
 // Child object banana aur prototype link set karna
+const student = Object.create(human);
