@@ -39,4 +39,14 @@ console.log(person.id);
 
 
 /*Hidden Descriptor Read karna: Object.getOwnPropertyDescriptor */
-
+const car = {brand:"Tata"};
+const descriptor = Object.getOwnPropertyDescriptor(car,"brand");
+console.log(descriptor);
+/* Output:
+{
+  value: 'Tata',
+  writable: true,
+  enumerable: true,
+  configurable: true
+}
+*/
