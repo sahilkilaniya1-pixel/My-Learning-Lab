@@ -32,4 +32,4 @@ const handler = {
 
 const userProxy = new Proxy (target, handler);
 
-console.log()
+console.log(userProxy.name);
