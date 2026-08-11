@@ -45,5 +45,6 @@ functions memory me space ghereinge.*/
 
 // Aap ise Prototype se optimize karte ho:
 function User(name, role){
+    this.name = name;
     
 }
