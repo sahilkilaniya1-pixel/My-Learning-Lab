@@ -34,5 +34,5 @@ student.study = function(){
 student.eat();  //Output: Sahil khana kha raha hai.(parent se mila).
 student.study(); //output: Sahil padh raha hain. (Apna khud ka hai).
 
-console.log(student.hasOwnProperty("name"));
-console.log(student.hasOwnProperty("isAlive"));
+console.log(student.hasOwnProperty("name")); //true 
+console.log(student.hasOwnProperty("isAlive")); //False
