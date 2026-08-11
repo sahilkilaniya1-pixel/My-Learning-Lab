@@ -12,6 +12,6 @@ const person = {};
 Object.defineProperties(person,"id",{
     valee: 101,
     writeable: false, //Read-only
-    enumerable:false,
+    enumerable:false, //Object.keys() me hide hoga
 
 })
