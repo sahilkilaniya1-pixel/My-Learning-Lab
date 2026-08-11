@@ -13,3 +13,6 @@ jab aap kisi object ki Property access karte ho: user.age
 4-Agar parent me bhi nahi mila -> Parent ke parent me dekhta hain (isi chain ko prototype chain bolte hain).
 5-chain ke aakhri me Object.prototype hota hai. Jiska prototype null hota hain. Agar tab bhi na mile , toh undefined milta hai.
 */
+
+
+// Object.create() se Direct Prototype Linking
