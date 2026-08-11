@@ -32,3 +32,4 @@ const userAccount = {
     }
 };
 // Accessing Getters (Method ki tarah () nahi lagate)
+console.log(userAccount.fullname);
