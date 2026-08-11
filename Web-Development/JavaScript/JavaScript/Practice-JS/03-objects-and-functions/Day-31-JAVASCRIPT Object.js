@@ -39,3 +39,5 @@ console.log(userAccount.balance);  //"1,000"
 
 userAccount.balance = 5000;
 console.log(userAccount.balance);
+
+userAccount.balance = -200;
