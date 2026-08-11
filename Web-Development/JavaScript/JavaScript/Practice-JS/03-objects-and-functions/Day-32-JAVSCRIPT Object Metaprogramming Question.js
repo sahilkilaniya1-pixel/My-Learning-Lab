@@ -16,7 +16,11 @@ const handler = {
     get(targetObject, property, receiver){
         console.log(`Property '${property}'read ki gaye hai.`);
         return property in targetObject ? targetObject[property] : "Key Not Found";
-    };
+    },
 
-    //
+    //SET Trap: jab bhi koi property update/add ki jayegi
+    set(targetObject, property, value, receiver){
+        if(property ==="age" && type of value !=="number")
+            throw new TypeError("Age humesha number honi cahiye")
+    }
 }
