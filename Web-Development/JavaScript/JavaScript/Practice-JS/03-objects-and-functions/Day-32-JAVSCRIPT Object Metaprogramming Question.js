@@ -36,3 +36,4 @@ console.log(userProxy.name); // Logs: "Property 'name' read ki gayi hai." -> "Sa
 console.log(userProxy.city); // Output: "Key Not Found" (Default undefined ke bajaye)
 
 // Validation Check
+userProxy.age = 24; //successfully set
