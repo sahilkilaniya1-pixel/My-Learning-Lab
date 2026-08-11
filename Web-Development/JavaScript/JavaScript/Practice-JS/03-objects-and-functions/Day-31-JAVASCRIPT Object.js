@@ -11,5 +11,14 @@ const userAccount = {
     //Getter: Computed Property (read access)
     get fullname(){
         return `${this.firstname} ${this.lastname}`;
+    },
+
+    get balance(){
+        return `${this._rawBalance.toLocaleString(`en-IN`)}`;
+    },
+
+    //SETTER: Validation (write access)
+    set balance(amount){
+        if(typeof amount !==)
     }
 }
