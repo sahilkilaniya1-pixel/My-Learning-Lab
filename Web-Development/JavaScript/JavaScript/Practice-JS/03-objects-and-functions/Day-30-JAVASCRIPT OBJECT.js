@@ -10,4 +10,5 @@ jab aap kisi object ki Property access karte ho: user.age
 1.JS sabse phele dekhta hai: Kya age Property khud user object ke andar hai?
 2.Agar HAAN-> js user ke [[prototype]] parent object me jaker dhoondhta hai.
 3.Agar NAHI-> JS user ke [[prototype]] parent object me jaker dhoondhta hai.
+4-Agar parent me bhi nahi mila -> Parent ke parent me dekhta hain ()
 */
