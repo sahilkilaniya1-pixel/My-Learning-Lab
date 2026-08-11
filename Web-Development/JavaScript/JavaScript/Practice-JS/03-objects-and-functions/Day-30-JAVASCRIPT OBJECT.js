@@ -53,3 +53,8 @@ function User(name, role){
 User.prototype.login = function(){
     console.log(`${this.name}logged in!`);
 };
+const user1 = new User("Sahil","Admin");
+const user2 = new User("Kilaniya","user");
+
+user1.login(); //Sahil logged in!
+user2.login(); //Kilaniya logged in !
