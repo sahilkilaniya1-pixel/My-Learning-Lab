@@ -30,3 +30,6 @@ console.log(Object.keys(person)); //output - [] empty array hidden hai.
 for(let key in person){
     console.log(key); //Kuch print nahi hoga
 }  
+
+
+//3.configurable Test:
