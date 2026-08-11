@@ -46,5 +46,7 @@ functions memory me space ghereinge.*/
 // Aap ise Prototype se optimize karte ho:
 function User(name, role){
     this.name = name;
-    
+    this.role = role;
 }
+//Memory Optimization: Method ko Prototype me rakho!
+//Memory me shif 1 baare store hoga, chahe 1 lakh user bane.
