@@ -12,4 +12,8 @@ Proxy ke 3 main parts hote hain:'
 */
 
 const target = {name:"Sahil", age:23};
-const
+const handler = {
+    get(targetObject, property, receiver){
+        console.log(`Property '${property}'read ki gaye`)
+    }
+}
