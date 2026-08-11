@@ -33,3 +33,5 @@ for(let key in person){
 
 
 //3.configurable Test:
+delete person.id; //Delete reject ho jayega
+console.log(person.id);
