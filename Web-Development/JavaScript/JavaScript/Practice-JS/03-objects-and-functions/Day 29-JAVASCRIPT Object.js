@@ -26,7 +26,7 @@ person.id = 999;
 console.log(person.id); //Output: 101 (change nahi hua)
 
 //2.Enumerable Test:
-console.log(Object.keys(person));
-for(let key in user){
-    console.log(key);
-}
+console.log(Object.keys(person)); //output - [] empty array hidden hai.
+for(let key in person){
+    console.log(key); //Kuch print nahi hoga
+}  
