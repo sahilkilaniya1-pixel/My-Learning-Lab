@@ -11,4 +11,7 @@ function getCharacterFrequency(str){
             continue;
 
         count[char]=(count[char] || 0)+1;
- 
+    }
+    return count;
+}
+console.log(getCharacterFrequency("Javascript"));
