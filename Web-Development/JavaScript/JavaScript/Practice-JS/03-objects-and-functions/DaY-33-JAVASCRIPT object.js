@@ -4,14 +4,12 @@ Problem: Ek string given hain. har character kitni baar repeat hua hain, uska ob
 
 Approch: Loop chalao, agar key pehle se object mein hai toh +1 karo, nahi 1 assign karo.
 */
-function getCharacterFrequency(str){
+function getCharacterFrequency(str) {
     const count = {};
-    for(let char of str){
-        if(char ===' ')
+    for (let char of str) {
+        if (char === ' ')
             continue;
 
-        count[char]=(count[char] || 0)+1;
+        count[char] = (count[char] || 0) + 1;
     }
-    return count;
-}
-console.log(getCharacterFrequency("Javascript"));
+    
