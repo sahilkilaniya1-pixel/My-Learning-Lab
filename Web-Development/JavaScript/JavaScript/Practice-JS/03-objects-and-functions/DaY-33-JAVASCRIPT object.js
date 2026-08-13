@@ -10,4 +10,5 @@ function getCharacterFrequency(str){
         if(char ===' ')
             continue;
 
-       
+        count[char]=(count[char] || 0)+1;
+ 
