@@ -4,3 +4,5 @@ Problem: Ek string given hain. har character kitni baar repeat hua hain, uska ob
 
 Approch: Loop chalao, agar key pehle se object mein hai toh +1 karo, nahi 1 assign karo.
 */
+function getCharacterFrequency(str){
+    
