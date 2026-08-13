@@ -15,3 +15,5 @@ function getCharacterFrequency(str) {
     return count;
 }
 console.log(getCharacterFrequency("Javascript"));
+
+// Level 2(intermediate): grouping Array of Objects
