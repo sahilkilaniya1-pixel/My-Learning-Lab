@@ -18,5 +18,5 @@ console.log(getCharacterFrequency("Javascript"));
 
 // Level 2(intermediate): grouping Array of Objects
 /*
-Problem: Ek Students ka Array diya hai. unhe unke grade
+Problem: Ek Students ka Array diya hai. unhe unke grade ke basic par group karke naya object banao.
 */
