@@ -8,4 +8,6 @@ function getCharacterFrequency(str){
     const count = {};
     for(let char of str){
         if(char ===' ')
-            
+            continue;
+
+       
