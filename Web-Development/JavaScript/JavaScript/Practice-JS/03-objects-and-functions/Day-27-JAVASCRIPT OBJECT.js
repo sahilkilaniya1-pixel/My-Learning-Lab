@@ -3,11 +3,11 @@
 const user = {
   name: "Sahil",
   age: 23,
-  "Current City": "Rohtak",
+  Current_City: "Rohtak",
 };
 // Dot Notation vs Bracket Notation
 console.log(user.name);
-console.log(user["Current City"]);
+console.log(user.Current_City);
 
 // Dynamic Key Access
 console.log(user.age);

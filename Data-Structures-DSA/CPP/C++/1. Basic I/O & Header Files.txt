@@ -1,1 +1,5 @@
-#include <iostream>: Input/Output operations ke liye stream library include karti hai.
+float
+Int 
+bool
+char
+double
