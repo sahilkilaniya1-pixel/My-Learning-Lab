@@ -57,3 +57,6 @@ Problem: Ek nested object diya gaya hai jisme items ki prices kisi bhi level par
 
 Approach: Dynamic Recursion + Loop (for...in) ka combination.
 */
+const inventory = {
+    electronics: {
+        
