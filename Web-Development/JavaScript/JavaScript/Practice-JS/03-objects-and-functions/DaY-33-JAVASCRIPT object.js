@@ -32,6 +32,8 @@ function groupByGrade(arr){
     let result = {};
     for(let i=0; i,arr.length; i++){
         let student = arr[i];
+        let grade = student.grade;
+        let name = student.name;
         
     }
 }
