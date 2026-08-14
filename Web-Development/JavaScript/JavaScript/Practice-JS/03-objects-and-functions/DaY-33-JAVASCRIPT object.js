@@ -72,3 +72,10 @@ function calculateTotalSum(obj){
     let total= 0;
     for(let key in obj){
         const value = obj[key];
+
+        if(typeof value === 'number'){
+            total += value;
+        }
+        else if (typeof value ==='object' && value !)
+    }
+}
