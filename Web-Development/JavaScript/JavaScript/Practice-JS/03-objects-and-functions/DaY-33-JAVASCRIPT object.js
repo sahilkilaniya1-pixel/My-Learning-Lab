@@ -23,7 +23,7 @@ Problem: Ek Students ka Array diya hai. unhe unke grade ke basic par group karke
 
 Approach: .reduce() ya for...of loop ka use karke group-by logic create karenge.
 */
-const student = {
+const student = [
     { name: "Rahul", grade: "A" },
 
-}
+]
