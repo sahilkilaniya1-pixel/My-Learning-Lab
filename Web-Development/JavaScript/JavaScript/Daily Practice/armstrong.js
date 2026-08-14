@@ -1,4 +1,4 @@
-function inArmstrong(num){
+function isArmstrong(num){
     if(num<0) return false;
     let temp = num;
     let digitCount = num.toString().length;
@@ -10,3 +10,4 @@ function inArmstrong(num){
     }
     return sum===num;
 }
+console.log(i)
