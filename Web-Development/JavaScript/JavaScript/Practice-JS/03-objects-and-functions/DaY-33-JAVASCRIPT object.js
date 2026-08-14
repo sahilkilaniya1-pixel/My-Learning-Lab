@@ -27,4 +27,7 @@ const student = [
     { name: "Rahul", grade: "A" },
     { name: "priya", grade: "B" },
     { name: "Amit", grade: "C" },
-]
+];
+function groupByGrade(arr){
+    let result = {};
+}
