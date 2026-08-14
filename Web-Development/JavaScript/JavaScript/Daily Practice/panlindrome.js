@@ -1,4 +1,4 @@
-function palindrome() {
+function palindrome(str) {
     let cleanStr = str.toLowerCase();
     let left = 0;
     let right = cleanStr.length - 1;
