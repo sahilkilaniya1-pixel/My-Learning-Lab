@@ -62,4 +62,7 @@ const inventory = {
         laptop: {price:50000, tax:5000},
         mobile: {price:20000}
 },
+    groceries: {
+        frutis: {price:500},
+        vegetables: {price:300}
     
