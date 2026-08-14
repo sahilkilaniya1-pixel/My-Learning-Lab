@@ -12,3 +12,5 @@ function palindrome() {
     return true;
 }
 console.log(palindrome("madam"));
+console.log(palindrome("RaEcar"));
+console.log(palindrome("coding"));
