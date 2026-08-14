@@ -84,3 +84,4 @@ function calculateTotalSum(obj){
     return total;
 }
 let finalAns = calculateTotalSum(inventory);
+console.log("Total Inventory Cost:",finalAns);
