@@ -6,5 +6,8 @@ function palindrome() {
         if(cleanStr[left]!==cleanStr[right]){
             return false;
         }
+        left ++;
+        right --;
     }
+    return true;
 }
