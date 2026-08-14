@@ -77,6 +77,8 @@ function calculateTotalSum(obj){
             total = total+value;
         }
 
-        
+        else if (typeof value ==="object" && value !== null){
+            tota
+        }
     }
 }
