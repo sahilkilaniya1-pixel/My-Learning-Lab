@@ -10,4 +10,4 @@ function isArmstrong(num){
     }
     return sum===num;
 }
-console.log(i)
+console.log(isArmstrong(153));
