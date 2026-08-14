@@ -6,7 +6,7 @@ function isArmstrong(num){
     while(original>0){
         let lastDigit = original %10;
         sum+=Math.pow(lastDigit,digitCount);
-        temp = Math.floor(original/10);
+        original = Math.floor(original/10);
     }
     return sum===num;
 }
