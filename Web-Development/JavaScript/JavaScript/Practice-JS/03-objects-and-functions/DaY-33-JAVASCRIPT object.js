@@ -81,4 +81,6 @@ function calculateTotalSum(obj){
             total = total + calculateTotalSum(value);
         }
     }
+    return total;
 }
+let finalAns
