@@ -11,3 +11,4 @@ function palindrome() {
     }
     return true;
 }
+console.log(palindrome("madam"));
