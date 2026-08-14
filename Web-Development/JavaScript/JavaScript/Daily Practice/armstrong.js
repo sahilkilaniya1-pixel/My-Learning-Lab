@@ -1,5 +1,6 @@
 function isArmstrong(num){
-    if(num<0) return false;
+    if(num<0) 
+        return false;
     let original = num;
     let digitCount = num.toString().length;
     let sum = 0;
