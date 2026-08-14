@@ -34,6 +34,12 @@ function groupByGrade(arr){
         let student = arr[i];
         let grade = student.grade;
         let name = student.name;
-        
+
+        if(result[grade]=== undefined){
+            result[grade] = [name];
+        }else {
+            result[grade].push(name);
+        }
     }
+    return result;
 }
