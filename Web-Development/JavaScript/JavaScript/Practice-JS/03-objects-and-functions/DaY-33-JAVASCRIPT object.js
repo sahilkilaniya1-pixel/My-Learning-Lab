@@ -54,4 +54,6 @@ console.log(groupByGrade(students));
 // Level 3 (Advanced): Deep Nested Object Value Calculator
 /*
 Problem: Ek nested object diya gaya hai jisme items ki prices kisi bhi level par ho sakti hain. Sabhi numerical prices ka total sum calculate karo.
+
+Approach: Dynamic Recursion + Loop (for...in) ka combination.
 */
