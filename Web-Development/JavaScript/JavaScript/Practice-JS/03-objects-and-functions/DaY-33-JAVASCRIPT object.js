@@ -23,24 +23,35 @@ Problem: Ek Students ka Array diya hai. unhe unke grade ke basic par group karke
 
 Approach: .reduce() ya for...of loop ka use karke group-by logic create karenge.
 */
-const student = [
+const students = [
     { name: "Rahul", grade: "A" },
-    { name: "priya", grade: "B" },
-    { name: "Amit", grade: "C" },
+    { name: "Priya", grade: "B" },
+    { name: "Amit", grade: "A" },
+    { name: "Neha", grade: "C" }
 ];
-function groupByGrade(arr){
+
+function groupByGrade(arr) {
+    // Step 1: Ek khaali result object banao
     let result = {};
-    for(let i=0; i,arr.length; i++){
+
+    // Step 2: Normal for-loop chalayein
+    for (let i = 0; i < arr.length; i++) {
         let student = arr[i];
         let grade = student.grade;
         let name = student.name;
-
-        if(result[grade]=== undefined){
+        if (result[grade] === undefined) {
             result[grade] = [name];
-        }else {
+        } else {
             result[grade].push(name);
         }
     }
     return result;
 }
-console.log(groupByGrade(student));
+
+console.log(groupByGrade(students));
+
+
+// Level 3 (Advanced): Deep Nested Object Value Calculator
+/*
+
+*/
