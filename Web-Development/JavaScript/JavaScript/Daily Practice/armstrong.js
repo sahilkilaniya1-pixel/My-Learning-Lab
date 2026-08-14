@@ -5,6 +5,8 @@ function inArmstrong(num){
     let sum = 0;
     while(temp>0){
         let lastDigit = temp %10;
-        
+        sum+=Math.pow(lastDigit,digitCount);
+        temp = Math.floor(temp/10);
     }
+    return sum===num;
 }
