@@ -65,4 +65,9 @@ const inventory = {
     groceries: {
         frutis: {price:500},
         vegetables: {price:300}
+    },
+    deliveryFee: 100
+};
+function calculateTotalSum(obj){
     
+}
