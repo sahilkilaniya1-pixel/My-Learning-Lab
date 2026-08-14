@@ -43,3 +43,4 @@ function groupByGrade(arr){
     }
     return result;
 }
+console.log(groupByGrade(student));
