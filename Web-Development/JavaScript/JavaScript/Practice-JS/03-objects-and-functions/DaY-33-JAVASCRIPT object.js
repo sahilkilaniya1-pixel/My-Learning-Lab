@@ -73,6 +73,10 @@ function calculateTotalSum(obj){
     for(let key in obj){
         let value = obj[key];
 
-        
+        if(typeof value ==="number"){
+            total = total+value;
+        }
+
+        else if (typeof value)
     }
 }
