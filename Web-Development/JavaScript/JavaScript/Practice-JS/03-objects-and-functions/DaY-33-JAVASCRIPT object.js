@@ -25,4 +25,6 @@ Approach: .reduce() ya for...of loop ka use karke group-by logic create karenge.
 */
 const student = [
     { name: "Rahul", grade: "A" },
-    
+    { name: "priya", grade: "B" },
+    { name: "Amit", grade: "C" },
+]
