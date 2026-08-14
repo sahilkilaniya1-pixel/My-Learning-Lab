@@ -4,7 +4,7 @@ function isArmstrong(num){
     let digitCount = num.toString().length;
     let sum = 0;
     while(original>0){
-        let lastDigit = temp %10;
+        let lastDigit = original %10;
         sum+=Math.pow(lastDigit,digitCount);
         temp = Math.floor(original/10);
     }
