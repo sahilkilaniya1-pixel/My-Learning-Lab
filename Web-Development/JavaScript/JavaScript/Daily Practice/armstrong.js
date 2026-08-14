@@ -11,3 +11,6 @@ function isArmstrong(num){
     return sum===num;
 }
 console.log(isArmstrong(153));
+console.log(isArmstrong(1634));
+console.log(isArmstrong(123));
+console.log(isArmstrong(9));
