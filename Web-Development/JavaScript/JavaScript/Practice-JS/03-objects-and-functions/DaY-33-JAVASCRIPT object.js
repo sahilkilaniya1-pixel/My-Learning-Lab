@@ -75,4 +75,7 @@ function calculateTotalSum(obj){
 
         if(typeof value === 'number'){
             total += value;
-        
+        }
+        else if (typeof value ==='object' && value !)
+    }
+}
