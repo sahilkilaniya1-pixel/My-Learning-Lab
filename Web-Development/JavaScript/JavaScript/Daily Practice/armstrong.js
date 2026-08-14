@@ -4,6 +4,7 @@ function inArmstrong(num){
     let digitCount = num.toString().length;
     let sum = 0;
     while(temp>0){
+        let lastDigit = temp %10;
         
     }
 }
