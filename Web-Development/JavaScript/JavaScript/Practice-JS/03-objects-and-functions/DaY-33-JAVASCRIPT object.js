@@ -71,6 +71,8 @@ const inventory = {
 function calculateTotalSum(obj){
     let total = 0;
     for(let key in obj){
+        let value = obj[key];
+
         
     }
 }
