@@ -3,4 +3,7 @@ function inArmstrong(num){
     let temp = num;
     let digitCount = num.toString().length;
     let sum = 0;
+    while(temp>0){
+        
+    }
 }
