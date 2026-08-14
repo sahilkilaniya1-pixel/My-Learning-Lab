@@ -83,4 +83,4 @@ function calculateTotalSum(obj){
     }
     return total;
 }
-let finalAns
+let finalAns = calculateTotalSum(inventory);
