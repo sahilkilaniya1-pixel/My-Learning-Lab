@@ -64,4 +64,5 @@ function invertCourceData(courceData){
             studentMap[student].push(cource);
         }
     }
+    return studentMap;
 }
