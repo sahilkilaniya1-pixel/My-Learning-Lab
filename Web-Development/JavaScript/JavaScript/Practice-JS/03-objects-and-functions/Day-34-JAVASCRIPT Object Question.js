@@ -45,5 +45,7 @@ const cart = [
 console.log(calculateChartSummary(cart));
 
 /*
+Question 2: Course - Student Inverter
+Human Thought Process (Notice Board Mindset)
 
 */
