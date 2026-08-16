@@ -21,6 +21,8 @@ function calculateChartSummary(cart){
         totalItems += item.qty;
         const itemCost = item.price * item.qty;
         subtotal += itemCost;
+
+        let taxRate = 0;
         
     }
 }
