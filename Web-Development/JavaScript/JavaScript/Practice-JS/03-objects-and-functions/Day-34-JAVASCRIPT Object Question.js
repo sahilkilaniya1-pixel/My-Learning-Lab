@@ -42,3 +42,8 @@ const cart = [
     { name: "Shirt", price: 1500, qty: 2, category: "clothing" },
     { name: "Book", price: 500, qty: 3, category: "books" }
 ]
+console.log(calculateChartSummary(cart));
+
+/*
+
+*/
