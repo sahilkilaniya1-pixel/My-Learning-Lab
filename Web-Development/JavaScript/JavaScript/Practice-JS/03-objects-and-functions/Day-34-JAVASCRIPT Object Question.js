@@ -37,5 +37,7 @@ function calculateChartSummary(cart){
     return {
         totalItems: totalItems,
         subtotal: subtotal,
-    }
+        totalTax: totalTax,
+        grandTotal: subtotal + totalTax
+    };
 }
