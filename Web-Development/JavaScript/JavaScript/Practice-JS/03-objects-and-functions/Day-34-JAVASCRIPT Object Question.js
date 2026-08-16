@@ -55,6 +55,6 @@ Main student ka naam boluga, jaise Sahil. pucho 'kya sahil meri register noteboo
 function invertCourceData(courceData){
     const studentMap = {};
     for(let cource in courceData){
-        
+        const studentArray = courceData[cource];
     }
 }
