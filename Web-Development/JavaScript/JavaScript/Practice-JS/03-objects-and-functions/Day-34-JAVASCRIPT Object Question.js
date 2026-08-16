@@ -68,4 +68,5 @@ function invertCourceData(courceData){
 }
 const courceData = {
     "JavaScript": ["Sahil", "Amit", "Priya"],
+    "React": ["Sahil", "Priya"],
 };
