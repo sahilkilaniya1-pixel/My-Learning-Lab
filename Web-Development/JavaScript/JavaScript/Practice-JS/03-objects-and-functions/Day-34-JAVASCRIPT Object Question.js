@@ -78,5 +78,5 @@ console.log(invertCourceData(courceData));
 Question 3: Sensitive Data Masker
 mere pass confidential user files hain. public display
 ke liye mujhe ek bilkul nayi clean copy banani hai.
-main purani  file ko overwrite nahi karuga . simple ek naya blank paper loonga, sirf allowed properties(id, name, role) copy karunga, aur
+main purani  file ko overwrite nahi karuga . simple ek naya blank paper loonga, sirf allowed properties(id, name, role) copy karunga, aur confidential keys (password) ko original
 */
