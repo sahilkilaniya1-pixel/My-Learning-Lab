@@ -56,5 +56,9 @@ function invertCourceData(courceData){
     const studentMap = {};
     for(let cource in courceData){
         const studentArray = courceData[cource];
+
+        for(let student of studentArray){
+            
+        }
     }
 }
