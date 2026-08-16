@@ -52,3 +52,6 @@ Main student ka naam boluga, jaise Sahil. pucho 'kya sahil meri register noteboo
 - Agar nahi, toh phele sahil ka naam likho aur ek khali page do.
 -Phir Sahil ke page par current cource ka naam write down kar do.
 */
+function invertCourceData(courceData){
+    
+}
