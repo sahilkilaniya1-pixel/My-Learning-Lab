@@ -67,5 +67,5 @@ function invertCourceData(courceData){
     return studentMap;
 }
 const courceData = {
-    "javascript"
-}
+    "JavaScript": ["Sahil", "Amit", "Priya"],
+};
