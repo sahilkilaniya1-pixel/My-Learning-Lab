@@ -11,4 +11,8 @@ function calculateChartSummary(cart){
     let totalItems = 0;
     let subtotal = 0;
     let totalTax = 0;
+
+    for(let item of cart){
+        
+    }
 }
