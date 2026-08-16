@@ -10,5 +10,5 @@ par uski category dekhkar tax calculate karta hoon, aur end mein total bill hand
 function calculateChartSummary(cart){
     let totalItems = 0;
     let subtotal = 0;
-    
+    let totalTax = 0;
 }
