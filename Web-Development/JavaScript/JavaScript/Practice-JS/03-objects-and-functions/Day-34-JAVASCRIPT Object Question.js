@@ -30,5 +30,6 @@ function calculateChartSummary(cart){
         } else {
             taxRate = 0.05;
         }
+        const itemTax = itemCost * taxRate;
     }
 }
