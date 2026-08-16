@@ -48,5 +48,6 @@ console.log(calculateChartSummary(cart));
 Question 2: Course - Student Inverter
 Human Thought Process (Notice Board Mindset)
 Phele list hai cource->Students. Mujhe chahiye student -> Cources.
-Main student ka naam boluga, jaise Sahil. pucho ''
+Main student ka naam boluga, jaise Sahil. pucho 'kya sahil meri register notebook mein phele se hai?'
+- 
 */
