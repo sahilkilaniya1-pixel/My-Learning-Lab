@@ -33,5 +33,9 @@ function calculateChartSummary(cart){
         const itemTax = itemCost * taxRate;
         taxRate += itemTax;
     }
-    
+
+    return {
+        totalItems: totalItems,
+        
+    }
 }
