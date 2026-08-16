@@ -19,6 +19,6 @@ function calculateChartSummary(cart){
 
     for(let item of cart){
         totalItems += item.qty;
-
+        const itemCost = item.price * item.qty;
     }
 }
