@@ -8,5 +8,6 @@ total price, aur tax add karta jata hoon. Har item
 par uski category dekhkar tax calculate karta hoon, aur end mein total bill hand-over kar deta hoon." 
 */
 function calculateChartSummary(cart){
+    let totalItems = 0;
     
 }
