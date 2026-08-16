@@ -58,7 +58,10 @@ function invertCourceData(courceData){
         const studentArray = courceData[cource];
 
         for(let student of studentArray){
-            
+            if(!studentMap[student]){
+                studentMap[student] = [];
+            }
+            studentMap[student].push(cource);
         }
     }
 }
