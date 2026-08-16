@@ -23,6 +23,8 @@ function calculateChartSummary(cart){
         subtotal += itemCost;
 
         let taxRate = 0;
-        
+        if(item.category === "electronics"){
+            taxRate = 0.18%
+        } else if
     }
 }
