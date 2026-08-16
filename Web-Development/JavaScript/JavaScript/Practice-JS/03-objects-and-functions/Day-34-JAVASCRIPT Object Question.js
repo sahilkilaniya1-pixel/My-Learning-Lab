@@ -76,5 +76,7 @@ console.log(invertCourceData(courceData));
 
 /*
 Question 3: Sensitive Data Masker
-mere pass confidential user files hain. public display 
+mere pass confidential user files hain. public display
+ke liye mujhe ek bilkul nayi clean copy banani hai.
+main purani 
 */
