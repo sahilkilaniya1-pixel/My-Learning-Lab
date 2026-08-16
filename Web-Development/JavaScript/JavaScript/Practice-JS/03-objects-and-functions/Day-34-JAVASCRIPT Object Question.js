@@ -71,3 +71,4 @@ const courceData = {
     "React": ["Sahil", "Priya"],
     "Node.js": ["Amit", "Rohan"]
 };
+console.log(invertCourceData(courceData));
