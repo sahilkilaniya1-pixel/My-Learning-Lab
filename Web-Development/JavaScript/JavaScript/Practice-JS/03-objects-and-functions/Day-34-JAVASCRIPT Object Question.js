@@ -66,3 +66,6 @@ function invertCourceData(courceData){
     }
     return studentMap;
 }
+const courceData = {
+    "javascript"
+}
