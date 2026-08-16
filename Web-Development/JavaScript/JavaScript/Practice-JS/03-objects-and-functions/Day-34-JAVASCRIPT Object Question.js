@@ -36,6 +36,6 @@ function calculateChartSummary(cart){
 
     return {
         totalItems: totalItems,
-        
+        subtotal: subtotal,
     }
 }
