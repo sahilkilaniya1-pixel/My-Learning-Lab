@@ -53,5 +53,5 @@ Main student ka naam boluga, jaise Sahil. pucho 'kya sahil meri register noteboo
 -Phir Sahil ke page par current cource ka naam write down kar do.
 */
 function invertCourceData(courceData){
-    
+    const studentMap = {};
 }
