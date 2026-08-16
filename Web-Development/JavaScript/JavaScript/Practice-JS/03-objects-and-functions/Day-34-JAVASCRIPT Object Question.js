@@ -24,9 +24,11 @@ function calculateChartSummary(cart){
 
         let taxRate = 0;
         if(item.category === "electronics"){
-            taxRate = 0.18%;
+            taxRate = 0.18;
         } else if (item.category === "clothing"){
-            
+            taxRate = 0.12;
+        } else {
+            taxRate = 0.05;
         }
     }
 }
