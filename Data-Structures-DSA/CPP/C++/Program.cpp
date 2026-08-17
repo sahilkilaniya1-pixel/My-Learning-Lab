@@ -21,5 +21,5 @@ cout (character output): "character output" ka short form hai. iska pronounciati
 
 
 2. Yeh Kaise Kaam Karta Hai?
-
+std::cout ke sath hamesha Insertion Operator (<<) 
  */
