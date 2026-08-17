@@ -14,4 +14,8 @@ std(namespace): C++ mein standard library ki
 cheezein ek "Container" ke andar hoti hain jis namespace kehte hain. std ka matlab "Standard"hai.
 
 
-::(scope resolution operator): yeh compiler ko bata hai ki cout kahan dhoondhna hai (yani std namespace  */
+::(scope resolution operator): yeh compiler ko bata hai ki cout kahan dhoondhna hai (yani std namespace ke andar).
+
+
+
+ */
