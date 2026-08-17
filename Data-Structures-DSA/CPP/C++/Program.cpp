@@ -18,4 +18,8 @@ cheezein ek "Container" ke andar hoti hain jis namespace kehte hain. std ka matl
 
 
 cout (character output): "character output" ka short form hai. iska pronounciation "See-out" hota hai.
+
+
+2. Yeh Kaise Kaam Karta Hai?
+
  */
