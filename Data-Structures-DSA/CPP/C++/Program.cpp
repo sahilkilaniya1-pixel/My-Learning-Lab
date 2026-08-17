@@ -17,5 +17,5 @@ cheezein ek "Container" ke andar hoti hain jis namespace kehte hain. std ka matl
 ::(scope resolution operator): yeh compiler ko bata hai ki cout kahan dhoondhna hai (yani std namespace ke andar).
 
 
-cout (character output): "character output" ka 
+cout (character output): "character output" ka short form hai. iska pronounciation "See-out" hota hai.
  */
