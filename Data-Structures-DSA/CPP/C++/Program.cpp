@@ -24,5 +24,6 @@ cout (character output): "character output" ka short form hai. iska pronounciati
 std::cout ke sath hamesha Insertion Operator (<<) ka use kiya jata hai. yeh operaotr data ko cout ki taraf bhejta hai
 std::cout << "Data jo print karna hai";
 
+3. Standard Code Example
 
  */
