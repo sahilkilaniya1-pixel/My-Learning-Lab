@@ -8,3 +8,11 @@ int main() {  //{} show source of code
     // <<endl is a keyword for print new line
     return 0;
 }
+/*
+1. Naam ka Matlab (Breakdown)
+
+
+
+
+
+ */
