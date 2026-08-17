@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main (){
-    cout <<"Namste Dunia" << endl;
+int main() {
+    cout << "Namaste Dunia" << endl;
     return 0;
 }
