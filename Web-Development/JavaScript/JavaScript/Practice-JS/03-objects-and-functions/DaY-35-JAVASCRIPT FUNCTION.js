@@ -5,3 +5,5 @@ function sayMyName(){
 //Function use - function call
 sayMyName();
 
+
+// function printCounting(){
