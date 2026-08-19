@@ -47,10 +47,10 @@ function getMyname(firstName, lastName){
     let fullName = firstName + " "+ lastName;
     return fullName;
     //Unreachable statements
-    let a = 10;
-    let b = 15;
-    let sum = a+b;
-    console.log(sum,);
+    // let a = 10;
+    // let b = 15;
+    // let sum = a+b;
+    // console.log(sum,);
 }
 let fullname = getMyname("Sahil","Kilaniya");
 console.log("Full name", fullname);  //Full name Sahil Kilaniya
