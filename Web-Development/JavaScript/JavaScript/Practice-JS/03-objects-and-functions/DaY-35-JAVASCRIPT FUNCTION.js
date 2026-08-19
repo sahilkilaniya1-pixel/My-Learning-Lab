@@ -81,3 +81,10 @@ let getExp = function(x,y){
     return solve;
 }
 console.log(getExp(2,10));
+
+//arrow function
+let getExp = (x,y) =>{
+    let solve = x**y;
+    return solve;
+}
+console.log(getExp(2,10));
