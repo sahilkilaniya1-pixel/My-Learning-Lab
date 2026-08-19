@@ -48,4 +48,4 @@ function getMyname(firstName, lastName){
     return fullName;
 };
 let fullname = getMyname("Sahil","Kilaniya");
-console.log("Full name", fullname);
+console.log("Full name", fullname);  //Full name Sahil Kilaniya
