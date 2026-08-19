@@ -1,5 +1,5 @@
 //Function definition
-function sayMyName(){
+function sayMyName() {
     console.log("Sahil")
 }
 //Function use - function call
@@ -15,8 +15,8 @@ sayMyName(); //Sahil
 
 
 //parameter:
-function printNumber(num){ //num- parameter
-    console.log("printing Number:",num);
+function printNumber(num) { //num- parameter
+    console.log("printing Number:", num);
 }
 printNumber(5); // argument call
 // printing Number: 5
@@ -25,14 +25,14 @@ printNumber(5); // argument call
 
 
 //Multiparameter
-function getAverage(num1, num2){
-    let avg = (num1+num2)/2;
-    console.log("Average:",avg);
-    }
-getAverage(3,70); //Average: 36.5
+function getAverage(num1, num2) {
+    let avg = (num1 + num2) / 2;
+    console.log("Average:", avg);
+}
+getAverage(3, 70); //Average: 36.5
 
 
 
-function getSum(a,b,c){
-    
+function getSum(a, b, c) {
+    let sum = a + b + c;
 }
