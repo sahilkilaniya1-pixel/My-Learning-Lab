@@ -54,3 +54,7 @@ function getMyname(firstName, lastName){
 }
 let fullname = getMyname("Sahil","Kilaniya");
 console.log("Full name", fullname);  //Full name Sahil Kilaniya
+
+
+
+
