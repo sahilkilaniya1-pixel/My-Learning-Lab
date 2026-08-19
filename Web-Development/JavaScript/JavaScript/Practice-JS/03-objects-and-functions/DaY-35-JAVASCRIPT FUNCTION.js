@@ -69,5 +69,5 @@ console.log(output);
 
 let squareNumber = function(num){
     let solve = num**2;
-    
+    return ans;
 }
