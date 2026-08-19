@@ -19,3 +19,6 @@ function printNumber(num){ //num- parameter
     console.log("printing Number:",num);
 }
 printNumber(5); // argument call
+
+
+//Multiparameter
