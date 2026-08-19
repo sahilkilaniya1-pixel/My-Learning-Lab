@@ -10,3 +10,4 @@ sayMyName("Sahil");
 
 
 //Variable hosting
+var age = 25;
