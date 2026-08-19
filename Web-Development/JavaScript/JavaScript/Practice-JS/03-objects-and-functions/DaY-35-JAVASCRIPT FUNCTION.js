@@ -15,7 +15,7 @@ sayMyName();
 
 
 //parameter:
-function printNumber(num){
+function printNumber(num){ //num- parameter
     console.log("printing Number:",num);
 }
-printNumber(5);
+printNumber(5); // argument call
