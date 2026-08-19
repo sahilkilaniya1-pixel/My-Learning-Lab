@@ -39,3 +39,7 @@ function getSum(a, b, c) {
 }
 let ans = getSum(1,2,3);
 console.log("Printing Sum:",ans); //Printing Sum: 6
+
+
+
+let fullname = getMyname("Sahil","Kilaniya");
