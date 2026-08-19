@@ -16,5 +16,6 @@ sayMyName();
 
 //parameter:
 function printNumber(num){
-    console.log("printing Number:")
+    console.log("printing Number:",num);
 }
+printNumber(5);
