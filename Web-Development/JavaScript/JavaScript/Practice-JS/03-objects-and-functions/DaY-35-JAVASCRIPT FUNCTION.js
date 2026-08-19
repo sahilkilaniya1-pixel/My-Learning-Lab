@@ -15,3 +15,6 @@ sayMyName();
 
 
 //parameter:
+function printNumber(num){
+    
+}
