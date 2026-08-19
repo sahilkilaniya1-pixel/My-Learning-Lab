@@ -72,3 +72,4 @@ let squareNumber = function(num){
     return ans;
 }
 let solve = squareNumber(5);
+console.log(solve);
