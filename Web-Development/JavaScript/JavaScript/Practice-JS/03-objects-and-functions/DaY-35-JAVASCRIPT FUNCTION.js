@@ -76,4 +76,6 @@ console.log(solve);
 
 
 
-let getExp = function(x,y){}
+let getExp = function(x,y){
+    let solve = x**y;
+}
