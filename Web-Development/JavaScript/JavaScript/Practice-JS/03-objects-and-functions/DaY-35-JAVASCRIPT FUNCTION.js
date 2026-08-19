@@ -19,7 +19,7 @@ function printNumber(num){ //num- parameter
     console.log("printing Number:",num);
 }
 printNumber(5); // argument call
-
+// printing Number: 5
 
 //Multiparameter
 function getAverage(num1, num2){
