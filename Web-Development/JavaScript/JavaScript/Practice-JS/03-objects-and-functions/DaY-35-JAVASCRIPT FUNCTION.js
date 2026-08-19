@@ -38,3 +38,4 @@ function getSum(a, b, c) {
     return sum;
 }
 let ans = getSum(1,2,3);
+console.log("Printing Sum:",ans);
