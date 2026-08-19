@@ -63,3 +63,10 @@ const getMultiplication = function (a, b) {
 }
 let output =(getMultiplication(2, 10));
 console.log(output);
+
+
+
+
+let squareNumber = function(num){
+    
+}
