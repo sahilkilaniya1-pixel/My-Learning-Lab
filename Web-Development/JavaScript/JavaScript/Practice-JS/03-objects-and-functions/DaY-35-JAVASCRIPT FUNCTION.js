@@ -58,7 +58,8 @@ console.log("Full name", fullname);  //Full name Sahil Kilaniya
 
 
 
-function getMultiplication(a,b){
+const getMultiplication =function(a,b){
     return a*b;
 }
 let output = console.log(getMultiplication(2,10));
+console.log(output);
