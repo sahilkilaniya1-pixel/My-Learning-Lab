@@ -48,6 +48,7 @@ function getMyname(firstName, lastName){
     return fullName;
     //Unreachable statements
     let a = 10;
+    let b = 15;
     
 }
 let fullname = getMyname("Sahil","Kilaniya");
