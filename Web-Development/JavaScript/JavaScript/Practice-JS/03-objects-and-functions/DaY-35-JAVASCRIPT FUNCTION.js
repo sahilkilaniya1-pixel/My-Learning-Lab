@@ -26,4 +26,4 @@ function getAverage(num1, num2){
     let avg = (num1+num2)/2;
     console.log("Average:",avg);
     }
-getAverage(3,7);
+getAverage(3,70); //Average: 36.5
