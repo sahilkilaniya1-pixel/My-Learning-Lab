@@ -1,3 +1,3 @@
 //Call stack & Hosting
 
-//Hosting -> process  -> var dec and func dec -> shift to the top in their stage
+//Hosting -> process  -> var  and func -> shift to the top in their stage
