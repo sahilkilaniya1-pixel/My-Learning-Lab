@@ -35,4 +35,5 @@ getAverage(3, 70); //Average: 36.5
 
 function getSum(a, b, c) {
     let sum = a + b + c;
+    return sum;
 }
