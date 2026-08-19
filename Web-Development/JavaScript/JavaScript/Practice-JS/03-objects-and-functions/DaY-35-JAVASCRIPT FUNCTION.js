@@ -24,4 +24,4 @@ printNumber(5); // argument call
 //Multiparameter
 function getAverage(num1, num2){
     let avg = (num1+num2)/2;
-    
+    console.log("Average:",avg);
