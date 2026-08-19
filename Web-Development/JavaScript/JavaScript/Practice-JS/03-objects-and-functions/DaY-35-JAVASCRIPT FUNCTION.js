@@ -44,5 +44,6 @@ console.log("Printing Sum:",ans); //Printing Sum: 6
 
 let fullname = getMyname("Sahil","Kilaniya");
 function getMyname(firstName, lastName){
+    let fullName = firstName + " "+ lastName;
     
 }
