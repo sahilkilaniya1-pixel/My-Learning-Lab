@@ -69,7 +69,11 @@ console.log(output);
 
 let squareNumber = function(num){
     let solve = num**2;
-    return ans;
+    return solve;
 }
 let solve = squareNumber(5);
 console.log(solve);
+
+
+
+let getExp = function(x,y){}
