@@ -37,14 +37,14 @@ function getSum(a, b, c) {
     let sum = a + b + c;
     return sum;
 }
-let ans = getSum(1,2,3);
-console.log("Printing Sum:",ans); //Printing Sum: 6
+let ans = getSum(1, 2, 3);
+console.log("Printing Sum:", ans); //Printing Sum: 6
 
 
 
 
-function getMyname(firstName, lastName){
-    let fullName = firstName + " "+ lastName;
+function getMyname(firstName, lastName) {
+    let fullName = firstName + " " + lastName;
     return fullName;
     //Unreachable statements
     // let a = 10;
@@ -52,14 +52,14 @@ function getMyname(firstName, lastName){
     // let sum = a+b;
     // console.log(sum,);
 }
-let fullname = getMyname("Sahil","Kilaniya");
+let fullname = getMyname("Sahil", "Kilaniya");
 console.log("Full name", fullname);  //Full name Sahil Kilaniya
 
 
 
 
-const getMultiplication =function(a,b){
-    return a*b;
+const getMultiplication = function (a, b) {
+    return a * b;
 }
-let output = console.log(getMultiplication(2,10));
+let output =(getMultiplication(2, 10));
 console.log(output);
