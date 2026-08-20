@@ -20,3 +20,6 @@ console.log(age); // 25
 // sayHello();
 // function sayHello () {
 //     console.log("Hello");
+// }// Hello
+
+
