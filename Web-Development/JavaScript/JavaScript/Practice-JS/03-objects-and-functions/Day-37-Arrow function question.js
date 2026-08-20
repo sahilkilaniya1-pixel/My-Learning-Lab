@@ -65,6 +65,12 @@ function validatePassword(password) {
 console.log(validatePassword("pass@123"))
 console.log(validatePassword("Pass@123"))
 
+// =========================================
+const validatePassword = (password) =>{
+    if(password.length <8){
+        return  false;
+    }
+}
 
 
 // Q3. Write a function validatePhoneNumber(number) that checks if the given string is a valid 10-digit Indian 
@@ -121,3 +127,5 @@ function sanitizeInput(str) {
 console.log(sanitizeInput("   <h1>Hello World</h1>   ")); //Output : Hello World
 
 
+// Q6. Write a function toggleClass(elementId, className) that toggles a CSS class on a given element (e.g., for 
+// a dark mode switch).
