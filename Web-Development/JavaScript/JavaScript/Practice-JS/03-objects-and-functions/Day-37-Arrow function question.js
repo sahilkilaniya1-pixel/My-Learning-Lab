@@ -37,7 +37,7 @@ function validatePassword(password) {
     return hasUpper && hasNumber && hasSpecial;
 }
 console.log(validatePassword("pass@123"))
-console.log(validatePassword("Pass@123")) 
+console.log(validatePassword("Pass@123"))
 
 
 
@@ -55,6 +55,9 @@ function validatePhoneNumber(number) {
 console.log(validatePhoneNumber("1234567891")) //Output-True
 
 
+
+
+
 // Q4. Write a function matchPasswords(pass1, pass2) that checks whether two entered passwords (e.g., in a 
 // signup form) match.
 function matchPasswords(pass1, pass2) {
@@ -69,5 +72,26 @@ function matchPasswords(pass1, pass2) {
 console.log(matchPasswords("Sa123", "Sa123")); // Output-True
 console.log(matchPasswords("Sa123", "Sa12")); //Output-False
 
+
+
+
+// Q5. Write a function sanitizeInput(str) that removes extra leading/trailing spaces and any HTML tags from a 
+// user input string. 
+function sanitizeInput(str) {
+    let cleanStr = "";
+    let insideTag = false;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === '<') insideTag = true;
+        else if (str[i] === '>') insideTag = false;
+        else if (!insideTag) cleanStr += str[i];
+    }
+    let start = 0, end = cleanStr.length - 1;
+    while (start <= end && cleanStr[start] === ' ') start++;
+    while (end >= start && cleanStr[end] === ' ') end--;
+    let result = "";
+    for (let i = start; i <= end; i++) result += cleanStr[i];
+    return result;
+}
+console.log(sanitizeInput("   <h1>Hello World</h1>   ")); //Output : Hello World
 
 

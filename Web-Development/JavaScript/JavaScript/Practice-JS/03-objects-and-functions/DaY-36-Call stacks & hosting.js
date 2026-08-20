@@ -23,9 +23,14 @@ console.log(age); // 25
 // }// Hello
 
 
+// Example 1: Function Declaration (Sahi Chalega)
+function sayHello (){
+    console.log("Hello")
+}
+sayHello(); // Output: Hello
 
-//function exp
-sayHello();
+// Example 2: Function Expression (ReferenceError)
+sayHello(); // ❌ Error!
 let sayHello = function(){
     console.log("Hello");
-}///reference Error
+}
