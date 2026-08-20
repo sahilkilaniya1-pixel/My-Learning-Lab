@@ -69,9 +69,39 @@ console.log(validatePassword("Pass@123"))
 const validatePassword = (password) =>{
     if(password.length <8){
         return  false;
+ 
     }
-}
+    let hasUpper = false;
+    let hasNumber = false;
+    let hasSpecial = false;
+    let specialChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+    
+    for(let i=0; i<password.length; i++){
+        let char = password[i];
 
+        if(char => 'A' && char <='Z'){
+            hasUpper = true;
+        }
+        else if (char >= '0'&& char<='9'){
+            hasNumber = true;
+        }
+        else {
+            for(let j=0; j<specialChars; j++){
+                if(char=== specialChars[j]){
+                    hasSpecial = true;
+                }
+            }
+        }
+    }
+    if(hasUpper && hasNumber && hasSpecial){
+        return true;
+    }else{
+        return false;
+    }
+};
+console.log(validatePassword("Pass@123")); //True
+console.log(validatePassword("pass@123")); //False
+console.log(validatePassword("Pass123"));  //False
 
 // Q3. Write a function validatePhoneNumber(number) that checks if the given string is a valid 10-digit Indian 
 // phone number. 
