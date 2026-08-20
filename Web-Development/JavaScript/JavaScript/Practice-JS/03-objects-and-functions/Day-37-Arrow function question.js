@@ -18,20 +18,20 @@ console.log(validateEmail("invalid.email@"));
 
 // ====================
 const validateEmail = (email) => {
-  let atIndex = -1;
-  let dotIndex = -1;
-  for (let i = 0; i < email.length; i++) {
-    if (email[i] === '@') {
-      atIndex = i;
-    } else if (email[i] === '.') {
-      dotIndex = i;
+    let atIndex = -1;
+    let dotIndex = -1;
+    for (let i = 0; i < email.length; i++) {
+        if (email[i] === '@') {
+            atIndex = i;
+        } else if (email[i] === '.') {
+            dotIndex = i;
+        }
     }
-  }
-  if (atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1) {
-    return true;
-  }
-  
-  return false;
+    if (atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1) {
+        return true;
+    }
+
+    return false;
 };
 console.log(validateEmail("test@example.com"));
 console.log(validateEmail("test@com"));
@@ -66,36 +66,36 @@ console.log(validatePassword("pass@123"))
 console.log(validatePassword("Pass@123"))
 
 // =========================================
-const validatePassword = (password) =>{
-    if(password.length <8){
-        return  false;
- 
+const validatePassword = (password) => {
+    if (password.length < 8) {
+        return false;
+
     }
     let hasUpper = false;
     let hasNumber = false;
     let hasSpecial = false;
     let specialChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
-    
-    for(let i=0; i<password.length; i++){
+
+    for (let i = 0; i < password.length; i++) {
         let char = password[i];
 
-        if(char => 'A' && char <='Z'){
+        if (char => 'A' && char <= 'Z') {
             hasUpper = true;
         }
-        else if (char >= '0'&& char<='9'){
+        else if (char >= '0' && char <= '9') {
             hasNumber = true;
         }
         else {
-            for(let j=0; j<specialChars; j++){
-                if(char=== specialChars[j]){
+            for (let j = 0; j < specialChars; j++) {
+                if (char === specialChars[j]) {
                     hasSpecial = true;
                 }
             }
         }
     }
-    if(hasUpper && hasNumber && hasSpecial){
+    if (hasUpper && hasNumber && hasSpecial) {
         return true;
-    }else{
+    } else {
         return false;
     }
 };
@@ -117,12 +117,12 @@ function validatePhoneNumber(number) {
 console.log(validatePhoneNumber("1234567891")) //Output-True
 
 // =================================
-const validatePhoneNumber = (number) =>{
-    if(number.length !==10){
+const validatePhoneNumber = (number) => {
+    if (number.length !== 10) {
         return false;
     }
-    for(let i=1; i<number.length; i++){
-        if(number[i]<'0' || number[i]> '9'){
+    for (let i = 1; i < number.length; i++) {
+        if (number[i] < '0' || number[i] > '9') {
             return false;
         }
     }
@@ -150,6 +150,20 @@ function matchPasswords(pass1, pass2) {
 console.log(matchPasswords("Sa123", "Sa123")); // Output-True
 console.log(matchPasswords("Sa123", "Sa12")); //Output-False
 
+// =================================
+const matchPasswords = (pass1, pass2) => {
+    if (pass1.length !== pass2.length) {
+        return false;
+    }
+    for (let i = 0; i < pass1.length; i++) {
+        if (pass1[i] !== pass2[i]) {
+            return false;
+        }
+    }
+    return true;
+};
+console.log(matchPasswords("abc123", "abc123"));  //Output: true
+console.log(matchPasswords("abc123", "abc124"));  //Output: False
 
 
 
@@ -172,6 +186,37 @@ function sanitizeInput(str) {
 }
 console.log(sanitizeInput("   <h1>Hello World</h1>   ")); //Output : Hello World
 
+// ===========================
+const sanitizeInput = (str) => {
+    let cleanStr = "";
+    let insideTag = false;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === '<') {
+            insideTag = true;
+        } else if (str[i] === '>') {
+            insideTag = false;
+        } else if (!insideTag) {
+            cleanStr += str[i];
+        }
+    }
+    let start = 0;
+    let end = cleanStr.length - 1;
+    while (start <= end && cleanStr[start] === ' ') {
+        start++;
+    }
+    while (end >= start && cleanStr[end] === ' ') {
+        end--;
+    }
+    let result = "";
+    for (let i = start; i <= end; i++) {
+        result += cleanStr[i];
+    }
 
-// Q6. Write a function toggleClass(elementId, className) that toggles a CSS class on a given element (e.g., for 
+    return result;
+};
+console.log(sanitizeInput(" <b>Hello World</b> ")); // Output: "Hello World"
+console.log(sanitizeInput("<h1>Title</h1>"));       // Output: "Title"
+
+
+// Q6. Write a function toggleClass(elementId, className) that toggles a CSS class on a given element (e.g., for
 // a dark mode switch).
