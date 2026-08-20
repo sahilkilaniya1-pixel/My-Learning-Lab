@@ -44,3 +44,8 @@ try {
   console.log("Var expression error:", err.message);
 }
 
+var sayHelloVar = function () {
+  console.log("Hello from Var");
+};
+
+
