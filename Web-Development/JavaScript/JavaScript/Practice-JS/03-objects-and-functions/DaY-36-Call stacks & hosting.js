@@ -54,4 +54,20 @@ var sayHelloVar = function () {
 // ==========================================
 
 function first() {
- 
+  console.log("1. Inside first function");
+  second(); // Call Stack mein second() push hoga
+  console.log("4. Exiting first function");
+}
+
+function second() {
+  console.log("2. Inside second function");
+  third(); // Call Stack mein third() push hoga
+  console.log("3. Exiting second function");
+}
+
+function third() {
+  console.log("   --> Inside third function (Stack Peak)");
+}
+
+// Main execution start
+first();
