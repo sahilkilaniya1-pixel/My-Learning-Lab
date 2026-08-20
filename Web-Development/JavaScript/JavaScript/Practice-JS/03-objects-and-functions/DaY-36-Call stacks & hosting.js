@@ -11,3 +11,4 @@ sayMyName("Sahil");
 
 //Variable hosting
 // console.log(age);  //undefined 
+var age = 25;
