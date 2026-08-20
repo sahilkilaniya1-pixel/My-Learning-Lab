@@ -1,8 +1,45 @@
 // Q1. Write a function validateEmail(email) that checks whether the given email string is in a valid format 
 // using a regular expression. 
-const validateEmail = (email)=>{
-    
+function validateEmail(email) {
+    let atIndex = -1;
+    let dotIndex = -1;
+    for (let i = 0; i < email.length; i++) {
+        if (email[i] === '@') atIndex = i;
+        if (email[i] === '.') dotIndex = i;
+    }
+    if (atIndex < 1 || dotIndex <= atIndex + 1 || dotIndex === email.length - 1) {
+        return false;
+    }
+    return true;
 }
+console.log(validateEmail("user@example.com"));
+console.log(validateEmail("invalid.email@"));
+
+
+// ====================
+const validateEmail = (email) => {
+  let atIndex = -1;
+  let dotIndex = -1;
+  for (let i = 0; i < email.length; i++) {
+    if (email[i] === '@') {
+      atIndex = i;
+    } else if (email[i] === '.') {
+      dotIndex = i;
+    }
+  }
+  if (atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1) {
+    return true;
+  }
+  
+  return false;
+};
+console.log(validateEmail("test@example.com"));
+console.log(validateEmail("test@com"));
+console.log(validateEmail("@example.com"));
+// ===========================
+
+
+
 
 // Q2. Write a function validatePassword(password) that returns true only if the password has at least 8 
 // characters, one uppercase letter, one number, and one special character. 
