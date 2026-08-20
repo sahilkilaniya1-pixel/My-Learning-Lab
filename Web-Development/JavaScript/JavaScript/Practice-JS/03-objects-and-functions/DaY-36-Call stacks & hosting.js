@@ -29,3 +29,4 @@ function sayHello (){
 }
 sayHello(); // Output: Hello
 
+// Example 2: Function Expression (ReferenceError)
