@@ -18,3 +18,5 @@ console.log(age); // 25
 
 //Function dec
 // sayHello();
+// function sayHello () {
+//     console.log("Hello");
