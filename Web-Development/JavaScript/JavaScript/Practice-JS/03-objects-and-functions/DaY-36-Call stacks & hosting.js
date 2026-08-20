@@ -1,41 +1,36 @@
-//Call stack & Hosting
+// ==========================================
+// 1. HOISTING (VAR vs LET/CONST)
+// ==========================================
 
-//Hosting -> process  -> var  and func -> shift to the top in their stage
+// Variable Hoisting with 'var'
+console.log("age (before declaration):", age); // Output: undefined
+var age = 25;
+console.log("age (after declaration):", age);  // Output: 25
+
+// Variable Hoisting with 'let' / 'const' (TDZ - Temporal Dead Zone)
+try {
+  console.log(score); // ❌ Throws ReferenceError
+  let score = 100;
+} catch (err) {
+  console.log("Error in let hoisting:", err.message);
+}
+
+
+// ==========================================
+// 2. FUNCTION HOISTING
+// ==========================================
+
+// A) Function Declaration (Fully Hoisted)
+sayMyName("Sahil"); // ✅ Output: Sahil (Pehle call kar sakte hain)
 
 function sayMyName(finalName) {
-    console.log(finalName);
-}
-sayMyName("Sahil");
-
-
-
-//Variable hosting
-// console.log(age);  //undefined 
-var age = 25;
-console.log(age); // 25
-
-
-
-//Function dec
-// sayHello();
-// function sayHello () {
-//     console.log("Hello");
-// }// Hello
-
-
-// Example 1: Function Declaration (Sahi Chalega)
-function sayHello (){
-    console.log("Hello")
-}
-sayHello(); // Output: Hello
-
-// Example 2: Function Expression (ReferenceError)
-sayHello(); // ❌ Error!
-let sayHello = function(){
-    console.log("Hello");
+  console.log("My name is:", finalName);
 }
 
+// B) Function Expression (Var vs Let)
+try {
+  sayHelloLet(); // ❌ ReferenceError
+} catch (err) {
+  console.log("Let expression error:", err.message);
+}
 
-
-// function call stack -> container -> LIFO last in first one
-                // |-> Data Structure 
