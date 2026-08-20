@@ -34,3 +34,8 @@ sayHello(); // ❌ Error!
 let sayHello = function(){
     console.log("Hello");
 }
+
+
+
+// function call stack -> container -> LIFO last in first one
+                // |-> Data Structure 
