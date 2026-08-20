@@ -16,3 +16,5 @@ console.log(age); // 25
 
 
 
+//Function dec
+// sayHello();
