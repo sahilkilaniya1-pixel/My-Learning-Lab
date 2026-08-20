@@ -31,3 +31,6 @@ sayHello(); // Output: Hello
 
 // Example 2: Function Expression (ReferenceError)
 sayHello(); // ❌ Error!
+let sayHello = function(){
+    console.log("Hello");
+}
