@@ -13,3 +13,6 @@ sayMyName("Sahil");
 // console.log(age);  //undefined 
 var age = 25;
 console.log(age); // 25
+
+
+
