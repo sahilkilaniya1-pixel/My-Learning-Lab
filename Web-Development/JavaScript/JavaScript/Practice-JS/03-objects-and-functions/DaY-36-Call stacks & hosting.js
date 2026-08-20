@@ -40,3 +40,7 @@ let sayHelloLet = function () {
 
 try {
   sayHelloVar(); // ❌ TypeError: sayHelloVar is not a function
+} catch (err) {
+  console.log("Var expression error:", err.message);
+}
+
