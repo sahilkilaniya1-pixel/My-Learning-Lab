@@ -16,4 +16,14 @@
 
 
 
-
+function validatePhoneNumber(number) {
+    if (number.length !== 10)
+        return false;
+    if (number[0] < '6' || number[0] > '9')
+        return false;
+    for (let i = 1; i < number.length; i++) {
+        if (number[i] < '0' || number[i] > '9')
+            return false;
+    }
+    return true;
+}
