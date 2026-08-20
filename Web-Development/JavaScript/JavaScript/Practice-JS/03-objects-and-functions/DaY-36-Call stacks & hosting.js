@@ -23,3 +23,4 @@ console.log(age); // 25
 // }// Hello
 
 
+// Example 1: Function Declaration (Sahi Chalega)
