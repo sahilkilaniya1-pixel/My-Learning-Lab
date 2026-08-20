@@ -38,3 +38,5 @@ let sayHelloLet = function () {
   console.log("Hello from Let");
 };
 
+try {
+  sayHelloVar(); // ❌ TypeError: sayHelloVar is not a function
