@@ -5,3 +5,6 @@
 function sayMyName(finalName) {
     console.log(finalName);
 }
+sayMyName("Sahil");
+
+
