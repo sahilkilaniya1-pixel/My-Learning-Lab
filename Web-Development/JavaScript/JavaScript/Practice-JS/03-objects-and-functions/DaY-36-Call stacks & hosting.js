@@ -8,3 +8,6 @@ function sayMyName(finalName) {
 sayMyName("Sahil");
 
 
+
+//Variable hosting
+// console.log(age);  //undefined 
