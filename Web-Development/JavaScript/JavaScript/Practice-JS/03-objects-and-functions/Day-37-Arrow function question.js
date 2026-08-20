@@ -1,19 +1,8 @@
 // Q1. Write a function validateEmail(email) that checks whether the given email string is in a valid format 
 // using a regular expression. 
-function validateEmail(email) {
-    let atIndex = -1;
-    let dotIndex = -1;
-    for (let i = 0; i < email.length; i++) {
-        if (email[i] === '@') atIndex = i;
-        if (email[i] === '.') dotIndex = i;
-    }
-    if (atIndex < 1 || dotIndex <= atIndex + 1 || dotIndex === email.length - 1) {
-        return false;
-    }
-    return true;
+const validateEmail = (email)=>{
+    
 }
-console.log(validateEmail("user@example.com"));
-console.log(validateEmail("invalid.email@"));
 
 // Q2. Write a function validatePassword(password) that returns true only if the password has at least 8 
 // characters, one uppercase letter, one number, and one special character. 
