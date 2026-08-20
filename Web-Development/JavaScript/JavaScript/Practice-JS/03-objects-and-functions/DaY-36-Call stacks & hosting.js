@@ -26,3 +26,6 @@ console.log(age); // 25
 // Example 1: Function Declaration (Sahi Chalega)
 function sayHello (){
     console.log("Hello")
+}
+sayHello(); // Output: Hello
+
