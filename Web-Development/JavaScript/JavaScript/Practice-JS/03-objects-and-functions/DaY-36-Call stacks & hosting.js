@@ -33,3 +33,8 @@ try {
 } catch (err) {
   console.log("Let expression error:", err.message);
 }
+
+let sayHelloLet = function () {
+  console.log("Hello from Let");
+};
+
