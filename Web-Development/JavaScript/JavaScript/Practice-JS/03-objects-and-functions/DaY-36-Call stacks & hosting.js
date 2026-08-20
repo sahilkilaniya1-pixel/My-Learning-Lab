@@ -60,4 +60,5 @@ function first() {
 }
 
 function second() {
+  console.log("2. Inside second function");
   
