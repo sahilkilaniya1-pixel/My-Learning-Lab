@@ -15,7 +15,8 @@
 
 
 
-
+// Q3. Write a function validatePhoneNumber(number) that checks if the given string is a valid 10-digit Indian 
+// phone number. 
 function validatePhoneNumber(number) {
     if (number.length !== 10)
         return false;
