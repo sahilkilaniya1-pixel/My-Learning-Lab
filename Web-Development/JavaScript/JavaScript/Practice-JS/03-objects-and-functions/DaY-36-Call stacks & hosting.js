@@ -65,3 +65,9 @@ function second() {
   console.log("3. Exiting second function");
 }
 
+function third() {
+  console.log("   --> Inside third function (Stack Peak)");
+}
+
+// Main execution start
+first();
