@@ -116,7 +116,23 @@ function validatePhoneNumber(number) {
 }
 console.log(validatePhoneNumber("1234567891")) //Output-True
 
-
+// =================================
+const validatePhoneNumber = (number) =>{
+    if(number.length !==10){
+        return false;
+    }
+    for(let i=1; i<number.length; i++){
+        if(number[i]<'0' || number[i]> '9'){
+            return false;
+        }
+    }
+    return true;
+};
+console.log(validatePhoneNumber("9876543210")) //Output: true
+console.log(validatePhoneNumber("5876543210")); //Output: true
+console.log(validatePhoneNumber("98765abc10")); //Output: false
+console.log(validatePhoneNumber("98765")); // Output: false
+// =============================================
 
 
 
