@@ -61,4 +61,7 @@ function first() {
 
 function second() {
   console.log("2. Inside second function");
-  
+  third(); // Call Stack mein third() push hoga
+  console.log("3. Exiting second function");
+}
+
