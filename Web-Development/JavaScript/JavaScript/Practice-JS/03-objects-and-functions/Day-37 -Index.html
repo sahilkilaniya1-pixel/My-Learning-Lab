@@ -108,7 +108,12 @@
 
         data.forEach((rowObject)=>{
             const tr = document.createElement("td");
-            keys.forEach((key) =>{})
+            keys.forEach((key) =>{
+                const td = document.createElement("td");
+                td.textContent = rowObject[key];
+                tr.appendChild(tr);
+            });
+            
         })
       }
     </script>
