@@ -38,7 +38,9 @@
         const ul = document.createElement("ul");
         arr.forEach((item)=>{
             const li = document.createElement("li");
-        })
+            li.textContent = item;
+            ul.appendChild(li);
+        });
       }
     </script>
   </body>
