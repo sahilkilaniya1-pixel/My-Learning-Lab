@@ -229,3 +229,4 @@ const toggleClass = (elementId, className){
     } else {
         element.classList.add(className);
     }
+};
