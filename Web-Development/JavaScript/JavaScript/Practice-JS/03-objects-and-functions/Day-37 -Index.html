@@ -102,8 +102,11 @@
         key.forEach((key)=>{
             const th = document.createElement("th");
             th.textContent = key.toUpperCase();
-            
-        })
+            headerRow.appendChild(th);
+        });
+        table.appendChild(headerRow);
+
+        data.forEach((rowObject)=>{})
       }
     </script>
   </body>
