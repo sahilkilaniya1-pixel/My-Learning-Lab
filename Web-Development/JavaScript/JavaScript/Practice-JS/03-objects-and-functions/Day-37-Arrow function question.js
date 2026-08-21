@@ -223,4 +223,5 @@ console.log(sanitizeInput("<h1>Title</h1>"));       // Output: "Title"
 const toggleClass = (elementId, className){
     const element = document.getElementById(elementId);
     if(!element)
-        
+        return;
+    
