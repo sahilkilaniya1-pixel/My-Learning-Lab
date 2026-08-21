@@ -21,4 +21,14 @@
             if(!element) return "Element Not Found";
 
             if(element.classList.contains(className)){
-                
+                element.classList.remove(className);
+                return "Class Removed";
+            } else {
+                element.classList.add(className);
+                return "Class Added";
+            }
+        };
+        console.log(toggleClass("myBox", "Active"));
+    </script>
+</body>
+</html>
