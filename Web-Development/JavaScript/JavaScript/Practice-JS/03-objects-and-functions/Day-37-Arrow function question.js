@@ -222,4 +222,5 @@ console.log(sanitizeInput("<h1>Title</h1>"));       // Output: "Title"
 // a dark mode switch).
 const toggleClass = (elementId, className){
     const element = document.getElementById(elementId);
-    
+    if(!element)
+        
