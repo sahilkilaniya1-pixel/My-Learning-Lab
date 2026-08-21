@@ -34,19 +34,25 @@
       //Questioin: 7: Q7. Write a function showHideElement(elementId) that toggles the visibility of an element between shown
       // and hidden.
 
-      const createListFromArray = (arr, containerId)=>{
+      const createListFromArray = (arr, containerId) => {
         const ul = document.createElement("ul");
-        arr.forEach((item)=>{
-            const li = document.createElement("li");
-            li.textContent = item;
-            ul.appendChild(li);
+
+        arr.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          ul.appendChild(li);
         });
+
         const container = document.getElementById(containerId);
-        if(container){
-            container.appendChild(ul);
+
+        if (container) {
+          container.appendChild(ul);
+          console.log("Success", arr);
+        } else {
+          console.error("Error" + containerId + " HTML page par nahi hai.");
         }
       };
-      createListFromArray(["Apple", "Banana", "Orange"], "myListDiv")
+      createListFromArray(["Apple", "Banana", "Orange"], "myListDiv");
     </script>
   </body>
 </html>
