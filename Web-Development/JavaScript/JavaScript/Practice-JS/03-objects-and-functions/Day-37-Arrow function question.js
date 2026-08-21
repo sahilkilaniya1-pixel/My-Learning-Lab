@@ -230,3 +230,4 @@ const toggleClass = (elementId, className){
         element.classList.add(className);
     }
 };
+console.log(toggleClass("myBox","Active"));
