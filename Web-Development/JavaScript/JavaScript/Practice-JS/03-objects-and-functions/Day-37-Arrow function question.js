@@ -224,4 +224,5 @@ const toggleClass = (elementId, className){
     const element = document.getElementById(elementId);
     if(!element)
         return;
-    
+    if(element.classList.contains(className)){
+        
