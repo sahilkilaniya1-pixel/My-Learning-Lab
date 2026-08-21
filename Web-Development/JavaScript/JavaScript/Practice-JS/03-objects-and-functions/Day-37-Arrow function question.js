@@ -225,4 +225,5 @@ const toggleClass = (elementId, className){
     if(!element)
         return;
     if(element.classList.contains(className)){
-        
+        element.classList.remove(className);
+    
