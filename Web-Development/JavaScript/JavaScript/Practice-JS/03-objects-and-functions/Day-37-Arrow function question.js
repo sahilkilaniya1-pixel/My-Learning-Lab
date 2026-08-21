@@ -216,18 +216,3 @@ const sanitizeInput = (str) => {
 };
 console.log(sanitizeInput(" <b>Hello World</b> ")); // Output: "Hello World"
 console.log(sanitizeInput("<h1>Title</h1>"));       // Output: "Title"
-
-
-// Q6. Write a function toggleClass(elementId, className) that toggles a CSS class on a given element (e.g., for
-// a dark mode switch).
-const toggleClass = (elementId, className){
-    const element = document.getElementById(elementId);
-    if(!element)
-        return;
-    if(element.classList.contains(className)){
-        element.classList.remove(className);
-    } else {
-        element.classList.add(className);
-    }
-};
-console.log(toggleClass("myBox","Active"));
