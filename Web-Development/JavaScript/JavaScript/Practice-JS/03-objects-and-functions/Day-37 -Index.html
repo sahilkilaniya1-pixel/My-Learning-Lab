@@ -21,7 +21,7 @@
     <!-- Q9 -->
     <!-- <div id="tableContainer"></div> -->
     <!-- Q10 -->
-    <form id="signupForm">
+    <!-- <form id="signupForm">
       <input type="text" name="fullName" placeholder="Enter Name" /><br /><br />
       <input
         type="email"
@@ -29,7 +29,10 @@
         placeholder="Enter Email"
       /><br /><br />
       <button type="button" onclick="handleSubmit()">Submit</button>
-    </form>
+    </form> -->
+    <!-- Q11 -->
+    <form id="loginForm">
+      
     <script>
       // Q6. Write a function toggleClass(elementId, className) that toggles a CSS class on a given element (e.g., for
       // a dark mode switch).
@@ -141,23 +144,23 @@
 
       // Q10. Write a function highlightActiveTab(tabId) that adds an "active" class to the clicked tab and removes it
       // from all other tabs (assume tabs share the class "nav-tab").
-      const  getFromData = (formId) =>{
+      const getFromData = (formId) => {
         const from = document2.getElementById(formId);
-        if(!form) return {};
+        if (!form) return {};
 
         const formData = {};
         const input = form.querySelectorAll("input, select, textarea");
 
-        inputs.forEach((input)=> {
-            if(input.name) {
-              formData[input.name]=input.value;
-            }
+        inputs.forEach((input) => {
+          if (input.name) {
+            formData[input.name] = input.value;
+          }
         });
         return formData;
       };
-      function handleSubmit(){
-          const data = getFormData("signupForm");
-          console.log("data");
+      function handleSubmit() {
+        const data = getFormData("signupForm");
+        console.log("data");
       }
     </script>
   </body>
