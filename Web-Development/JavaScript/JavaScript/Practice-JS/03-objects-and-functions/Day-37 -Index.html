@@ -107,6 +107,7 @@
       //   ];
       //   createTableFromData(myUsersData, "tableContainer");
 
+      
       // Q9. Write a function updateCartCount(count) that updates the text of a cart badge element to show the
       // current number of items.
 
@@ -146,6 +147,7 @@
       // ];
       // createTableFromData(usersList, "tableContainer");
 
+
       // Q10. Write a function highlightActiveTab(tabId) that adds an "active" class to the clicked tab and removes it
       // from all other tabs (assume tabs share the class "nav-tab").
       // const getFromData = (formId) => {
@@ -166,6 +168,10 @@
       //   const data = getFormData("signupForm");
       //   console.log("data");
       // }
+
+
+      // Q11. Write a function countdownTimer(seconds, displayElementId) that counts down from the given number
+      // of seconds and updates the text of a display element every second.
       const validateForm = (formId) => {
         const form = document.getElementById(formId);
         if (!form) return false;
@@ -183,6 +189,15 @@
         });
         return isValid;
       };
+      function handleFormSubmit() {
+        const isFormValid = validateForm("loginForm");
+
+        if (isFormValid) {
+          alert("Form successfully fill ho gaya hai!");
+        } else {
+          alert("Kripya saare Red highlight wale fields bharein!");
+        }
+      }
     </script>
   </body>
 </html>
