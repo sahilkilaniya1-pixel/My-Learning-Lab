@@ -173,8 +173,13 @@
         let isValid = true;
         const inputs = form.querySelectorAll("input[required]");
         input.forEach((input) =>{
-          if(input.value.trim()==="")
-        })
+          if (input.value.trim() === "") {
+          isValid = false;
+          input.style.borderColor = "red";
+        } else {
+          input.style.borderColor = "green"; 
+        }
+      });
       }
     </script>
   </body>
