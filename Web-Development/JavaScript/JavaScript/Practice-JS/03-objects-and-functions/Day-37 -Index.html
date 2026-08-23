@@ -148,24 +148,24 @@
 
       // Q10. Write a function highlightActiveTab(tabId) that adds an "active" class to the clicked tab and removes it
       // from all other tabs (assume tabs share the class "nav-tab").
-      const getFromData = (formId) => {
-        const from = document2.getElementById(formId);
-        if (!form) return {};
+      // const getFromData = (formId) => {
+      //   const from = document2.getElementById(formId);
+      //   if (!form) return {};
 
-        const formData = {};
-        const input = form.querySelectorAll("input, select, textarea");
+      //   const formData = {};
+      //   const input = form.querySelectorAll("input, select, textarea");
 
-        inputs.forEach((input) => {
-          if (input.name) {
-            formData[input.name] = input.value;
-          }
-        });
-        return formData;
-      };
-      function handleSubmit() {
-        const data = getFormData("signupForm");
-        console.log("data");
-      }
+      //   inputs.forEach((input) => {
+      //     if (input.name) {
+      //       formData[input.name] = input.value;
+      //     }
+      //   });
+      //   return formData;
+      // };
+      // function handleSubmit() {
+      //   const data = getFormData("signupForm");
+      //   console.log("data");
+      // }
     </script>
   </body>
 </html>
