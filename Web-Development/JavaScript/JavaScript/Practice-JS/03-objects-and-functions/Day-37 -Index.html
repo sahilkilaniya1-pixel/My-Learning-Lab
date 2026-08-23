@@ -149,9 +149,13 @@
         const input = form.querySelectorAll("input, select, textarea");
 
         inputs.forEach((input)=> {
-          
-        })
-      }
+            if(input.name) {
+              formData[input.name]=input.value;
+            }
+        });
+        return formData;
+      };
+      
     </script>
   </body>
 </html>
