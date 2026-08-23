@@ -167,25 +167,22 @@
       //   console.log("data");
       // }
       const validateForm = (formId) => {
-      const form = document.getElementById(formId);
-      if (!form) return false;
+        const form = document.getElementById(formId);
+        if (!form) return false;
 
-      let isValid = true;
-      // HTML se sirf 'required' wale inputs ko pakda
-      const inputs = form.querySelectorAll("input[required]");
+        let isValid = true;
+        const inputs = form.querySelectorAll("input[required]");
 
-      inputs.forEach((input) => {
-        // Space ko hata kar value check ki
-        if (input.value.trim() === "") {
-          isValid = false;
-          input.style.borderColor = "red";
-        } else {
-          input.style.borderColor = "green";
-        }
-      });
-
-      return isValid;
-    };
+        inputs.forEach((input) => {
+          if (input.value.trim() === "") {
+            isValid = false;
+            input.style.borderColor = "red";
+          } else {
+            input.style.borderColor = "green";
+          }
+        });
+        return isValid;
+      };
     </script>
   </body>
 </html>
