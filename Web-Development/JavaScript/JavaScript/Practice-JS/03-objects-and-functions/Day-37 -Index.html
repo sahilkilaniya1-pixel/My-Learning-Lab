@@ -93,46 +93,48 @@
 
       // Q9. Write a function updateCartCount(count) that updates the text of a cart badge element to show the
       // current number of items.
-        const createTableFromData = (data, containerId) => {
-            if (!data || data.length === 0) return;
+      // const createTableFromData = (data, containerId) => {
+      //     if (!data || data.length === 0) return;
+      //     const table = document.createElement("table");
 
-            const table = document.createElement("table");
+      //     const headerRow = document.createElement("tr");
 
-            const headerRow = document.createElement("tr");
+      //     const keys = Object.keys(data[0]);
 
-            const keys = Object.keys(data[0]); 
+      //     keys.forEach((key) => {
+      //         const th = document.createElement("th");
+      //         th.textContent = key.toUpperCase();
+      //         headerRow.appendChild(th);
+      //     });
+      //     table.appendChild(headerRow);
 
-            keys.forEach((key) => {
-                const th = document.createElement("th");
-                th.textContent = key.toUpperCase();
-                headerRow.appendChild(th);
-            });
-            table.appendChild(headerRow);
+      //     data.forEach((rowObject) => {
+      //         const tr = document.createElement("tr");
+      //         keys.forEach((key) => {
+      //             const td = document.createElement("td");
+      //             td.textContent = rowObject[key]; // Object se key ki value nikali
+      //             tr.appendChild(td);
+      //         });
+      //         table.appendChild(tr);
+      //     });
+      //     const container = document.getElementById(containerId);
+      //     if (container) {
+      //         container.appendChild(table);
+      //         console.log("Table successfully created");
+      //     } else {
+      //         console.error("Error");
+      //     }
+      // };
+      // const usersList = [
+      //     { id: 1, name: "Sahil ", age: 22, city: "Delhi", role: "Developer" },
+      //     { id: 2, name: "Mohit", age: 25, city: "Mumbai", role: "Designer" },
+      //     { id: 3, name: "Janvi", city: "Pune",   role: "Manager" },
+      //     { id: 4, name: "Rahul", age: 28, city: "Noida",  role: "Tester" }
+      // ];
+      // createTableFromData(usersList, "tableContainer");
 
-            data.forEach((rowObject) => {
-                const tr = document.createElement("tr");
-                keys.forEach((key) => {
-                    const td = document.createElement("td");
-                    td.textContent = rowObject[key]; // Object se key ki value nikali
-                    tr.appendChild(td);
-                });
-                table.appendChild(tr);
-            });
-            const container = document.getElementById(containerId);
-            if (container) {
-                container.appendChild(table);
-                console.log("Table successfully created!");
-            } else {
-                console.error("Error");
-            }
-        };
-        const usersList = [
-            { id: 1, name: "Sahil Kumar", age: 22, city: "Delhi", role: "Developer" },
-            { id: 2, name: "Aman Sharma", age: 25, city: "Mumbai", role: "Designer" },
-            { id: 3, name: "Janvi", city: "Pune",   role: "Manager" },
-            { id: 4, name: "Rahul Singh", age: 28, city: "Noida",  role: "Tester" }
-        ];
-        createTableFromData(usersList, "tableContainer");
+      // Q10. Write a function highlightActiveTab(tabId) that adds an "active" class to the clicked tab and removes it
+      // from all other tabs (assume tabs share the class "nav-tab").
     </script>
   </body>
 </html>
