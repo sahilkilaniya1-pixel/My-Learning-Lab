@@ -167,7 +167,9 @@
       //   console.log("data");
       // }
       const validateFrom = (formId) =>{
-        const form = document
+        const form = document.getElementById(formId)
+        if(!form)
+          return false;
       }
     </script>
   </body>
