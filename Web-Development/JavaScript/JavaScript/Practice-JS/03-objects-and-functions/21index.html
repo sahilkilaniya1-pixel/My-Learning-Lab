@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myBox">Hello, I am myBox</div>
+  </body>
+  <script>
+    const createListFromArray = (arr, containerId) => {
+      const ul = document.createElement("ul");
+      arr.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+      const container = document.getElementById(containerId);
+      if (container) {
+        container.appendChild(ul);
+        console.log("Success", arr);
+      } else {
+        console.error("Error" + containerId + " HTML page par nahi hai.");
+      }
+    };
+    const result = createListFromArray(
+      ["Apple", "Banana", "Orange"],
+      "myListDiv",
+    );
+    console.log("Function Return Output:", result);
+  </script>
+</html>
