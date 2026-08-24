@@ -78,6 +78,7 @@
                 buttons.forEach((btn, index) => {
                     btn.addEventListener("click", () => {
                         contents.forEach((content) => (content.style.display = "none"));
+                        buttons.forEach((b) => b.classList.remove("active"));
         </script>
   </body>
 </html>
