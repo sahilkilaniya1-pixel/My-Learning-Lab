@@ -76,6 +76,8 @@
                 const contents = document.querySelectorAll(`.${contentClass}`);
                 const contents = document.querySelectorAll(`.${contentClass}`);
                 buttons.forEach((btn, index) => {
+                    btn.addEventListener("click", () => {
+                        contents.forEach((content) => (content.style.display = "none"));
         </script>
   </body>
 </html>
