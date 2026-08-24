@@ -1,84 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tab System Demo</title>
+    
+    <!-- CSS STYLING -->
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
-        background-color: #f4f4f9;
-      }
-      .tabs-container {
-        max-width: 500px;
-        background: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-      }
-      .tab-btn {
-        width: 33.33%;
-        float: left;
-        padding: 12px 0;
-        border: none;
-        background-color: #e0e0e0;
-        cursor: pointer;
-        font-size: 16px;
-        transition: 0.3s;
-      }
-      .tab-btn:hover {
-        background-color: #d6d6d6;
-      }
-      .tab-btn.active {
-        background-color: #007bff;
-        color: white;
-        font-weight: bold;
-      }
-      .button-wrapper::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-      .tab-content {
-        display: none; /* By default saare hidden rahenge */
-        padding: 20px;
-        font-size: 15px;
-        line-height: 1.5;
-        color: #333;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f9;
+        }
+
+        /* Tabs Container */
+        .tabs-container {
+            max-width: 500px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Buttons ki Styling */
+        .tab-btn {
+            width: 33.33%;
+            float: left;
+            padding: 12px 0;
+            border: none;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        /* Mouse hover karne par */
+        .tab-btn:hover {
+            background-color: #d6d6d6;
+        }
+
+        /* Click hone par Active Button ka Design */
+        .tab-btn.active {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Clearfix (Float fix karne ke liye) */
+        .button-wrapper::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Content Boxes ki Styling */
+        .tab-content {
+            display: none; /* By default saare hidden rahenge */
+            padding: 20px;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #333;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+
     <h2>JavaScript Tab Navigation System</h2>
-    <div class="tabs-container"></div>
-    <div class="button-wrapper">
+
+    <div class="tabs-container">
+        
+        <!-- STEP 1: BUTTONS WRAPPER -->
+        <div class="button-wrapper">
             <!-- 1st button par pehle se 'active' class hai -->
             <button class="tab-btn active">Home</button>
             <button class="tab-btn">Profile</button>
             <button class="tab-btn">Settings</button>
         </div>
+
+        <!-- STEP 2: CONTENT BOXES WRAPPER -->
+        <!-- Note: Buttons aur Contents ka INDEX sequence bilkul same hai (0, 1, 2) -->
+        
+        <!-- Content Index 0 (Home) - Pehle se Open (display: block) -->
         <div class="tab-content" style="display: block;">
             <h3>Home Page</h3>
             <p>Welcome to our Home section! Yahan aapko latest updates aur general info milegi.</p>
         </div>
-        <div class="tab-content"></div>
+
+        <!-- Content Index 1 (Profile) -->
+        <div class="tab-content">
             <h3>User Profile</h3>
             <p>Aapka Name: Sahil Kumar<br>Role: Frontend Developer<br>Location: India</p>
         </div>
+
+        <!-- Content Index 2 (Settings) -->
         <div class="tab-content">
             <h3>Account Settings</h3>
             <p>Yahan se aap apna Password, Notifications aur Privacy Preferences change kar sakte hain.</p>
         </div>
-        <script>
-            const setupTabs = (buttonClass, contentClass) => {
-                const buttons = document.querySelectorAll(`.${buttonClass}`);
-                const contents = document.querySelectorAll(`.${contentClass}`);
-                const contents = document.querySelectorAll(`.${contentClass}`);
-                buttons.forEach((btn, index) => {
-                    btn.addEventListener("click", () => {
-                        contents.forEach((content) => (content.style.display = "none"));
-                        buttons.forEach((b) => b.classList.remove("active"));
-        </script>
-  </body>
+
+    </div>
+
+    <!-- STEP 3: JAVASCRIPT LOGIC -->
+    <script>
+        // AAPKA TAB SETUP FUNCTION
+        const setupTabs = (buttonClass, contentClass) => {
+            // HTML se saare buttons aur contents ko select kar liya
+            const buttons = document.querySelectorAll(`.${buttonClass}`);
+            const contents = document.querySelectorAll(`.${contentClass}`);
+
+            // Har button par Loop aur Click Listener lagaya
+            buttons.forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+                    
+                    // 1. Reset Contents: Pehle se khule hue saare content boxes ko HIDE kar do
+                    contents.forEach((content) => (content.style.display = "none"));
+
+                    // 2. Reset Buttons: Saare buttons se active (Blue Color) style HATA do
+                    buttons.forEach((b) => b.classList.remove("active"));
+
+                    // 3. Active Target: Clicked Button wale SAME INDEX ke content ko SHOW karo
+                    contents[index].style.display = "block";
+                    
+                    // 4. Clicked button par active class ADD kar do
+                    btn.classList.add("active");
+                });
+            });
+        };
+
+        // FUNCTION CALL (Dono classes ke naam pass kiye)
+        setupTabs("tab-btn", "tab-content");
+    </script>
+
+</body>
 </html>
