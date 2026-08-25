@@ -6,3 +6,7 @@ function printTriangle(N) {
       row = row + "* ";                // Dibbe mein star daalo
     }
     
+    console.log(row);                  // Rule 4: Row print karo
+  }
+}
+printTriangle(5);
