@@ -21,3 +21,5 @@ function printTriangle(n) {
         }
         console.log(row);
     }
+}
+printTriangle(4);
