@@ -20,4 +20,4 @@ function printTriangle(n) {
             row+="*";
         }
         console.log(row);
-    
+    }
