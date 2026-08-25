@@ -1,12 +1,25 @@
-function printTriangle(N) {
-  for (let i = 1; i <= N; i++) {       // Rule 1: Row tracker
-    let row = "";                      // Rule 2: Khali Dibba
+// function printTriangle(N) {
+//   for (let i = 1; i <= N; i++) {       // Rule 1: Row tracker
+//     let row = "";                      // Rule 2: Khali Dibba
     
-    for (let j = 1; j <= i; j++) {     // Rule 3: Column tracker
-      row = row + "* ";                // Dibbe mein star daalo
+//     for (let j = 1; j <= i; j++) {     // Rule 3: Column tracker
+//       row = row + "* ";                // Dibbe mein star daalo
+//     }
+    
+//     console.log(row);                  // Rule 4: Row print karo
+//   }
+// }
+// printTriangle(5);
+
+
+function printTriangle(n) {
+    for(let i=1; i<=n; i++){
+        let row ="";
+
+        for(let j=1; j<=i; j++){
+            row+="*";
+        }
+        console.log(row);
     }
-    
-    console.log(row);                  // Rule 4: Row print karo
-  }
 }
-printTriangle(5);
+printTriangle(4);
