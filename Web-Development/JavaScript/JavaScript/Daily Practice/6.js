@@ -96,6 +96,6 @@
             // row += "*";
         // }
         // console.log(row);
-    }
+    // }
 }
 SolidSquare(5);
