@@ -126,6 +126,6 @@
             // row+="*";
         // }
         // console.log(row);
-    }
-}
- LeftParallelogram(5);
+    // }
+// }
+//  LeftParallelogram(5);
