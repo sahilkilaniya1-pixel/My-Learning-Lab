@@ -29,7 +29,7 @@ function printArray(a)
 {
      var len = a.length, i = 0;
      if (len == 0)
-//         console.log("Empty Array");
+        console.log("Empty Array");
 //      else 
 //      {
 // // do-while loop in javascript
