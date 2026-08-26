@@ -31,7 +31,7 @@ function printArray(a)
      if (len == 0)
         console.log("Empty Array");
      else 
-//      {
+     {
 // // do-while loop in javascript
 //          do 
 //          {
