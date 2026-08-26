@@ -20,7 +20,7 @@ function printTriangle(n) {
             row+="*";
         }
         console.log(row);
-//     }
+    }
 // }
 // printTriangle(4);
 
