@@ -25,7 +25,7 @@ function printTriangle(n) {
 printTriangle(4);
 
 
-// function printArray(a) 
+function printArray(a) 
 // {
 //      var len = a.length, i = 0;
 //      if (len == 0)
