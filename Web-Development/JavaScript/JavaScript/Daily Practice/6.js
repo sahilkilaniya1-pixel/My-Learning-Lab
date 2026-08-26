@@ -12,7 +12,7 @@
 printTriangle(5);
 
 
-// function printTriangle(n) {
+function printTriangle(n) {
 //     for(let i=1; i<=n; i++){
 //         let row ="";
 
