@@ -25,15 +25,15 @@
 // printTriangle(4);
 
 
-// function printArray(a) 
+// function printArray(a)
 // {
 //      var len = a.length, i = 0;
 //      if (len == 0)
 //         console.log("Empty Array");
-//      else 
+//      else
 //      {
 // do-while loop in javascript
-//          do 
+//          do
 //          {
 //              console.log(a[i]);
 //          } while (++i < len);
@@ -69,7 +69,7 @@
 //         for (let j = 1; j <= n; j++) {
 //             row += "*";
 //         }
-//         console.log(row); 
+//         console.log(row);
 //     }
 // }
 // printSolidSquare(5);
@@ -145,3 +145,6 @@
 //     }
 // }
 // RightParallelogram(5);
+
+
+function  MirroredHalfDiamond(n){}
