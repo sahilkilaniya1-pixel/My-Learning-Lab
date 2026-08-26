@@ -62,13 +62,14 @@
 // }
 // printPaddedTriangle(4);
 
-function printSolidSquare(n) {
-    for (let i = 1; i <= n; i++) {
-        let row = "";
-        for (let j = 1; j <= n; j++) {
-            row += "*";
-        }
-        console.log(row); 
-    }
-}
-printSolidSquare(5);
+
+// function printSolidSquare(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let row = "";
+//         for (let j = 1; j <= n; j++) {
+//             row += "*";
+//         }
+//         console.log(row); 
+//     }
+// }
+// printSolidSquare(5);
