@@ -113,4 +113,4 @@
     // }
     
 // }
-printPattern(5);
+// printPattern(5);
