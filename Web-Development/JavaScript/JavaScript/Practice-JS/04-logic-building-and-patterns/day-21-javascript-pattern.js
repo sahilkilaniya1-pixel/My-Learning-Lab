@@ -103,34 +103,37 @@
 
 
 // Q13. Left Parallelogram
-// let n =5;
-// for(let i=1; i<=n; i++){
-//     let row="";
-//     for(let j=1; j<=n-i; j++){
-//         row+=" ";
-//     }
-//     for(let s=1; s<=n; s++){
-//         row+="*";
-//     }
-//     console.log(row);
-// }
+function LeftParallelogram(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let s = 1; s <= (n - i + 1); s++) {
+            row += " ";
+        }
+        for (let j = 1; j <= n; j++) {
+            row += "*";
+        }
+        console.log(row);
+    }
+}
+LeftParallelogram(5);
 
 
 
 
 // Q14. Wide Space Triangle
-// let n = 3;
-// for (let i = 1; i <= n; i++) {
-//   let row = "";
-//   for (let j = 1; j <= n - i; j++) {
-//     row += "  ";
-//   }
-//   for (let k = 1; k <= i; k++) {
-//     row += "* ";
-//   }
-//   console.log(row);
+// function WideSpaceTriangle(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let row = "";
+//         for (let s = 1; s <= (n - i); s++) {
+//             row += "  ";
+//         }
+//         for (let j = 1; j <= i; j++) {
+//             row += "* ";
+//         }
+//         console.log(row);
+//     }
 // }
-
+// WideSpaceTriangle(3);
 
 
 // let n = 5;
