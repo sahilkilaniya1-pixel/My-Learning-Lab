@@ -4,7 +4,7 @@
 
     for (let j = 1; j <= i; j++) {     // Rule 3: Column tracker
       row = row + "* ";                // Dibbe mein star daalo
-//     }
+    }
 
 //     console.log(row);                  // Rule 4: Row print karo
 //   }
