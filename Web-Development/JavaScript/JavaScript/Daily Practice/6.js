@@ -138,9 +138,9 @@
             // row+=" ";
         // }
         // for(let j=1;j<=n; j++){
-            row+="*";
-        }
-        console.log(row);
-    }
-}
-RightParallelogram(5);
+            // row+="*";
+//         }
+//         console.log(row);
+//     }
+// }
+// RightParallelogram(5);
