@@ -149,7 +149,7 @@
 
 // function WideSpaceTriangle(n) {
 //   for (let i = 1; i <= n; i++) {
-    let row = "";
+    // let row = "";
     for (let s = 1; s <= (n - i); s++) {
       row += "  ";
     }
