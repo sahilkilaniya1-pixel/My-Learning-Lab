@@ -70,5 +70,5 @@ function printSolidSquare(n) {
         }
         console.log(row); 
     }
-// }
+}
 // printSolidSquare(5);
