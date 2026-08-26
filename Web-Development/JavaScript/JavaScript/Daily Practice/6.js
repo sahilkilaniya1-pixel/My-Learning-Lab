@@ -22,7 +22,7 @@ function printTriangle(n) {
         console.log(row);
     }
 }
-// printTriangle(4);
+printTriangle(4);
 
 
 // function printArray(a) 
