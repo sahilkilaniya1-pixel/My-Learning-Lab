@@ -27,7 +27,7 @@ printTriangle(4);
 
 function printArray(a) 
 {
-//      var len = a.length, i = 0;
+     var len = a.length, i = 0;
 //      if (len == 0)
 //         console.log("Empty Array");
 //      else 
