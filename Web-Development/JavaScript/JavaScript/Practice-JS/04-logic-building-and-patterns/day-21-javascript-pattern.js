@@ -1,16 +1,39 @@
-// let n = 3;
-// for (let i = 1; i <= n; i++) {
-//   let row = "";
-
-
-//   for (let j = 1; j <= i; j++) {
-//     row += "*";
-//   }
-//   for(let s=1; s<=n*2+1; s++){
-//       row+="*";
-//   }
-//   console.log(row);
+// Q1. Solid Square
+// function SolidSquare(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let row = "";
+//         for (let j = 1; j <= n; j++) {
+//             row += "*";
+//         }
+//         console.log(row);
+//     }
 // }
+// SolidSquare(5);
+
+// Q2. RightAngleTriangle
+// function PrintRightAngleTriangle(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let row = "";
+//         for (let j = 1; j <= i; j++) {
+//             row += "*";
+//         }
+//         console.log(row);
+//     }
+// }
+// PrintRightAngleTriangle(5);
+
+
+// Q3. InvertedRightTriangle
+// function PrintInvertedRightTriangle(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let row = "";
+//         for (let j = 1; j <= n - i; j++) {
+//             row += "*";
+//         }
+//         console.log(row);
+//     }
+// }
+// PrintInvertedRightTriangle(6);
 
 
 
@@ -105,19 +128,19 @@
 
 
 // Q13. Left Parallelogram
-function LeftParallelogram(n) {
-    for (let i = 1; i <= n; i++) {
-        let row = "";
-        for (let s = 1; s <= (n - i + 1); s++) {
-            row += " ";
-        }
-        for (let j = 1; j <= n; j++) {
-            row += "*";
-        }
-        console.log(row);
-    }
-}
-LeftParallelogram(5);
+// function LeftParallelogram(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let row = "";
+//         for (let s = 1; s <= (n - i + 1); s++) {
+//             row += " ";
+//         }
+//         for (let j = 1; j <= n; j++) {
+//             row += "*";
+//         }
+//         console.log(row);
+//     }
+// }
+// LeftParallelogram(5);
 
 
 
@@ -138,30 +161,22 @@ LeftParallelogram(5);
 // WideSpaceTriangle(3);
 
 
-// let n = 5;
-// for (let i = 1; i <= n; i++) {
-//     let row = "";
-//     for (let j = 1; j <= i; j++) {
-//         row += j + " ";
-//     }
-//     console.log(row);
-// }
-
-
-
 
 // Q38. Palindromic Number
-// let n = 5;
-// for (let i = 1; i <= n; i++) {
-//     let row = "";
-//     for (let s = 1; s <= n - i; s++) {
-//         row += "  ";
+// function PrintpalindromicPattern(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let row = "";
+//         for (let s = 1; s <= n - i; s++) {
+//             row += "  ";
+//         }
+//         for (let j = 1; j <= i; j++) {
+//             ``
+//             row += j + " ";
+//         }
+//         for (let j = i - 1; j >= 1; j--) {
+//             row += j + " ";
+//         }
+//         console.log(row);
 //     }
-//     for (let j = 1; j <= i; j++) {``
-//         row += j + " ";
-//     }
-//     for (let j = i - 1; j >= 1; j--) {
-//         row += j + " ";
-//     }
-//     console.log(row);
 // }
+// PrintpalindromicPattern(5);

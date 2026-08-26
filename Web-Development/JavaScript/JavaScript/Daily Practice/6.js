@@ -160,3 +160,26 @@
 //   }
 // }
 // WideSpaceTriangle(3);
+
+// function PrintRightAngleTriangle(n){
+//     for(let i=1; i<=n; i++){
+//         let row ="";
+//         for(let j=1; j<=i; j++){
+//             row+="*";
+//         }
+//         console.log(row);
+//     }
+// }
+// PrintRightAngleTriangle(5);
+
+
+// function PrintInvertedRightTriangle(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let row = "";
+//         for (let j = 1; j <= n-i; j++) {
+//             row += "*";
+//         }
+//         console.log(row);
+//     }
+// }
+// PrintInvertedRightTriangle(6);
