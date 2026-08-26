@@ -34,7 +34,7 @@ function printArray(a)
      {
 do-while loop in javascript
          do 
-//          {
+         {
 //              console.log(a[i]);
 //          } while (++i < len);
 //      }
