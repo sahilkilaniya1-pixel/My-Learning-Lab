@@ -112,5 +112,5 @@
         // console.log(row);
     // }
     
-}
+// }
 printPattern(5);
