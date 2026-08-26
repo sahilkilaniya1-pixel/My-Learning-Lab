@@ -32,7 +32,7 @@ function printArray(a)
         console.log("Empty Array");
      else 
      {
-// // do-while loop in javascript
+do-while loop in javascript
 //          do 
 //          {
 //              console.log(a[i]);
