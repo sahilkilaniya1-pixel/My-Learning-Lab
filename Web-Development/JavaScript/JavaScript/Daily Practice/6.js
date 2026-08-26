@@ -33,7 +33,7 @@ function printArray(a)
      else 
      {
 do-while loop in javascript
-//          do 
+         do 
 //          {
 //              console.log(a[i]);
 //          } while (++i < len);
