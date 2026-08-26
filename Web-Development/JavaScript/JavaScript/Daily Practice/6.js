@@ -12,14 +12,38 @@
 // printTriangle(5);
 
 
-function printTriangle(n) {
-    for(let i=1; i<=n; i++){
-        let row ="";
+// function printTriangle(n) {
+//     for(let i=1; i<=n; i++){
+//         let row ="";
 
-        for(let j=1; j<=i; j++){
-            row+="*";
-        }
-        console.log(row);
-    }
-}
-printTriangle(4);
+//         for(let j=1; j<=i; j++){
+//             row+="*";
+//         }
+//         console.log(row);
+//     }
+// }
+// printTriangle(4);
+
+
+// function printArray(a) 
+// {
+//      var len = a.length, i = 0;
+//      if (len == 0)
+//         console.log("Empty Array");
+//      else 
+//      {
+// // do-while loop in javascript
+//          do 
+//          {
+//              console.log(a[i]);
+//          } while (++i < len);
+//      }
+// }
+
+// for (let i = 1; i <= 3; i++) {
+//   let row = "";
+//   for (let j = 1; j <= 4; j++) {
+//     row += j + " ";
+//   }
+//   console.log(row);
+// }
