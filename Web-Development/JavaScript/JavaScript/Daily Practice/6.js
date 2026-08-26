@@ -38,7 +38,7 @@ do-while loop in javascript
              console.log(a[i]);
          } while (++i < len);
      }
-// }
+}
 
 // for (let i = 1; i <= 3; i++) {
 //   let row = "";
