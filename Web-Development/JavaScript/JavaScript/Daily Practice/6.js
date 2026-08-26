@@ -95,7 +95,7 @@
         // for (let j = 1; j <= n; j++) {
             // row += "*";
         // }
-        console.log(row);
+        // console.log(row);
     }
 }
 SolidSquare(5);
