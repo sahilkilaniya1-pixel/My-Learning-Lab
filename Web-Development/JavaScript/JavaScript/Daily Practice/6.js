@@ -19,7 +19,7 @@ function printTriangle(n) {
         for(let j=1; j<=i; j++){
             row+="*";
         }
-//         console.log(row);
+        console.log(row);
 //     }
 // }
 // printTriangle(4);
