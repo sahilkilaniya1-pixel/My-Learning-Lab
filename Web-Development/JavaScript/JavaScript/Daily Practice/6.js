@@ -68,7 +68,7 @@ function printSolidSquare(n) {
         for (let j = 1; j <= n; j++) {
             row += "*";
         }
-//         console.log(row); 
+        console.log(row); 
 //     }
 // }
 // printSolidSquare(5);
