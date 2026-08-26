@@ -133,7 +133,7 @@
 
 // function  RightParallelogram(n){
     // for(let i=1; i<=n; i++){
-        let row = "";
+        // let row = "";
         for(let s=1; s<=(i-1); s++){
             row+=" ";
         }
