@@ -69,6 +69,6 @@ function printSolidSquare(n) {
             row += "*";
         }
         console.log(row); 
-//     }
+    }
 // }
 // printSolidSquare(5);
