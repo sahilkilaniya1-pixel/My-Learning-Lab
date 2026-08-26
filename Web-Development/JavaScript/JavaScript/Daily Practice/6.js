@@ -90,28 +90,28 @@
 // printPaddedTriangle(4);
 
 // function SolidSquare(n) {
-    // for (let i = 1; i <= n; i++) {
-        // let row = "";
-        // for (let j = 1; j <= n; j++) {
-            // row += "*";
-        // }
-        // console.log(row);
-    // }
+// for (let i = 1; i <= n; i++) {
+// let row = "";
+// for (let j = 1; j <= n; j++) {
+// row += "*";
+// }
+// console.log(row);
+// }
 // }
 // SolidSquare(5);
 
 // function printPattern(n){
-    // for(let i=1; i<=n; i++){
-        // let row = "";
-        // for(let s=1; s<=(n-i); s++){
-            // row+=" ";
-        // }
-        // for(let j=1; j<=i; j++){
-            // row+=j+" ";
-        // }
-        // console.log(row);
-    // }
-    
+// for(let i=1; i<=n; i++){
+// let row = "";
+// for(let s=1; s<=(n-i); s++){
+// row+=" ";
+// }
+// for(let j=1; j<=i; j++){
+// row+=j+" ";
+// }
+// console.log(row);
+// }
+
 // }
 // printPattern(5);
 
@@ -131,14 +131,15 @@
 //  LeftParallelogram(5);
 
 
-// function  RightParallelogram(n){
-    // for(let i=1; i<=n; i++){
-        // let row = "";
-        // for(let s=1; s<=(i-1); s++){
-            // row+=" ";
-        // }
-        // for(let j=1;j<=n; j++){
-            // row+="*";
+
+// function RightParallelogram(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let row = "";
+//         for (let s = 1; s <= (i - 1); s++) {
+//             row += " ";
+//         }
+//         for (let j = 1; j <= n; j++) {
+//             row += "*";
 //         }
 //         console.log(row);
 //     }
