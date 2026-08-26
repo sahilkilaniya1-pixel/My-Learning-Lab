@@ -8,7 +8,7 @@
 
     console.log(row);                  // Rule 4: Row print karo
   }
-// }
+}
 // printTriangle(5);
 
 
