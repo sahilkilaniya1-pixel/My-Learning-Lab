@@ -147,10 +147,10 @@
 // RightParallelogram(5);
 
 
-function WideSpaceTriangle(N) {
-  for (let i = 1; i <= N; i++) {
+// function WideSpaceTriangle(n) {
+  for (let i = 1; i <= n; i++) {
     let row = "";
-    for (let s = 1; s <= (N - i); s++) {
+    for (let s = 1; s <= (n - i); s++) {
       row += "  ";
     }
     for (let j = 1; j <= i; j++) {
