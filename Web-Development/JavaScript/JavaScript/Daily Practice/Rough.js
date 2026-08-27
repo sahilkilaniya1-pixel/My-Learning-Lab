@@ -221,15 +221,26 @@
 // VerticaRectangle(3);
 
 
-function mirrorHalfDiamond(n){
-    for(let i=1; i<=n; i++){
-        let row ="";  
-        for(let s=1; s<=(n-i); s++){
-            row+=" ";
+// function MirroredHalfDiamond(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let s = 1; s <= (n - i); s++) {
+            row += " ";
         }
-        for(let j=1; j<=i; j++){
-            row+="*";
+        for (let j = 1; j <= i; j++) {
+            row += "*";
+        }
+        console.log(row);
+    }
+    for (let i = n - 1; i >= 1; i--) {
+        let row = "";
+        for (let s = 1; s <= (n - i); s++) {
+            row += " ";
+        }
+        for (let j = 1; j <= i; j++) {
+            row += "*";
         }
         console.log(row);
     }
 }
+MirroredHalfDiamond(5);
