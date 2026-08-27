@@ -189,7 +189,7 @@ AlternateLineTriangle(5);
 // }
 // console.log(row);
 // }
-// }
+}
 MirroredHalfDiamond(5);
 
 
