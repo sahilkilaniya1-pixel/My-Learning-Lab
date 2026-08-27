@@ -241,6 +241,6 @@
             // row += "*";
         // }
         // console.log(row);
-    }
+    // }
 }
 MirroredHalfDiamond(5);
