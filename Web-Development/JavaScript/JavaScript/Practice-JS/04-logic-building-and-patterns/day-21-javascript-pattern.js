@@ -177,7 +177,7 @@ AlternateLineTriangle(5);
         // for (let j = 1; j <= i; j++) {
             // row += "*";
         }
-// console.log(row);
+console.log(row);
 }
 for (let i = n - 1; i >= 1; i--) {
 let row = "";
