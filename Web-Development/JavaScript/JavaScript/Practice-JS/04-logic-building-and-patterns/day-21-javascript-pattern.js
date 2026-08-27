@@ -106,66 +106,69 @@ AlternateLineTriangle(5);
 
 
 // Q10. Inverted Left Triangle
-// let n = 5;
-// for (let i = 1; i <= n; i++) {
-//   let row = "";
-//   for (let j = 1; j <= i-1; j++) {
-//     row += " ";
-//   }
-//   for(let s=1; s<=n-i+1; s++){
-//     row+="*";
-//   }
-//   console.log(row);
-// }
-
+function InvertedLeftTriangle(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= i - 1; j++) {
+            row += " ";
+        }
+        for (let s = 1; s <= n - i + 1; s++) {
+            row += "*";
+        }
+        console.log(row);
+    }
+}
+InvertedLeftTriangle(n);
 
 
 // Q9. Left-Aligned Triangle
 // let n = 5;
-// for(let i=1; i<=n; i++){
-//     let row ="";
-//     for(let j=1; j<=n-i; j++){
-//         row+=" ";
-//     }
-//     for(let s=1; s<=i; s++){
-//         row+="*";
-//     }
-//     console.log(row);
-// }
-
+function LeftAlignedTriangle(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= n - i; j++) {
+            row += " ";
+        }
+        for (let s = 1; s <= i; s++) {
+            row += "*";
+        }
+        console.log(row);
+    }
+}
+LeftAlignedTriangle(n);
 
 
 // Q11. Right Parallelogram
-// function RightParallelogram(n) {
-//     for (let i = 1; i <= n; i++) {
-//         let row = "";
-//         for (let s = 1; s <= (i - 1); s++) {
-//             row += " ";
-//         }
-//         for (let j = 1; j <= n; j++) {
-//             row += "*";
-//         }
-//         console.log(row);
-//     }
-// }
-// RightParallelogram(5);
+function RightParallelogram(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let s = 1; s <= (i - 1); s++) {
+            row += " ";
+        }
+        for (let j = 1; j <= n; j++) {
+            row += "*";
+        }
+        console.log(row);
+    }
+}
+RightParallelogram(5);
 
 
 
 // Q12. Left Parallelogram
-// function LeftParallelogram(n) {
-//     for (let i = 1; i <= n; i++) {
-//         let row = "";
-//         for (let s = 1; s <= (n - i + 1); s++) {
-//             row += " ";
-//         }
-//         for (let j = 1; j <= n; j++) {
-//             row += "*";
-//         }
-//         console.log(row);
-//     }
-// }
-// LeftParallelogram(5);
+function LeftParallelogram(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let s = 1; s <= (n - i + 1); s++) {
+            row += " ";
+        }
+        for (let j = 1; j <= n; j++) {
+            row += "*";
+        }
+        console.log(row);
+    }
+}
+LeftParallelogram(5);
 
 // Q13. MirroredHalfDiamond
 function MirroredHalfDiamond(n) {
@@ -177,18 +180,18 @@ function MirroredHalfDiamond(n) {
         for (let j = 1; j <= i; j++) {
             row += "*";
         }
-console.log(row);
-}
-for (let i = n - 1; i >= 1; i--) {
-let row = "";
-for (let s = 1; s <= (n - i); s++) {
-row += " ";
-}
-for (let j = 1; j <= i; j++) {
-row += "*";
-}
-console.log(row);
-}
+        console.log(row);
+    }
+    for (let i = n - 1; i >= 1; i--) {
+        let row = "";
+        for (let s = 1; s <= (n - i); s++) {
+            row += " ";
+        }
+        for (let j = 1; j <= i; j++) {
+            row += "*";
+        }
+        console.log(row);
+    }
 }
 MirroredHalfDiamond(5);
 
