@@ -29,3 +29,4 @@ function InvertedPyramidSolid(n) {
 InvertedPyramidSolid(5);
 
 
+// Q18. Full Diamond
