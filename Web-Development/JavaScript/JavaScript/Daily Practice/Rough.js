@@ -221,4 +221,8 @@
 // VerticaRectangle(3);
 
 
-function mirrorHalfDiamond(n){}
+function mirrorHalfDiamond(n){
+    for(let i=1; i<=n; i++){
+        
+    }
+}
