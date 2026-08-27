@@ -185,7 +185,7 @@ AlternateLineTriangle(5);
 // row += " ";
 // }
 // for (let j = 1; j <= i; j++) {
-// row += "*";
+row += "*";
 }
 console.log(row);
 }
