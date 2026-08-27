@@ -282,3 +282,17 @@
 //     }
 // }
 // verticalTriangle(5);
+
+
+
+// Q8. Even Star Triangle
+// function EvenStarTriangle(n){
+//     for(let i=1; i<=n; i++){
+//         let row = "";
+//         for(let j=1; j<=(2*i); j++){
+//             row+="*";
+//         }
+//         console.log(row);
+//     }
+// }
+// EvenStarTriangle(5);

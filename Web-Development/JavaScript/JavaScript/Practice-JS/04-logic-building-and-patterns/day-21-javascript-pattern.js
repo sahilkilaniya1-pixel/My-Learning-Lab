@@ -78,11 +78,11 @@ AlternateLineTriangle(5);
 
 
 //Q6. Vertical Triangle
-function HorizontalTriangle(n){
-    for(let i=1; i<=n; i++){
-        let row ="";
-        for(let j=1; j<=3; j++){
-            row+="*";
+function HorizontalTriangle(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= 3; j++) {
+            row += "*";
         }
         console.log(row);
     }
@@ -91,21 +91,44 @@ HorizontalTriangle(5);
 
 
 // Q7 .Horizontal Triangle
-function HorizontalTriangle(n){
-    for(let i=1; i<=n; i++){
-        let row ="";
-        for(let j=1; j<=7; j++){
-            row+="*";
+function HorizontalTriangle(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= 7; j++) {
+            row += "*";
         }
         console.log(row);
     }
 }
 HorizontalTriangle(3);
 
+// Q8. Even start Triangle
+function EvenStarTriangle(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= (2 * i); j++) {
+            row += "*";
+        }
+        console.log(row);
+    }
+}
+EvenStarTriangle(5);
 
 
-
-
+// Q9. Left-Aligned Triangle
+function LeftAlignedTriangle(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= n - i; j++) {
+            row += " ";
+        }
+        for (let s = 1; s <= i; s++) {
+            row += "*";
+        }
+        console.log(row);
+    }
+}
+LeftAlignedTriangle(n);
 
 // Q10. Inverted Left Triangle
 function InvertedLeftTriangle(n) {
@@ -123,21 +146,7 @@ function InvertedLeftTriangle(n) {
 InvertedLeftTriangle(n);
 
 
-// Q9. Left-Aligned Triangle
-// let n = 5;
-function LeftAlignedTriangle(n) {
-    for (let i = 1; i <= n; i++) {
-        let row = "";
-        for (let j = 1; j <= n - i; j++) {
-            row += " ";
-        }
-        for (let s = 1; s <= i; s++) {
-            row += "*";
-        }
-        console.log(row);
-    }
-}
-LeftAlignedTriangle(n);
+
 
 
 // Q11. Right Parallelogram
@@ -200,19 +209,19 @@ MirroredHalfDiamond(5);
 
 
 // Q14. Wide Space Triangle
-// function WideSpaceTriangle(n) {
-//     for (let i = 1; i <= n; i++) {
-//         let row = "";
-//         for (let s = 1; s <= (n - i); s++) {
-//             row += "  ";
-//         }
-//         for (let j = 1; j <= i; j++) {
-//             row += "* ";
-//         }
-//         console.log(row);
-//     }
-// }
-// WideSpaceTriangle(3);
+function WideSpaceTriangle(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let s = 1; s <= (n - i); s++) {
+            row += "  ";
+        }
+        for (let j = 1; j <= i; j++) {
+            row += "* ";
+        }
+        console.log(row);
+    }
+}
+WideSpaceTriangle(3);
 
 
 
