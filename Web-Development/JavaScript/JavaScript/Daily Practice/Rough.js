@@ -243,4 +243,4 @@
         // console.log(row);
     // }
 }
-MirroredHalfDiamond(5);
+// MirroredHalfDiamond(5);
