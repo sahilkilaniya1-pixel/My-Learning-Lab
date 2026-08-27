@@ -199,7 +199,7 @@
 
 // function AlternateLineTriangle(n) {
 //     for (let i = 1; i <= n; i++) {
-//         let row = "";
+//         let row = ""; 
 //         for (let j = 1; j <= (i % 2 !== 0 ? 1 : 2); j++) {
 //             row += "*";
 //         }
@@ -229,13 +229,13 @@
         // }
         // for (let j = 1; j <= i; j++) {
             // row += "*";
-        }
+        // }
         // console.log(row);
     // }
     // for (let i = n - 1; i >= 1; i--) {
         // let row = "";
         // for (let s = 1; s <= (n - i); s++) {
-            // row += " ";
+            // row += " "; 
         // }
         // for (let j = 1; j <= i; j++) {
             // row += "*";
@@ -244,3 +244,41 @@
     // }
 // }
 // MirroredHalfDiamond(5);
+
+
+
+// Q7 .Horizontal Triangle
+// let row = 3;
+// let coln = 7;
+// for (let i = 1; i <= 3; i++) {
+//     let row = "";
+
+//     for (let j = 1; j <= 7; j++) {
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+// function HorizontalTriangle(n){
+//     for(let i=1; i<=n; i++){
+//         let row ="";
+//         for(let j=1; j<=7; j++){
+//             row+="*";
+//         }
+//         console.log(row);
+//     }
+// }
+// HorizontalTriangle(3);
+
+
+// Q6.vertical
+// function verticalTriangle(n){
+//     for(let i=1; i<=n; i++){
+//         let row ="";
+//         for(let j=1; j<=3; j++){
+//             row+="*";
+//         }
+//         console.log(row);
+//     }
+// }
+// verticalTriangle(5);

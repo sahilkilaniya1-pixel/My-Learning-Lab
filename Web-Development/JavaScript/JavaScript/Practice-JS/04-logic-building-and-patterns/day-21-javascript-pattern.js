@@ -60,47 +60,49 @@ function AlternateLineTriangle(n) {
     }
 }
 AlternateLineTriangle(5);
+// Q5. Alternate Line Triangle
+function AlternateLineTriangle(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= i; j++) {
+            if (i == 1 || j == 1 || (i == 2 && j == 2) || (i == 4 && j == 4)) {
+                row += "*";
+            } else {
+                row += "";
+            }
+        }
+        console.log(row);
+    }
+}
+AlternateLineTriangle(5);
+
+
+//Q6. Vertical Triangle
+function HorizontalTriangle(n){
+    for(let i=1; i<=n; i++){
+        let row ="";
+        for(let j=1; j<=3; j++){
+            row+="*";
+        }
+        console.log(row);
+    }
+}
+HorizontalTriangle(5);
 
 
 // Q7 .Horizontal Triangle
-// let row = 3;
-// let coln = 7;
-// for (let i = 1; i <= 3; i++) {
-//     let row = "";
-
-//     for (let j = 1; j <= 7; j++) {
-//         row += "*";
-//     }
-//     console.log(row);
-// }
-
-
-
-// Q5. Alternate Line Triangle
-// let n = 5;
-// for (let i = 1; i <= n; i++) {
-//   let row = "";
-//   for (let j = 1; j <= i; j++) {
-//     if (i == 1 || j == 1 || (i == 2 && j == 2) || (i == 4 && j == 4)) {
-//       row += "*";
-//     } else {
-//       row += "";
-//     }
-//   }
-//   console.log(row);
-// }
+function HorizontalTriangle(n){
+    for(let i=1; i<=n; i++){
+        let row ="";
+        for(let j=1; j<=7; j++){
+            row+="*";
+        }
+        console.log(row);
+    }
+}
+HorizontalTriangle(3);
 
 
-
-// Q3. Inverted Right Triangle
-// let  n = 5;
-// for(let i=n; i>=1; i--){
-//     let row ="";
-//     for(let j=1; j<=i; j++){
-//         row+="*";
-//     }
-//     console.log(row);
-// }
 
 
 
