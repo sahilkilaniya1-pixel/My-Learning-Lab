@@ -182,7 +182,7 @@ AlternateLineTriangle(5);
 // for (let i = n - 1; i >= 1; i--) {
 // let row = "";
 // for (let s = 1; s <= (n - i); s++) {
-// row += " ";
+row += " ";
 }
 for (let j = 1; j <= i; j++) {
 row += "*";
