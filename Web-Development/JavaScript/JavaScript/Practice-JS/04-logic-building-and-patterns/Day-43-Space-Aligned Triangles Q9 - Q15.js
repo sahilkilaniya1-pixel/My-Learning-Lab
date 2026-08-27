@@ -11,7 +11,7 @@ function LeftAlignedTriangle(n) {
         console.log(row);
     }
 }
-LeftAlignedTriangle(n);
+LeftAlignedTriangle(5);
 
 // Q10. Inverted Left Triangle
 function InvertedLeftTriangle(n) {
@@ -105,3 +105,15 @@ function WideSpaceTriangle(n) {
     }
 }
 WideSpaceTriangle(3);
+
+// Q15. Shifted Square
+function ShiftedSquare(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= n; j++) {
+            row += "*";
+        }
+        console.log(row);
+    }
+}
+ShiftedSquare(3);
