@@ -388,5 +388,5 @@
     // callback(result);
 // }
 // processNumber(5, (output) =>{
-    console.log("Result is:", output);
+    // console.log("Result is:", output);
 });
