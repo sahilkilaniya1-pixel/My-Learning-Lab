@@ -385,7 +385,7 @@
 
 // function processNumber (num, callback){
     // let result = num *2;
-    callback(result);
+    // callback(result);
 }
 processNumber(5, (output) =>{
     console.log("Result is:", output);
