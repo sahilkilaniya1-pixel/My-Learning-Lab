@@ -348,7 +348,7 @@
         // if(typeof obj[key]==='number'){
             // sum +=obj[key];
         // }
-    }
+    // }
     return sum;
 }
 const data = {a:10, b:'hello', c:20, d:true};
