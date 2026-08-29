@@ -376,6 +376,6 @@
     // for(let num of numbers){
         // total += num;
     // }
-    return total;
+    // return total;
 }
 console.log(sumAll(5,10,15,20,25));
