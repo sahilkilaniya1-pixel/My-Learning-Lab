@@ -324,7 +324,7 @@
 // InvertedPyramidSolid(5);
 
 // let x = 10;[]
-function test() {
+// function test() {
     console.log(x);
     let x = 20;
 }
