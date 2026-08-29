@@ -222,26 +222,26 @@
 
 
 // function MirroredHalfDiamond(n) {
-    // for (let i = 1; i <= n; i++) {
-        // let row = "";
-        // for (let s = 1; s <= (n - i); s++) {
-            // row += " ";
-        // }
-        // for (let j = 1; j <= i; j++) {
-            // row += "*";
-        // }
-        // console.log(row);
-    // }
-    // for (let i = n - 1; i >= 1; i--) {
-        // let row = "";
-        // for (let s = 1; s <= (n - i); s++) {
-            // row += " "; 
-        // }
-        // for (let j = 1; j <= i; j++) {
-            // row += "*";
-        // }
-        // console.log(row);
-    // }
+// for (let i = 1; i <= n; i++) {
+// let row = "";
+// for (let s = 1; s <= (n - i); s++) {
+// row += " ";
+// }
+// for (let j = 1; j <= i; j++) {
+// row += "*";
+// }
+// console.log(row);
+// }
+// for (let i = n - 1; i >= 1; i--) {
+// let row = "";
+// for (let s = 1; s <= (n - i); s++) {
+// row += " "; 
+// }
+// for (let j = 1; j <= i; j++) {
+// row += "*";
+// }
+// console.log(row);
+// }
 // }
 // MirroredHalfDiamond(5);
 
@@ -325,17 +325,17 @@
 
 // let x = 10;[]
 // function test() {
-    // console.log(x);
-    // let x = 20;
+// console.log(x);
+// let x = 20;
 // }
 // Text();
 
 // for(var  i=0; i< 3; i++){
-    // setTimeout(()=>console.log(i),1000);
+// setTimeout(()=>console.log(i),1000);
 // }
 
 // for( let i=0; i< 3; i++){
-    // setTimeout(()=>console.log(i),1000);
+// setTimeout(()=>console.log(i),1000);
 // }
 
 // const obj = {a:1};
@@ -343,13 +343,18 @@
 // console.log(obj.a);
 
 // function sumObjectValues(obj){
-    // let sum = 0;
-    // for(let key in obj){
-        // if(typeof obj[key]==='number'){
-            // sum +=obj[key];
-        // }
-    // }
-    // return sum;
+// let sum = 0;
+// for(let key in obj){
+// if(typeof obj[key]==='number'){
+// sum +=obj[key];
+// }
+// }
+// return sum;
 // }
 // const data = {a:10, b:'hello', c:20, d:true};
 // console.log(sumObjectValues(data));
+
+// function getSquare(num) {
+    return num * num;
+}
+console.log(getSquare(7));
