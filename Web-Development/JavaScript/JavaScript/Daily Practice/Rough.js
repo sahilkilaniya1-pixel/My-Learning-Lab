@@ -337,3 +337,7 @@
 // for( let i=0; i< 3; i++){
     // setTimeout(()=>console.log(i),1000);
 // }
+
+const obj = {a:1};
+obj.a=2;
+console.log(obj.a);
