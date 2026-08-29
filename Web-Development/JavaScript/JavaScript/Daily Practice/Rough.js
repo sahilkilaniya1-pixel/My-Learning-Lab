@@ -352,4 +352,4 @@
     // return sum;
 // }
 // const data = {a:10, b:'hello', c:20, d:true};
-console.log(sumObjectValues(data));
+// console.log(sumObjectValues(data));
