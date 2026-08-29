@@ -341,3 +341,15 @@
 // const obj = {a:1};
 // obj.a=2;
 // console.log(obj.a);
+
+// function sumObjectValues(obj){
+    let sum = 0;
+    for(let key in obj){
+        if(typeof obj[key]==='number'){
+            sum +=obj[key];
+        }
+    }
+    return sum;
+}
+const data = {a:10, b:'hello', c:20, d:true};
+console.log(sumObjectValues(data));
