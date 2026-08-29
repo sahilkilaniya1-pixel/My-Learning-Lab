@@ -400,3 +400,9 @@
 //     return num % 2===0;
 // }
 // console.log(isEven(7));
+
+// function greetUser(name = "Guest"){
+//     return `Hello ${name}`;
+// }
+// console.log(greetUser("Sahil"));
+// console.log(greetUser());
