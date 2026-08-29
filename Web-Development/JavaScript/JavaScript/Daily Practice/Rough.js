@@ -382,3 +382,11 @@
 
 // const multiply = (a,b) => a*b;
 // console.log(multiply(3,5));
+
+// function processNumber (num, callback){
+    let result = num *2;
+    callback(result);
+}
+processNumber(5, (output) =>{
+    console.log("Result is:", output);
+});
