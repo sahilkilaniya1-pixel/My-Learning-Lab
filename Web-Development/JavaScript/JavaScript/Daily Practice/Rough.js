@@ -377,5 +377,5 @@
         // total += num;
     // }
     // return total;
-}
+// }
 console.log(sumAll(5,10,15,20,25));
