@@ -379,3 +379,6 @@
     // return total;
 // }
 // console.log(sumAll(5,10,15,20,25));
+
+// const multiply = (a,b) => a*b;
+console.log(multiply(3,5));
