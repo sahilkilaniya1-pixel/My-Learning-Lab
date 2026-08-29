@@ -355,6 +355,6 @@
 // console.log(sumObjectValues(data));
 
 // function getSquare(num) {
-    return num * num;
+    // return num * num;
 }
 console.log(getSquare(7));
