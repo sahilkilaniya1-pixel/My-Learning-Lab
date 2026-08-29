@@ -373,7 +373,7 @@
 
 // function sumAll(...numbers){
     // let total = 0;
-    for(let num of numbers){
+    // for(let num of numbers){
         total += num;
     }
     return total;
