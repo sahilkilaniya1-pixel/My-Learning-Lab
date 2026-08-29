@@ -349,7 +349,7 @@
             // sum +=obj[key];
         // }
     // }
-    return sum;
+    // return sum;
 }
 const data = {a:10, b:'hello', c:20, d:true};
 console.log(sumObjectValues(data));
