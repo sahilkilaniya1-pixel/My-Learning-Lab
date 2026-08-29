@@ -367,5 +367,5 @@
 // function greetUser (name = "Guest"){
     // return   `hello ${name}`;
 }
-console.log(greetUser("Sahil"));
+// console.log(greetUser("Sahil"));
 console.log(greetUser());
