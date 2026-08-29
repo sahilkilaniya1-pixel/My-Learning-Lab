@@ -365,7 +365,7 @@
 // console.log(isEven(7));;
 
 // function greetUser (name = "Guest"){
-    return   `hello ${name}`;
+    // return   `hello ${name}`;
 }
 console.log(greetUser("Sahil"));
 console.log(greetUser());
