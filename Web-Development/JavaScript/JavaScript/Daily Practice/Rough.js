@@ -355,28 +355,28 @@
 // console.log(sumObjectValues(data));
 
 // function getSquare(num) {
-    // return num * num;
+// return num * num;
 // }
 // console.log(getSquare(7));
 
 // function isEven(num){
-    // return num % 2 ===0;
+// return num % 2 ===0;
 // }
 // console.log(isEven(7));;
 
 // function greetUser (name = "Guest"){
-    // return   `hello ${name}`;
+// return   `hello ${name}`;
 // }
 // console.log(greetUser("Sahil"));
 // console.log(greetUser());
 
 
 // function sumAll(...numbers){
-    // let total = 0;
-    // for(let num of numbers){
-        // total += num;
-    // }
-    // return total;
+// let total = 0;
+// for(let num of numbers){
+// total += num;
+// }
+// return total;
 // }
 // console.log(sumAll(5,10,15,20,25));
 
@@ -384,9 +384,19 @@
 // console.log(multiply(3,5));
 
 // function processNumber (num, callback){
-    // let result = num *2;
-    // callback(result);
+// let result = num *2;
+// callback(result);
 // }
 // processNumber(5, (output) =>{
-    // console.log("Result is:", output);
+// console.log("Result is:", output);
 // });
+
+// function getSquare(num) {
+//     return num * num;
+// }
+// console.log(getSquare(4));
+
+// function isEven(num){
+//     return num % 2===0;
+// }
+// console.log(isEven(7));
