@@ -338,6 +338,6 @@
     // setTimeout(()=>console.log(i),1000);
 // }
 
-const obj = {a:1};
+// const obj = {a:1};
 obj.a=2;
 console.log(obj.a);
