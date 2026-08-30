@@ -487,3 +487,16 @@ const { use } = require("react");
     // }
 // }
 // console.log(found);
+
+// function myMap (arr, callback){
+    let result = [];
+    for(let i=0; i<arr.length; i++){
+        result [result.length] = callback(arr[i], i, arr);
+    }
+    return result;
+}
+let number = [1,2,3];
+let doubled = myMap(number, function(num){
+    return num *2;
+});
+console.log(doubled);
