@@ -457,8 +457,12 @@ const { use } = require("react");
 
 // let arr = [10, 20, 30];
 
-// arr.push(40);
-// arr.pop()
-// arr.shift();
-// arr.unshift(5);
+// arr.push(40); add in end
+// arr.pop()  remove in end
+// arr.shift();  remove in start
+// arr.unshift(5); add in start
 // console.log(arr);
+
+// let color = ["red","blue","Yellow"]
+console.log(color.indexOf("blue"));
+console.log(color.indexOf("red"));
