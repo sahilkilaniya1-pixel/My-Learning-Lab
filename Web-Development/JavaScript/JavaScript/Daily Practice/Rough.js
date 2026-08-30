@@ -502,18 +502,26 @@ const { use } = require("react");
 // console.log(doubled);
 
 
-function myFilter(arr, callback) {
-  let result = [];
-  for (let i = 0; i < arr.length; i++) {
-    // Agar callback true return kare, tabhi add karo
-    if (callback(arr[i], i, arr)) {
-      result[result.length] = arr[i];
-    }
-  }
-  return result;
-}
+// function myFilter(arr, callback) {
+//   let result = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     // Agar callback true return kare, tabhi add karo
+//     if (callback(arr[i], i, arr)) {
+//       result[result.length] = arr[i];
+//     }
+//   }
+//   return result;
+// }
 
-let numbers = [1, 2, 3, 4, 5];
-let evens = myFilter(numbers, num => num % 2 === 0);
+// let numbers = [1, 2, 3, 4, 5];
+// let evens = myFilter(numbers, num => num % 2 === 0);
 
-console.log(evens); // [2, 4]
+// console.log(evens); // [2, 4]
+
+
+const person = {
+    name: "Golu",
+    age: 22,
+    isCoder: True
+};
+console.log(person);
