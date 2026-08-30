@@ -424,5 +424,5 @@
         // pincode: 124001
     // }
 // };
-const {address: {state}} = user;
+// const {address: {state}} = user;
 console.log(state);
