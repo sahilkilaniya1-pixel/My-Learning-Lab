@@ -471,7 +471,7 @@ const { use } = require("react");
 // let numbers = [1, 2, 3, 4];
 // let squared = numbers.map(num => num * num);
 // console.log(squared);
-let evenNumber = numbers.filter(num => num % 2 === 0);
+// let evenNumber = numbers.filter(num => num % 2 === 0);
 console.log(evenNumber);
 let sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
 console.log(sum);
