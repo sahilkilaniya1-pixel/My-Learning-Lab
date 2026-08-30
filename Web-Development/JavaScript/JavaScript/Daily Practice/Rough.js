@@ -492,7 +492,7 @@ const { use } = require("react");
     // let result = [];
     // for(let i=0; i<arr.length; i++){
         // result [result.length] = callback(arr[i], i, arr);
-    }
+    // }
     return result;
 }
 let number = [1,2,3];
