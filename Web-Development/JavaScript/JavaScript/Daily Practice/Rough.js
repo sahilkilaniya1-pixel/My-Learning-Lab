@@ -2,6 +2,8 @@
 // //   for (let i = 1; i <= N; i++) {       // Rule 1: Row tracker
 // //     let row = "";                      // Rule 2: Khali Dibba
 
+const { use } = require("react");
+
 //     for (let j = 1; j <= i; j++) {     // Rule 3: Column tracker
 //       row = row + "* ";                // Dibbe mein star daalo
 //     }
@@ -426,3 +428,14 @@
 // };
 // const {address: {state}} = user;
 // console.log(state);
+
+// const user = {
+    naem: 'Sahil',
+    address : {
+        city: 'Rohtak',
+        state: 'Haryana',
+        pincode: 124001
+    }
+};
+console.log(user.address.city);
+console.log(user['address']['city']);
