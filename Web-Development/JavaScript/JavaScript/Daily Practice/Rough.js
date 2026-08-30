@@ -532,4 +532,4 @@ const { use } = require("react");
 // const user = {name: "Sahil", city: "Delhi", role: "Developer"};
 // console.log(Object.keys(user));
 // console.log(Object.values(user));
-console.log(Object.entries(user));
+// console.log(Object.entries(user));
