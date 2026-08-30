@@ -519,9 +519,12 @@ const { use } = require("react");
 // console.log(evens); // [2, 4]
 
 
-const person = {
-    name: "Golu",
+// const person = {
+    name: "Sahil",
     age: 22,
-    isCoder: True
+    isCoder: true
 };
-console.log(person);
+console.log(person["age"]);
+
+let dynamcKey = "isCoder";
+console.log(person[dynamcKey]);
