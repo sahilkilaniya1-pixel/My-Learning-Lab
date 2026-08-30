@@ -523,7 +523,7 @@ const { use } = require("react");
     // name: "Sahil",
     // age: 22,
     // isCoder: true
-};
+// };
 console.log(person["age"]);
 
 let dynamcKey = "isCoder";
