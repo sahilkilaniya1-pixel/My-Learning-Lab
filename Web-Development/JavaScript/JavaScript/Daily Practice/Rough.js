@@ -465,4 +465,4 @@ const { use } = require("react");
 
 // let color = ["red","blue","Yellow"]
 // console.log(color.indexOf("blue"));
-console.log(color.indexOf("red"));
+// console.log(color.indexOf("red"));
