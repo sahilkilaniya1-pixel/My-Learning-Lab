@@ -551,7 +551,7 @@ const { use } = require("react");
 // const student = {name:"Sahil", marks: 85, Section: "A"};
 // function getCustomKeys(obj){
     // let KeyArray = [];
-    for(let key in obj){
+    // for(let key in obj){
         if(obj.hasOwnProperty(key)){
             KeyArray[KeyArray.length] = key;
         }
