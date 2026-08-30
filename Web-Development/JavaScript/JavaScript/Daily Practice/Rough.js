@@ -499,4 +499,4 @@ const { use } = require("react");
 // let doubled = myMap(number, function(num){
     // return num *2;
 // });
-console.log(doubled);
+// console.log(doubled);
