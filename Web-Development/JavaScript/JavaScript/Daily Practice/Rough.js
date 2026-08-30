@@ -489,7 +489,7 @@ const { use } = require("react");
 // console.log(found);
 
 // function myMap (arr, callback){
-    let result = [];
+    // let result = [];
     for(let i=0; i<arr.length; i++){
         result [result.length] = callback(arr[i], i, arr);
     }
