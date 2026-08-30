@@ -555,7 +555,7 @@ const { use } = require("react");
         // if(obj.hasOwnProperty(key)){
             // KeyArray[KeyArray.length] = key;
         // }
-    }
+    // }
     return keysArray;
 }
 console.log(getCustomKeys(student));
