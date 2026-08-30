@@ -419,7 +419,7 @@
 // const user = {
     // naem: 'Sahil',
     // address : {
-        city: 'Rohtak',
+        // city: 'Rohtak',
         state: 'Haryana',
         pincode: 124001
     }
