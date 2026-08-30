@@ -476,3 +476,14 @@ const { use } = require("react");
 // let sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
 // console.log(sum);
 
+
+// let arr  = ["Apple", "banana","mango"];
+let target = "banana";
+let found = false;
+for(let i=0; i<arr.length; i++){
+    if(arr[i]===target) {
+        found = true;
+        break;
+    }
+}
+console.log(found);
