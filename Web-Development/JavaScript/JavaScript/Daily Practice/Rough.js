@@ -436,6 +436,6 @@ const { use } = require("react");
         // state: 'Haryana',
         // pincode: 124001
     // }
-};
+// };
 console.log(user.address.city);
 console.log(user['address']['city']);
