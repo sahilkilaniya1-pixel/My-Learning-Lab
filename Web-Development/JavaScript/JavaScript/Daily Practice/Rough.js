@@ -459,6 +459,6 @@ const { use } = require("react");
 
 // arr.push(40);
 // arr.pop()
-arr.shift();
+// arr.shift();
 arr.unshift(5);
 console.log(arr);
