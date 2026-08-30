@@ -498,5 +498,5 @@ const { use } = require("react");
 // let number = [1,2,3];
 // let doubled = myMap(number, function(num){
     // return num *2;
-});
+// });
 console.log(doubled);
