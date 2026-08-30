@@ -421,7 +421,7 @@
     // address : {
         // city: 'Rohtak',
         // state: 'Haryana',
-        pincode: 124001
+        // pincode: 124001
     }
 };
 const {address: {state}} = user;
