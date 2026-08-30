@@ -453,3 +453,12 @@ const { use } = require("react");
 // let fruits  =["Apple", "banana"];
 // console.log(fruits[0]);
 // console.log(fruits.length);
+
+
+// let arr = [10, 20, 30];
+
+arr.push(40);
+arr.pop()
+arr.shift();
+arr.unshift(5);
+console.log(arr);
