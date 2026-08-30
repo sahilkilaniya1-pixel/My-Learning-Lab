@@ -469,7 +469,7 @@ const { use } = require("react");
 // console.log(color.indexOf("purple"));
 
 // let numbers = [1, 2, 3, 4];
-let squared = numbers.map(num => num * num);
+// let squared = numbers.map(num => num * num);
 console.log(squared);
 let evenNumber = numbers.filter(num => num % 2 === 0);
 console.log(evenNumber);
