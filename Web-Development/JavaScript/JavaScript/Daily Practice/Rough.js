@@ -417,7 +417,7 @@
 // console.log(sumAll(5,10));
 
 // const user = {
-    naem: 'Sahil',
+    // naem: 'Sahil',
     address : {
         city: 'Rohtak',
         state: 'Haryana',
