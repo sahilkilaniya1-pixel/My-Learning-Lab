@@ -446,5 +446,5 @@ const { use } = require("react");
 
 // for...of vs for...in
 // const arr = [10, 20];
-for (let val of arr) console.log(val); // 10, 20 (Values)
+// for (let val of arr) console.log(val); // 10, 20 (Values)
 for (let index in arr) console.log(index); // 0, 1 (Keys/Indices)
