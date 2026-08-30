@@ -521,7 +521,7 @@ const { use } = require("react");
 
 // const person = {
     // name: "Sahil",
-    age: 22,
+    // age: 22,
     isCoder: true
 };
 console.log(person["age"]);
