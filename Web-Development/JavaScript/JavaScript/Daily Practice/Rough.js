@@ -542,3 +542,8 @@ const { use } = require("react");
 
 // const copied = Object.assign({}, obj1);
 // console.log(copied);
+
+
+// const settings = {theme: "dark"};
+// Object.freeze(settings);
+// settings.theme = "Light";
