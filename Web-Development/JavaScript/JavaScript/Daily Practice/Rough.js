@@ -433,7 +433,7 @@ const { use } = require("react");
     // naem: 'Sahil',
     // address : {
         // city: 'Rohtak',
-        state: 'Haryana',
+        // state: 'Haryana',
         pincode: 124001
     }
 };
