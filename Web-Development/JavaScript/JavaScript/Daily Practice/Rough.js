@@ -484,6 +484,6 @@ const { use } = require("react");
     // if(arr[i]===target) {
         // found = true;
         // break;
-    }
+    // }
 }
 console.log(found);
