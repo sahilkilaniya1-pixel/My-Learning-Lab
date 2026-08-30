@@ -430,7 +430,7 @@ const { use } = require("react");
 // console.log(state);
 
 // const user = {
-    naem: 'Sahil',
+    // naem: 'Sahil',
     // address : {
         city: 'Rohtak',
         state: 'Haryana',
