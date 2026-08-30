@@ -442,7 +442,7 @@ const { use } = require("react");
 
 // Ternary Operator
 // let age = 20;
-let canVote = age >= 18 ? "Yes" : "No";
+// let canVote = age >= 18 ? "Yes" : "No";
 
 // for...of vs for...in
 const arr = [10, 20];
