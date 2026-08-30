@@ -450,3 +450,6 @@ const { use } = require("react");
 // for (let index in arr) console.log(index); // 0, 1 (Keys/Indices)
 
 
+// let fruits  =["Apple", "banana"];
+console.log(fruits[0]);
+console.log(fruits.length);
