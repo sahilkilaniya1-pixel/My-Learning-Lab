@@ -423,6 +423,6 @@
         // state: 'Haryana',
         // pincode: 124001
     }
-};
+// };
 const {address: {state}} = user;
 console.log(state);
