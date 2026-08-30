@@ -415,3 +415,14 @@
 //     return total;
 // }
 // console.log(sumAll(5,10));
+
+// const user = {
+    naem: 'Sahil',
+    address : {
+        city: 'Rohtak',
+        state: 'Haryana',
+        pincode: 124001
+    }
+};
+const {address: {state}} = user;
+console.log(state);
