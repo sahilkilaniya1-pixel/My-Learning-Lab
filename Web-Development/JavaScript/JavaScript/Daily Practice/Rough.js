@@ -533,3 +533,12 @@ const { use } = require("react");
 // console.log(Object.keys(user));
 // console.log(Object.values(user));
 // console.log(Object.entries(user));
+
+const obj1 = {a:1};
+const obj2 = {b:2};
+
+const merged = {...obj1, ...obj2};
+console.log(merged);
+
+const copied = Object.assign({}, obj1);
+console.log(copied);
