@@ -549,7 +549,7 @@ const { use } = require("react");
 // settings.theme = "Light";
 
 // const student = {name:"Sahil", marks: 85, Section: "A"};
-function getCustomKeys(obj){
+// function getCustomKeys(obj){
     let KeyArray = [];
     for(let key in obj){
         if(obj.hasOwnProperty(key)){
