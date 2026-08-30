@@ -419,23 +419,23 @@ const { use } = require("react");
 // console.log(sumAll(5,10));
 
 // const user = {
-    // naem: 'Sahil',
-    // address : {
-        // city: 'Rohtak',
-        // state: 'Haryana',
-        // pincode: 124001
-    // }
+// naem: 'Sahil',
+// address : {
+// city: 'Rohtak',
+// state: 'Haryana',
+// pincode: 124001
+// }
 // };
 // const {address: {state}} = user;
 // console.log(state);
 
 // const user = {
-    // naem: 'Sahil',
-    // address : {
-        // city: 'Rohtak',
-        // state: 'Haryana',
-        // pincode: 124001
-    // }
+// naem: 'Sahil',
+// address : {
+// city: 'Rohtak',
+// state: 'Haryana',
+// pincode: 124001
+// }
 // };
 // console.log(user.address.city);
 // console.log(user['address']['city']);
@@ -467,3 +467,12 @@ const { use } = require("react");
 // console.log(color.indexOf("blue"));
 // console.log(color.indexOf("red"));
 // console.log(color.indexOf("purple"));
+
+// let numbers = [1, 2, 3, 4];
+let squared = numbers.map(num => num * num);
+console.log(squared);
+let evenNumber = numbers.filter(num => num % 2 === 0);
+console.log(evenNumber);
+let sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
+console.log(sum);
+
