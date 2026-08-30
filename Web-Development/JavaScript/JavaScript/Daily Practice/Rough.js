@@ -437,5 +437,5 @@ const { use } = require("react");
         // pincode: 124001
     // }
 // };
-console.log(user.address.city);
+// console.log(user.address.city);
 console.log(user['address']['city']);
