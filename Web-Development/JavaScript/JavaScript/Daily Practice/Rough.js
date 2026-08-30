@@ -524,7 +524,7 @@ const { use } = require("react");
     // age: 22,
     // isCoder: true
 // };
-console.log(person["age"]);
+// console.log(person["age"]);
 
 let dynamcKey = "isCoder";
 console.log(person[dynamcKey]);
