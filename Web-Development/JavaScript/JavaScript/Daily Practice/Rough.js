@@ -526,5 +526,5 @@ const { use } = require("react");
 // };
 // console.log(person["age"]);
 
-let dynamcKey = "isCoder";
+// let dynamcKey = "isCoder";
 console.log(person[dynamcKey]);
