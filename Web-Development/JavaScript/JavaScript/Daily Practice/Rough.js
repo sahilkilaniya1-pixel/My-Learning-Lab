@@ -493,7 +493,7 @@ const { use } = require("react");
     // for(let i=0; i<arr.length; i++){
         // result [result.length] = callback(arr[i], i, arr);
     // }
-    return result;
+    // return result;
 }
 let number = [1,2,3];
 let doubled = myMap(number, function(num){
