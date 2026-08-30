@@ -540,5 +540,5 @@ const { use } = require("react");
 // const merged = {...obj1, ...obj2};
 // console.log(merged);
 
-const copied = Object.assign({}, obj1);
+// const copied = Object.assign({}, obj1);
 console.log(copied);
