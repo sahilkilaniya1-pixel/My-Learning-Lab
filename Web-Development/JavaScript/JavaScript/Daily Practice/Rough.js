@@ -435,7 +435,7 @@ const { use } = require("react");
         // city: 'Rohtak',
         // state: 'Haryana',
         // pincode: 124001
-    }
+    // }
 };
 console.log(user.address.city);
 console.log(user['address']['city']);
