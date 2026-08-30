@@ -473,6 +473,6 @@ const { use } = require("react");
 // console.log(squared);
 // let evenNumber = numbers.filter(num => num % 2 === 0);
 // console.log(evenNumber);
-let sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
-console.log(sum);
+// let sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
+// console.log(sum);
 
