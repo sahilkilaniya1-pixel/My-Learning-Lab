@@ -479,7 +479,7 @@ const { use } = require("react");
 
 // let arr  = ["Apple", "banana","mango"];
 // let target = "banana";
-let found = false;
+// let found = false;
 for(let i=0; i<arr.length; i++){
     if(arr[i]===target) {
         found = true;
