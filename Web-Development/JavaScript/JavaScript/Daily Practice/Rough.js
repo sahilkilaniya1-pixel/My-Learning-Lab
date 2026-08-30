@@ -481,7 +481,7 @@ const { use } = require("react");
 // let target = "banana";
 // let found = false;
 // for(let i=0; i<arr.length; i++){
-    if(arr[i]===target) {
+    // if(arr[i]===target) {
         found = true;
         break;
     }
