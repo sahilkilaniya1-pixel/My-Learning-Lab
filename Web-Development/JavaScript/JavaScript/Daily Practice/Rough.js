@@ -481,22 +481,39 @@ const { use } = require("react");
 // let target = "banana";
 // let found = false;
 // for(let i=0; i<arr.length; i++){
-    // if(arr[i]===target) {
-        // found = true;
-        // break;
-    // }
+// if(arr[i]===target) {
+// found = true;
+// break;
+// }
 // }
 // console.log(found);
 
 // function myMap (arr, callback){
-    // let result = [];
-    // for(let i=0; i<arr.length; i++){
-        // result [result.length] = callback(arr[i], i, arr);
-    // }
-    // return result;
+// let result = [];
+// for(let i=0; i<arr.length; i++){
+// result [result.length] = callback(arr[i], i, arr);
+// }
+// return result;
 // }
 // let number = [1,2,3];
 // let doubled = myMap(number, function(num){
-    // return num *2;
+// return num *2;
 // });
 // console.log(doubled);
+
+
+function myFilter(arr, callback) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    // Agar callback true return kare, tabhi add karo
+    if (callback(arr[i], i, arr)) {
+      result[result.length] = arr[i];
+    }
+  }
+  return result;
+}
+
+let numbers = [1, 2, 3, 4, 5];
+let evens = myFilter(numbers, num => num % 2 === 0);
+
+console.log(evens); // [2, 4]
