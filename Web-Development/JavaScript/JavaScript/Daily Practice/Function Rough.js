@@ -48,5 +48,5 @@
 
 // B. Modern Way: Rest Parameters (...args)
 function sumNew(...numbers){
-    return numbers.reduce
+    return numbers.reduce((total,num) => total +num, 0);
 }
