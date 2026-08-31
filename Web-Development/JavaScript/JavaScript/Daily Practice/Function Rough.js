@@ -13,7 +13,7 @@
 // Variable mein function assign karna. Ye hoisted nahi hoti.
 // greet(); //Error
 // const greet = function (name){
-    // return `Hello, ${name}`;
+// return `Hello, ${name}`;
 // };
 
 // C. Arrow Functions (() => {})
@@ -25,22 +25,22 @@
 // A. Higher-Order Functions (HOF) & Callbacks
 
 // function sendNotification(){
-    // console.log("Payment Successful! SMS sent.");
+// console.log("Payment Successful! SMS sent.");
 // }
 // function processPayment(amount, callback){
-    // console.log(`processing payment of ${amount}...`);
-    // callback();
+// console.log(`processing payment of ${amount}...`);
+// callback();
 // }
 // processPayment(500, sendNotification);
 
 
 // 2. Rest Parameters (...args) vs arguments Object
 // A. Old Way: arguments Object
-function sumOld(){
+// function sumOld() {
     let total = 0;
-    for(let i=0; i< arguments.length; i++){
+    for (let i = 0; i < arguments.length; i++) {
         total += arguments[i];
     }
     return total;
 }
-console.log(sumOld(10,20,30));
+console.log(sumOld(10, 20, 30));
