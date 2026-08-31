@@ -17,7 +17,7 @@
 // console.log(Object.entries(user));
 
 // B. Object.assign() aur Spread Operator (...)
-const obj1 = {a:1};
+// const obj1 = {a:1};
 const obj2 = {b:2};
 // Spread Operator (Modern Way)
 const merged = {...obj1, ...obj2};
