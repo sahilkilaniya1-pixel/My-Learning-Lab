@@ -34,4 +34,14 @@
 
 // 3. Objects WITHOUT Built-in Functions (Custom Logic)
 // A. Custom Object.keys() (Keys ko manually loop karna)
-const student = {name: "Sahil", marks:85, section: "A"};
+// const student = {name: "Sahil", marks:85, section: "A"};
+function getCustomKeys(obj){
+    let keyArray = [];
+    for(let key in obj) {
+        if (obj.hasOwnProperty(key)){
+            keyArray[keyArray.length] = key;
+        }
+    }
+    return keyArray;
+}
+console.log(getCustomKeys(student));
