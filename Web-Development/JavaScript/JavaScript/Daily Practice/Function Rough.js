@@ -14,4 +14,4 @@ function sayHello(){
 // greet(); //Error
 const greet = function (name){
     return `Hello, ${name}`;
-}
+};
