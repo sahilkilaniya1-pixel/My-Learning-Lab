@@ -6,6 +6,6 @@
     // isCoder: true
 // };
 // console.log(person);
-console.log(person.name);
+// console.log(person.name);
 console.log(person["age"]);
 // Dynamic key Access Example
