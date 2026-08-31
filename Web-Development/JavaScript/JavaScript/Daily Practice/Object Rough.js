@@ -43,5 +43,5 @@
         // }
     // }
     // return keyArray;
-}
+// }
 console.log(getCustomKeys(student));
