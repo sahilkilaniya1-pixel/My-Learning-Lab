@@ -4,10 +4,10 @@
 // 1. Function Types & Writing Styles
 // A. Function Declaration
 
-sayHello(); //Works fine
-function sayHello(){
-    console.log("Hello World");
-}
+// sayHello(); //Works fine
+// function sayHello(){
+//     console.log("Hello World");
+// }
 
 // B. Function Expression
 // Variable mein function assign karna. Ye hoisted nahi hoti.
@@ -37,5 +37,10 @@ function sayHello(){
 // 2. Rest Parameters (...args) vs arguments Object
 // A. Old Way: arguments Object
 function sumOld(){
-    
+    let total = 0;
+    for(let i=0; i< arguments.length; i++){
+        total += arguments[i];
+    }
+    return total;
 }
+console.log(sumOld(10,20,30));
