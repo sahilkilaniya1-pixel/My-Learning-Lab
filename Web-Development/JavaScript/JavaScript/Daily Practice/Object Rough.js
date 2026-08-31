@@ -37,7 +37,7 @@
 // const student = {name: "Sahil", marks:85, section: "A"};
 // function getCustomKeys(obj){
     // let keyArray = [];
-    for(let key in obj) {
+    // for(let key in obj) {
         if (obj.hasOwnProperty(key)){
             keyArray[keyArray.length] = key;
         }
