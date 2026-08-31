@@ -47,3 +47,4 @@
 
 
 // B. Modern Way: Rest Parameters (...args)
+function sumNew(...numbers){}
