@@ -49,7 +49,7 @@
 
 // B. Custom Object Merge (Bina Spread / Object.assign ke)
 // const defaultSettings = {theme: "light", font:"arial"};
-const userSettings = {theme: "dark"};
+// const userSettings = {theme: "dark"};
 
 function customAssign(target, source ){
     for(let key in source) {
