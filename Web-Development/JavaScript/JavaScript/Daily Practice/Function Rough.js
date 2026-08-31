@@ -3,3 +3,8 @@
 
 // 1. Function Types & Writing Styles
 // A. Function Declaration
+
+sayHello();
+function sayHello(){
+    console.log("Hello World");
+}
