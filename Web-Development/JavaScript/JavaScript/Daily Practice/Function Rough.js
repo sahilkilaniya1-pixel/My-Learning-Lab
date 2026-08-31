@@ -44,3 +44,6 @@
     // return total;
 // }
 // console.log(sumOld(10, 20, 30));
+
+
+// B. Modern Way: Rest Parameters (...args)
