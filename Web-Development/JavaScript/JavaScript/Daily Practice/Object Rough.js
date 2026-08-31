@@ -33,3 +33,4 @@
 // console.log(settings);
 
 // 3. Objects WITHOUT Built-in Functions (Custom Logic)
+// A. Custom Object.keys() (Keys ko manually loop karna)
