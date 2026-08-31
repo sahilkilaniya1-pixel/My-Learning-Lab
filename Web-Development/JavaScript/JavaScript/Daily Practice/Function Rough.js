@@ -49,7 +49,7 @@
 // B. Modern Way: Rest Parameters (...args)
 // function sumNew(...numbers){
     // return numbers.reduce((total,num) => total +num, 0);
-}
+// }
 // console.log(sumNew(10,20,30,40)); // 100
 
 //Specific parameters ke sath:
