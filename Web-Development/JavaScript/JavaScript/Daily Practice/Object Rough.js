@@ -30,4 +30,4 @@
 // const settings = {theme: "dark"};
 // Object.freeze(settings);
 // settings.theme ="light";
-console.log(settings);
+// console.log(settings);
