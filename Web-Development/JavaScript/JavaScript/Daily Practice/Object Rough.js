@@ -10,3 +10,4 @@
 // console.log(person["age"]);
 // Dynamic key Access Example
 
+// 2. Objects WITH Built-in Methods
