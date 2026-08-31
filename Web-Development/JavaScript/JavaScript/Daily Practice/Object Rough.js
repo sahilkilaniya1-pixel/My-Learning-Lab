@@ -57,5 +57,5 @@
     // }
     // return target;
 // }
-const finalSettings = customAssign(defaultSettings, userSettings);
+// const finalSettings = customAssign(defaultSettings, userSettings);
 console.log(finalSettings);
