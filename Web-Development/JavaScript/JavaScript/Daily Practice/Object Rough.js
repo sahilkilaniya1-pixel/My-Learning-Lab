@@ -27,3 +27,5 @@
 // console.log(copied);
 
 // C. Immutability Methods (freeze vs seal)
+const settings = {theme: "dark"};
+Object.freeze(settings)
