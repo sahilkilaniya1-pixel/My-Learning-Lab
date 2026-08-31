@@ -53,7 +53,7 @@
 // console.log(sumNew(10,20,30,40)); // 100
 
 //Specific parameters ke sath:
-function userDetails (firstName , lastName, ...hobbies){
+// function userDetails (firstName , lastName, ...hobbies){
     console.log(`Name:${firstName} ${lastName}`);
     console.log(`Hobboes:`, hobbies);
 }
