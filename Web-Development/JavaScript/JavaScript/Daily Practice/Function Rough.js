@@ -23,8 +23,9 @@ function sayHello(){
 
 // 2. Advanced Function Concepts
 // A. Higher-Order Functions (HOF) & Callbacks
+
 // function sendNotification(){
-    console.log("Payment Successful! SMS sent.");
+    // console.log("Payment Successful! SMS sent.");
 }
 function processPayment(amount, callback){
     console.log(`processing payment of ${amount}...`);
