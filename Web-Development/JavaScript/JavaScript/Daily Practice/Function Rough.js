@@ -27,5 +27,6 @@ function sendNotification(){
     console.log("Payment Successful! SMS sent.");
 }
 function processPayment(amount, callback){
-    
+    console.log(`processing payment of ${amount}...`);
+    callback();
 }
