@@ -13,5 +13,5 @@ function sayHello(){
 // Variable mein function assign karna. Ye hoisted nahi hoti.
 // greet(); //Error
 // const greet = function (name){
-    return `Hello, ${name}`;
+    // return `Hello, ${name}`;
 };
