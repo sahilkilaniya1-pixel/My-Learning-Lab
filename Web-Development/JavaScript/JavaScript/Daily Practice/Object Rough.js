@@ -1,6 +1,6 @@
 // 1. Object Creation & Accessing
 // A. Creation (Object Literal)
-const person = {
+// const person = {
     name: "Sahil",
     age: 22,
     isCoder: true
