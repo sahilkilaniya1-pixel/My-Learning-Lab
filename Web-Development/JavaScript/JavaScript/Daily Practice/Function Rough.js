@@ -8,3 +8,6 @@ sayHello(); //Works fine
 function sayHello(){
     console.log("Hello World");
 }
+
+// B. Function Expression
+Variable mein function assign karna. Ye hoisted nahi hoti.
