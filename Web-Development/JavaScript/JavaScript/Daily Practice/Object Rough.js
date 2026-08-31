@@ -2,7 +2,7 @@
 // A. Creation (Object Literal)
 // const person = {
     // name: "Sahil",
-    age: 22,
+    // age: 22,
     isCoder: true
 };
 console.log(person);
