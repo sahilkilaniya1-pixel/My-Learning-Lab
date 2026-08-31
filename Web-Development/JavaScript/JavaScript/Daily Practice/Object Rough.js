@@ -34,3 +34,4 @@
 
 // 3. Objects WITHOUT Built-in Functions (Custom Logic)
 // A. Custom Object.keys() (Keys ko manually loop karna)
+const student = {name: "Sahil", marks:85, section: "A"};
