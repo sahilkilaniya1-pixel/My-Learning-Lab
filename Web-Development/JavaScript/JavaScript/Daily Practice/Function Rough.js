@@ -55,6 +55,6 @@
 //Specific parameters ke sath:
 // function userDetails (firstName , lastName, ...hobbies){
     // console.log(`Name:${firstName} ${lastName}`);
-    console.log(`Hobboes:`, hobbies);
+    // console.log(`Hobboes:`, hobbies);
 }
 userDetails("Sahil","Kilaniya","coding","Gaming","Music");
