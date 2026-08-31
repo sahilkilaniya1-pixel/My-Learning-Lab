@@ -11,4 +11,7 @@
 // Dynamic key Access Example
 
 // 2. Objects WITH Built-in Methods
-const user = {name: "Rahul", city:"Rohtak", role:"Developer"};
+// const user = {name: "Rahul", city:"Rohtak", role:"Developer"};
+console.log(Object.keys(user));
+console.log(Object.values(user));
+console.log(Object.entries(user));
