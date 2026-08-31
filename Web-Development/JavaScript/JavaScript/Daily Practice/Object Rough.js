@@ -56,6 +56,6 @@
         // target[key] = source[key];
     // }
     return target;
-}
+// }
 const finalSettings = customAssign(defaultSettings, userSettings);
 console.log(finalSettings);
