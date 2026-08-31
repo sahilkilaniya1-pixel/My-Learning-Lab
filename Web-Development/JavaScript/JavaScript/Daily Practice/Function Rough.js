@@ -10,4 +10,4 @@ function sayHello(){
 }
 
 // B. Function Expression
-Variable mein function assign karna. Ye hoisted nahi hoti.
+// Variable mein function assign karna. Ye hoisted nahi hoti.
