@@ -3,7 +3,7 @@
 // const person = {
     // name: "Sahil",
     // age: 22,
-    isCoder: true
+    // isCoder: true
 };
 console.log(person);
 console.log(person.name);
