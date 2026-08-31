@@ -21,5 +21,5 @@ function sayHello(){
 // const add = (a,b) => a+b;
 // console.log(add(5,1));
 
-2. Advanced Function Concepts
+// 2. Advanced Function Concepts
 A. Higher-Order Functions (HOF) & Callbacks
