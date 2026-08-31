@@ -32,3 +32,4 @@
 // settings.theme ="light";
 // console.log(settings);
 
+// 3. Objects WITHOUT Built-in Functions (Custom Logic)
