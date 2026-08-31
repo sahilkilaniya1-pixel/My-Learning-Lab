@@ -41,7 +41,7 @@
         // if (obj.hasOwnProperty(key)){
             // keyArray[keyArray.length] = key;
         }
-    }
+    // }
     return keyArray;
 }
 console.log(getCustomKeys(student));
