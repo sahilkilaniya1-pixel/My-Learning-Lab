@@ -4,7 +4,7 @@
 // 1. Function Types & Writing Styles
 // A. Function Declaration
 
-sayHello();
+sayHello(); //Works fine
 function sayHello(){
     console.log("Hello World");
 }
