@@ -32,3 +32,6 @@ function sayHello(){
     // callback();
 // }
 // processPayment(500, sendNotification);
+
+
+// 2. Rest Parameters (...args) vs arguments Object
