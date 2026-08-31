@@ -52,7 +52,7 @@
 // const userSettings = {theme: "dark"};
 
 // function customAssign(target, source ){
-    for(let key in source) {
+    // for(let key in source) {
         target[key] = source[key];
     }
     return target;
