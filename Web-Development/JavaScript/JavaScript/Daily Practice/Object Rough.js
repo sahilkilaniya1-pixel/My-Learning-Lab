@@ -17,3 +17,4 @@
 // console.log(Object.entries(user));
 
 // B. Object.assign() aur Spread Operator (...)
+const obj1 = {a:1};
