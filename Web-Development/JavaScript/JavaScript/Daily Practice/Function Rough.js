@@ -36,3 +36,6 @@ function sayHello(){
 
 // 2. Rest Parameters (...args) vs arguments Object
 // A. Old Way: arguments Object
+function sumOld(){
+    
+}
