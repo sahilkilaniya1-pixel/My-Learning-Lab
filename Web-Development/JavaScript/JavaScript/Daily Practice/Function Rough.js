@@ -17,4 +17,4 @@ function sayHello(){
 // };
 
 // C. Arrow Functions (() => {})
-ES6 mein introduced, concise syntax.
+// ES6 mein introduced, concise syntax.
