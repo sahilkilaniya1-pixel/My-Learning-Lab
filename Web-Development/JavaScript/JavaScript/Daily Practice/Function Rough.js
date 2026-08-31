@@ -22,4 +22,4 @@ function sayHello(){
 // console.log(add(5,1));
 
 // 2. Advanced Function Concepts
-A. Higher-Order Functions (HOF) & Callbacks
+// A. Higher-Order Functions (HOF) & Callbacks
