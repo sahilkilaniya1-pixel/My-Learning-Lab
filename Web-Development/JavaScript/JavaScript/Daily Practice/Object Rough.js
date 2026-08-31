@@ -58,4 +58,4 @@
     // return target;
 // }
 // const finalSettings = customAssign(defaultSettings, userSettings);
-console.log(finalSettings);
+// console.log(finalSettings);
