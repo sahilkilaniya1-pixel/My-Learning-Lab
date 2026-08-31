@@ -19,4 +19,4 @@ function sayHello(){
 // C. Arrow Functions (() => {})
 // ES6 mein introduced, concise syntax.
 // const add = (a,b) => a+b;
-console.log(add(5,1));
+// console.log(add(5,1));
