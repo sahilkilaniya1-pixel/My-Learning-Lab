@@ -48,12 +48,14 @@
 
 
 // B. Custom Object Merge (Bina Spread / Object.assign ke)
-const defaultSettings = {theme: "light", font:"arial"};
+// const defaultSettings = {theme: "light", font:"arial"};
 const userSettings = {theme: "dark"};
 
 function customAssign(target, source ){
     for(let key in source) {
         target[key] = source[key];
     }
-    return 
+    return target;
 }
+const finalSettings = customAssign(defaultSettings, userSettings);
+console.log(finalSettings);
