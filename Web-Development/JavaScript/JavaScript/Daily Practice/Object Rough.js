@@ -11,3 +11,4 @@
 // Dynamic key Access Example
 
 // 2. Objects WITH Built-in Methods
+const user = {name: "Rahul", city:"Rohtak", role:"Developer"};
