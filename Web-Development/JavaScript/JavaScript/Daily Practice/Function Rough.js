@@ -30,3 +30,4 @@ function processPayment(amount, callback){
     console.log(`processing payment of ${amount}...`);
     callback();
 }
+processPayment(500, sendNotification);
