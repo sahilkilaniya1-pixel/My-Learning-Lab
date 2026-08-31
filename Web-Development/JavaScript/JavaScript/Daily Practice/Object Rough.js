@@ -26,3 +26,4 @@
 // const copied = Object.assign({}. obj1);
 // console.log(copied);
 
+// C. Immutability Methods (freeze vs seal)
