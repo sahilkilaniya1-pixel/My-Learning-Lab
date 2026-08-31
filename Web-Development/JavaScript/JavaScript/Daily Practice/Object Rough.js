@@ -55,7 +55,7 @@
     // for(let key in source) {
         // target[key] = source[key];
     // }
-    return target;
+    // return target;
 // }
 const finalSettings = customAssign(defaultSettings, userSettings);
 console.log(finalSettings);
