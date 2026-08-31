@@ -24,4 +24,4 @@
 // console.log(merged);
 // Object .assign
 // const copied = Object.assign({}. obj1);
-console.log(copied);
+// console.log(copied);
