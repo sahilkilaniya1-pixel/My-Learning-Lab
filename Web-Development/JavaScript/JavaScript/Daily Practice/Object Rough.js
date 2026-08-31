@@ -38,7 +38,7 @@
 // function getCustomKeys(obj){
     // let keyArray = [];
     // for(let key in obj) {
-        if (obj.hasOwnProperty(key)){
+        // if (obj.hasOwnProperty(key)){
             keyArray[keyArray.length] = key;
         }
     }
