@@ -42,6 +42,6 @@
             // keyArray[keyArray.length] = key;
         // }
     // }
-    return keyArray;
+    // return keyArray;
 }
 console.log(getCustomKeys(student));
