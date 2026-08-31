@@ -11,3 +11,7 @@ function sayHello(){
 
 // B. Function Expression
 // Variable mein function assign karna. Ye hoisted nahi hoti.
+// greet(); //Error
+const greet = function (name){
+    return `Hello, ${name}`;
+}
