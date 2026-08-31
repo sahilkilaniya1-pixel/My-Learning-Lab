@@ -53,4 +53,4 @@
 // console.log(sumNew(10,20,30,40)); // 100
 
 //Specific parameters ke sath:
-function userDetails ()
+function userDetails (firstName , lastName, ...hobbies){}
