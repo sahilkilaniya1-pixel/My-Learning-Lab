@@ -51,4 +51,9 @@
 const defaultSettings = {theme: "light", font:"arial"};
 const userSettings = {theme: "dark"};
 
-function customAssign(target, source ){}
+function customAssign(target, source ){
+    for(let key in source) {
+        target[key] = source[key];
+    }
+    return 
+}
