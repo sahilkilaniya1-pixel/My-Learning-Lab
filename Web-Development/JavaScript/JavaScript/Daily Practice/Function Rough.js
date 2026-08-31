@@ -15,3 +15,6 @@ function sayHello(){
 // const greet = function (name){
     // return `Hello, ${name}`;
 // };
+
+// C. Arrow Functions (() => {})
+ES6 mein introduced, concise syntax.
