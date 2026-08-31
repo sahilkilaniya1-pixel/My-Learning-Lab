@@ -16,3 +16,4 @@
 // console.log(Object.values(user));
 // console.log(Object.entries(user));
 
+// B. Object.assign() aur Spread Operator (...)
