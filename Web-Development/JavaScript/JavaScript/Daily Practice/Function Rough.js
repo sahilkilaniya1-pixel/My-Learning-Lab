@@ -37,7 +37,7 @@
 // 2. Rest Parameters (...args) vs arguments Object
 // A. Old Way: arguments Object
 // function sumOld() {
-    let total = 0;
+    // let total = 0;
     for (let i = 0; i < arguments.length; i++) {
         total += arguments[i];
     }
