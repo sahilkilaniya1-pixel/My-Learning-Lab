@@ -57,4 +57,4 @@
     // console.log(`Name:${firstName} ${lastName}`);
     // console.log(`Hobboes:`, hobbies);
 // }
-userDetails("Sahil","Kilaniya","coding","Gaming","Music");
+// userDetails("Sahil","Kilaniya","coding","Gaming","Music");
