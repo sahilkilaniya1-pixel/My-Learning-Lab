@@ -29,6 +29,6 @@ function sayHello(){
 // }
 // function processPayment(amount, callback){
     // console.log(`processing payment of ${amount}...`);
-    callback();
+    // callback();
 }
 processPayment(500, sendNotification);
