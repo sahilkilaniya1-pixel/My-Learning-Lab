@@ -15,8 +15,8 @@ try {
     die("Database Connection Failed: " . $e->getMessage());
 }
 
-==========================================
-// 2. FORM SUBMIT HONE PAR DATA SAVE KARNA (Insert)
+// ==========================================
+2. FORM SUBMIT HONE PAR DATA SAVE KARNA (Insert)
 // ==========================================
 $message = "";
 if (isset($_POST['save_btn'])) {
