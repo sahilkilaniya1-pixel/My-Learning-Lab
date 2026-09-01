@@ -78,3 +78,4 @@ function calculate(...agrs){
         return "Invalid number of arguments";
     }
 }
+console.log(calculate(7));
