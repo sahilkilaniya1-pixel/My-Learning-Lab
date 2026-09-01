@@ -42,8 +42,8 @@ if (isset($_GET['status']) && $_GET['status'] == 'success') {
     $message = "User successfully saved in Database!";
 }
 
-==========================================
-// 3. DATABASE SE DATA NIKALNA (Fetch/Read)
+// ==========================================
+3. DATABASE SE DATA NIKALNA (Fetch/Read)
 // ==========================================
 $stmt = $pdo->prepare("SELECT * FROM users ORDER BY id DESC");
 $stmt->execute();
