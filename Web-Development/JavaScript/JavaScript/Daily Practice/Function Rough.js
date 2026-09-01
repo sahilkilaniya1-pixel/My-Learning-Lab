@@ -98,3 +98,6 @@ function greet(msg) {
 // Built-in bind execution:
 const boundGreet = greet.bind(user, "Hello");
 boundGreet();
+
+
+// How Custom myBind() Works Behind the Scenes
