@@ -46,8 +46,8 @@ if (isset($_GET['status']) && $_GET['status'] == 'success') {
 // 3. DATABASE SE DATA NIKALNA (Fetch/Read)
 // ==========================================
 $stmt = $pdo->prepare("SELECT * FROM users ORDER BY id DESC");
-// $stmt->execute();
-$all_users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt->execute();
+// $all_users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
