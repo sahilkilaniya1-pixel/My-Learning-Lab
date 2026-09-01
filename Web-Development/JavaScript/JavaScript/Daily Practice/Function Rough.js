@@ -70,5 +70,5 @@ function calculate(...agrs){
         let width = args[1];
         return (length * width);
     }
-    
+    else if (args.length ==== 3){}
 }
