@@ -38,8 +38,8 @@ if (isset($_POST['save_btn'])) {
     exit();
 }
 
-// if (isset($_GET['status']) && $_GET['status'] == 'success') {
-    $message = "User successfully saved in Database!";
+if (isset($_GET['status']) && $_GET['status'] == 'success') {
+    // $message = "User successfully saved in Database!";
 }
 
 // ==========================================
