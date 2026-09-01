@@ -66,7 +66,7 @@ $all_users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         .success { color: green; font-weight: bold; }
     </style>
 <!-- </head> -->
-<body>
+<!-- <body> -->
 
     <div class="box">
         <h2>Add User to Database</h2>
