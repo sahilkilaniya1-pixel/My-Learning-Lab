@@ -59,3 +59,7 @@
 // }
 // userDetails("Sahil","Kilaniya","coding","Gaming","Music");
 
+// 3. Custom Function Overloading
+function calculate(...agrs){
+    
+}
