@@ -39,8 +39,8 @@ if (isset($_POST['save_btn'])) {
 }
 
 if (isset($_GET['status']) && $_GET['status'] == 'success') {
-    // $message = "User successfully saved in Database!";
-}
+    $message = "User successfully saved in Database!";
+// }
 
 // ==========================================
 // 3. DATABASE SE DATA NIKALNA (Fetch/Read)
