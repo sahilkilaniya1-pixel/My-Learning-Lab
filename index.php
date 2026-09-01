@@ -17,8 +17,8 @@ try {
 
 // ==========================================
 // 2. FORM SUBMIT HONE PAR DATA SAVE KARNA (Insert)
-==========================================
-$message = "";
+// ==========================================
+// $message = "";
 if (isset($_POST['save_btn'])) {
     $user_name  = $_POST['user_name'];
     $user_email = $_POST['user_email'];
