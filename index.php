@@ -52,8 +52,8 @@ $all_users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <!DOCTYPE html>
 <html lang="en">
-<!-- <head> -->
-    <meta charset="UTF-8">
+<head>
+    <!-- <meta charset="UTF-8"> -->
     <title>PHP MySQL Easy Demo</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 30px; background: #f4f4f4; }
