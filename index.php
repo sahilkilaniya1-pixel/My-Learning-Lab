@@ -1,8 +1,8 @@
 <?php
 // ==========================================
 // 1. DATABASE SE CONNECT HONA (Connection Setup)
-==========================================
-$host     = "localhost";
+// ==========================================
+// $host     = "localhost";
 $dbname   = "my_test_db";
 $username = "root";       // XAMPP ka default user
 $password = "";           // XAMPP ka default password khali hota hai
