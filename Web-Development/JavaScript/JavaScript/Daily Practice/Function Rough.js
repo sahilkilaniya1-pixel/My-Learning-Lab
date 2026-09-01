@@ -87,5 +87,5 @@ console.log(calculate(3, 4, 5));
 // 4. Custom bind() Method (Understanding this)
 /*
 Javscript mein this keyword contect ko point karta hain
-blid() method kisi function ko specific objet ke 
+blid() method kisi function ko specific objet ke sath permanently attact kr deta hain or ek nya function return krta hain.
 */
