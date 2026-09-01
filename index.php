@@ -28,8 +28,8 @@ if (isset($_POST['save_btn'])) {
     $stmt = $pdo->prepare($sql);
 
     // Data daal kar execute karna
-    // $stmt->execute([
-        ':name'  => $user_name,
+    $stmt->execute([
+        // ':name'  => $user_name,
         ':email' => $user_email
     ]);
 
