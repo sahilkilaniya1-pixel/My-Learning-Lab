@@ -37,45 +37,49 @@
 // 2. Rest Parameters (...args) vs arguments Object
 // A. Old Way: arguments Object
 // function sumOld() {
-    // let total = 0;
-    // for (let i = 0; i < arguments.length; i++) {
-        // total += arguments[i];
-    // }
-    // return total;
+// let total = 0;
+// for (let i = 0; i < arguments.length; i++) {
+// total += arguments[i];
+// }
+// return total;
 // }
 // console.log(sumOld(10, 20, 30));
 
 
 // B. Modern Way: Rest Parameters (...args)
 // function sumNew(...numbers){
-    // return numbers.reduce((total,num) => total +num, 0);
+// return numbers.reduce((total,num) => total +num, 0);
 // }
 // console.log(sumNew(10,20,30,40)); // 100
 
 //Specific parameters ke sath:
 // function userDetails (firstName , lastName, ...hobbies){
-    // console.log(`Name:${firstName} ${lastName}`);
-    // console.log(`Hobboes:`, hobbies);
+// console.log(`Name:${firstName} ${lastName}`);
+// console.log(`Hobboes:`, hobbies);
 // }
 // userDetails("Sahil","Kilaniya","coding","Gaming","Music");
 
 // 3. Custom Function Overloading
-function calculate(...agrs){
-    if(args.length === 1){
-        let radius = args [0];
-        return (Math.PI * radius * radius);
+function calculate(...args) {
+    if (args.length === 1) {
+        let radius = args[0];
+        return (Math.PI * radius * radius).toFixed(2);
     }
-    else if(args.length === 2){
+    else if (args.length === 2) {
         let length = args[0];
         let width = args[1];
-        return (length * width);
+        return length * width;
     }
-    else if (args.length === 3){
-        let [a,b,c]= args;
-        return a + b +c;
+    else if (args.length === 3) {
+        let [a, b, c] = args;
+        return a + b + c;
     }
+
     else {
-        return "Invalid number of arguments";
+        return "Invalid number of arguments!";
     }
 }
+
 console.log(calculate(7));
+console.log(calculate(10, 5));
+console.log(calculate(3, 4, 5));
