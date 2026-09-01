@@ -61,8 +61,8 @@ $all_users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         input { width: 90%; padding: 8px; margin: 8px 0; }
         button { background: green; color: white; padding: 10px 15px; border: none; cursor: pointer; }
         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        /* th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } */
-        th { background: #333; color: white; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        /* th { background: #333; color: white; } */
         .success { color: green; font-weight: bold; }
     </style>
 </head>
