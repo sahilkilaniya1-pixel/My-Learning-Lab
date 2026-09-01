@@ -63,8 +63,8 @@ $all_users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background: #333; color: white; }
-        /* .success { color: green; font-weight: bold; } */
-    </style>
+        .success { color: green; font-weight: bold; }
+    /* </style> */
 </head>
 <body>
 
