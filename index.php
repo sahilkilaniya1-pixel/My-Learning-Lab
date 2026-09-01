@@ -33,8 +33,8 @@ if (isset($_POST['save_btn'])) {
         // ':email' => $user_email
     ]);
 
-    Page Refresh warning se bachne ke liye Redirect
-    header("Location: " . $_SERVER['PHP_SELF'] . "?status=success");
+    // Page Refresh warning se bachne ke liye Redirect
+    // header("Location: " . $_SERVER['PHP_SELF'] . "?status=success");
     exit();
 }
 
