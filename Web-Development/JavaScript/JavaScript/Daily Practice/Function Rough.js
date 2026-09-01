@@ -89,7 +89,7 @@ console.log(calculate(3, 4, 5));
 Javscript mein this keyword contect ko point karta hain
 blid() method kisi function ko specific objet ke sath permanently attact kr deta hain or ek nya function return krta hain.
 */
-const user = { name: "Priya" };
+const user = { name: "Sahil" };
 
 function greet(msg) {
   console.log(`${msg}, ${this.name}`);
@@ -97,4 +97,4 @@ function greet(msg) {
 
 // Built-in bind execution:
 const boundGreet = greet.bind(user, "Hello");
-boundGreet(); // Output: Hello, Priya
+boundGreet();
