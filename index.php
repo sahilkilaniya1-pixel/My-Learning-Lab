@@ -23,8 +23,8 @@ if (isset($_POST['save_btn'])) {
     $user_name  = $_POST['user_name'];
     $user_email = $_POST['user_email'];
 
-    Empty template tayar karna (Security ke liye)
-    $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
+    // Empty template tayar karna (Security ke liye)
+    // $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
     $stmt = $pdo->prepare($sql);
 
     // Data daal kar execute karna
