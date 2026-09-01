@@ -35,8 +35,8 @@ if (isset($_POST['save_btn'])) {
 
     // Page Refresh warning se bachne ke liye Redirect
     header("Location: " . $_SERVER['PHP_SELF'] . "?status=success");
-    // exit();
-}
+    exit();
+// }
 
 if (isset($_GET['status']) && $_GET['status'] == 'success') {
     $message = "User successfully saved in Database!";
