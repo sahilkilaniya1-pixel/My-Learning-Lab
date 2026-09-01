@@ -5,9 +5,9 @@
 $host     = "localhost";
 $dbname   = "my_test_db";
 $username = "root";       // XAMPP ka default user
-// $password = "";           // XAMPP ka default password khali hota hai
+$password = "";           // XAMPP ka default password khali hota hai
 
-try {
+// try {
     // DB Line Connect karna
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
