@@ -55,8 +55,8 @@ $all_users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>PHP MySQL Easy Demo</title>
-    <!-- <style> -->
-        body { font-family: Arial, sans-serif; margin: 30px; background: #f4f4f4; }
+    <style>
+        /* body { font-family: Arial, sans-serif; margin: 30px; background: #f4f4f4; } */
         .box { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; max-width: 500px; }
         input { width: 90%; padding: 8px; margin: 8px 0; }
         button { background: green; color: white; padding: 10px 15px; border: none; cursor: pointer; }
