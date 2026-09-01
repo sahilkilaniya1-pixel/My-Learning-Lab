@@ -75,6 +75,6 @@ function calculate(...agrs){
         return a + b +c;
     }
     else {
-        
+        return "Invalid number of arguments";
     }
 }
