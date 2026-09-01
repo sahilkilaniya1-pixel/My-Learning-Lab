@@ -90,4 +90,4 @@ Javscript mein this keyword contect ko point karta hain
 blid() method kisi function ko specific objet ke sath permanently attact kr deta hain or ek nya function return krta hain.
 */
 const user = {name : "sahil"};
-function greet(msg){}
+function greet(msg){`${msg}, ${this.name}`;}
