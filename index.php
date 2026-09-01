@@ -29,8 +29,8 @@ if (isset($_POST['save_btn'])) {
 
     // Data daal kar execute karna
     $stmt->execute([
-        // ':name'  => $user_name,
-        ':email' => $user_email
+        ':name'  => $user_name,
+        // ':email' => $user_email
     ]);
 
     // Page Refresh warning se bachne ke liye Redirect
