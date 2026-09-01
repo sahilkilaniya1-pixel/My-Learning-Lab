@@ -85,4 +85,6 @@ console.log(calculate(10, 5));
 console.log(calculate(3, 4, 5));
 
 // 4. Custom bind() Method (Understanding this)
-/* */
+/*
+
+*/
