@@ -47,9 +47,9 @@ if (isset($_GET['status']) && $_GET['status'] == 'success') {
 // ==========================================
 $stmt = $pdo->prepare("SELECT * FROM users ORDER BY id DESC");
 $stmt->execute();
-// $all_users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$all_users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
+/
 <!DOCTYPE html>
 <html lang="en">
 <head>
