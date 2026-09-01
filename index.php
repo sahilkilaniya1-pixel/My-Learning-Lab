@@ -13,9 +13,9 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Database Connection Failed: " . $e->getMessage());
-// }
+}
 
-// ==========================================
+==========================================
 // 2. FORM SUBMIT HONE PAR DATA SAVE KARNA (Insert)
 // ==========================================
 $message = "";
