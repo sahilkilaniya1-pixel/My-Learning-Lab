@@ -91,3 +91,4 @@ blid() method kisi function ko specific objet ke sath permanently attact kr deta
 */
 const user = {name : "sahil"};
 function greet(msg){`${msg}, ${this.name}`;}
+// Built - in blid execution
