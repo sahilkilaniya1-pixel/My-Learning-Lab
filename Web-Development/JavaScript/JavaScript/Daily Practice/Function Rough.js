@@ -86,5 +86,5 @@ console.log(calculate(3, 4, 5));
 
 // 4. Custom bind() Method (Understanding this)
 /*
-
+Javscript mein this keyword contect ko point karta hain
 */
