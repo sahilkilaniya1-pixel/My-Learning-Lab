@@ -1,6 +1,6 @@
 <?php
-==========================================
-// 1. DATABASE SE CONNECT HONA (Connection Setup)
+// ==========================================
+1. DATABASE SE CONNECT HONA (Connection Setup)
 // ==========================================
 $host     = "localhost";
 $dbname   = "my_test_db";
