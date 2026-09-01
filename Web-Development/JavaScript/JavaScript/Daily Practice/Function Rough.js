@@ -74,4 +74,7 @@ function calculate(...agrs){
         let [a,b,c]= args;
         return a + b +c;
     }
+    else {
+        
+    }
 }
