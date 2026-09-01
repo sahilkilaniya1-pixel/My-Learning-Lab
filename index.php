@@ -4,8 +4,8 @@
 // ==========================================
 $host     = "localhost";
 $dbname   = "my_test_db";
-// $username = "root";       // XAMPP ka default user
-$password = "";           // XAMPP ka default password khali hota hai
+$username = "root";       // XAMPP ka default user
+// $password = "";           // XAMPP ka default password khali hota hai
 
 try {
     // DB Line Connect karna
