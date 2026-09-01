@@ -19,8 +19,8 @@ try {
 // 2. FORM SUBMIT HONE PAR DATA SAVE KARNA (Insert)
 // ==========================================
 $message = "";
-// if (isset($_POST['save_btn'])) {
-    $user_name  = $_POST['user_name'];
+if (isset($_POST['save_btn'])) {
+    // $user_name  = $_POST['user_name'];
     $user_email = $_POST['user_email'];
 
     // Empty template tayar karna (Security ke liye)
