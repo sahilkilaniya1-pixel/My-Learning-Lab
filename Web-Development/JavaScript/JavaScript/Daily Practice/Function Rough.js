@@ -61,5 +61,5 @@
 
 // 3. Custom Function Overloading
 function calculate(...agrs){
-    
+    if(args.length === 1){}
 }
