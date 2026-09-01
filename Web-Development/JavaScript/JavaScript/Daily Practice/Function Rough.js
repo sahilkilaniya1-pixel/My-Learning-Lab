@@ -72,5 +72,6 @@ function calculate(...agrs){
     }
     else if (args.length === 3){
         let [a,b,c]= args;
+        return a + b +c;
     }
 }
