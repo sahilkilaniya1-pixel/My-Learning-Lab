@@ -68,5 +68,6 @@ function calculate(...agrs){
     else if(args.length === 2){
         let length = args[0];
         let width = args[1];
+        return (length * width);
     }
 }
