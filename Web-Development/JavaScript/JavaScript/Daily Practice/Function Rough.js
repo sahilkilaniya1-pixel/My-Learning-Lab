@@ -65,5 +65,7 @@ function calculate(...agrs){
         let radius = args [0];
         return (Math.PI * radius * radius);
     }
-    else if(args.length === 2){}
+    else if(args.length === 2){
+        let length = args[0];
+    }
 }
