@@ -13,8 +13,8 @@
     }
 
     if (isset($_POST['delete_cookie_btn'])) {
-        // setcookie("user_preferred_theme", "", time() - 3600, "/"); // Past time sets deletion
-        header("Location: " . $_SERVER['PHP_SELF']);
+        setcookie("user_preferred_theme", "", time() - 3600, "/"); // Past time sets deletion
+        // header("Location: " . $_SERVER['PHP_SELF']);
         exit;
     }
 
