@@ -1,8 +1,8 @@
 <!-- <?php -->
     // Sessions use karne ke liye session_start() sabse pehle (HTML se pehle) hona chahiye
     if (session_status() === PHP_SESSION_NONE) {
-        // session_start();
-    }
+        session_start();
+    // }
 
     // Cookie Handle Logic (Testing ke liye)
     if (isset($_POST['set_cookie_btn'])) {
