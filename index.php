@@ -22,8 +22,8 @@
     if (isset($_POST['login_session_btn'])) {
         $_SESSION['logged_user'] = $_POST['sess_username'];
         $_SESSION['login_time'] = date("h:i:s A");
-        // header("Location: " . $_SERVER['PHP_SELF']);
-        exit;
+        header("Location: " . $_SERVER['PHP_SELF']);
+        // exit;
     }
 
     if (isset($_POST['logout_session_btn'])) {
