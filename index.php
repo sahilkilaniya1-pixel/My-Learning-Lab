@@ -30,10 +30,10 @@
         session_unset();
         session_destroy();
         header("Location: " . $_SERVER['PHP_SELF']);
-        // exit;
+        exit;
     }
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
