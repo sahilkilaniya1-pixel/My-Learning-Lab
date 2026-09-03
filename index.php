@@ -51,7 +51,7 @@
         input[type="submit"]:hover, button:hover { background: #0056b3; }
         .btn-danger { background: #dc3545; }
         .btn-danger:hover { background: #bd2130; }
-        <!-- .result-box { background: #e7f3fe; border-left: 4px solid #2196F3; padding: 10px; margin-top: 10px; } -->
+        .result-box { background: #e7f3fe; border-left: 4px solid #2196F3; padding: 10px; margin-top: 10px; }
         .success-box { background: #d4edda; border-left: 4px solid #28a745; padding: 10px; margin-top: 10px; color: #155724; }
     </style>
 </head>
