@@ -37,8 +37,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <title>Learn PHP - Complete Masterclass</title> -->
-    <style>
+    <title>Learn PHP - Complete Masterclass</title>
+    <!-- <style> -->
         body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f4f6f9; }
         .container { max-width: 900px; margin: auto; background: #ffffff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         .section { background: #fafafa; padding: 15px 20px; margin-bottom: 20px; border-radius: 8px; border-left: 5px solid #007bff; }
