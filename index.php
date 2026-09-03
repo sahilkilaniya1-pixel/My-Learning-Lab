@@ -1,5 +1,5 @@
-<?php
-    // Sessions use karne ke liye session_start() sabse pehle (HTML se pehle) hona chahiye
+<!-- <?php -->
+    Sessions use karne ke liye session_start() sabse pehle (HTML se pehle) hona chahiye
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
