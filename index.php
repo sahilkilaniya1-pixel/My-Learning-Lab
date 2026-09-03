@@ -35,8 +35,8 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<!-- <head> -->
-    <meta charset="UTF-8">
+<head>
+    <!-- <meta charset="UTF-8"> -->
     <title>Learn PHP - Complete Masterclass</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f4f6f9; }
