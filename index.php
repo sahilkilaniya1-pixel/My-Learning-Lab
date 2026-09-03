@@ -27,8 +27,8 @@
     }
 
     if (isset($_POST['logout_session_btn'])) {
-        // session_unset();
-        session_destroy();
+        session_unset();
+        // session_destroy();
         header("Location: " . $_SERVER['PHP_SELF']);
         exit;
     }
