@@ -5,8 +5,8 @@
     }
 
     // Cookie Handle Logic (Testing ke liye)
-    // if (isset($_POST['set_cookie_btn'])) {
-        $theme = $_POST['theme_choice'] ?? 'light';
+    if (isset($_POST['set_cookie_btn'])) {
+        // $theme = $_POST['theme_choice'] ?? 'light';
         setcookie("user_preferred_theme", $theme, time() + (86400 * 7), "/"); // 7 days valid
         header("Location: " . $_SERVER['PHP_SELF']);
         exit;
