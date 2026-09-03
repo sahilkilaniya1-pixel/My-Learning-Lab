@@ -16,7 +16,7 @@
         setcookie("user_preferred_theme", "", time() - 3600, "/"); // Past time sets deletion
         header("Location: " . $_SERVER['PHP_SELF']);
         exit;
-    }
+    // }
 
     // Session Handle Logic (Testing ke liye)
     if (isset($_POST['login_session_btn'])) {
