@@ -3,40 +3,165 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Event Handling Demo</title>
+    <title>Master JS Events Demo</title>
+    <style>
+      body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+      .box { border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; border-radius: 6px; }
+      #hoverArea { width: 200px; height: 50px; background: #e0e0e0; text-align: center; line-height: 50px; }
+      .parent-box { background: lightblue; padding: 20px; }
+      .child-btn { background: white; padding: 10px; border: 1px solid black; }
+    </style>
   </head>
   <body>
-    <!-- 
-      1. Events ke primary Components:
-      - Event Target: woh HTML element jis par event hota hai (e.g. button).
-      - Event Name: event ka naam (e.g. click, mouseover).
-      - Event Handler: woh function jo event hone par run hota hai.
-    -->
 
-    <h2>JavaScript Events Handling</h2>
+    <h2>JavaScript Master Events Handling</h2>
 
-    <!-- Tarika 1: Inline Event Handler (Purana Tarika) -->
-    <button onclick="alert('Inline Button click hua!')">
-      Tarika 1: Inline Click
-    </button>
+    <!-- 1. Tarika 1 & 2: Inline vs EventListener -->
+    <div class="box">
+      <h3>1. Basic Handling Methods</h3>
+      <button onclick="alert('Inline Click!')">Tarika 1: Inline Click</button>
+      <button id="btn2">Tarika 2: AddEventListener</button>
+    </div>
 
-    <br /><br />
+    <!-- 2. Mouse Events -->
+    <div class="box">
+      <h3>2. Mouse Events</h3>
+      <button id="dblBtn">Double Click Me</button>
+      <div id="hoverArea">Mouse In / Out Here</div>
+    </div>
 
-    <!-- Tarika 2: Event Listener (Best Practice) -->
-    <button id="btn2">
-      Tarika 2: AddEventListener Click
-    </button>
+    <!-- 3. Keyboard Events -->
+    <div class="box">
+      <h3>3. Keyboard Events</h3>
+      <input type="text" id="keyInput" placeholder="Type something..." />
+      <p id="keyOutput"></p>
+    </div>
 
-    <!-- JavaScript code ko <script> tag ke andar hi likhna hota hai -->
+    <!-- 4. Form Events (preventDefault) -->
+    <div class="box">
+      <h3>4. Form Events & preventDefault</h3>
+      <form id="myForm">
+        <input type="text" id="username" placeholder="Username" required />
+        <button type="submit">Submit Form</button>
+      </form>
+    </div>
+
+    <!-- 5. Event Bubbling & Delegation -->
+    <div class="box">
+      <h3>5. Event Bubbling & Delegation</h3>
+      <div id="parentBox" class="parent-box">
+        Parent Div
+        <button id="childBtn" class="child-btn">Child Button (Bubbling)</button>
+      </div>
+      <br />
+      <ul id="todoList">
+        <li>Item 1 (Delegation)</li>
+        <li>Item 2 (Delegation)</li>
+      </ul>
+    </div>
+
+    <!-- JavaScript Execution Block -->
     <script>
-      // Element ko uske ID se select kar rahe hain
+      // ==========================================
+      // SECTION 1: Basic Event Handling
+      // ==========================================
       const btn2 = document.querySelector('#btn2');
-
-      // Event Listener attach karna
-      btn2.addEventListener('click', function () {
-        console.log('Tarika 2: Button click ho gaya!');
-        alert('Event Listener se click hua!');
+      btn2.addEventListener('click', function (e) {
+        // e.target batata hai ki exact kis element par click hua
+        console.log('Target element:', e.target);
+        alert('Event Listener Click!');
       });
+
+      // ==========================================
+      // SECTION 2: Mouse Events
+      // ==========================================
+      const dblBtn = document.querySelector('#dblBtn');
+      const hoverArea = document.querySelector('#hoverArea');
+
+      // Double Click Event
+      dblBtn.addEventListener('dblclick', () => {
+        alert('Double click detected!');
+      });
+
+      // Mouse Over (Hover in)
+      hoverArea.addEventListener('mouseover', () => {
+        hoverArea.style.backgroundColor = 'yellow';
+        hoverArea.innerText = 'Mouse Inside!';
+      });
+
+      // Mouse Out (Hover out)
+      hoverArea.addEventListener('mouseout', () => {
+        hoverArea.style.backgroundColor = '#e0e0e0';
+        hoverArea.innerText = 'Mouse In / Out Here';
+      });
+
+      // ==========================================
+      // SECTION 3: Keyboard Events
+      // ==========================================
+      const keyInput = document.querySelector('#keyInput');
+      const keyOutput = document.querySelector('#keyOutput');
+
+      // keyup event: jab user key chhodta hai
+      keyInput.addEventListener('keyup', (e) => {
+        // e.key se pata chalta hai konsi key dabayi gayi
+        keyOutput.innerText = `Last key: ${e.key} | Total text: ${e.target.value}`;
+      });
+
+      // ==========================================
+      // SECTION 4: Form Events & preventDefault
+      // ==========================================
+      const myForm = document.querySelector('#myForm');
+      
+      myForm.addEventListener('submit', (e) => {
+        // Default page refresh ko rokne ke liye
+        e.preventDefault(); 
+        const username = document.querySelector('#username').value;
+        console.log('Form Submitted Safely. Data:', username);
+        alert(`Welcome ${username}! Form page refresh hue bina submit hua.`);
+      });
+
+      // ==========================================
+      // SECTION 5: Advanced Concepts (Bubbling & Delegation)
+      // ==========================================
+
+      // A. Event Bubbling (Child se Parent ki taraf event flow)
+      const parentBox = document.querySelector('#parentBox');
+      const childBtn = document.querySelector('#childBtn');
+
+      parentBox.addEventListener('click', () => {
+        console.log('Bubbling: Parent Div Clicked!');
+      });
+
+      childBtn.addEventListener('click', (e) => {
+        console.log('Bubbling: Child Button Clicked!');
+        // Is line se event upar parent tak nahi jayega:
+        // e.stopPropagation(); 
+      });
+
+      // B. Event Delegation (Single Parent listener for all children)
+      const todoList = document.querySelector('#todoList');
+      todoList.addEventListener('click', (e) => {
+        // Check karte hain ki click actual <li> par hua hai ya nahi
+        if (e.target.tagName === 'LI') {
+          console.log('Delegation Clicked:', e.target.innerText);
+        }
+      });
+
+      // ==========================================
+      // SECTION 6: Custom Events
+      // ==========================================
+      // Apna custom event banana
+      const myCustomEvent = new CustomEvent('userStatus', {
+        detail: { status: 'Online' }
+      });
+
+      // Custom event ko listen karna
+      document.addEventListener('userStatus', (e) => {
+        console.log('Custom Event Fired! Status is:', e.detail.status);
+      });
+
+      // Event ko trigger karna
+      document.dispatchEvent(myCustomEvent);
     </script>
   </body>
 </html>
