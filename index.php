@@ -44,7 +44,7 @@
         .section { background: #fafafa; padding: 15px 20px; margin-bottom: 20px; border-radius: 8px; border-left: 5px solid #007bff; }
         h2 { color: #007bff; margin-top: 0; }
         h3 { color: #333; margin-top: 0; }
-        <!-- code { background: #eef1f6; padding: 2px 6px; border-radius: 4px; color: #d63384; } -->
+        code { background: #eef1f6; padding: 2px 6px; border-radius: 4px; color: #d63384; }
         hr { border: 0; height: 1px; background: #ddd; margin: 20px 0; }
         input[type="text"], input[type="password"], select { padding: 8px; margin: 5px 0 10px 0; width: 95%; border: 1px solid #ccc; border-radius: 4px; }
         input[type="submit"], button { background: #007bff; color: #fff; padding: 8px 15px; border: none; border-radius: 4px; cursor: pointer; }
