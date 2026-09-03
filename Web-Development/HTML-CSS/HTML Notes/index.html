@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    /
-    1. Events ke primary Components
-    -Events Target: woh html element jis par events hota hain  (e.g. button, input, form, etc).
-    -Events Name: woh element jis par event hota hain(e.g. click, mouseover, keypress, etc).
-    -Events Handler: woh function jis par event hota hain (e.g. function myfunction)
-    */
-    <!-- 2. Events Handle Karne Ke Tarike -->
-     <!-- Tarika 1: Inline Event Handler (Purana Tarika)
-    HTML tag ke andar hi directly attribute ke roop mein likhna: -->
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling Demo</title>
+  </head>
+  <body>
+    <!-- 
+      1. Events ke primary Components:
+      - Event Target: woh HTML element jis par event hota hai (e.g. button).
+      - Event Name: event ka naam (e.g. click, mouseover).
+      - Event Handler: woh function jo event hone par run hota hai.
+    -->
+
+    <h2>JavaScript Events Handling</h2>
+
+    <!-- Tarika 1: Inline Event Handler (Purana Tarika) -->
+    <button onclick="alert('Inline Button click hua!')">
+      Tarika 1: Inline Click
+    </button>
+
+    <br /><br />
+
+    <!-- Tarika 2: Event Listener (Best Practice) -->
+    <button id="btn2">
+      Tarika 2: AddEventListener Click
+    </button>
+
+    <!-- JavaScript code ko <script> tag ke andar hi likhna hota hai -->
+    <script>
+      // Element ko uske ID se select kar rahe hain
+      const btn2 = document.querySelector('#btn2');
+
+      // Event Listener attach karna
+      btn2.addEventListener('click', function () {
+        console.log('Tarika 2: Button click ho gaya!');
+        alert('Event Listener se click hua!');
+      });
+    </script>
+  </body>
 </html>
