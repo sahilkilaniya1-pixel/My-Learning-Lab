@@ -54,8 +54,8 @@
         .result-box { background: #e7f3fe; border-left: 4px solid #2196F3; padding: 10px; margin-top: 10px; }
         .success-box { background: #d4edda; border-left: 4px solid #28a745; padding: 10px; margin-top: 10px; color: #155724; }
     </style>
-<!-- </head> -->
-<body>
+</head>
+<!-- <body> -->
     <div class="container">
         <h2>My PHP Learning Playground</h2>
         <p>This is my PHP playground setup with Operators, Conditions, Loops, Arrays, Functions, Form Handling, Sessions &amp; Cookies.</p>
