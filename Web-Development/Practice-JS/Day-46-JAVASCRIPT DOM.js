@@ -8,5 +8,5 @@ document (Root)
            └── div (container) */
 /*
 1.Elements Ko Select Karna (Finding Elements)
-
+Javascript mein HTML elements ko Pakadne ko do mein tarike hain:
 */
