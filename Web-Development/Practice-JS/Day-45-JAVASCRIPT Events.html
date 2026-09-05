@@ -1,16 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Events Complete Guide</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- =========================================================
          TOPIC 1: INLINE EVENTS (Old Approach)
          ========================================================= -->
-    
+
     <!-- Example A: Direct inline alert -->
     <button onclick="alert('Inline click executed')">
       Direct Inline Click
@@ -25,7 +24,7 @@
       }
     </script>
 
-<!-- 
+    <!-- 
 ===================================================================
 3 Disadvantages of Inline Clicks (Why Companies Avoid It):
 ===================================================================
@@ -41,8 +40,6 @@
    Modern browsers enforce Content Security Policies (CSP) that block inline 
    JavaScript execution to prevent Cross-Site Scripting (XSS) attacks.
 -->
-
-
 
     <!-- =========================================================
          TOPIC 2: PROBLEMATIC CODE (Property Assignment Overriding)
@@ -64,7 +61,7 @@
       };
     </script>
 
-<!-- 
+    <!-- 
 ===================================================================
 Reason for the Bug:
 ===================================================================
@@ -74,8 +71,6 @@ Reason for the Bug:
 3. As a result, "Action 1" is deleted and clicking the button triggers 
    only "Action 2".
 -->
-
-
 
     <!-- =========================================================
          TOPIC 3: MODERN BEST PRACTICE (addEventListener)
@@ -99,7 +94,7 @@ Reason for the Bug:
       });
     </script>
 
-<!-- 
+    <!-- 
 ===================================================================
 Why This Works (The Mechanism of Event Listener Registry/Queue)
 ===================================================================
@@ -115,13 +110,11 @@ This allows both "Action 1" and "Action 2" to execute successfully without
 erasing each other!
 -->
 
-
-
     <!-- =========================================================
          TOPIC 4: EVENT PROPAGATION (Bubbling vs Capturing)
          ========================================================= -->
 
-<!-- 
+    <!-- 
 Suppose you have 3 nested elements: Window -> Div -> Button.
 When you click on the button, the click event travels in 2 distinct phases:
 
@@ -143,8 +136,12 @@ When you click on the button, the click event travels in 2 distinct phases:
       const childElement = document.querySelector("#child");
 
       // Event Bubbling (Default behavior)
-      childElement.addEventListener("click", () => console.log("1. Child Clicked"));
-      parentElement.addEventListener("click", () => console.log("2. Parent Clicked"));
+      childElement.addEventListener("click", () =>
+        console.log("1. Child Clicked"),
+      );
+      parentElement.addEventListener("click", () =>
+        console.log("2. Parent Clicked"),
+      );
 
       /*
         Output when Child Button is clicked:
@@ -153,13 +150,11 @@ When you click on the button, the click event travels in 2 distinct phases:
       */
     </script>
 
-
-
     <!-- =========================================================
          TOPIC 5: EVENT DELEGATION (Smart Performance Strategy)
          ========================================================= -->
 
-<!-- 
+    <!-- 
 Imagine you have a To-Do List containing 1,000 items.
 
 - Bad Approach: Attaching individual addEventListeners to all 1,000 <li> tags.
@@ -187,13 +182,11 @@ Imagine you have a To-Do List containing 1,000 items.
       });
     </script>
 
-
-
     <!-- =========================================================
          TOPIC 6: DEBOUNCING & THROTTLING (Optimization Techniques)
          ========================================================= -->
 
-<!-- 
+    <!-- 
 When users trigger high-frequency events rapidly (such as typing fast in a search input 
 or continuously scrolling a page), we use optimization techniques to minimize server load 
 and browser performance stress.
@@ -224,9 +217,12 @@ A. Debouncing (Execute only after a pause):
         .querySelector("#searchInput")
         .addEventListener("input", handleSearch);
     </script>
-<!-- 
+    <!-- 
 B.Throttling (Fixed Time Interval)
  Page Scroll ye resize Hone par Events continous trigger hone ki bajaye har 200ms mein sirf ek hi baar chalega.
 -->
-</body>
+ <!-- 
+
+ -->
+  </body>
 </html>
