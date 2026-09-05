@@ -138,22 +138,22 @@ Maan lijiye aapke pass 3 nested boxes hain: Window -> Div -> Button . Jab aap bu
 :: Bura Tarika: sabhi 1,000 <li> tags par alag- alag addEventListner lagana. Isse Browser ki Memory crash ho sakti hain.
 :: Smart Tarika (Delegation): Listner sirf main parent <ul> par lagayein. Bubbling ki wajah se <li> ka click <ul> tak pahunch jayega.
 -->
-  <ul id="Mylist">
-    <li>Task 1</li>
-    <li>Task 2</li>
-    <li>Task 3</li>
-  </ul>
-  <script>
-    const list = document.querySelector('#Mylist');
-    //Listner sirf parent <ul> par hai.
-      list.addEventListener('click',(e) => {
-          //Check karein ki click kis item par hua hain
-          if (e.target.tagName === 'LI') {
-            console.log('Clicked Item:', e.target.innerText);
-          }
+    <ul id="Mylist">
+      <li>Task 1</li>
+      <li>Task 2</li>
+      <li>Task 3</li>
+    </ul>
+    <script>
+      const list = document.querySelector("#Mylist");
+      //Listner sirf parent <ul> par hai.
+      list.addEventListener("click", (e) => {
+        //Check karein ki click kis item par hua hain
+        if (e.target.tagName === "LI") {
+          console.log("Clicked Item:", e.target.innerText);
+        }
       });
-  </script>
-<!-- 
+    </script>
+    <!-- 
 Debouncing & Throttling (Optimization Techniques)
 Jab user rapidly event trigger karta hain (jaise search box mein fast typing ya continuous page scroll), toh server/browser par stress na pade iske liye hum in do techniques ka use karte hain.
 
@@ -161,5 +161,13 @@ A. Debouncing (Pause ke baad chalo)
 Jab tak user typing kar raha hai event ruk rahega. Typing rokne ke  500ms baad hi API call/search hoga.
 -->
 
+    <!-- Search bar input ke liye Debounce logic -->
+    // Search bar input ke liye Debounce logic function debounce(fn, delay) {
+    let timer; return function (...args) { clearTimeout(timer); // Purana timer
+    cancel karein timer = setTimeout(() => fn(...args), delay); // Naya timer
+    set karein }; } const handleSearch = debounce((e) => { console.log('API call
+    for:', e.target.value); }, 500);
+    document.querySelector('#searchInput').addEventListener('input',
+    handleSearch);
   </body>
 </html>
