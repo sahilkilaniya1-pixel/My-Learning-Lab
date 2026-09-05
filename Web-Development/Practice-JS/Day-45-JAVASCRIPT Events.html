@@ -110,15 +110,16 @@ This allows both "Action 1" and "Action 2" to execute successfully without
 erasing each other!
 -->
 
-<!-- Event Propagation (Bubbling vs Capturing) 
+    <!-- Event Propagation (Bubbling vs Capturing) 
 Maan lijiye aapke pass 3 nested boxes hain: Window -> Div -> Button . Jab aap button par click karte hain, toh click event 2 alag phases mein travel karta hain.
 :: Capturing Phase (Upar se Niche): Event Sabse bahar wale parent (window) se niche Button tak aata hain
 :: Bubbling Phase (Niche se Upar - Defalut): Event Button se shuru hokar upar ki taraf paani ke bubbles ki tarah window tak jata hain.
 -->
-<div id="parent" style="padding: 20px; background-color: antiquewhite;">
-  Parent Box
-  
-</div>
+    <div id="parent" style="padding: 20px; background-color: antiquewhite">
+      Parent Box
+      <button id="child">Child button</button>
+    </div>
 
+    <script></script>
   </body>
 </html>
