@@ -20,3 +20,4 @@ docuemnt.querySelector('selectore'):Saare matching element ek NodeList (array-li
 const header = document.querySelector('#main-header');
 //Class se select karna (phela match)
 const card = document.querySelector('.card');
+//Saare p tags ko select karna
