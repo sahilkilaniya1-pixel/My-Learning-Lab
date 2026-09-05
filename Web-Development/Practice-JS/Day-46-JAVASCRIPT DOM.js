@@ -54,3 +54,6 @@ btn.classList.toggle('highlight'); // Agar class hai toh hata dega, nahi hai toh
 btn.setAttribute('disabled', 'true');
 console.log(btn.getAttribute('type')); // e.g., 'submit'
 btn.removeAttribute('disabled');
+
+// 3.Naye Elements Create Aur Insert Karna
+// 
