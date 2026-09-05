@@ -23,3 +23,4 @@ const card = document.querySelector('.card');
 //Saare p tags ko select karna
 const allParagraphs = document.querySelectorAll('p'); //NodeList
 
+// B.Traditional Methods (purane Tarike)
