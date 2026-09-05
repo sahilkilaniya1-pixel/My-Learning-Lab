@@ -49,3 +49,5 @@ const btn = document.querySelector('button');
 btn.classList.add('active');
 btn.classList.remove('hidden');
 btn.classList.toggle('highlight'); // Agar class hai toh hata dega, nahi hai toh add kar dega
+
+//Attributes set/get/remove
