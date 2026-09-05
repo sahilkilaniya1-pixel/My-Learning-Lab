@@ -18,3 +18,4 @@ docuemnt.querySelector('selectore'):Saare matching element ek NodeList (array-li
 */
 //ID se select karna
 const header = document.querySelector('#main-header');
+//Class se select karna (phela match)
