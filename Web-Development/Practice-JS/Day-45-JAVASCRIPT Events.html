@@ -148,7 +148,9 @@ Maan lijiye aapke pass 3 nested boxes hain: Window -> Div -> Button . Jab aap bu
     //Listner sirf parent <ul> par hai.
       list.addEventListener('click',(e) => {
           //Check karein ki click kis item par hua hain
-          
+          if (e.target.tagName === 'LI') {
+            
+          }
       })
   </script>
   </body>
