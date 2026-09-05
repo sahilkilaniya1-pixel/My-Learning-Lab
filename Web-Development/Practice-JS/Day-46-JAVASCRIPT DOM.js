@@ -66,3 +66,4 @@ newCard.innerText = "Yeh ek naya dynamix card hai";
 
 // Step 3: DOm mein insert karein (Parent element ka andar)
 const container = document.querySelector('#container');
+container.appendChild(newCard);
