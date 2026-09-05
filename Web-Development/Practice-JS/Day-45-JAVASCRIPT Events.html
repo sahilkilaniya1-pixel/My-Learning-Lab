@@ -121,24 +121,28 @@ Maan lijiye aapke pass 3 nested boxes hain: Window -> Div -> Button . Jab aap bu
     </div>
 
     <script>
-      const parent = document.querySelector('#parent');
-      const child = document.querySelector('#child');
+      const parent = document.querySelector("#parent");
+      const child = document.querySelector("#child");
 
       //Event Bubbling (Default)
-      child.addEventListener('click', ()=>console.log('1. Child Clicked'));
-      child.addEventListener('Click', ()=> console.log('2.Parent Clicked'));
+      child.addEventListener("click", () => console.log("1. Child Clicked"));
+      child.addEventListener("Click", () => console.log("2.Parent Clicked"));
 
       //Output Jab Child Click hoga:
       // 1.Child Clicked
       // 2.Parent Clicked
     </script>
-<!-- 
+    <!-- 
     2.Event Delegation (Smart Performance Strategy)
     Maan lijiye aapke pass ek To-Do-List hai jisme 1,000 items hain.
 :: Bura Tarika: sabhi 1,000 <li> tags par alag- alag addEventListner lagana. Isse Browser ki Memory crash ho sakti hain.
 :: Smart Tarika (Delegation): Listner sirf main parent <ul> par lagayein. Bubbling ki wajah se <li> ka click <ul> tak pahunch jayega.
-  
-
 -->
+  <ul id="Mylist">
+    <li>Task 1</li>
+    <li>Task 2</li>
+    <li>Task 3</li>
+  </ul>
+  <script></script>
   </body>
 </html>
