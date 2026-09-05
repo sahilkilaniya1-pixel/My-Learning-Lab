@@ -57,3 +57,5 @@ btn.removeAttribute('disabled');
 
 // 3.Naye Elements Create Aur Insert Karna
 // Dynamic content add karne ke liye JS mein naye elements banakar DOM mein attach kiye jaate hain.
+// Step 1: Element create karein
+const newCard = document.createElement('div');
