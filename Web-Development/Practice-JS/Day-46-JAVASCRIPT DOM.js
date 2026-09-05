@@ -12,5 +12,5 @@ Javascript mein HTML elements ko Pakadne ko do mein tarike hain:
 
 A:Modern Methods (Best Practice - CSS Selectors)
 
-
+document.querySelector('selectore'):Phela Matching element deta hai.
 */
