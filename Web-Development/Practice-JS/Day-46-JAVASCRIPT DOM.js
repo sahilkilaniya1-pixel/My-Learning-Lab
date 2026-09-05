@@ -53,3 +53,4 @@ btn.classList.toggle('highlight'); // Agar class hai toh hata dega, nahi hai toh
 //Attributes set/get/remove
 btn.setAttribute('disabled', 'true');
 console.log(btn.getAttribute('type')); // e.g., 'submit'
+btn.removeAttribute('disabled');
