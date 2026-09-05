@@ -222,7 +222,14 @@ B.Throttling (Fixed Time Interval)
  Page Scroll ye resize Hone par Events continous trigger hone ki bajaye har 200ms mein sirf ek hi baar chalega.
 -->
  <!-- 
-
+4.Custom events (Apna Event Banana)
+Javascript ke Built-in events (click, submit) ke ilawa Aap apna khud ka custom event bhi bana sakte hain -- jaise notification /bhejte waqt.
  -->
+<!-- Step 1: Naya Custom Event banayein data ke  sath -->
+const myEvent = new CustomEvent('userLoggedIn', {
+  detail: {
+    
+  }
+})
   </body>
 </html>
