@@ -44,3 +44,4 @@ box.style.backgroundColor = 'blue';
 box.style.fontSize = '20px'; // camelCase naming use hoti hai (font-size -> fontSize)
 
 // Classses & Attributes Manages Karna
+const btn = document.querySelector('button');
