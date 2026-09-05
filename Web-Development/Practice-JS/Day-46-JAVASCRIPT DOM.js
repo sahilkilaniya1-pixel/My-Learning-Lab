@@ -47,3 +47,4 @@ box.style.fontSize = '20px'; // camelCase naming use hoti hai (font-size -> font
 const btn = document.querySelector('button');
 //classes add/remove/toggle karna (best for style)
 btn.classList.add('active');
+btn.classList.remove('hidden');
