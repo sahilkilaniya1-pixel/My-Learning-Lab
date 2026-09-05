@@ -28,3 +28,4 @@ const header = document.getElementById('main-header');
 const cards = document.getElementsByClassName('card'); // HTMLCollection
 const tags = document.getElementsByTagName('div');
 
+/* */
