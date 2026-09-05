@@ -68,3 +68,4 @@ newCard.innerText = "Yeh ek naya dynamix card hai";
 const container = document.querySelector('#container');
 container.appendChild(newCard); // Container ke last mein add hoga
 // yaa
+container.prepend(newCard);
