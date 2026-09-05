@@ -22,3 +22,4 @@ const header = document.querySelector('#main-header');
 const card = document.querySelector('.card');
 //Saare p tags ko select karna
 const allParagraphs = document.querySelectorAll('p'); //NodeList
+
