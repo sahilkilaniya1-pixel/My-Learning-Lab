@@ -149,9 +149,9 @@ Maan lijiye aapke pass 3 nested boxes hain: Window -> Div -> Button . Jab aap bu
       list.addEventListener('click',(e) => {
           //Check karein ki click kis item par hua hain
           if (e.target.tagName === 'LI') {
-            
+            console.log('Clicked Item:', e.target.innerText);
           }
-      })
+      });
   </script>
   </body>
 </html>
