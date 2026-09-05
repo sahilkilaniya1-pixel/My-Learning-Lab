@@ -36,3 +36,5 @@ const title = document.querySelector('h1');
 title.innerText = "Welcome to my Website";
 //HTML tags ke sath content change karega
 title.innerHTML = "Welcome <span style='color:red;'>User</span>";
+
+// Style Change Karna
