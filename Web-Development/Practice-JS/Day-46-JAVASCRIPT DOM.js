@@ -48,3 +48,4 @@ const btn = document.querySelector('button');
 //classes add/remove/toggle karna (best for style)
 btn.classList.add('active');
 btn.classList.remove('hidden');
+btn.classList.toggle('highlight'); // Agar class hai toh hata dega, nahi hai toh add kar dega
