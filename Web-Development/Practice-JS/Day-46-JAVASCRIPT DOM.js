@@ -73,3 +73,4 @@ container.prepend(newCard); // Container ke start mein add hoga
 // 4.Elements Delete karna
 // Elements ko Remove Karne ke do Tarike hain:
 const item = document.querySelector('.remove-me');
+// Modern Method : direct remove karna
