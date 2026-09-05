@@ -69,3 +69,6 @@ const container = document.querySelector('#container');
 container.appendChild(newCard); // Container ke last mein add hoga
 // yaa
 container.prepend(newCard); // Container ke start mein add hoga
+
+// 4.Elements Delete karna
+// 
