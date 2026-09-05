@@ -33,3 +33,4 @@ const tags = document.getElementsByTagName('div');
 */
 const title = document.querySelector('h1');
 //Sirf text Changes karega (safe)
+title.innerText = "Welcome to my Website";
