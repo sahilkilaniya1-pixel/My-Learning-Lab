@@ -45,3 +45,4 @@ box.style.fontSize = '20px'; // camelCase naming use hoti hai (font-size -> font
 
 // Classses & Attributes Manages Karna
 const btn = document.querySelector('button');
+//classes add/remove/toggle karna (best for style)
