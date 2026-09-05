@@ -25,5 +25,5 @@ const allParagraphs = document.querySelectorAll('p'); //NodeList
 
 // B.Traditional Methods (purane Tarike)
 const header = document.getElementById('main-header');
-const cards = document.getElementsByClassName('card');
+const cards = document.getElementsByClassName('card'); // HTMLCollection
 const tags = document.getElementsByTagName('div');
