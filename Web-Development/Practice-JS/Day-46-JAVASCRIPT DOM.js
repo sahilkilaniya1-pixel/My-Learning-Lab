@@ -28,4 +28,6 @@ const header = document.getElementById('main-header');
 const cards = document.getElementsByClassName('card'); // HTMLCollection
 const tags = document.getElementsByTagName('div');
 
-/* */
+/*
+2.Elements Ko Modity Karna (Changing Content, Style & Attributes)
+*/
