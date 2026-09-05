@@ -1,22 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events Topic</title>
-</head>
-<body>
-    <button onclick="alert('inline click ho gaya')">
-        Direct Inline Click</button>
-    
+  </head>
+  <body>
+    <button onclick="alert('inline click ho gaya')">Direct Inline Click</button>
+
     <!-- Example B: Function call in html -->
-     <button onclick="sayHello()">Function Call inline Click</button>
-     <script>
-        function sayHello(){
-            console.log('Hello function call hua inclne click se.');
-        }
-     </script>
-</body>
+    <button onclick="sayHello()">Function Call inline Click</button>
+    <script>
+      function sayHello() {
+        console.log("Hello function call hua inclne click se.");
+      }
+    </script>
+  </body>
 </html>
 <!-- 
 Inline click 3 disadvantages: (why companies Avoid it)
@@ -35,26 +34,26 @@ Best Practice: Modern Standard (addEventListener)
 Professional developers hamesha HTML (Strecutre) aur JS (Logic ) ko alag rakhte hain:
 
 -->
-<!DOCTYPE html> -->
+<!doctype html> -->
 <html lang="en">
-<body>
+  <body>
     <button id="myBtn">Click Me(Modern Way)</button>
     <script>
-        //Step1: Element ko Select kiya
-        const btn = document.querySelector('myBtn');
+      //Step1: Element ko Select kiya
+      const btn = document.querySelector("myBtn");
 
-        //Step2: Event Listener lagaya
-        btn.addEventListener('click', function(){
-            console.log('Modern way click ho gaya');
-        });
+      //Step2: Event Listener lagaya
+      btn.addEventListener("click", function () {
+        console.log("Modern way click ho gaya");
+      });
     </script>
-</body>
+  </body>
 </html>
 
 <!-- 
 Problematic Code
 Step 1: Inline Event
-<!-- <button id="myBtn" onclick="alert('Action 1')">Click Me</button>
+    <button id="myBtn" onclick="alert('Action 1')">Click Me</button>
 
 <script>
   const btn = document.getElementById('myBtn');
