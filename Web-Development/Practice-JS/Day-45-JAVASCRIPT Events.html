@@ -3,98 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Events Topic</title>
+    <title>Events</title>
   </head>
   <body>
-    <button onclick="alert('inline click ho gaya')">Direct Inline Click</button>
+    <!-- =========================================================
+         TOPIC 1: INLINE EVENTS (Old Approach)
+         ========================================================= -->
 
-    <!-- Example B: Function call in html -->
-    <button onclick="sayHello()">Function Call inline Click</button>
+    <!-- Example A: Direct inline alert -->
+    <button onclick="alert('Inline click executed')">
+      Direct Inline Click
+    </button>
+
+    <!-- Example B: Function call in HTML -->
+    <button onclick="sayHello()">Function Call Inline Click</button>
+
     <script>
       function sayHello() {
-        console.log("Hello function call hua inclne click se.");
+        console.log("Hello! Function called via inline click.");
       }
     </script>
-  </body>
-</html>
-<!-- 
-Inline click 3 disadvantages: (why companies Avoid it)
-1.Ek Event par sirf aap ek sath multiple functions easily
-run nahi kar sakte. Agar aap doosra onclick lagayenge, toh phela override hojayega
 
-2.HTML Aur JS ka Mix Ho jana (Messy Code)
-Jab aapka project bada hoga (1000+ lines of code), toh har HTML tag mein onclick="" dhoondhna aur change karna bohot muskil ho jayega.
+    <!-- 
+===================================================================
+3 Disadvantages of Inline Clicks (Why Companies Avoid It):
+===================================================================
+1. Overriding Issue:
+   You cannot easily execute multiple functions for a single event.
+   If you add a second onclick attribute, the first one will be overridden.
 
-3.Security (CSP Issues)
-Modern browsers mein security Policies (CSP) hoti hain jo inline javascript ko block kar deti hain taaki hackers malicious script execute na kar sakein.
+2. Mixing HTML and JS (Messy Code):
+   In large-scale applications (1000+ lines of code), finding and updating 
+   onclick="" attributes inside HTML tags becomes extremely difficult to maintain.
 
+3. Security Issues (CSP):
+   Modern browsers enforce Content Security Policies (CSP) that block inline 
+   JavaScript execution to prevent Cross-Site Scripting (XSS) attacks.
 -->
-<!--  
-Best Practice: Modern Standard (addEventListener)
-Professional developers hamesha HTML (Strecutre) aur JS (Logic ) ko alag rakhte hain:
 
--->
-<!doctype html> -->
-<html lang="en">
-  <body>
-    <button id="myBtn">Click Me(Modern Way)</button>
+    <!-- =========================================================
+         TOPIC 2: PROBLEMATIC CODE (Property Assignment Overriding)
+         ========================================================= -->
+
+    <button id="overrideBtn">Click Me (Problematic Way)</button>
+
     <script>
-      //Step1: Element ko Select kiya
-      const btn = document.querySelector("myBtn");
+      const overrideBtn = document.getElementById("overrideBtn");
 
-      //Step2: Event Listener lagaya
+      // Step 1: Assigned the first event handler
+      overrideBtn.onclick = function () {
+        alert("Action 1");
+      };
+
+      // Step 2: Assigned the second event handler (This overrides the first one)
+      overrideBtn.onclick = function () {
+        alert("Action 2");
+      };
+    </script>
+
+    <!-- 
+===================================================================
+Reason for the Bug:
+===================================================================
+1. Writing onclick="alert('Action 1')" sets an `onclick` property on the DOM element object.
+2. When JS executes `btn.onclick = function() { alert('Action 2'); }`, 
+   it overwrites the previously assigned function on that object property.
+3. As a result, "Action 1" is deleted and clicking the button triggers 
+   only "Action 2".
+-->
+
+    <!-- =========================================================
+         TOPIC 3: MODERN BEST PRACTICE (addEventListener)
+         ========================================================= -->
+
+    <!-- Solution: Professional developers strictly separate HTML (Structure) and JS (Logic) -->
+    <button id="myBtn">Click Me (Modern Way)</button>
+
+    <script>
+      // Step 1: Selected the element (Using # ID selector)
+      const btn = document.querySelector("#myBtn");
+
+      // Step 2: Attached Action 1
       btn.addEventListener("click", function () {
-        console.log("Modern way click ho gaya");
+        alert("Action 1 Executed!");
+      });
+
+      // Step 3: Attached Action 2 (Both actions will execute sequentially)
+      btn.addEventListener("click", function () {
+        alert("Action 2 Executed!");
       });
     </script>
+
+    <!-- 
+===================================================================
+Why This Works (The Mechanism of Event Listener Registry/Queue)
+===================================================================
+addEventListener does not assign or overwrite a single object property. 
+Instead, it maintains an internal "Event Listener Registry / Queue":
+
+1. Adding the first listener registers it at Position 1 in the queue.
+2. Adding the second listener pushes it to Position 2 in the queue.
+3. Upon the trigger event (click), the browser iterates through the 
+   queued functions sequentially in the order they were registered.
+
+This allows both "Action 1" and "Action 2" to execute successfully without 
+erasing each other!
+-->
   </body>
 </html>
-
-<!-- 
-Problematic Code
-Step 1: Inline Event
-    <button id="myBtn" onclick="alert('Action 1')">Click Me</button>
-
-<script>
-  const btn = document.getElementById('myBtn');
-  
-  // Step 2: DOM Property Assignment
-  btn.onclick = function() {
-    alert('Action 2');
-  };
-</script> -->
--->
-<!-- 
-Bug Ka reason:
-1. HTML ke andar
-onclick="alert('Action 1')" likhne se browser ne button par ek onclick property set ki.
-2.Lekin jab Javascript mein btn.onclick=function(){alert('Action 2'); }
-chala, toh isne phele wala onclick ko replace (override) kar diya.
-3.Is wajah se "Action 1"delete ho gaya aur button click karne par sirf "Action 2" ka alert aa raha tha.
--->
-
-<!-- Solution ne kaise fix kiya? 
-Humne dono tarikon ko hatakar modern addEventListner ka use kiya: 
--->
-<!-- Fixed Code -->
-<button id="myBtn">Click Me</button>
-
-<script>
-  const btn = document.getElementById('myBtn');
-  
-  // Action 1 attach kiya
-  btn.addEventListener('click', () => alert('Action 1'));
-
-  // Action 2 attach kiya
-  btn.addEventListener('click', () => alert('Action 2'));
-</script>
-<!-- 
-Fix Kyun Hua?
-addEventListener variable replace karne jaisa kaam nahi karta. Yeh ek "Event Stack/Queue" ki tarah kaam karta hai.
-
-Jab aap pehla listener add karte hain, woh queue mein 1st Position par chala jata hai.
-
-Jab aap doosra listener add karte hain, woh queue mein 2nd Position par chala jata hai.
-
-Jab button click hota hai, toh browser queue ke saare functions ko ek-ek karke sequence mein run kar deta hai. Iss tarah dono alerts ("Action 1" aur "Action 2") bina ek doosre ko erase kiye successfully chal jate hain!
--->
