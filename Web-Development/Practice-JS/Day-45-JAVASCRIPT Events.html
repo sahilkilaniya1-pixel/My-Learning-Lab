@@ -1,15 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Events Complete Guide</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+</head>
+<body>
+
     <!-- =========================================================
          TOPIC 1: INLINE EVENTS (Old Approach)
          ========================================================= -->
-
+    
     <!-- Example A: Direct inline alert -->
     <button onclick="alert('Inline click executed')">
       Direct Inline Click
@@ -24,7 +25,7 @@
       }
     </script>
 
-    <!-- 
+<!-- 
 ===================================================================
 3 Disadvantages of Inline Clicks (Why Companies Avoid It):
 ===================================================================
@@ -40,6 +41,8 @@
    Modern browsers enforce Content Security Policies (CSP) that block inline 
    JavaScript execution to prevent Cross-Site Scripting (XSS) attacks.
 -->
+
+
 
     <!-- =========================================================
          TOPIC 2: PROBLEMATIC CODE (Property Assignment Overriding)
@@ -61,7 +64,7 @@
       };
     </script>
 
-    <!-- 
+<!-- 
 ===================================================================
 Reason for the Bug:
 ===================================================================
@@ -71,6 +74,8 @@ Reason for the Bug:
 3. As a result, "Action 1" is deleted and clicking the button triggers 
    only "Action 2".
 -->
+
+
 
     <!-- =========================================================
          TOPIC 3: MODERN BEST PRACTICE (addEventListener)
@@ -94,7 +99,7 @@ Reason for the Bug:
       });
     </script>
 
-    <!-- 
+<!-- 
 ===================================================================
 Why This Works (The Mechanism of Event Listener Registry/Queue)
 ===================================================================
@@ -110,11 +115,13 @@ This allows both "Action 1" and "Action 2" to execute successfully without
 erasing each other!
 -->
 
+
+
     <!-- =========================================================
          TOPIC 4: EVENT PROPAGATION (Bubbling vs Capturing)
          ========================================================= -->
 
-    <!-- 
+<!-- 
 Suppose you have 3 nested elements: Window -> Div -> Button.
 When you click on the button, the click event travels in 2 distinct phases:
 
@@ -137,10 +144,10 @@ When you click on the button, the click event travels in 2 distinct phases:
 
       // Event Bubbling (Default behavior)
       childElement.addEventListener("click", () =>
-        console.log("1. Child Clicked"),
+        console.log("1. Child Clicked")
       );
       parentElement.addEventListener("click", () =>
-        console.log("2. Parent Clicked"),
+        console.log("2. Parent Clicked")
       );
 
       /*
@@ -150,11 +157,13 @@ When you click on the button, the click event travels in 2 distinct phases:
       */
     </script>
 
+
+
     <!-- =========================================================
          TOPIC 5: EVENT DELEGATION (Smart Performance Strategy)
          ========================================================= -->
 
-    <!-- 
+<!-- 
 Imagine you have a To-Do List containing 1,000 items.
 
 - Bad Approach: Attaching individual addEventListeners to all 1,000 <li> tags.
@@ -182,11 +191,13 @@ Imagine you have a To-Do List containing 1,000 items.
       });
     </script>
 
+
+
     <!-- =========================================================
          TOPIC 6: DEBOUNCING & THROTTLING (Optimization Techniques)
          ========================================================= -->
 
-    <!-- 
+<!-- 
 When users trigger high-frequency events rapidly (such as typing fast in a search input 
 or continuously scrolling a page), we use optimization techniques to minimize server load 
 and browser performance stress.
@@ -217,19 +228,60 @@ A. Debouncing (Execute only after a pause):
         .querySelector("#searchInput")
         .addEventListener("input", handleSearch);
     </script>
-    <!-- 
-B.Throttling (Fixed Time Interval)
- Page Scroll ye resize Hone par Events continous trigger hone ki bajaye har 200ms mein sirf ek hi baar chalega.
+
+<!-- 
+B. Throttling (Fixed Time Interval Execution):
+   Instead of continuously firing events during rapid actions (like page scrolling or resizing), 
+   Throttling guarantees the function executes at most once every fixed time interval (e.g., once every 200ms).
 -->
- <!-- 
-4.Custom events (Apna Event Banana)
-Javascript ke Built-in events (click, submit) ke ilawa Aap apna khud ka custom event bhi bana sakte hain -- jaise notification /bhejte waqt.
- -->
-<!-- Step 1: Naya Custom Event banayein data ke  sath -->
-const myEvent = new CustomEvent('userLoggedIn', {
-  detail: {
-    
-  }
-})
-  </body>
+
+    <script>
+      // Throttle Higher-Order Utility Function
+      function throttle(fn, limit) {
+        let inThrottle = false;
+        return function (...args) {
+          if (!inThrottle) {
+            fn(...args);
+            inThrottle = true;
+            setTimeout(() => (inThrottle = false), limit);
+          }
+        };
+      }
+
+      // Example Scroll Handler throttled to run every 200ms
+      window.addEventListener(
+        "scroll",
+        throttle(() => {
+          console.log("Scroll event triggered at fixed intervals!");
+        }, 200)
+      );
+    </script>
+
+
+
+    <!-- =========================================================
+         TOPIC 7: CUSTOM EVENTS (Creating Your Own Events)
+         ========================================================= -->
+
+<!-- 
+In addition to JavaScript's built-in DOM events (click, submit, input), 
+you can create and dispatch your own Custom Events—for instance, when triggering a app notification or user login.
+-->
+
+    <script>
+      // Step 1: Create a Custom Event instance with attached custom data payload (detail)
+      const myEvent = new CustomEvent("userLoggedIn", {
+        detail: { username: "Rahul", role: "Admin" },
+      });
+
+      // Step 2: Listen for the custom event anywhere on the DOM
+      document.addEventListener("userLoggedIn", (e) => {
+        console.log(`Welcome ${e.detail.username}! Role: ${e.detail.role}`);
+      });
+
+      // Step 3: Programmatically trigger/dispatch the custom event
+      document.dispatchEvent(myEvent);
+    </script>
+
+</body>
 </html>
