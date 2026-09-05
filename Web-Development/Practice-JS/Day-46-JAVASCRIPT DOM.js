@@ -71,4 +71,4 @@ container.appendChild(newCard); // Container ke last mein add hoga
 container.prepend(newCard); // Container ke start mein add hoga
 
 // 4.Elements Delete karna
-// 
+// Elements ko Remove Karne ke do Tarike hain:
