@@ -31,3 +31,5 @@ const tags = document.getElementsByTagName('div');
 /*
 2.Elements Ko Modity Karna (Changing Content, Style & Attributes)
 */
+const title = document.querySelector('h1');
+//Sirf text Changes karega (safe)
