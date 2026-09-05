@@ -16,3 +16,4 @@ document.querySelector('selectore'):Phela Matching element deta hai.
 docuemnt.querySelector('selectore'):Saare matching element ek NodeList (array-like ) mein deta hai.
 
 */
+//ID se select karna
