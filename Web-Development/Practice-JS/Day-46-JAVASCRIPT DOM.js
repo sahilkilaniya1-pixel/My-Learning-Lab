@@ -62,3 +62,4 @@ const newCard = document.createElement('div');
 
 // Step 2: Element mein content aur class add karein
 newCard.classList.add('card');
+newCard.innerText = "Yeh ek naya dynamix card hai";
