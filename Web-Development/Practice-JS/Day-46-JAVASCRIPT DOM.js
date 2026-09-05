@@ -40,3 +40,4 @@ title.innerHTML = "Welcome <span style='color:red;'>User</span>";
 // Style Change Karna
 const box = document.querySelector('.box');
 //Direct inline CSS apply karna.
+box.style.backgroundColor = 'blue';
