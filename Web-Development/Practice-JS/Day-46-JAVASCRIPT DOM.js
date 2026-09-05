@@ -41,4 +41,4 @@ title.innerHTML = "Welcome <span style='color:red;'>User</span>";
 const box = document.querySelector('.box');
 //Direct inline CSS apply karna.
 box.style.backgroundColor = 'blue';
-box.style.fontSize = '20px';
+box.style.fontSize = '20px'; // camelCase naming use hoti hai (font-size -> fontSize)
