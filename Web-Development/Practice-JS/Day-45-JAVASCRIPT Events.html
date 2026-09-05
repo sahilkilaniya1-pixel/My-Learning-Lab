@@ -1,15 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Events</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Complete Guide</title>
+</head>
+<body>
+
     <!-- =========================================================
          TOPIC 1: INLINE EVENTS (Old Approach)
          ========================================================= -->
-
+    
     <!-- Example A: Direct inline alert -->
     <button onclick="alert('Inline click executed')">
       Direct Inline Click
@@ -24,7 +25,7 @@
       }
     </script>
 
-    <!-- 
+<!-- 
 ===================================================================
 3 Disadvantages of Inline Clicks (Why Companies Avoid It):
 ===================================================================
@@ -40,6 +41,8 @@
    Modern browsers enforce Content Security Policies (CSP) that block inline 
    JavaScript execution to prevent Cross-Site Scripting (XSS) attacks.
 -->
+
+
 
     <!-- =========================================================
          TOPIC 2: PROBLEMATIC CODE (Property Assignment Overriding)
@@ -61,7 +64,7 @@
       };
     </script>
 
-    <!-- 
+<!-- 
 ===================================================================
 Reason for the Bug:
 ===================================================================
@@ -71,6 +74,8 @@ Reason for the Bug:
 3. As a result, "Action 1" is deleted and clicking the button triggers 
    only "Action 2".
 -->
+
+
 
     <!-- =========================================================
          TOPIC 3: MODERN BEST PRACTICE (addEventListener)
@@ -94,7 +99,7 @@ Reason for the Bug:
       });
     </script>
 
-    <!-- 
+<!-- 
 ===================================================================
 Why This Works (The Mechanism of Event Listener Registry/Queue)
 ===================================================================
@@ -110,64 +115,115 @@ This allows both "Action 1" and "Action 2" to execute successfully without
 erasing each other!
 -->
 
-    <!-- Event Propagation (Bubbling vs Capturing) 
-Maan lijiye aapke pass 3 nested boxes hain: Window -> Div -> Button . Jab aap button par click karte hain, toh click event 2 alag phases mein travel karta hain.
-:: Capturing Phase (Upar se Niche): Event Sabse bahar wale parent (window) se niche Button tak aata hain
-:: Bubbling Phase (Niche se Upar - Defalut): Event Button se shuru hokar upar ki taraf paani ke bubbles ki tarah window tak jata hain.
+
+
+    <!-- =========================================================
+         TOPIC 4: EVENT PROPAGATION (Bubbling vs Capturing)
+         ========================================================= -->
+
+<!-- 
+Suppose you have 3 nested elements: Window -> Div -> Button.
+When you click on the button, the click event travels in 2 distinct phases:
+
+1. Capturing Phase (Top to Bottom):
+   The event travels down from the outermost parent (Window) to the target element (Button).
+
+2. Bubbling Phase (Bottom to Top - Default):
+   Starting from the target element (Button), the event bubbles up towards 
+   the outermost parent (Window) like bubbles in water.
 -->
+
     <div id="parent" style="padding: 20px; background-color: antiquewhite">
       Parent Box
-      <button id="child">Child button</button>
+      <button id="child">Child Button</button>
     </div>
 
     <script>
-      const parent = document.querySelector("#parent");
-      const child = document.querySelector("#child");
+      const parentElement = document.querySelector("#parent");
+      const childElement = document.querySelector("#child");
 
-      //Event Bubbling (Default)
-      child.addEventListener("click", () => console.log("1. Child Clicked"));
-      child.addEventListener("Click", () => console.log("2.Parent Clicked"));
+      // Event Bubbling (Default behavior)
+      childElement.addEventListener("click", () => console.log("1. Child Clicked"));
+      parentElement.addEventListener("click", () => console.log("2. Parent Clicked"));
 
-      //Output Jab Child Click hoga:
-      // 1.Child Clicked
-      // 2.Parent Clicked
+      /*
+        Output when Child Button is clicked:
+        1. Child Clicked
+        2. Parent Clicked
+      */
     </script>
-    <!-- 
-    2.Event Delegation (Smart Performance Strategy)
-    Maan lijiye aapke pass ek To-Do-List hai jisme 1,000 items hain.
-:: Bura Tarika: sabhi 1,000 <li> tags par alag- alag addEventListner lagana. Isse Browser ki Memory crash ho sakti hain.
-:: Smart Tarika (Delegation): Listner sirf main parent <ul> par lagayein. Bubbling ki wajah se <li> ka click <ul> tak pahunch jayega.
+
+
+
+    <!-- =========================================================
+         TOPIC 5: EVENT DELEGATION (Smart Performance Strategy)
+         ========================================================= -->
+
+<!-- 
+Imagine you have a To-Do List containing 1,000 items.
+
+- Bad Approach: Attaching individual addEventListeners to all 1,000 <li> tags.
+  This consumes excessive RAM and can crash browser performance.
+
+- Smart Approach (Delegation): Attach a single listener to the parent <ul> element.
+  Due to Event Bubbling, any click on an <li> will automatically bubble up to the <ul>.
 -->
-    <ul id="Mylist">
+
+    <ul id="myList">
       <li>Task 1</li>
       <li>Task 2</li>
       <li>Task 3</li>
     </ul>
+
     <script>
-      const list = document.querySelector("#Mylist");
-      //Listner sirf parent <ul> par hai.
+      const list = document.querySelector("#myList");
+
+      // Single listener on the parent element
       list.addEventListener("click", (e) => {
-        //Check karein ki click kis item par hua hain
+        // Verify that the actual clicked target is an <li> element
         if (e.target.tagName === "LI") {
           console.log("Clicked Item:", e.target.innerText);
         }
       });
     </script>
-    <!-- 
-Debouncing & Throttling (Optimization Techniques)
-Jab user rapidly event trigger karta hain (jaise search box mein fast typing ya continuous page scroll), toh server/browser par stress na pade iske liye hum in do techniques ka use karte hain.
 
-A. Debouncing (Pause ke baad chalo)
-Jab tak user typing kar raha hai event ruk rahega. Typing rokne ke  500ms baad hi API call/search hoga.
+
+
+    <!-- =========================================================
+         TOPIC 6: DEBOUNCING & THROTTLING (Optimization Techniques)
+         ========================================================= -->
+
+<!-- 
+When users trigger high-frequency events rapidly (such as typing fast in a search input 
+or continuously scrolling a page), we use optimization techniques to minimize server load 
+and browser performance stress.
+
+A. Debouncing (Execute only after a pause):
+   Delays processing until user activity pauses. The event execution remains on hold 
+   while typing continues. An API call or search executes only after 500ms of user inactivity.
 -->
 
-    <!-- Search bar input ke liye Debounce logic -->
-    // Search bar input ke liye Debounce logic function debounce(fn, delay) {
-    let timer; return function (...args) { clearTimeout(timer); // Purana timer
-    cancel karein timer = setTimeout(() => fn(...args), delay); // Naya timer
-    set karein }; } const handleSearch = debounce((e) => { console.log('API call
-    for:', e.target.value); }, 500);
-    document.querySelector('#searchInput').addEventListener('input',
-    handleSearch);
-  </body>
+    <input type="text" id="searchInput" placeholder="Search here..." />
+
+    <script>
+      // Debounce Higher-Order Utility Function
+      function debounce(fn, delay) {
+        let timer;
+        return function (...args) {
+          clearTimeout(timer); // Cancel the previous pending timer
+          timer = setTimeout(() => fn(...args), delay); // Set a new timer
+        };
+      }
+
+      // Handler wrapped with a 500ms debounce delay
+      const handleSearch = debounce((e) => {
+        console.log("API call for:", e.target.value);
+      }, 500);
+
+      document
+        .querySelector("#searchInput")
+        .addEventListener("input", handleSearch);
+    </script>
+
+</body>
 </html>
