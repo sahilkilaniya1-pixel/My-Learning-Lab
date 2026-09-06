@@ -2,5 +2,5 @@
 using namespace std;
 int main()
 {
-    count<<"Hello coders";
+    cout<<"Hello coders";
 }
