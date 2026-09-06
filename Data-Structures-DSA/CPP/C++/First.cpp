@@ -1,5 +1,6 @@
 #include<istream>
 using namespace std;
-int main(){
+int main()
+{
     count<<"Hello coders";
 }
