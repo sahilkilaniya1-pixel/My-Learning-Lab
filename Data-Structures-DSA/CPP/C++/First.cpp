@@ -15,7 +15,7 @@
 // {
     // string name;
     // int age;
-    string gender;
+    // string gender;
 
     cout << "Enter your good name:";
     getline(cin, name);
