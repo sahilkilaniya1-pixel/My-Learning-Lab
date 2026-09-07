@@ -20,7 +20,7 @@
     // cout << "Enter your good name:";
     // getline(cin, name);
 
-    cout << "Enter Your Age:";
+    // cout << "Enter Your Age:";
     cin >> age;
 
     cout << "Enter Your Gender:";
