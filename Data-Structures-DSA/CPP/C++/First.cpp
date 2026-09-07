@@ -26,6 +26,6 @@
     // cout << "Enter Your Gender:";
     // cin >> gender;
 
-    cout << "\nHello " << name << " Age " << age << " Gender " << gender << endl;
+    // cout << "\nHello " << name << " Age " << age << " Gender " << gender << endl;
     return 0;
 }
