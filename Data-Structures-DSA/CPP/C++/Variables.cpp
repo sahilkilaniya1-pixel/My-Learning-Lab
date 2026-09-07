@@ -6,7 +6,7 @@ int x; // Global  Scope
 
 int main()
 {
-    int y;
+    int y; //Garbage Value
     cout<<x<<endl;
     cout<<y<<endl;
     return 0;
