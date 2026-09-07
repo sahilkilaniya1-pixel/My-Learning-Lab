@@ -7,5 +7,5 @@ int x; // Global  Scope
 int main()
 {
     int y;
-    
+    cout<<x<<endl;
 }
