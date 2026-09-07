@@ -11,7 +11,7 @@
 // #include <string>
 // using namespace std;
 
-int main()
+// int main()
 {
     string name;
     int age;
