@@ -14,7 +14,7 @@
 // int main()
 // {
     // string name;
-    int age;
+    // int age;
     string gender;
 
     cout << "Enter your good name:";
