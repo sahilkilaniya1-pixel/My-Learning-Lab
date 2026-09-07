@@ -12,7 +12,7 @@
 // using namespace std;
 
 // int main()
-{
+// {
     string name;
     int age;
     string gender;
