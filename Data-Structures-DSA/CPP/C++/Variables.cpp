@@ -1,1 +1,1 @@
-// A local variable is declared inside a function or block and can be
+// A local variable is declared inside a function or block and can be a
