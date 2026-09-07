@@ -5,3 +5,4 @@ using namespace std;
 int x; // Global  Scope
 
 int main()
+{}
