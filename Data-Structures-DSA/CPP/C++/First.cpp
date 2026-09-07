@@ -13,7 +13,7 @@
 
 // int main()
 // {
-    string name;
+    // string name;
     int age;
     string gender;
 
