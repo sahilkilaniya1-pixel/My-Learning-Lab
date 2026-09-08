@@ -3,7 +3,7 @@
     // let row = "";
     // for (let j = 1; j <= i; j++) {
     //   row += "*";
-    }
+    // }
     for (let j = 1; j <= 2*(n-i); j++) {
       row += " ";
     }
