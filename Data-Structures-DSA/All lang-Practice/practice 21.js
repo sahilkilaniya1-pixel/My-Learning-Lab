@@ -86,7 +86,7 @@
     // }
     // console.log(row);
 //   }
-  for (let i = 1; i < n; i++) {
+//   for (let i = 1; i < n; i++) {
     let row = "";
     for (let s = 0; s < n - 1 - i; s++) {
       row += "_";
