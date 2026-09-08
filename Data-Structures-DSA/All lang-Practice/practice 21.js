@@ -84,7 +84,7 @@
     // for (let j = 0; j < 2 * (n - i) - 1; j++) {
     //   row += "*";
     // }
-    console.log(row);
+    // console.log(row);
   }
   for (let i = 1; i < n; i++) {
     let row = "";
