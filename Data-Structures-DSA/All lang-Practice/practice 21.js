@@ -36,7 +36,7 @@
 //   }
 //   let topRows = (n + 1) / 2;
 //   let starCount = topRows;
-  let spaceCount = 0;
+//   let spaceCount = 0;
   for (let r = 1; r <= topRows; r = r + 1) {
     let rowText = "";
     for (let s = 1; s <= starCount; s = s + 1) {
