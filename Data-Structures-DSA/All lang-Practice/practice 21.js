@@ -74,3 +74,7 @@ function printDiamondInSquare(n) {
   }
 }
 printDiamondInSquare(7);
+
+function SandglassStar(n){
+    
+}
