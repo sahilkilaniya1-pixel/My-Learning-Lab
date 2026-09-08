@@ -91,7 +91,7 @@
     // for (let s = 0; s < n - 1 - i; s++) {
     //   row += "_";
     // }
-    for (let j = 0; j < 2 * i + 1; j++) {
+    // for (let j = 0; j < 2 * i + 1; j++) {
       row += "*";
     }
     console.log(row);
