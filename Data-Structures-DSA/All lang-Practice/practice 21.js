@@ -50,7 +50,6 @@
 //     for (let s = 1; s <= starCount; s = s + 1) {
 //       rowText = rowText + "*";
 //     }
-
 //     console.log(rowText);
 //     starCount = starCount - 1;
 //     spaceCount = spaceCount + 2;
@@ -69,7 +68,6 @@
 //     for (let s = 1; s <= starCount; s = s + 1) {
 //       rowText = rowText + "*";
 //     }
-
 //     console.log(rowText);
 //     starCount = starCount + 1;
 //     spaceCount = spaceCount - 2;
