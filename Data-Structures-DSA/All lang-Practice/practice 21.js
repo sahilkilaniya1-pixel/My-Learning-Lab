@@ -95,6 +95,6 @@
     //   row += "*";
     // }
     // console.log(row);
-  }
+//   }
 }
 // SandglassStar(5);
