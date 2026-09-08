@@ -70,5 +70,5 @@
     // starCount = starCount + 1;
     // spaceCount = spaceCount - 2;
   }
-}
+// 
 // printDiamondInSquare(7);
