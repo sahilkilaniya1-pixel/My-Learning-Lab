@@ -63,7 +63,7 @@
     // for (let sp = 1; sp <= spaceCount; sp = sp + 1) {
     //   rowText = rowText + " ";
     // }
-    for (let s = 1; s <= starCount; s = s + 1) {
+    // for (let s = 1; s <= starCount; s = s + 1) {
       rowText = rowText + "*";
     }
     console.log(rowText);
