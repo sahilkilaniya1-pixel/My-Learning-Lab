@@ -1,11 +1,10 @@
-function printButterfly(n) {
+// function printButterfly(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= i; j++) {
       row += "*";
     }
-    const spaces = 2 * (n - i);
-    for (let j = 1; j <= spaces; j++) {
+    for (let j = 1; j <= 2*(n-i); j++) {
       row += " ";
     }
     for (let j = 1; j <= i; j++) {
@@ -19,8 +18,7 @@ function printButterfly(n) {
     for (let j = 1; j <= i; j++) {
       row += "*";
     }
-    const spaces = 2 * (n - i);
-    for (let j = 1; j <= spaces; j++) {
+    for (let j = 1; j <= 2*(n-i); j++) {
       row += " ";
     }
     for (let j = 1; j <= i; j++) {
