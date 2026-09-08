@@ -56,7 +56,7 @@
 //   spaceCount = n - 3;
 //   let bottomRows = topRows - 1;
 //   for (let r = 1; r <= bottomRows; r = r + 1) {
-    let rowText = "";
+    // let rowText = "";
     for (let s = 1; s <= starCount; s = s + 1) {
       rowText = rowText + "*";
     }
