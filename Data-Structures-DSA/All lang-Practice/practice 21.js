@@ -71,4 +71,4 @@
     // spaceCount = spaceCount - 2;
   }
 }
-printDiamondInSquare(7);
+// printDiamondInSquare(7);
