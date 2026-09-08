@@ -53,7 +53,7 @@
     // spaceCount = spaceCount + 2;
 //   }
 //   starCount = 2;
-  spaceCount = n - 3;
+//   spaceCount = n - 3;
   let bottomRows = topRows - 1;
   for (let r = 1; r <= bottomRows; r = r + 1) {
     let rowText = "";
