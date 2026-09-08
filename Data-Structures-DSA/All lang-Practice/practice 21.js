@@ -64,7 +64,7 @@
     //   rowText = rowText + " ";
     // }
     // for (let s = 1; s <= starCount; s = s + 1) {
-      rowText = rowText + "*";
+    //   rowText = rowText + "*";
     // }
     console.log(rowText);
     starCount = starCount + 1;
