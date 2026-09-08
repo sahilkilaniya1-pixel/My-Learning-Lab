@@ -82,7 +82,7 @@
     //   row += "_";
     // }
     // for (let j = 0; j < 2 * (n - i) - 1; j++) {
-      row += "*";
+    //   row += "*";
     }
     console.log(row);
   }
