@@ -72,3 +72,6 @@
 //   }
 // 
 // printDiamondInSquare(7);
+
+
+
