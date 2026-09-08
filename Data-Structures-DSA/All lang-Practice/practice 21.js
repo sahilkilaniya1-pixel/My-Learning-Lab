@@ -32,7 +32,7 @@
 
 // function printDiamondInSquare(n) {
 //   if (n % 2 === 0) {
-    n = n + 1;
+    // n = n + 1;
   }
   let topRows = (n + 1) / 2;
   let starCount = topRows;
