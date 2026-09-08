@@ -100,3 +100,6 @@
 // SandglassStar(5);
 
 
+function RightArrow(n){
+    
+}
