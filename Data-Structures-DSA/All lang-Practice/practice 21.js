@@ -75,8 +75,8 @@
 
 
 
-function SandglassStar(n) {
-  for (let i = 0; i < n; i++) {
+// function SandglassStar(n) {
+//   for (let i = 0; i < n; i++) {
     let row = "";
     for (let s = 0; s < i; s++) {
       row += "_";
