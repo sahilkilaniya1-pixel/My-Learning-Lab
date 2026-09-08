@@ -40,7 +40,7 @@
 //   for (let r = 1; r <= topRows; r = r + 1) {
     // let rowText = "";
     // for (let s = 1; s <= starCount; s = s + 1) {
-      rowText = rowText + "*";
+    //   rowText = rowText + "*";
     }
     for (let sp = 1; sp <= spaceCount; sp = sp + 1) {
       rowText = rowText + " ";
