@@ -50,7 +50,7 @@
     // }
     // console.log(rowText);
     // starCount = starCount - 1;
-    spaceCount = spaceCount + 2;
+    // spaceCount = spaceCount + 2;
   }
   starCount = 2;
   spaceCount = n - 3;
