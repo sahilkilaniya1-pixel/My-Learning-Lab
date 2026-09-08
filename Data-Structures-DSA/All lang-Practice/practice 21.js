@@ -89,7 +89,7 @@
 //   for (let i = 1; i < n; i++) {
     // let row = "";
     // for (let s = 0; s < n - 1 - i; s++) {
-      row += "_";
+    //   row += "_";
     }
     for (let j = 0; j < 2 * i + 1; j++) {
       row += "*";
