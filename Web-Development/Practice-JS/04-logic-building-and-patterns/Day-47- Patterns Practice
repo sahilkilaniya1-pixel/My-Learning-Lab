@@ -17,13 +17,26 @@
 // printHollowParallelogram(5, 8);
 
 
-function SameNumberRow(n){
-    for(let i=1; i<=n; i++){
-        let row="";
-        for(let j=1; j<=i; j++){
-            row+=i;
-        }
-        console.log(row);
-    }
-}
-SameNumberRow(4);
+// function SameNumberRow(n){
+//     for(let i=1; i<=n; i++){
+//         let row="";
+//         for(let j=1; j<=i; j++){
+//             row+=i;
+//         }
+//         console.log(row);
+//     }
+// }
+// SameNumberRow(4);
+
+
+
+// function IncreasingColumn(n){
+//     for(let i=1; i<=n; i++){
+//         let row="";
+//         for(let j=1;j<=i; j++){
+//             row+=j;
+//         }
+//         console.log(row);
+//     }
+// }
+// IncreasingColumn(4);
