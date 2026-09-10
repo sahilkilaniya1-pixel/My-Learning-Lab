@@ -16,8 +16,6 @@ function printHollowParallelogram(rows, cols) {
 }
 printHollowParallelogram(5, 8);
 
-
-
 function SameNumberRow(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
@@ -28,7 +26,6 @@ function SameNumberRow(n) {
   }
 }
 SameNumberRow(4);
-
 
 function IncreasingColumn(n) {
   for (let i = 1; i <= n; i++) {
@@ -41,20 +38,18 @@ function IncreasingColumn(n) {
 }
 IncreasingColumn(4);
 
-
 function FloydsTriangle(n) {
-    let count = 1;
-    for (let i = 1; i <= n; i++) {
-        let row = "";
-        for (let j = 1; j <= i; j++) {
-            row += count + " ";
-            count++;
-        }
-        console.log(row);
+  let count = 1;
+  for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+      row += count + " ";
+      count++;
     }
+    console.log(row);
+  }
 }
 FloydsTriangle(4);
-
 
 function InvertedNumbers(n) {
   for (let i = n; i >= 1; i--) {
@@ -68,16 +63,14 @@ function InvertedNumbers(n) {
 }
 InvertedNumbers(5);
 
-
-
-function NumberPyramid(n){
-  for(let i=1; i<=n; i++){
+function NumberPyramid(n) {
+  for (let i = 1; i <= n; i++) {
     let row = "";
-    for(let s=1; s<=(); s++){
-      row="-";
+    for (let s = 1; s <= n - i; s++) {
+      row += " ";
     }
-    for(let j=1; j<=n; j++){
-      row+=j*i;
+    for (let j = 1; j <= i; j++) {
+      row += i + " ";
     }
     console.log(row);
   }
