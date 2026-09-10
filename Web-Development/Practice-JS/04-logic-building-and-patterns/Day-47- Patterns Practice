@@ -42,13 +42,28 @@
 // IncreasingColumn(4);
 
 
-function FloydsTriangle(n){
-    for(let i=1; i<=n; i++){
-        let row ="";
-        for(let j=1; j<=i; j++){
-            row+=i*j;
+// function FloydsTriangle(n){
+//     for(let i=1; i<=n; i++){
+//         let row ="";
+//         for(let j=1; j<=i; j++){
+//             row+=i*j;
+//         }
+//         console.log(row);
+//     }
+// }
+// FloydsTriangle(4);
+
+function FloydsTriangle(n) {
+    let count = 1;
+
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= i; j++) {
+            row += count + " ";
+            count++;
         }
-        console.log(row);
+        console.log(row.trim());
     }
 }
+
 FloydsTriangle(4);
