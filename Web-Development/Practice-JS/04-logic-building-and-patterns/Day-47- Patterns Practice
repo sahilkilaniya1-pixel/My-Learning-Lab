@@ -55,6 +55,7 @@ function FloydsTriangle(n) {
 }
 FloydsTriangle(4);
 
+
 function InvertedNumbers(n) {
   for (let i = n; i >= 1; i--) {
     let row = "";
