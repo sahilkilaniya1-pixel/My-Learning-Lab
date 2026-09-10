@@ -1,0 +1,13 @@
+<html>
+<script>
+    function myFun() {
+        document.getElementById(
+            "gfg").innerHTML = "GeeksforGeeks"
+    };
+</script>
+
+<body>
+    <button onclick="myFun()">Click me</button>
+    <p id="gfg"></p>
+</body>
+</html>
