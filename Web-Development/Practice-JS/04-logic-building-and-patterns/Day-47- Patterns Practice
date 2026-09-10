@@ -1,0 +1,25 @@
+function printHollowParallelogram(rows, cols) {
+  for (let i = 0; i < rows; i++) {
+    let rowStr = "";
+
+    // 1. Print leading spaces to tilt the shape into a parallelogram
+    for (let j = 0; j < rows - i - 1; j++) {
+      rowStr += " ";
+    }
+
+    // 2. Print hollow parallelogram row
+    for (let j = 0; j < cols; j++) {
+      // Print '*' for top/bottom rows OR first/last columns
+      if (i === 0 || i === rows - 1 || j === 0 || j === cols - 1) {
+        rowStr += "*";
+      } else {
+        rowStr += " "; // Inside hollow space
+      }
+    }
+
+    console.log(rowStr);
+  }
+}
+
+// Example: 5 rows and 8 columns
+printHollowParallelogram(5, 8);
