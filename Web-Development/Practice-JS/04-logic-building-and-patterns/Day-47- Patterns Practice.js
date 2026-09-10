@@ -77,7 +77,6 @@ function NumberPyramid(n) {
 }
 NumberPyramid(5);
 
-
 function BinaryTriangle(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
