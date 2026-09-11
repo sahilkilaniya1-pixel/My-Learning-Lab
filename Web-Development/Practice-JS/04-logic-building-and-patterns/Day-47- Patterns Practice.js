@@ -90,4 +90,4 @@
     // console.log(row);
   // }
 // }
-BinaryTriangle(5);
+// BinaryTriangle(5);
