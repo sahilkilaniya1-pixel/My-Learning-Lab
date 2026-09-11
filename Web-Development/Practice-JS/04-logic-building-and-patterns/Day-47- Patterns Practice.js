@@ -12,7 +12,7 @@
       // }
     // }
     // console.log(rowStr);
-  }
+  // }
 }
 printHollowParallelogram(5, 8);
 
