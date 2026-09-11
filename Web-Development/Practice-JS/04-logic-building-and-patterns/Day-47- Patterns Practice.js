@@ -84,7 +84,7 @@
       // if ((i + j) % 2 === 0) {
         // row += "1 ";
       // } else {
-        row += "0 ";
+        // row += "0 ";
       }
     }
     console.log(row);
