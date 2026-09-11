@@ -70,7 +70,7 @@
       // row += " ";
     // }
     // for (let j = 1; j <= i; j++) {
-      row += i + " ";
+      // row += i + " ";
     }
     console.log(row);
   }
