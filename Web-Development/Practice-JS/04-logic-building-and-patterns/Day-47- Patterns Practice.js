@@ -34,7 +34,7 @@
       // row += j;
     // }
     // console.log(row);
-  }
+  // }
 // }
 IncreasingColumn(4);
 
