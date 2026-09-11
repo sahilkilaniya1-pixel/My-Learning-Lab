@@ -59,7 +59,7 @@
     // }
 
     // console.log(row);
-  }
+  // }
 }
 InvertedNumbers(5);
 
