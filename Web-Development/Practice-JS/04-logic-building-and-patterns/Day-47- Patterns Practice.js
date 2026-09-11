@@ -1,7 +1,7 @@
 // function printHollowParallelogram(rows, cols) {
   // for (let i = 0; i < rows; i++) {
     // let rowStr = "";
-    for (let j = 0; j < rows - i - 1; j++) {
+    // for (let j = 0; j < rows - i - 1; j++) {
       rowStr += " ";
     }
     for (let j = 0; j < cols; j++) {
