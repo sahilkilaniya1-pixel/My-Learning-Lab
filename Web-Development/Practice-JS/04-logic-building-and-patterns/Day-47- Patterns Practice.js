@@ -25,7 +25,7 @@
     // console.log(row);
   // }
 // }
-SameNumberRow(4);
+// SameNumberRow(4);
 
 function IncreasingColumn(n) {
   for (let i = 1; i <= n; i++) {
