@@ -75,7 +75,7 @@
     // console.log(row);
   // }
 // }
-NumberPyramid(5);
+// NumberPyramid(5);
 
 function BinaryTriangle(n) {
   for (let i = 1; i <= n; i++) {
