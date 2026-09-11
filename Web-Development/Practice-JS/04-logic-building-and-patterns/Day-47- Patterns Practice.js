@@ -27,7 +27,7 @@
 // }
 // SameNumberRow(4);
 
-function IncreasingColumn(n) {
+// function IncreasingColumn(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= i; j++) {
