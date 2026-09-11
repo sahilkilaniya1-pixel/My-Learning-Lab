@@ -61,7 +61,7 @@
     // console.log(row);
   // }
 // }
-InvertedNumbers(5);
+// InvertedNumbers(5);
 
 function NumberPyramid(n) {
   for (let i = 1; i <= n; i++) {
