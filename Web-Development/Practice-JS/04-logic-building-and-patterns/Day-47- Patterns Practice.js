@@ -22,7 +22,7 @@
     // for (let j = 1; j <= i; j++) {
       // row += i;
     // }
-    console.log(row);
+    // console.log(row);
   }
 }
 SameNumberRow(4);
