@@ -87,7 +87,7 @@
         // row += "0 ";
       // }
     // }
-    console.log(row);
+    // console.log(row);
   }
 }
 BinaryTriangle(5);
