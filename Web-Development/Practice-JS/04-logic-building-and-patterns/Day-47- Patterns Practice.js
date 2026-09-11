@@ -73,7 +73,7 @@
       // row += i + " ";
     // }
     // console.log(row);
-  }
+  // }
 }
 NumberPyramid(5);
 
