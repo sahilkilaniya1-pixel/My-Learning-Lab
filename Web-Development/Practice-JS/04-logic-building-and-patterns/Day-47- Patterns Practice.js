@@ -38,7 +38,7 @@
 // }
 // IncreasingColumn(4);
 
-function FloydsTriangle(n) {
+// function FloydsTriangle(n) {
   let count = 1;
   for (let i = 1; i <= n; i++) {
     let row = "";
