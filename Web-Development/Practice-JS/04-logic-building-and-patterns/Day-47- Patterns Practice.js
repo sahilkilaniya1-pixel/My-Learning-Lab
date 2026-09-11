@@ -49,7 +49,7 @@
     // console.log(row);
   // }
 // }
-FloydsTriangle(4);
+// FloydsTriangle(4);
 
 function InvertedNumbers(n) {
   for (let i = n; i >= 1; i--) {
