@@ -16,7 +16,7 @@
 // }
 // printHollowParallelogram(5, 8);
 
-function SameNumberRow(n) {
+// function SameNumberRow(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= i; j++) {
