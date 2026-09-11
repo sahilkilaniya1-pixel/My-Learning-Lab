@@ -48,7 +48,7 @@
     // }
     // console.log(row);
   // }
-}
+// }
 FloydsTriangle(4);
 
 function InvertedNumbers(n) {
