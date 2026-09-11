@@ -36,7 +36,7 @@
     // console.log(row);
   // }
 // }
-IncreasingColumn(4);
+// IncreasingColumn(4);
 
 function FloydsTriangle(n) {
   let count = 1;
