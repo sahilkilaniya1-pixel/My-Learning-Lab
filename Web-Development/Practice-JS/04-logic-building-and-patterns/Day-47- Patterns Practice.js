@@ -47,7 +47,7 @@
       // count++;
     // }
     // console.log(row);
-  }
+  // }
 }
 FloydsTriangle(4);
 
