@@ -89,5 +89,5 @@
     // }
     // console.log(row);
   // }
-}
+// }
 BinaryTriangle(5);
