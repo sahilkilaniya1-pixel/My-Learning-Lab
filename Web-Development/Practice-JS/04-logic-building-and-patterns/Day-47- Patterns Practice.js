@@ -6,7 +6,7 @@
     // }
     // for (let j = 0; j < cols; j++) {
       // if (i === 0 || i === rows - 1 || j === 0 || j === cols - 1) {
-        rowStr += "*";
+        // rowStr += "*";
       } else {
         rowStr += " ";
       }
