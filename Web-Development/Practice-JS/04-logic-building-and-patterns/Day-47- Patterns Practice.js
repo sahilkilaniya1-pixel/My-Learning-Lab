@@ -85,7 +85,7 @@
         // row += "1 ";
       // } else {
         // row += "0 ";
-      }
+      // }
     // }
     console.log(row);
   }
