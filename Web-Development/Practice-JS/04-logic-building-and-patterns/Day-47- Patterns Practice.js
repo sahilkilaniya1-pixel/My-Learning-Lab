@@ -8,7 +8,7 @@
       // if (i === 0 || i === rows - 1 || j === 0 || j === cols - 1) {
         // rowStr += "*";
       // } else {
-        rowStr += " ";
+        // rowStr += " ";
       }
     }
     console.log(rowStr);
