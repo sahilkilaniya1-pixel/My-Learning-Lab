@@ -58,7 +58,7 @@
       // row += j + " ";
     // }
 
-    console.log(row);
+    // console.log(row);
   }
 }
 InvertedNumbers(5);
