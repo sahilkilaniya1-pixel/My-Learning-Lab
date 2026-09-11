@@ -11,7 +11,7 @@
         // rowStr += " ";
       // }
     // }
-    console.log(rowStr);
+    // console.log(rowStr);
   }
 }
 printHollowParallelogram(5, 8);
