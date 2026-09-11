@@ -23,7 +23,7 @@
       // row += i;
     // }
     // console.log(row);
-  }
+  // }
 }
 SameNumberRow(4);
 
