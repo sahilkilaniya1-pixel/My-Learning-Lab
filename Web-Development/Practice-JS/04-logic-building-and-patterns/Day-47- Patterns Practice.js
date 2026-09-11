@@ -35,7 +35,7 @@
     // }
     // console.log(row);
   }
-}
+// }
 IncreasingColumn(4);
 
 function FloydsTriangle(n) {
