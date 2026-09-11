@@ -74,7 +74,7 @@
     // }
     // console.log(row);
   // }
-}
+// }
 NumberPyramid(5);
 
 function BinaryTriangle(n) {
