@@ -13,7 +13,7 @@
     // }
     // console.log(rowStr);
   // }
-}
+// }
 printHollowParallelogram(5, 8);
 
 function SameNumberRow(n) {
