@@ -14,7 +14,7 @@
     // console.log(rowStr);
   // }
 // }
-printHollowParallelogram(5, 8);
+// printHollowParallelogram(5, 8);
 
 function SameNumberRow(n) {
   for (let i = 1; i <= n; i++) {
