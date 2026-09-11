@@ -33,7 +33,7 @@
     // for (let j = 1; j <= i; j++) {
       // row += j;
     // }
-    console.log(row);
+    // console.log(row);
   }
 }
 IncreasingColumn(4);
