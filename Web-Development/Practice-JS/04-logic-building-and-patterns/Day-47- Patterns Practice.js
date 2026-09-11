@@ -24,7 +24,7 @@
     // }
     // console.log(row);
   // }
-}
+// }
 SameNumberRow(4);
 
 function IncreasingColumn(n) {
