@@ -52,5 +52,5 @@ const element = document.getElementById("first");
 //   child1.style.backgroundColor = "black";
 // });
 
-const parent  = document.getElementById("parent");
+const parent = document.getElementById("parent");
 console.log(parent);
