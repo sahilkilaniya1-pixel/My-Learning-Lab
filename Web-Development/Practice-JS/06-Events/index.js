@@ -44,11 +44,16 @@ const element = document.getElementById("first");
 //   element.style.backgroundColor = "Blue";
 // });
 
+
+
+
+
+
+
 const child1 = document.getElementById("child1");
-child1.addEventListener('click', () =>{
-    child1.textContent = "I am clicked";
-})
-child1.addEventListener('click', ()=>{
-    child1.style.backgroundColor="black"
-})
- 
+child1.addEventListener("click", () => {
+  child1.textContent = "I am clicked";
+});
+child1.addEventListener("click", () => {
+  child1.style.backgroundColor = "black";
+});
