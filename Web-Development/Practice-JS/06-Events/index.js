@@ -19,10 +19,3 @@ element.addEventListener("click", () => {
   element.style.backgroundColor = "SkyBlue";
 });
 
-let a = {
-  greet: function (value) {
-    console.log("Hello", value);
-  },
-};
-a.greet(10);
-a.greet(20);
