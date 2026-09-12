@@ -12,9 +12,17 @@ const element = document.getElementById("first");
 //   element.textContent = "Iam the Best";
 // };
 
-element.addEventListener('click',()=>{
-    element.textContent="Stirke is Coming"
-})
-element.addEventListener('click',()=>{
-    element.style.backgroundColor="SkyBlue"
-})
+element.addEventListener("click", () => {
+  element.textContent = "Stirke is Coming";
+});
+element.addEventListener("click", () => {
+  element.style.backgroundColor = "SkyBlue";
+});
+
+let a = {
+  greet: function (value) {
+    console.log("Hello", value);
+  },
+};
+a.greet(10);
+a.greet(20);
