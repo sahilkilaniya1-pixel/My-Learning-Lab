@@ -23,7 +23,6 @@ const element = document.getElementById("first");
 //   element.style.backgroundColor = "SkyBlue";
 // });
 
-
 // element.addEventListener("click", () => {
 //   element.textContent = "Stirke is Coming";
 // });
@@ -31,9 +30,16 @@ const element = document.getElementById("first");
 //   element.style.backgroundColor = "SkyBlue";
 // });
 
-element.addEventListener("mouseenter", () => {
-  element.textContent = "Stirke is Coming";
-});
-element.addEventListener("mouseenter", () => {
-  element.style.backgroundColor = "SkyBlue";
-});
+// element.addEventListener("mouseenter", () => {
+//   element.textContent = "Stirke is Coming";
+// });
+// element.addEventListener("mouseenter", () => {
+//   element.style.backgroundColor = "SkyBlue";
+// });
+
+// element.addEventListener("mouseleave", () => {
+//   element.textContent = "Strike is Coming";
+// });
+// element.addEventListener("mouseleave", () => {
+//   element.style.backgroundColor = "Blue";
+// });
