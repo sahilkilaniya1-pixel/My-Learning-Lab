@@ -12,9 +12,9 @@ const element = document.getElementById("first");
 //   element.textContent = "Iam the Best";
 // };
 
-element.addEventListener('click', () =>{
-    element.textContent="Strike is Coming"
+element.addEventListener('click',()=>{
+    element.textContent="Stirke is Coming"
 })
-element.addEventListener('click', () =>{
-    element.style.backgroundColor="Brown";
+element.addEventListener('click',()=>{
+    element.style.backgroundColor="SkyBlue"
 })
