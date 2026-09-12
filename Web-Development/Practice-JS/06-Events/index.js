@@ -15,3 +15,6 @@ const element = document.getElementById("first");
 element.addEventListener('click', () =>{
     element.textContent="Strike is Coming"
 })
+element.addEventListener('click', () =>{
+    element.style.backgroundColor="Brown";
+})
