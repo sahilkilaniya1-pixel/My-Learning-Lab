@@ -1,4 +1,4 @@
-function handClick(){
+function handleClick(){
     const element = document.getElementById("first");
-    element.textContent = "Strike is Coming"
+    element.textContent="Strike is Coming"
 }
