@@ -49,7 +49,7 @@ child1.addEventListener("click", () => {
   child1.textContent = "I am clicked";
 });
 child1.addEventListener("click", () => {
-//   child1.style.backgroundColor = "black";
+  child1.style.backgroundColor = "black";
 // });
 
 // const parent = document.getElementById("parent");
