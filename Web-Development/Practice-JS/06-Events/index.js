@@ -1,79 +1,68 @@
-// Event: Mouse move, click, Double Click
-// Events Listener: Listening the events (click)
-// Events Action: Strike is coming
-
-// function handleClick(){
-//     const element = document.getElementById("first");
-//     element.textContent="Strike is Coming"
-// }
-
+// ==========================================
+// 1. SINGLE ELEMENT EVENTS (Click, Hover, DBClick)
+// ==========================================
 const element = document.getElementById("first");
-// element.onclick = function handleClick() {
-//   element.textContent = "Strike is coming";
-// };
 
-// element.onclick = function handleClick() {
-//   element.textContent = "Iam the Best";
-// };
+if (element) {
+  // Click Event: Content + Background Style Update
+  element.addEventListener("click", () => {
+    element.textContent = "Strike is Coming";
+    element.style.backgroundColor = "SkyBlue";
+  });
 
-// element.addEventListener("dblclick", () => {
-//   element.textContent = "Stirke is Coming";
-// });
-// element.addEventListener("dblclick", () => {
-//   element.style.backgroundColor = "SkyBlue";
-// });
+  // Double Click Event
+  element.addEventListener("dblclick", () => {
+    element.textContent = "Double Clicked!";
+    element.style.backgroundColor = "DeepSkyBlue";
+  });
 
-// element.addEventListener("click", () => {
-//   element.textContent = "Stirke is Coming";
-// });
-// element.addEventListener("click", () => {
-//   element.style.backgroundColor = "SkyBlue";
-// });
+  // Mouse Enter (Hover In)
+  element.addEventListener("mouseenter", () => {
+    element.style.backgroundColor = "LightCyan";
+  });
 
-// element.addEventListener("mouseenter", () => {
-//   element.textContent = "Stirke is Coming";
-// });
-// element.addEventListener("mouseenter", () => {
-//   element.style.backgroundColor = "SkyBlue";
-// });
+  // Mouse Leave (Hover Out)
+  element.addEventListener("mouseleave", () => {
+    element.style.backgroundColor = "White";
+  });
+}
 
-// element.addEventListener("mouseleave", () => {
-//   element.textContent = "Strike is Coming";
-// });
-// element.addEventListener("mouseleave", () => {
-//   element.style.backgroundColor = "Blue";
-// });
+// ==========================================
+// 2. PARENT-CHILD EVENT ITERATION (Looping)
+// ==========================================
+const parentContainer = document.getElementById("parent");
 
-// const child1 = document.getElementById("child1");
-// child1.addEventListener("click", () => {
-//   child1.textContent = "I am clicked";
-// });
-// child1.addEventListener("click", () => {
-//   child1.style.backgroundColor = "black";
-// });
+if (parentContainer) {
+  // Option A: Loop over children
+  for (let child of parentContainer.children) {
+    child.addEventListener("click", () => {
+      child.textContent = "I am clicked";
+      child.style.backgroundColor = "black";
+      child.style.color = "white";
+    });
+  }
+}
 
-// const parent = document.getElementById("parent");
-// console.log(parent.children);
-
-// for (let child of parent.children) {
-//     console.log(child);
-//     child.addEventListener('click', () => {
-//         child.textContent = "i am clicked";
-//     });
-// }
-
+// ==========================================
+// 3. EVENT PROPAGATION (Bubbling Controlled)
+// ==========================================
 const grandparent = document.getElementById("grandparent");
-grandparent.addEventListener("click", (e) => {
-  e.stopPropagation();
-  console.log("Grandparent is clicked");
-});
 const parent = document.getElementById("parent");
-parent.addEventListener("click", (e) => {
-  e.stopPropagation();
-  console.log("parent is clicked");
-});
 const child = document.getElementById("child");
-child.addEventListener("click", (e) => {
-  e.stopPropagation();
-  console.log("child is clicked");
-});
+
+if (grandparent && parent && child) {
+  grandparent.addEventListener("click", (e) => {
+    e.stopPropagation();
+    console.log("Grandparent is clicked");
+  });
+
+  parent.addEventListener("click", (e) => {
+    e.stopPropagation();
+    console.log("Parent is clicked");
+  });
+
+  child.addEventListener("click", (e) => {
+    e.stopPropagation();
+    console.log("Child is clicked");
+  });
+}

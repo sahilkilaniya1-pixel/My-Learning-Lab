@@ -3,26 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM Events Practice - My Learning Lab</title>
+    
+    <style>
+        body {
+            background-color: #121212;
+            color: aliceblue;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Flex Utility for Nested Boxes */
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        /* Grandparent, Parent, Child Elements */
+        #grandparent {
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            color: black;
+        }
+
+        #parent {
+            height: 200px;
+            width: 200px;
+            background-color: white;
+            color: black;
+        }
+
+        #child {
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            color: white;
+        }
+
+        /* Optional Children List Container */
+        .child-box {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            color: white;
+        }
+    </style>
 </head>
-<body style="background-color: black; color: aliceblue;">
-    <!-- <h1 id="first" onclick="handleClick()">Hello Codder</h1> -->
-         <!-- <h1 style="background-color: aquamarine;" id="first">Hello Codder</h1> -->
+<body>
 
-         <!-- <div id="parent">
-            <div id="child1" class="child" style="height: 150px; width: 150px; background-color: aliceblue;">First</div>
-            <div id="child2" class="child" style="height: 150px; width: 150px; background-color: seagreen;">Second</div>
-            <div id="child3" class="child" style="height: 150px; width: 150px; background-color: blueviolet;">Thirt</div>
-            <div id="child4" class="child" style="height: 150px; width: 150px; background-color: lightblue;">Fourth</div>
-            <div id="child5" class="child" style="height: 150px; width: 150px; background-color: navy;">Fifth</div>
-         </div> -->
+    <!-- SECTION 1: Single Heading Target -->
+    <h1 id="first">Hello Coder</h1>
 
-         <div id="grandparent" style="height: 300px; width: 300px; background-color: aqua; display: flex; justify-content: center; align-items: center; ">
-                <div id="parent" style="height: 200px; width: 200px; background-color: white; display: flex; justify-content: center; align-items: center; ">
-                    <div id="child" style="height: 100px; width: 100px; background-color: blue; display: flex; justify-content: center; align-items: center; "></div>
-                </div>
-         </div>
+    <!-- SECTION 2: Event Propagation / Bubbling Sandbox -->
+    <div id="grandparent" class="flex-center">
+        Grandparent
+        <div id="parent" class="flex-center">
+            Parent
+            <div id="child" class="flex-center">
+                Child
+            </div>
+        </div>
+    </div>
 
+    <!-- Script File Linked at Bottom -->
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
