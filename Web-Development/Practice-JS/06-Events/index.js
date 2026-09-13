@@ -62,3 +62,15 @@ const element = document.getElementById("first");
 //     });
 // }
 
+const grandparent = document.getElementById("grandparent");
+grandparent.addEventListener("click", () => {
+  console.log("Grandparent is clicked");
+});
+const parent = document.getElementById("parent");
+parent.addEventListener("click", () => {
+  console.log("parent is clicked");
+});
+const child = document.getElementById("child");
+child.addEventListener("click", () => {
+  console.log("child is clicked");
+});
