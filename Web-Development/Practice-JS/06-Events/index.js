@@ -1,4 +1,4 @@
-// Event: Mouse move, click, Double Click
+Event: Mouse move, click, Double Click
 // Events Listener: Listening the events (click)
 // Events Action: Strike is coming
 
