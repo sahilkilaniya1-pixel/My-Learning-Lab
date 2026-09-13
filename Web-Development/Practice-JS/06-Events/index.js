@@ -5,7 +5,7 @@
 // function handleClick(){
 //     const element = document.getElementById("first");
 //     element.textContent="Strike is Coming"
-// }
+}
 
 const element = document.getElementById("first");
 element.onclick = function handleClick() {
@@ -56,10 +56,10 @@ const parent = document.getElementById("parent");
 console.log(parent.children);
 
 for (let child of parent.children) {
-    console.log(child);
-    child.addEventListener('click', () => {
-        child.textContent = "i am clicked";
-    });
+  console.log(child);
+  child.addEventListener("click", () => {
+    child.textContent = "i am clicked";
+  });
 }
 
 const grandparent = document.getElementById("grandparent");
