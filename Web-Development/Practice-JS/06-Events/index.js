@@ -25,7 +25,7 @@ element.addEventListener("dblclick", () => {
 
 element.addEventListener("click", () => {
   element.textContent = "Stirke is Coming";
-// });
+});
 // element.addEventListener("click", () => {
 //   element.style.backgroundColor = "SkyBlue";
 // });
