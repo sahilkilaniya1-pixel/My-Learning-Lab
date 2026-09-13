@@ -72,7 +72,7 @@ const element = document.getElementById("first");
   // e.stopPropagation();
   // console.log("parent is clicked");
 // });
-const child = document.getElementById("child");
+// const child = document.getElementById("child");
 child.addEventListener("click", (e) => {
   e.stopPropagation();
   console.log("child is clicked");
