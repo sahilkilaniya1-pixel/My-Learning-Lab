@@ -13,7 +13,7 @@ element.onclick = function handleClick() {
 };
 
 element.onclick = function handleClick() {
-//   element.textContent = "Iam the Best";
+  element.textContent = "Iam the Best";
 // };
 
 // element.addEventListener("dblclick", () => {
