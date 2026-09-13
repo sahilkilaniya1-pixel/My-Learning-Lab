@@ -3,30 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Events Practice - My Learning Lab</title>
-    
+    <title>DOM Events Lab - My Learning Lab</title>
+
     <style>
+        /* Base Page Setup */
         body {
-            background-color: black;
+            background-color: #121212;
             color: aliceblue;
             font-family: Arial, sans-serif;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            gap: 25px;
         }
 
-        /* Flex Utility for Nested Boxes */
+        /* Utility Flex Center Box */
         .flex-center {
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 8px;
             cursor: pointer;
-            transition: transform 0.2s ease;
+            font-weight: bold;
+            user-select: none;
         }
 
-        /* Grandparent, Parent, Child Elements */
+        /* Section 1: Headings */
+        .heading {
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 6px;
+        }
+        #first2 {
+            background-color: aquamarine;
+            color: #121212;
+        }
+
+        /* Section 2: Parent Child List */
+        #parent-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px;
+            border: 2px dashed #444;
+            border-radius: 10px;
+        }
+
+        .child-box {
+            height: 120px;
+            width: 120px;
+            font-size: 18px;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+        .child-box:hover {
+            transform: scale(1.05);
+        }
+
+        #child1 { background-color: aliceblue; color: black; }
+        #child2 { background-color: seagreen; color: white; }
+        #child3 { background-color: blueviolet; color: white; }
+        #child4 { background-color: lightblue; color: black; }
+        #child5 { background-color: navy; color: white; }
+
+        /* Section 3: Event Propagation / Bubbling Boxes */
         #grandparent {
             height: 300px;
             width: 300px;
@@ -47,22 +87,24 @@
             background-color: blue;
             color: white;
         }
-
-        /* Optional Children List Container */
-        .child-box {
-            height: 100px;
-            width: 100px;
-            margin: 10px;
-            color: white;
-        }
     </style>
 </head>
 <body>
 
-    <!-- SECTION 1: Single Heading Target -->
-    <h1 id="first">Hello Coder</h1>
+    <!-- 1. HEADINGS PRACTICE -->
+    <h1 id="first" class="heading">Hello Coder (First)</h1>
+    <h1 id="first2" class="heading">Hello Coder (Second)</h1>
 
-    <!-- SECTION 2: Event Propagation / Bubbling Sandbox -->
+    <!-- 2. PARENT & CHILDREN LOOPING PRACTICE -->
+    <div id="parent-list">
+        <div id="child1" class="child-box flex-center">First</div>
+        <div id="child2" class="child-box flex-center">Second</div>
+        <div id="child3" class="child-box flex-center">Third</div>
+        <div id="child4" class="child-box flex-center">Fourth</div>
+        <div id="child5" class="child-box flex-center">Fifth</div>
+    </div>
+
+    <!-- 3. EVENT BUBBLING & PROPAGATION PRACTICE -->
     <div id="grandparent" class="flex-center">
         Grandparent
         <div id="parent" class="flex-center">
@@ -73,7 +115,7 @@
         </div>
     </div>
 
-    <!-- Script File Linked at Bottom -->
+    <!-- JavaScript File -->
     <script src="index.js"></script>
 </body>
 </html>

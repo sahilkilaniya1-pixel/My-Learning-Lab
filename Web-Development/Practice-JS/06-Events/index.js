@@ -43,6 +43,11 @@ if (parentContainer) {
   }
 }
 
+parent.addEventListener("click", () => {
+  console.log(e.target);
+  e.target.textContent = "I am clicked";
+});
+
 // ==========================================
 // 3. EVENT PROPAGATION (Bubbling Controlled)
 // ==========================================
@@ -52,17 +57,23 @@ const child = document.getElementById("child");
 
 if (grandparent && parent && child) {
   grandparent.addEventListener("click", (e) => {
+    console.log(e.target);
     e.stopPropagation();
     console.log("Grandparent is clicked");
   });
 
   parent.addEventListener("click", (e) => {
+    console.log(e.target);
     e.stopPropagation();
     console.log("Parent is clicked");
   });
 
   child.addEventListener("click", (e) => {
+    console.log(e.target);
     e.stopPropagation();
     console.log("Child is clicked");
   });
 }
+
+// Capture phase on hain: Top se down aaoge: us time pe event ko trigger kar diya jaayega
+// Capture pahse off hain: event hain usko down to up (bubbling phase bolte hain, tab trigger kiya jaayega)
