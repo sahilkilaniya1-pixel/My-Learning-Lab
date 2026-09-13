@@ -53,11 +53,11 @@ const element = document.getElementById("first");
 // });
 
 const parent = document.getElementById("parent");
-console.log(parent);
+console.log(parent.children);
 
 for (let child of parent.children) {
-  console.log(child);
-  child.addEventListner("click", () => {
-    child.textContent = "I am clicked";
-  });
+    console.log(child);
+    child.addEventListener('click', () => {
+        child.textContent = "i am clicked";
+    });
 }
