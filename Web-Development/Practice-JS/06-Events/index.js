@@ -46,7 +46,7 @@ element.addEventListener("mouseleave", () => {
 
 const child1 = document.getElementById("child1");
 child1.addEventListener("click", () => {
-//   child1.textContent = "I am clicked";
+  child1.textContent = "I am clicked";
 // });
 // child1.addEventListener("click", () => {
 //   child1.style.backgroundColor = "black";
