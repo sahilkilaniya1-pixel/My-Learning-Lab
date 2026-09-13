@@ -60,7 +60,7 @@ for (let child of parent.children) {
     child.addEventListener('click', () => {
         child.textContent = "i am clicked";
     });
-// }
+}
 
 const grandparent = document.getElementById("grandparent");
 grandparent.addEventListener("click", () => {
