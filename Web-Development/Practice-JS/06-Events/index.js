@@ -32,7 +32,7 @@ element.addEventListener("click", () => {
 
 element.addEventListener("mouseenter", () => {
   element.textContent = "Stirke is Coming";
-// });
+});
 // element.addEventListener("mouseenter", () => {
 //   element.style.backgroundColor = "SkyBlue";
 // });
