@@ -34,7 +34,7 @@ element.addEventListener("mouseenter", () => {
   element.textContent = "Stirke is Coming";
 });
 element.addEventListener("mouseenter", () => {
-//   element.style.backgroundColor = "SkyBlue";
+  element.style.backgroundColor = "SkyBlue";
 // });
 
 // element.addEventListener("mouseleave", () => {
