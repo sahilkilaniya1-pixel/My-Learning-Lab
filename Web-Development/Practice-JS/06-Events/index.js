@@ -59,7 +59,7 @@ for (let child of parent.children) {
     console.log(child);
     child.addEventListener('click', () => {
         child.textContent = "i am clicked";
-//     });
+    });
 // }
 
 const grandparent = document.getElementById("grandparent");
