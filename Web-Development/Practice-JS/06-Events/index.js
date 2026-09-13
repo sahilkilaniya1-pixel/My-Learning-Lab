@@ -53,7 +53,7 @@ child1.addEventListener("click", () => {
 });
 
 const parent = document.getElementById("parent");
-// console.log(parent.children);
+console.log(parent.children);
 
 // for (let child of parent.children) {
 //     console.log(child);
