@@ -3,7 +3,7 @@
 // Events Action: Strike is coming
 
 // function handleClick(){
-//     const element = document.getElementById("first");
+    const element = document.getElementById("first");
     element.textContent="Strike is Coming"
 }
 
