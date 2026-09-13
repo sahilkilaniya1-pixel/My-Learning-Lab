@@ -64,7 +64,7 @@ const element = document.getElementById("first");
 
 // const grandparent = document.getElementById("grandparent");
 // grandparent.addEventListener("click", (e) => {
-  e.stopPropagation();
+  // e.stopPropagation();
   console.log("Grandparent is clicked");
 });
 const parent = document.getElementById("parent");
