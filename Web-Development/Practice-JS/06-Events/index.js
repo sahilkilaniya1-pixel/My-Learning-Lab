@@ -74,6 +74,6 @@ const element = document.getElementById("first");
 // });
 // const child = document.getElementById("child");
 // child.addEventListener("click", (e) => {
-  e.stopPropagation();
+  // e.stopPropagation();
   console.log("child is clicked");
 });
