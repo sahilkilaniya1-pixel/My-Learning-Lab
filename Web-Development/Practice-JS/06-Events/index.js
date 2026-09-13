@@ -70,7 +70,7 @@ const element = document.getElementById("first");
 // const parent = document.getElementById("parent");
 // parent.addEventListener("click", (e) => {
   // e.stopPropagation();
-  console.log("parent is clicked");
+  // console.log("parent is clicked");
 });
 const child = document.getElementById("child");
 child.addEventListener("click", (e) => {
