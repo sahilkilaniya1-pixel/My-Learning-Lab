@@ -55,8 +55,9 @@ const element = document.getElementById("first");
 const parent = document.getElementById("parent");
 console.log(parent);
 
-for(let child of parent.children){
-    child.addEventListner('click',() =>{
-        child.textContent = "I am clicked"
-    })
+for (let child of parent.children) {
+  console.log(child);
+  child.addEventListner("click", () => {
+    child.textContent = "I am clicked";
+  });
 }
