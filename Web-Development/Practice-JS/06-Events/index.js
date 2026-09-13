@@ -8,7 +8,7 @@
 // }
 
 const element = document.getElementById("first");
-// element.onclick = function handleClick() {
+element.onclick = function handleClick() {
 //   element.textContent = "Strike is coming";
 // };
 
