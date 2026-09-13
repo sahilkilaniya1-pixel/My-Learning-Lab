@@ -58,7 +58,7 @@ console.log(parent.children);
 for (let child of parent.children) {
     console.log(child);
     child.addEventListener('click', () => {
-//         child.textContent = "i am clicked";
+        child.textContent = "i am clicked";
 //     });
 // }
 
