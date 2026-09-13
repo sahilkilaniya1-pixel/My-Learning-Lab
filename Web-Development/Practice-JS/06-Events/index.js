@@ -52,12 +52,13 @@ const element = document.getElementById("first");
 //   child1.style.backgroundColor = "black";
 // });
 
-const parent = document.getElementById("parent");
-console.log(parent.children);
+// const parent = document.getElementById("parent");
+// console.log(parent.children);
 
-for (let child of parent.children) {
-    console.log(child);
-    child.addEventListener('click', () => {
-        child.textContent = "i am clicked";
-    });
-}
+// for (let child of parent.children) {
+//     console.log(child);
+//     child.addEventListener('click', () => {
+//         child.textContent = "i am clicked";
+//     });
+// }
+
