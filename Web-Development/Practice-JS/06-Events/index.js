@@ -38,7 +38,7 @@ element.addEventListener("mouseenter", () => {
 });
 
 element.addEventListener("mouseleave", () => {
-//   element.textContent = "Strike is Coming";
+  element.textContent = "Strike is Coming";
 // });
 // element.addEventListener("mouseleave", () => {
 //   element.style.backgroundColor = "Blue";
