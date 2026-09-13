@@ -37,7 +37,7 @@ element.addEventListener("mouseenter", () => {
   element.style.backgroundColor = "SkyBlue";
 });
 
-// element.addEventListener("mouseleave", () => {
+element.addEventListener("mouseleave", () => {
 //   element.textContent = "Strike is Coming";
 // });
 // element.addEventListener("mouseleave", () => {
