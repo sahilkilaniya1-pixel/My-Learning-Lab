@@ -62,15 +62,18 @@ const element = document.getElementById("first");
 //     });
 // }
 
-const grandparent = document.getElementById("grandparent");
-grandparent.addEventListener('click', () => {
+// const grandparent = document.getElementById("grandparent");
+grandparent.addEventListener("click", (e) => {
+  e.stopPropagation();
   console.log("Grandparent is clicked");
 });
 const parent = document.getElementById("parent");
-parent.addEventListener('click', () => {
+parent.addEventListener("click", (e) => {
+  e.stopPropagation();
   console.log("parent is clicked");
 });
 const child = document.getElementById("child");
-child.addEventListener('click', () => {
+child.addEventListener("click", (e) => {
+  e.stopPropagation();
   console.log("child is clicked");
 });
