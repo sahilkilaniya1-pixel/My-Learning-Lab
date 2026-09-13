@@ -41,7 +41,7 @@ element.addEventListener("mouseleave", () => {
   element.textContent = "Strike is Coming";
 });
 element.addEventListener("mouseleave", () => {
-//   element.style.backgroundColor = "Blue";
+  element.style.backgroundColor = "Blue";
 // });
 
 // const child1 = document.getElementById("child1");
