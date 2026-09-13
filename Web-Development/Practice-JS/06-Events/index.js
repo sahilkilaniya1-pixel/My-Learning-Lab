@@ -17,7 +17,7 @@ element.onclick = function handleClick() {
 };
 
 element.addEventListener("dblclick", () => {
-//   element.textContent = "Stirke is Coming";
+  element.textContent = "Stirke is Coming";
 // });
 // element.addEventListener("dblclick", () => {
 //   element.style.backgroundColor = "SkyBlue";
