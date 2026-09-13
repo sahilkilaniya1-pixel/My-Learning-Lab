@@ -14,7 +14,7 @@ element.onclick = function handleClick() {
 
 element.onclick = function handleClick() {
   element.textContent = "Iam the Best";
-// };
+};
 
 // element.addEventListener("dblclick", () => {
 //   element.textContent = "Stirke is Coming";
