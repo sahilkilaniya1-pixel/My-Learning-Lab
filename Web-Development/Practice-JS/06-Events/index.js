@@ -52,7 +52,7 @@ child1.addEventListener("click", () => {
   child1.style.backgroundColor = "black";
 });
 
-// const parent = document.getElementById("parent");
+const parent = document.getElementById("parent");
 // console.log(parent.children);
 
 // for (let child of parent.children) {
