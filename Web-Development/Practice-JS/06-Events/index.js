@@ -1,11 +1,11 @@
-Event: Mouse move, click, Double Click
-Events Listener: Listening the events (click)
-Events Action: Strike is coming
+// Event: Mouse move, click, Double Click
+// Events Listener: Listening the events (click)
+// Events Action: Strike is coming
 
-function handleClick(){
-    const element = document.getElementById("first");
-    element.textContent="Strike is Coming"
-}
+// function handleClick(){
+//     const element = document.getElementById("first");
+//     element.textContent="Strike is Coming"
+// }
 
 const element = document.getElementById("first");
 // element.onclick = function handleClick() {
