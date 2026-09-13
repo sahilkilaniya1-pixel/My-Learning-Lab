@@ -42,7 +42,7 @@ element.addEventListener("mouseleave", () => {
 });
 element.addEventListener("mouseleave", () => {
   element.style.backgroundColor = "Blue";
-// });
+});
 
 // const child1 = document.getElementById("child1");
 // child1.addEventListener("click", () => {
