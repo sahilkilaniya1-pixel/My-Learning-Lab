@@ -15,8 +15,8 @@ if (element) {
   element.addEventListener("dblclick", () => {
     element.textContent = "Double Clicked!";
     element.style.backgroundColor = "DeepSkyBlue";
-    // element.style.color = "black";
-  });
+    element.style.color = "black";
+  // });
 
   // Mouse Enter (Hover In)
   element.addEventListener("mouseenter", () => {
