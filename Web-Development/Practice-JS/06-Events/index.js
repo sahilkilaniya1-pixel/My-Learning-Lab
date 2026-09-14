@@ -28,8 +28,8 @@ if (element) {
   element.addEventListener("mouseleave", () => {
     element.textContent = "Hello Coder (First)";
     element.style.backgroundColor = "transparent";
-    // element.style.color = "aliceblue";
-  });
+    element.style.color = "aliceblue";
+  // });
 }
 
 // ==========================================
