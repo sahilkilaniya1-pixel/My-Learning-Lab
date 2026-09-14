@@ -21,8 +21,8 @@ if (element) {
   // Mouse Enter (Hover In)
   element.addEventListener("mouseenter", () => {
     element.style.backgroundColor = "LightCyan";
-    // element.style.color = "black";
-  // });
+    element.style.color = "black";
+  });
 
   // Mouse Leave (Hover Out)
   element.addEventListener("mouseleave", () => {
