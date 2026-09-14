@@ -8,8 +8,8 @@ if (element) {
   element.addEventListener("click", () => {
     element.textContent = "Strike is Coming";
     element.style.backgroundColor = "SkyBlue";
-    // element.style.color = "black";
-  });
+    element.style.color = "black";
+  // });
 
   // Double Click Event
   element.addEventListener("dblclick", () => {
