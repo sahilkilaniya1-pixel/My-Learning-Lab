@@ -1,7 +1,7 @@
 // ==========================================
 // 1. SINGLE ELEMENT EVENTS (Heading First)
 // ==========================================
-const element = document.getElementById("first");
+// const element = document.getElementById("first");
 
 if (element) {
   // Click Event
