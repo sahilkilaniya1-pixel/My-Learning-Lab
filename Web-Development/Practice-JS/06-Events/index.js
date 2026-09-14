@@ -16,10 +16,10 @@ if (element) {
     element.textContent = "Double Clicked!";
     element.style.backgroundColor = "DeepSkyBlue";
     element.style.color = "black";
-  // });
+  });
 
   // Mouse Enter (Hover In)
-  element.addEventListener("mouseenter", () => {
+  // element.addEventListener("mouseenter", () => {
     element.style.backgroundColor = "LightCyan";
     element.style.color = "black";
   });
