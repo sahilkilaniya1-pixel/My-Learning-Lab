@@ -1,79 +1,119 @@
 // ==========================================
-// 1. SINGLE ELEMENT EVENTS (Click, Hover, DBClick)
+// 1. SINGLE ELEMENT EVENTS (Heading First)
 // ==========================================
 const element = document.getElementById("first");
 
 if (element) {
-  // Click Event: Content + Background Style Update
+  // Click Event
   element.addEventListener("click", () => {
     element.textContent = "Strike is Coming";
     element.style.backgroundColor = "SkyBlue";
+    element.style.color = "black";
   });
 
   // Double Click Event
   element.addEventListener("dblclick", () => {
     element.textContent = "Double Clicked!";
     element.style.backgroundColor = "DeepSkyBlue";
+    element.style.color = "black";
   });
 
   // Mouse Enter (Hover In)
   element.addEventListener("mouseenter", () => {
     element.style.backgroundColor = "LightCyan";
+    element.style.color = "black";
   });
 
   // Mouse Leave (Hover Out)
   element.addEventListener("mouseleave", () => {
-    element.style.backgroundColor = "White";
+    element.textContent = "Hello Coder (First)";
+    element.style.backgroundColor = "transparent";
+    element.style.color = "aliceblue";
   });
 }
 
 // ==========================================
-// 2. PARENT-CHILD EVENT ITERATION (Looping)
+// 2. PARENT-CHILD LIST (Individual Box Events)
 // ==========================================
-const parentContainer = document.getElementById("parent");
+// Section 2 ke sabhi 5 boxes ko get kar rahe hain
+const child1 = document.getElementById("child1");
+const child2 = document.getElementById("child2");
+const child3 = document.getElementById("child3");
+const child4 = document.getElementById("child4");
+const child5 = document.getElementById("child5");
 
-if (parentContainer) {
-  // Option A: Loop over children
-  for (let child of parentContainer.children) {
-    child.addEventListener("click", () => {
-      child.textContent = "I am clicked";
-      child.style.backgroundColor = "black";
-      child.style.color = "white";
-    });
-  }
+if (child1) {
+  child1.addEventListener("click", (e) => {
+    e.stopPropagation();
+    child1.textContent = "I am clicked";
+    child1.style.backgroundColor = "black";
+    child1.style.color = "white";
+  });
 }
 
-parent.addEventListener("click", () => {
-  console.log(e.target);
-  e.target.textContent = "I am clicked";
-});
+if (child2) {
+  child2.addEventListener("dblclick", (e) => {
+    e.stopPropagation();
+    child2.textContent = "I am clicked";
+    child2.style.backgroundColor = "black";
+    child2.style.color = "white";
+  });
+}
+
+if (child3) {
+  child3.addEventListener("mouseup", (e) => {
+    e.stopPropagation();
+    child3.textContent = "I am clicked";
+    child3.style.backgroundColor = "black";
+    child3.style.color = "white";
+  });
+}
+
+if (child4) {
+  child4.addEventListener("mouseenter", (e) => {
+    e.stopPropagation();
+    child4.textContent = "I am clicked";
+    child4.style.backgroundColor = "black";
+    child4.style.color = "white";
+  });
+}
+
+if (child5) {
+  child5.addEventListener("mouseleave", (e) => {
+    e.stopPropagation();
+    child5.textContent = "I am clicked";
+    child5.style.backgroundColor = "black";
+    child5.style.color = "white";
+  });
+}
 
 // ==========================================
-// 3. EVENT PROPAGATION (Bubbling Controlled)
+// 3. EVENT BUBBLING & PROPAGATION (Nested Boxes)
 // ==========================================
 const grandparent = document.getElementById("grandparent");
 const parent = document.getElementById("parent");
 const child = document.getElementById("child");
 
-if (grandparent && parent && child) {
+if (grandparent) {
   grandparent.addEventListener("click", (e) => {
-    console.log(e.target);
+    // console.log(e);
     e.stopPropagation();
     console.log("Grandparent is clicked");
   });
+}
 
+if (parent) {
   parent.addEventListener("click", (e) => {
-    console.log(e.target);
+    // console.log(e);
     e.stopPropagation();
-    console.log("Parent is clicked");
-  });
-
-  child.addEventListener("click", (e) => {
-    console.log(e.target);
-    e.stopPropagation();
-    console.log("Child is clicked");
+    console.log("parent is clicked");
   });
 }
 
-// Capture phase on hain: Top se down aaoge: us time pe event ko trigger kar diya jaayega
-// Capture pahse off hain: event hain usko down to up (bubbling phase bolte hain, tab trigger kiya jaayega)
+if (child) {
+  child.addEventListener("click", (e) => {
+    // console.log(e);
+    e.stopPropagation();
+    console.log("child is clicked");
+  });
+}
