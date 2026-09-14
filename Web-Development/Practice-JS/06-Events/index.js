@@ -29,14 +29,14 @@ if (element) {
     element.textContent = "Hello Coder (First)";
     element.style.backgroundColor = "transparent";
     element.style.color = "aliceblue";
-  // });
+  });
 }
 
 // ==========================================
 // 2. PARENT-CHILD LIST (Individual Box Events)
 // ==========================================
 // Section 2 ke sabhi 5 boxes ko get kar rahe hain
-const child1 = document.getElementById("child1");
+// const child1 = document.getElementById("child1");
 const child2 = document.getElementById("child2");
 const child3 = document.getElementById("child3");
 const child4 = document.getElementById("child4");
