@@ -27,8 +27,8 @@ if (element) {
   // Mouse Leave (Hover Out)
   element.addEventListener("mouseleave", () => {
     element.textContent = "Hello Coder (First)";
-    // element.style.backgroundColor = "transparent";
-    element.style.color = "aliceblue";
+    element.style.backgroundColor = "transparent";
+    // element.style.color = "aliceblue";
   });
 }
 
