@@ -54,8 +54,8 @@ if (child1) {
 if (child2) {
   child2.addEventListener("dblclick", (e) => {
     e.stopPropagation();
-    // child2.textContent = "I am clicked";
-    child2.style.backgroundColor = "black";
+    child2.textContent = "I am clicked";
+    // child2.style.backgroundColor = "black";
     child2.style.color = "white";
   });
 }
