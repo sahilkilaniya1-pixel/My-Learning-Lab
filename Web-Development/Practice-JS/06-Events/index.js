@@ -1,9 +1,9 @@
 // ==========================================
 // 1. SINGLE ELEMENT EVENTS (Heading First)
 // ==========================================
-// const element = document.getElementById("first");
+const element = document.getElementById("first");
 
-if (element) {
+// if (element) {
   // Click Event
   element.addEventListener("click", () => {
     element.textContent = "Strike is Coming";
