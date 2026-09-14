@@ -47,11 +47,11 @@ if (child1) {
     e.stopPropagation();
     child1.textContent = "I am clicked";
     child1.style.backgroundColor = "black";
-    // child1.style.color = "white";
+    child1.style.color = "white";
   });
 }
 
-if (child2) {
+// if (child2) {
   child2.addEventListener("dblclick", (e) => {
     e.stopPropagation();
     child2.textContent = "I am clicked";
