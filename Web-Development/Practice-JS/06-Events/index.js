@@ -74,8 +74,8 @@ if (child4) {
     e.stopPropagation();
     child4.textContent = "I am clicked";
     child4.style.backgroundColor = "black";
-    // child4.style.color = "white";
-  });
+    child4.style.color = "white";
+  // });
 }
 
 if (child5) {
