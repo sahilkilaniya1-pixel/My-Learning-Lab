@@ -70,8 +70,8 @@ if (child3) {
 }
 
 if (child4) {
-  // child4.addEventListener("mouseenter", (e) => {
-    e.stopPropagation();
+  child4.addEventListener("mouseenter", (e) => {
+    // e.stopPropagation();
     child4.textContent = "I am clicked";
     child4.style.backgroundColor = "black";
     child4.style.color = "white";
