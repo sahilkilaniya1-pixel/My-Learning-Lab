@@ -66,10 +66,10 @@ if (child3) {
     child3.textContent = "I am clicked";
     child3.style.backgroundColor = "black";
     child3.style.color = "white";
-  // });
+  });
 }
 
-if (child4) {
+// if (child4) {
   child4.addEventListener("mouseenter", (e) => {
     e.stopPropagation();
     child4.textContent = "I am clicked";
