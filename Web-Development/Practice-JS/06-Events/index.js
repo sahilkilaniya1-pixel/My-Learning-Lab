@@ -75,8 +75,8 @@ if (child4) {
     child4.textContent = "I am clicked";
     child4.style.backgroundColor = "black";
     child4.style.color = "white";
-  // });
-}
+  });
+// }
 
 if (child5) {
   child5.addEventListener("mouseleave", (e) => {
