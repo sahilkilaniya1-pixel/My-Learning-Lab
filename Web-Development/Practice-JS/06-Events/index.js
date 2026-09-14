@@ -3,9 +3,9 @@
 // ==========================================
 const element = document.getElementById("first");
 
-// if (element) {
+if (element) {
   // Click Event
-  element.addEventListener("click", () => {
+  // element.addEventListener("click", () => {
     element.textContent = "Strike is Coming";
     element.style.backgroundColor = "SkyBlue";
     element.style.color = "black";
