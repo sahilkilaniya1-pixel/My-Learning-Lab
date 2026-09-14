@@ -9,10 +9,10 @@ if (element) {
     element.textContent = "Strike is Coming";
     element.style.backgroundColor = "SkyBlue";
     element.style.color = "black";
-  // });
+  });
 
   // Double Click Event
-  element.addEventListener("dblclick", () => {
+  // element.addEventListener("dblclick", () => {
     element.textContent = "Double Clicked!";
     element.style.backgroundColor = "DeepSkyBlue";
     element.style.color = "black";
