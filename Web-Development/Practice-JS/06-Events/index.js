@@ -56,8 +56,8 @@ if (child2) {
     e.stopPropagation();
     child2.textContent = "I am clicked";
     child2.style.backgroundColor = "black";
-    // child2.style.color = "white";
-  });
+    child2.style.color = "white";
+  // });
 }
 
 if (child3) {
