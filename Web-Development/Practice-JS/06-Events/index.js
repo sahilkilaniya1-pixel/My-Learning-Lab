@@ -46,8 +46,8 @@ if (child1) {
   child1.addEventListener("click", (e) => {
     e.stopPropagation();
     child1.textContent = "I am clicked";
-    // child1.style.backgroundColor = "black";
-    child1.style.color = "white";
+    child1.style.backgroundColor = "black";
+    // child1.style.color = "white";
   });
 }
 
