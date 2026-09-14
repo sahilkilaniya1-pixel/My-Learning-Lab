@@ -39,8 +39,8 @@ if (element) {
 const child1 = document.getElementById("child1");
 const child2 = document.getElementById("child2");
 const child3 = document.getElementById("child3");
-// const child4 = document.getElementById("child4");
-const child5 = document.getElementById("child5");
+const child4 = document.getElementById("child4");
+// const child5 = document.getElementById("child5");
 
 if (child1) {
   child1.addEventListener("click", (e) => {
