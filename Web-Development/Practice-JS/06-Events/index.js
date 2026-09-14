@@ -19,7 +19,7 @@ if (element) {
   });
 
   // Mouse Enter (Hover In)
-  element.addEventListener("mouseenter", () => {
+  // element.addEventListener("mouseenter", () => {
     element.style.backgroundColor = "LightCyan";
     element.style.color = "black";
   // });
