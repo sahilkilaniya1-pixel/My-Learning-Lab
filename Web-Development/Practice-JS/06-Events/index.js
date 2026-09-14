@@ -96,7 +96,7 @@ const child = document.getElementById("child");
 
 if (grandparent) {
   grandparent.addEventListener("click", (e) => {
-    // console.log(e);
+    console.log(e);
     e.stopPropagation();
     console.log("Grandparent is clicked");
   });
