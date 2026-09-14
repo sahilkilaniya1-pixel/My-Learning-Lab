@@ -13,8 +13,8 @@ if (element) {
 
   // Double Click Event
   element.addEventListener("dblclick", () => {
-    // element.textContent = "Double Clicked!";
-    element.style.backgroundColor = "DeepSkyBlue";
+    element.textContent = "Double Clicked!";
+    // element.style.backgroundColor = "DeepSkyBlue";
     element.style.color = "black";
   });
 
