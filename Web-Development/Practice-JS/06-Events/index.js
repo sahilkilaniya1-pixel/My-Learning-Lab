@@ -61,8 +61,8 @@ if (child2) {
 }
 
 if (child3) {
-  // child3.addEventListener("mouseup", (e) => {
-    e.stopPropagation();
+  child3.addEventListener("mouseup", (e) => {
+    // e.stopPropagation();
     child3.textContent = "I am clicked";
     child3.style.backgroundColor = "black";
     child3.style.color = "white";
