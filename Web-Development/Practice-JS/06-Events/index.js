@@ -20,6 +20,7 @@ if (element) {
 
   // Mouse Enter (Hover In)
   element.addEventListener("mouseenter", () => {
+    element.textContent= "mouseenter";
     element.style.backgroundColor = "LightCyan";
     element.style.color = "black";
   });
@@ -104,7 +105,7 @@ if (grandparent) {
 
 if (parent) {
   parent.addEventListener("click", (e) => {
-    // console.log(e);
+    console.log(e);
     e.stopPropagation();
     console.log("parent is clicked");
   });
