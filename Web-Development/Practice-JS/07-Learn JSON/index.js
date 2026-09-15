@@ -8,5 +8,5 @@
 // });
 // login.addEventListener("clicl", ()=> {
     // slider.classList.remove("moveslider");
-    formSection.classList.remove("form-section-move");
+    // formSection.classList.remove("form-section-move");
 });
