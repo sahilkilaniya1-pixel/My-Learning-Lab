@@ -7,6 +7,6 @@
     // formsection.classList.add("form-section-move");
 // });
 // login.addEventListener("clicl", ()=> {
-    slider.classList.remove("moveslider");
+    // slider.classList.remove("moveslider");
     formSection.classList.remove("form-section-move");
 });
