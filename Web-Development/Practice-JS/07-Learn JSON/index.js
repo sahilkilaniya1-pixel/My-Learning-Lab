@@ -9,4 +9,4 @@
 // login.addEventListener("clicl", ()=> {
     // slider.classList.remove("moveslider");
     // formSection.classList.remove("form-section-move");
-// });
+});
