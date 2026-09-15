@@ -1,12 +1,10 @@
 import sys
 from dbhelper import DBHelper
 
-
 class Flipkart:
     def __init__(self):
-        # Database connect kar rahe hain
         self.db = DBHelper()
-        # Main menu load kar rahe hain
+        self.current_user = None  # Store logged-in user data
         self.menu()
 
     def menu(self):
@@ -32,7 +30,7 @@ class Flipkart:
         email = input("Enter your email: ")
         password = input("Enter your password: ")
 
-        # DBHelper ka register function call
+        # Call DBHelper SQL Insert
         response = self.db.register(name, email, password)
 
         if response == 1:
@@ -40,7 +38,6 @@ class Flipkart:
         else:
             print(" Registration Failed! (Email might already exist)")
 
-        # User ko wapas main menu par bhejne ke liye
         self.menu()
 
     def login(self):
@@ -48,13 +45,14 @@ class Flipkart:
         email = input("Enter your email: ")
         password = input("Enter your password: ")
 
-        # DBHelper ka search function call
-        response = self.db.search(email, password)
+        # Call DBHelper SQL Select
+        user_data = self.db.search(email, password)
 
-        if response == 1:
-            print("\n Login Successful! Welcome to Flipkart Dashboard.")
-            self.second_menu()  # Login ke baad ka menu
-        elif response == 0:
+        if user_data != 0 and user_data != -1:
+            self.current_user = user_data
+            print(f"\n Login Successful! Welcome {self.current_user[1]}.")
+            self.second_menu()
+        elif user_data == 0:
             print("\n Invalid Email or Password!")
             self.menu()
         else:
@@ -62,7 +60,6 @@ class Flipkart:
             self.menu()
 
     def second_menu(self):
-        """Login hone ke baad dikhne wala menu"""
         user_input = input("""
         ***************************
         1. Enter 1 to See Profile
@@ -71,12 +68,16 @@ class Flipkart:
         > """)
 
         if user_input == "1":
-            print("\n Profile Page Coming Soon!")
+            print("\n--- USER PROFILE ---")
+            print(f"ID: {self.current_user[0]}")
+            print(f"Name: {self.current_user[1]}")
+            print(f"Email: {self.current_user[2]}")
             self.second_menu()
         else:
+            self.current_user = None
             print("\n Logged out successfully!")
             self.menu()
 
-
-# App start karne ke liye:
-obj = Flipkart()
+# Execute application
+if __name__ == "__main__":
+    obj = Flipkart()
