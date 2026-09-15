@@ -1,12 +1,10 @@
 import sys
 from dbhelper import DBHelper
-
 class Flipkart:
     def __init__(self):
         self.db = DBHelper()
         self.current_user = None
         self.menu()
-
     def menu(self):
         user_input = input("""
         ===========================
@@ -15,7 +13,6 @@ class Flipkart:
         3. Anything else to Exit
         ===========================
         > """)
-
         if user_input == "1":
             self.register()
         elif user_input == "2":
@@ -23,7 +20,6 @@ class Flipkart:
         else:
             print("Exiting application... Goodbye!")
             sys.exit()
-
     def register(self):
         print("\n--- USER REGISTRATION ---")
         name = input("Enter your name: ")
@@ -38,7 +34,6 @@ class Flipkart:
             print(" Registration Failed! (Email might already exist)")
 
         self.menu()
-
     def login(self):
         print("\n--- USER LOGIN ---")
         email = input("Enter your email: ")
@@ -56,8 +51,6 @@ class Flipkart:
         else:
             print("\n Database Error! Try again later.")
             self.menu()
-
-    # ------------------ SECOND MENU (UPDATED) ------------------
     def second_menu(self):
         user_input = input("""
         ***************************
@@ -67,16 +60,12 @@ class Flipkart:
         4. Enter 4 to Logout
         ***************************
         > """)
-
-        # 1. SEE PROFILE
         if user_input == "1":
             print("\n--- USER PROFILE DETAILS ---")
             print(f"User ID   : {self.current_user[0]}")
             print(f"Name      : {self.current_user[1]}")
             print(f"Email     : {self.current_user[2]}")
             self.second_menu()
-
-        # 2. EDIT PROFILE
         elif user_input == "2":
             print("\n--- EDIT PROFILE ---")
             new_name = input("Enter new name: ")
@@ -90,8 +79,6 @@ class Flipkart:
             else:
                 print(" Profile Update Failed!")
             self.second_menu()
-
-        # 3. DELETE PROFILE
         elif user_input == "3":
             confirm = input("Are you sure you want to delete your account? (y/n): ")
             if confirm.lower() == 'y':
@@ -99,18 +86,15 @@ class Flipkart:
                 if res == 1:
                     print(" Account Deleted Successfully!")
                     self.current_user = None
-                    self.menu()  # Back to main menu after account deletion
+                    self.menu()
                 else:
                     print(" Failed to Delete Account!")
                     self.second_menu()
             else:
                 self.second_menu()
-
-        # 4. LOGOUT
         else:
             self.current_user = None
             print("\n Logged out successfully!")
             self.menu()
-
 if __name__ == "__main__":
     obj = Flipkart()
