@@ -1,6 +1,5 @@
 import mysql.connector
 
-
 class DBHelper:
     def __init__(self):
         try:
@@ -16,33 +15,50 @@ class DBHelper:
             print(f"Database Connection Error: {err}")
 
     def register(self, name, email, password):
-        """SQL Query to INSERT new user record"""
         try:
-            # Parameterized SQL INSERT Query
             query = "INSERT INTO users (name, email, password) VALUES (%s, %s, %s)"
             values = (name, email, password)
-
             self.mycursor.execute(query, values)
-            self.conn.commit()  # Save changes to database
-            return 1  # Success
+            self.conn.commit()
+            return 1
         except mysql.connector.Error as err:
             print(f"Registration Error: {err}")
-            return 0  # Failure / Duplicate Email
+            return 0
 
     def search(self, email, password):
-        """SQL Query to SELECT and Verify user credentials"""
         try:
-            # Parameterized SQL SELECT Query
             query = "SELECT * FROM users WHERE email = %s AND password = %s"
             values = (email, password)
-
             self.mycursor.execute(query, values)
             data = self.mycursor.fetchall()
-
             if len(data) > 0:
-                return data[0]  # Return user row data (tuple)
+                return data[0]
             else:
-                return 0  # User not found
+                return 0
         except mysql.connector.Error as err:
-            print(f"Search Error: {err}")
-            return -1  # Database/Query error
+            print(f"Search Query Error: {err}")
+            return -1
+
+    # 1. UPDATE PROFILE QUERY
+    def update_profile(self, user_id, new_name, new_password):
+        try:
+            query = "UPDATE users SET name = %s, password = %s WHERE id = %s"
+            values = (new_name, new_password, user_id)
+            self.mycursor.execute(query, values)
+            self.conn.commit()
+            return 1
+        except mysql.connector.Error as err:
+            print(f"Update Error: {err}")
+            return 0
+
+    # 2. DELETE PROFILE QUERY
+    def delete_profile(self, user_id):
+        try:
+            query = "DELETE FROM users WHERE id = %s"
+            values = (user_id,)
+            self.mycursor.execute(query, values)
+            self.conn.commit()
+            return 1
+        except mysql.connector.Error as err:
+            print(f"Delete Error: {err}")
+            return 0
