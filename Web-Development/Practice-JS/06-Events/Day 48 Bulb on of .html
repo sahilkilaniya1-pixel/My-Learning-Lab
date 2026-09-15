@@ -4,74 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lightbulb Toggle</title>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        gap: 20px;
-        background-color: #f4f4f9;
-        font-family: system-ui, -apple-system, sans-serif;
-      }
-
-      /* Base Bulb Styles */
-      .bulb {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: #d1d5db;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      /* Active State using Data Attribute */
-      .bulb[data-active="true"] {
-        background-color: #facc15;
-        box-shadow: 0 0 30px #facc15;
-      }
-
-      .btn {
-        padding: 10px 24px;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        border: none;
-        border-radius: 8px;
-        background-color: #2563eb;
-        color: white;
-        transition: background-color 0.2s;
-      }
-
-      .btn:hover {
-        background-color: #1d4ed8;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Accessibility attributes added -->
-    <div 
-      class="bulb" 
-      id="bulb" 
-      role="img" 
-      aria-label="Lightbulb" 
-      data-active="false">
-    </div>
-
-    <button class="btn" id="toggleBtn" aria-pressed="false">Turn On</button>
-
     <script>
-      // 1. Cache DOM elements
       const bulb = document.getElementById('bulb');
       const toggleBtn = document.getElementById('toggleBtn');
-
-      // 2. Track state
       let isBulbOn = false;
-
-      // 3. UI Update logic separated from event handling
       function updateBulbUI() {
-        // Toggle elements state using DOM class/attribute methods
         bulb.dataset.active = isBulbOn;
         toggleBtn.setAttribute('aria-pressed', isBulbOn);
         toggleBtn.textContent = isBulbOn ? 'Turn Off' : 'Turn On';
