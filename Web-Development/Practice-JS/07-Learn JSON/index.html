@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f9; }
+        .box { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; }
+        input { width: 100%; padding: 8px; margin: 8px 0; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; cursor: pointer; margin-top: 10px; }
+        .toggle-btn { background: none; color: #007bff; border: none; margin-top: 15px; cursor: pointer; text-decoration: underline; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <!-- LOGIN FORM -->
+    <div id="loginSection">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Enter Email" required>
+        <input type="password" id="loginPassword" placeholder="Enter Password" required>
+        <button id="loginBtn">Login</button>
+        <button class="toggle-btn" onclick="toggleForms()">Don't have an account? Signup</button>
+    </div>
+
+    <!-- SIGNUP FORM -->
+    <div id="signupSection" class="hidden">
+        <h2>Signup</h2>
+        <input type="text" id="signupName" placeholder="Enter Name" required>
+        <input type="email" id="signupEmail" placeholder="Enter Email" required>
+        <input type="password" id="signupPassword" placeholder="Create Password" required>
+        <button id="signupBtn">Signup</button>
+        <button class="toggle-btn" onclick="toggleForms()">Already have an account? Login</button>
+    </div>
+</div>
+
+<script>
+    function toggleForms() {
+        document.getElementById('loginSection').classList.toggle('hidden');
+        document.getElementById('signupSection').classList.toggle('hidden');
+    }
+
+    // SIGNUP ACTION
+    document.getElementById('signupBtn').addEventListener('click', () => {
+        const name = document.getElementById('signupName').value;
+        const email = document.getElementById('signupEmail').value;
+        const password = document.getElementById('signupPassword').value;
+
+        if(!email || !password) { alert('Please fill all fields'); return; }
+
+        const users = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+        const userExists = users.some(u => u.email === email);
+
+        if(userExists) {
+            alert('User already exists. Please login.');
+        } else {
+            users.push({ name, email, password });
+            localStorage.setItem('registeredUsers', JSON.stringify(users));
+            alert('Account created! Please login.');
+            toggleForms();
+        }
+    });
+
+    // LOGIN ACTION
+    document.getElementById('loginBtn').addEventListener('click', () => {
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+
+        const users = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+        const validUser = users.find(u => u.email === email && u.password === password);
+
+        if(validUser) {
+            // Store active session and redirect
+            localStorage.setItem('currentUser', JSON.stringify(validUser));
+            window.location.href = 'dashboard.html';
+        } else {
+            alert('Invalid email or password!');
+        }
+    });
+</script>
+
+</body>
+</html>

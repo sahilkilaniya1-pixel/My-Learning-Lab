@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Saved Entries</title>
+    <style>
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 8px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Saved Daily Records</h2>
+
+    <table id="recordsTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Entry Content</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+    <br><br>
+    <button id="clearBtn">Clear All Entries</button>
+    <br><br>
+    <a href="index.html">&larr; Back to Entry Page</a>
+    <script>
+        const tableBody = document.getElementById('tableBody');
+        const entries = JSON.parse(localStorage.getItem('dailyRecords')) || [];
+
+        if (entries.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="2">No entries found.</td></tr>';
+        } else {
+            entries.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${item.date}</td><td>${item.content}</td>`;
+                tableBody.appendChild(row);
+            });
+        }
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            if (confirm('Delete all stored entries?')) {
+                localStorage.removeItem('dailyRecords');
+                location.reload();
+            }
+        });
+    </script>
+</body>
+</html>
