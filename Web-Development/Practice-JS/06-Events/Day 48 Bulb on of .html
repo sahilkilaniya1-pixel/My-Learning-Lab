@@ -5,34 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lightbulb Toggle</title>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            direction: center;
-            justify-content: center;
-            min-height: 100vh ;
-            gap: 20 ;
-            background-color: white;
-        }
-        .bulb {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: #d1d5db;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      body {display: flex;flex-direction: column; align-items: center;justify-content: center; min-height:100; gap:20px; background-color: white;font-family: system-ui,-apple-system,
+        sans-serif;
       }
+      .bulb {width: 100px;height: 100px;border-radius: 50%;background-color: white;}
+      .bulb[data-active="true"] {background-color: #facc15;}
+      .btn {padding: 10px 24px;font-size: 1rem;font-weight: 600;cursor: pointer;border: none;border-radius: 8px;background-color: blue;color: white;transition: background-color 0.2s;}
+      .btn:hover {background-color: #1d4ed8;}
     </style>
+  </head>
+  <body>
+    <div
+      class="bulb"id="bulb"role="img"aria-label="Lightbulb"data-active="false"
+    ></div>
     <button class="btn" id="toggleBtn" aria-pressed="false">Turn On</button>
     <script>
-      const bulb = document.getElementById('bulb');
-      const toggleBtn = document.getElementById('toggleBtn');
+      const bulb = document.getElementById("bulb");
+      const toggleBtn = document.getElementById("toggleBtn");
       let isBulbOn = false;
       function updateBulbUI() {
         bulb.dataset.active = isBulbOn;
-        toggleBtn.setAttribute('aria-pressed', isBulbOn);
-        toggleBtn.textContent = isBulbOn ? 'Turn Off' : 'Turn On';
+        toggleBtn.setAttribute("aria-pressed", isBulbOn);
+        toggleBtn.textContent = isBulbOn ? "Turn Off" : "Turn On";
       }
-      toggleBtn.addEventListener('click', () => {
+      toggleBtn.addEventListener("click", () => {
         isBulbOn = !isBulbOn;
         updateBulbUI();
       });
