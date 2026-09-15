@@ -3,7 +3,7 @@
 // let slider = document.querySelector('.slider')
 // let formsection = document.querySelector(".form-section")
 // slider.addEventListener("click",  () => {
-    slider.classList.add("mouseslider");
+    // slider.classList.add("mouseslider");
     formsection.classList.add("form-section-move");
 });
 login.addEventListener("clicl", ()=> {
