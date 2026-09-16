@@ -1,6 +1,1 @@
-
-// let  i=1;
-// while(i<=10){
-//     console.log("javascript");
-//     i++;
-// }
+return 1;
