@@ -36,7 +36,7 @@ def send_request(index):
             "count": 20
         }
     }
-    
+
     try:
         response = requests.post(URL, json=payload, headers=HEADERS, cookies=cookies_dict, timeout=10)
         
