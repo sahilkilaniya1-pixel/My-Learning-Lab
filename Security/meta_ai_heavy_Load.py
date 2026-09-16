@@ -32,4 +32,4 @@ print("\n--- Response Diagnostics ---")
 print("HTTP Status:", r.status_code)
 print("Content-Type:", r.headers.get("content-type", "<blank>"))
 print("Response length:", len(r.content))
-print("Response Preview:", r.text[:500])  # Response ka shuruati data dekhne ke liye
+print("Response Preview:", r.text[:500])
