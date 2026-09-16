@@ -28,7 +28,6 @@ r = requests.post(
     json=payload,
     timeout=20
 )
-
 print("\n--- Response Diagnostics ---")
 print("HTTP Status:", r.status_code)
 print("Content-Type:", r.headers.get("content-type", "<blank>"))

@@ -110,15 +110,3 @@ class Flipkart {
 }
 
 new Flipkart();
-
-
-
-
-	
-payload = {
-    "doc_id": "4d52c36b3193afd66184b4acf1e3bb40",
-    "variables": {
-        "conversationId": "bb00cf81-7a37-4f06-b21b-be58bc3cdda3",
-        "count": 20
-    }
-}
