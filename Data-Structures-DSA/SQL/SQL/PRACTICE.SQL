@@ -17,3 +17,4 @@ SELECT name, salary FROM Employees WHERE deparment = "IT";
 
 Question 2: Har department ki Average Salary aur total employees nikalo.
 Mental Process:
+Select department, AVG(salary) AS avg_salary, COUNT(emp_id) AS total_employees
