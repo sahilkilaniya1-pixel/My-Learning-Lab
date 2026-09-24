@@ -11,3 +11,5 @@ Jab bhi koi question aaye, hamesha in 4 question ke baare mein sochein:
 3.Kya Mujhe Specific rows filter karni hain ? -> yeh jayega WHERE mein.
 4.Kya summary/ group total nikalna hai? -> yeh jayega GROUP BY aur HAVING mein.
 
+Question 1: IT Department ke saare employees ka name aur salary dikhao.
+Mental Process:
