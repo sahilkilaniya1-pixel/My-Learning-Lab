@@ -15,3 +15,5 @@ Question 1: IT Department ke saare employees ka name aur salary dikhao.
 Mental Process:
 SELECT name, salary FROM Employees WHERE deparment = "IT";
 
+Question 2: Har department ki Average Salary aur total employees nikalo.
+Mental Process:
