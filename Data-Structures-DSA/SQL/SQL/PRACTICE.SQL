@@ -30,3 +30,4 @@ SELECT name, salary from employees WHERE salary > 50000 ORDER BY salary DESC;
 
 Question 2 (GROUP BY + HAVING)
 Un Departments ka naam aur unki Average Salary dikhao jinki Average Salary 60,000 se zyada hai.
+SELECT department, AVG(salary) AS avg_salary FROM Employees GROUP BY department HAVING AVG(salary) > 60000;
