@@ -34,3 +34,4 @@ SELECT department, AVG(salary) AS avg_salary FROM Employees GROUP BY department 
 
 Question 3 (LEFT JOIN / Advanced)
 Sabhi employees ke Name aur unke Project Name dikhao. Chahe unhe koi project assign hua ho ya nahi (jaise Vikas ko koi project nahi mila, fir bhi uska naam output mein aana chahiye).
+SELECT E.name AS Employee_name, P.project_name FROM Employees E LEFT JOIN Project P ON E.emp_id = P.emp_id;
