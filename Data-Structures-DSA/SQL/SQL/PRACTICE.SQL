@@ -12,7 +12,6 @@ Jab bhi koi question aaye, hamesha in 4 question ke baare mein sochein:
 4.Kya summary/ group total nikalna hai? -> yeh jayega GROUP BY aur HAVING mein.
 
 Question 1: IT Department ke saare employees ka name aur salary dikhao.
-Mental Process:
 SELECT name, salary FROM Employees WHERE deparment = "IT";
 
 Question 2: Har department ki Average Salary aur total employees nikalo.
