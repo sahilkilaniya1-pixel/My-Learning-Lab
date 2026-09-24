@@ -7,3 +7,4 @@ continous analytics/ranking chal rahi hai toh window functions (OVER(...)) use k
 Step 1: SQL ki Thinking Strategy(Dimaag kaise chalayein ?)
 Jab bhi koi question aaye, hamesha in 4 question ke baare mein sochein:
 1.Mujhe result mein kya-kya dikhana hai? -> yeh jayega SELECT mein.
+2.Mera data kis table (ya tables) se aa raha hai? -> Yeh jayega FROM aur JOIN mein.
