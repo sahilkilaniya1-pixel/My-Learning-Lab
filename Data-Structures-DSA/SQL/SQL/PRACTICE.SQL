@@ -28,3 +28,5 @@ Question 1 (Basic Filter & Sort)
 Un sabhi employees ka Name aur Salary dikhao jinki salary 50,000 se zyada hai, aur output ko Highest Salary se Lowest Salary ke order mein sort (arrange) karo.
 SELECT name, salary from employees WHERE salary > 50000 ORDER BY salary DESC;
 
+Question 2 (GROUP BY + HAVING)
+Un Departments ka naam aur unki Average Salary dikhao jinki Average Salary 60,000 se zyada hai.
