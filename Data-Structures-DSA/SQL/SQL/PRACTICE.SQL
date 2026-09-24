@@ -26,4 +26,4 @@ SELECT name,department, salary, DENSE_RANK() OVER (PARTITION BY department ORDER
 
 Question 1 (Basic Filter & Sort)
 Un sabhi employees ka Name aur Salary dikhao jinki salary 50,000 se zyada hai, aur output ko Highest Salary se Lowest Salary ke order mein sort (arrange) karo.
-SELECT name, salary from employees 
+SELECT name, salary from employees WHERE salary > 50000 ORDER BY salary DESC;
