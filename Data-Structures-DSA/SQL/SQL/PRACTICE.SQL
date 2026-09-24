@@ -15,7 +15,6 @@ Question 1: IT Department ke saare employees ka name aur salary dikhao.
 SELECT name, salary FROM Employees WHERE deparment = "IT";
 
 Question 2: Har department ki Average Salary aur total employees nikalo.
-Mental Process:
 Select department, AVG(salary) AS avg_salary, COUNT(emp_id) AS total_employees
 FROM Employees GROUP BY department;
 
