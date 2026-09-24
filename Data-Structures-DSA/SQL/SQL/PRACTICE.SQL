@@ -23,3 +23,4 @@ SELECT E.name AS employee_name, P.project_name FROM Employees E INNER JOIN Proje
 
 Question 4 (Window Function): Har department mein salary ke according highest paid employee ko Rank 1 do.
 SELECT name,department, salary, DENSE_RANK() OVER (PARTITION BY department ORDER BY salary DESC) AS salary_rank FROM Employees;
+
