@@ -13,3 +13,4 @@ Jab bhi koi question aaye, hamesha in 4 question ke baare mein sochein:
 
 Question 1: IT Department ke saare employees ka name aur salary dikhao.
 Mental Process:
+SELECT name, salary FROM Employees WHERE deparment = "IT";
