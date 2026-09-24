@@ -32,3 +32,5 @@ Question 2 (GROUP BY + HAVING)
 Un Departments ka naam aur unki Average Salary dikhao jinki Average Salary 60,000 se zyada hai.
 SELECT department, AVG(salary) AS avg_salary FROM Employees GROUP BY department HAVING AVG(salary) > 60000;
 
+Question 3 (LEFT JOIN / Advanced)
+Sabhi employees ke Name aur unke Project Name dikhao. Chahe unhe koi project assign hua ho ya nahi (jaise Vikas ko koi project nahi mila, fir bhi uska naam output mein aana chahiye).
