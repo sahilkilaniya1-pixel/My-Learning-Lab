@@ -20,3 +20,4 @@ Mental Process:
 Select department, AVG(salary) AS avg_salary, COUNT(emp_id) AS total_employees
 FROM Employees GROUP BY department;
 
+Question 3 (JOIN): Un employees ke naam aur unke project ka naam batao jinko project assign hua hai.
