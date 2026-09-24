@@ -9,3 +9,4 @@ Jab bhi koi question aaye, hamesha in 4 question ke baare mein sochein:
 1.Mujhe result mein kya-kya dikhana hai? -> yeh jayega SELECT mein.
 2.Mera data kis table (ya tables) se aa raha hai? -> Yeh jayega FROM aur JOIN mein.
 3.Kya Mujhe Specific rows filter karni hain ? -> yeh jayega WHERE mein.
+4.Kya summary/ group total nikalna hai? -> yeh jayega GROUP BY aur HAVING mein.
