@@ -28,7 +28,8 @@ SELECT E.name AS employee_name,
     INNER JOIN Project P ON E.emp_id = P.emp_id;
 
 Question 4 (Window Function): Har department mein salary ke according highest paid employee ko Rank 1 do.
-SELECT name,department, salary, DENSE_RANK() OVER (PARTITION BY department ORDER BY salary DESC) AS salary_rank FROM Employees;
+SELECT name,department, 
+    salary, DENSE_RANK() OVER (PARTITION BY department ORDER BY salary DESC) AS salary_rank FROM Employees;
 
 Question 1 (Basic Filter & Sort)
 Un sabhi employees ka Name aur Salary dikhao jinki salary 50,000 se zyada hai, aur output ko Highest Salary se Lowest Salary ke order mein sort (arrange) karo.
