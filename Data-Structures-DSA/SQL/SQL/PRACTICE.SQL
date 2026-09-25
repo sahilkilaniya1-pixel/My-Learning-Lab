@@ -13,7 +13,8 @@ Jab bhi koi question aaye, hamesha in 4 question ke baare mein sochein:
 
 Question 1: IT Department ke saare employees ka name aur salary dikhao.
 SELECT name, 
-    salary FROM Employees WHERE deparment = "IT";
+    salary FROM Employees 
+    WHERE deparment = "IT";
 
 Question 2: Har department ki Average Salary aur total employees nikalo.
 Select department, AVG(salary) AS avg_salary, COUNT(emp_id) AS total_employees
