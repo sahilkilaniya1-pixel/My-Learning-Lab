@@ -20,7 +20,7 @@ Question 2: Har department ki Average Salary aur total employees nikalo.
 Select department, 
     AVG(salary) AS avg_salary, 
     COUNT(emp_id) AS total_employees
-FROM Employees GROUP BY department;
+    FROM Employees GROUP BY department;
 
 Question 3 (JOIN): Un employees ke naam aur unke project ka naam batao jinko project assign hua hai.
 SELECT E.name AS employee_name, P.project_name FROM Employees E INNER JOIN Project P ON E.emp_id = P.emp_id;
